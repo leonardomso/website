@@ -5,7 +5,12 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint --fix --ext .js,.ts,.tsx src",
+    "format": "prettier --write src"
   },
   "dependencies": {
     "@emotion/core": "^10.0.28",
@@ -14,6 +19,7 @@
     "@xstate/test": "^0.4.0",
     "emotion-theming": "^10.0.27",
     "next": "9.4.4",
+    "next-pwa": "^2.6.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-feather": "^2.0.8",

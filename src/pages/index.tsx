@@ -1,4 +1,5 @@
-import Head from 'next/head'
+import React from "react";
+import Head from "next/head";
 
 const Index = () => {
   return (
@@ -12,7 +13,7 @@ const Index = () => {
         <h1>Website</h1>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Index;
