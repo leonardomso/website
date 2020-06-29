@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "public": true,
+  "alias": ["leonardomso.now.sh"],
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/next"
+    }
+  ]
+}

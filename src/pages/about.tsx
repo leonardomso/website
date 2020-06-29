@@ -3,7 +3,7 @@ import Head from "next/head";
 
 import Layout from "src/components/Layout/Layout";
 
-const Index = () => {
+const About = () => {
   return (
     <div className="container">
       <Head>
@@ -12,10 +12,10 @@ const Index = () => {
       </Head>
 
       <Layout>
-        <h1>Index</h1>
+        <h1>About</h1>
       </Layout>
     </div>
   );
 };
 
-export default Index;
+export default About;
