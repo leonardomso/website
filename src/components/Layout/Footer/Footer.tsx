@@ -1,13 +1,42 @@
 import React from "react";
+import { Twitter, GitHub, Linkedin, Instagram } from "react-feather";
 
-import { FooterStyled } from "./Footer.styles";
+import { FooterContainer } from "./Footer.styles";
 
-const Footer = () => {
-  return (
-    <FooterStyled>
-      <h1>Footer</h1>
-    </FooterStyled>
-  );
-};
+const Footer = () => (
+  <FooterContainer>
+    <a
+      href="https://twitter.com/leonardomso"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Twitter size={24} color="#000" cursor="pointer" />
+    </a>
+
+    <a
+      href="https://github.com/leonardomso"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <GitHub size={24} color="#000" cursor="pointer" />
+    </a>
+
+    <a
+      href="https://www.linkedin.com/in/leonardomso/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Linkedin size={24} color="#000" cursor="pointer" />
+    </a>
+
+    <a
+      href="https://www.instagram.com/leonardomso/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Instagram size={24} color="#000" cursor="pointer" />
+    </a>
+  </FooterContainer>
+);
 
 export default Footer;
