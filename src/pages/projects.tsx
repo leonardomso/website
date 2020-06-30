@@ -2,8 +2,9 @@ import React from "react";
 import Head from "next/head";
 
 import Layout from "src/components/Layout/Layout";
+import Projects from "src/components/Projects/Projects";
 
-const Projects = () => {
+const Index = () => {
   return (
     <div className="container">
       <Head>
@@ -12,10 +13,10 @@ const Projects = () => {
       </Head>
 
       <Layout>
-        <h1>Projects</h1>
+        <Projects />
       </Layout>
     </div>
   );
 };
 
-export default Projects;
+export default Index;

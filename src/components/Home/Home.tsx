@@ -1,21 +1,14 @@
 import React from "react";
 
-import {
-  HomeContainer,
-  HomeTitle,
-  HomeSubTitlesContainer,
-  HomeSubTitle,
-} from "./Home.styles";
+import { HomeContainer, HomeTitle, HomeSubTitle } from "./Home.styles";
 
 const Home = () => (
   <HomeContainer>
     <HomeTitle>Leonardo Maldonado</HomeTitle>
-
-    <HomeSubTitlesContainer>
-      <HomeSubTitle>Software Engineer</HomeSubTitle>
-      <HomeSubTitle>Focused on build web experiences</HomeSubTitle>
-      <HomeSubTitle>Using modern technologies</HomeSubTitle>
-    </HomeSubTitlesContainer>
+    <HomeSubTitle>
+      I am Software Engineer focused on build web experiences using modern
+      technologies.
+    </HomeSubTitle>
   </HomeContainer>
 );
 

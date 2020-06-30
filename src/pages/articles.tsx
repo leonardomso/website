@@ -2,8 +2,9 @@ import React from "react";
 import Head from "next/head";
 
 import Layout from "src/components/Layout/Layout";
+import Articles from "src/components/Articles/Articles";
 
-const Articles = () => {
+const Index = () => {
   return (
     <div className="container">
       <Head>
@@ -12,10 +13,10 @@ const Articles = () => {
       </Head>
 
       <Layout>
-        <h1>Articles</h1>
+        <Articles />
       </Layout>
     </div>
   );
 };
 
-export default Articles;
+export default Index;
