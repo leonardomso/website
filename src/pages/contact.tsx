@@ -2,20 +2,19 @@ import React from "react";
 import Head from "next/head";
 
 import Layout from "src/components/Layout/Layout";
+import Contact from "src/components/Contact/Contact";
 
-const Contact = () => {
-  return (
-    <div className="container">
-      <Head>
-        <title>Leonardo Maldonado</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+const Index = () => (
+  <div className="container">
+    <Head>
+      <title>Leonardo Maldonado</title>
+      <link rel="icon" href="/favicon.ico" />
+    </Head>
 
-      <Layout>
-        <h1>Contact</h1>
-      </Layout>
-    </div>
-  );
-};
+    <Layout>
+      <Contact />
+    </Layout>
+  </div>
+);
 
-export default Contact;
+export default Index;
