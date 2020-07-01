@@ -3,40 +3,48 @@ import { Twitter, GitHub, Linkedin, Instagram } from "react-feather";
 
 import { FooterContainer } from "./Footer.styles";
 
-const Footer = () => (
-  <FooterContainer>
-    <a
-      href="https://twitter.com/leonardomso"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <Twitter size={24} color="#000" cursor="pointer" />
-    </a>
+import { useTheme } from "src/system/ThemeContext";
 
-    <a
-      href="https://github.com/leonardomso"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <GitHub size={24} color="#000" cursor="pointer" />
-    </a>
+const Footer = () => {
+  const themeState = useTheme();
 
-    <a
-      href="https://www.linkedin.com/in/leonardomso/"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <Linkedin size={24} color="#000" cursor="pointer" />
-    </a>
+  const iconColor = themeState.dark ? "#FFFFFF" : "#000000";
 
-    <a
-      href="https://www.instagram.com/leonardomso/"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <Instagram size={24} color="#000" cursor="pointer" />
-    </a>
-  </FooterContainer>
-);
+  return (
+    <FooterContainer>
+      <a
+        href="https://twitter.com/leonardomso"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Twitter size={24} color={iconColor} cursor="pointer" />
+      </a>
+
+      <a
+        href="https://github.com/leonardomso"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <GitHub size={24} color={iconColor} cursor="pointer" />
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/leonardomso/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Linkedin size={24} color={iconColor} cursor="pointer" />
+      </a>
+
+      <a
+        href="https://www.instagram.com/leonardomso/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Instagram size={24} color={iconColor} cursor="pointer" />
+      </a>
+    </FooterContainer>
+  );
+};
 
 export default Footer;

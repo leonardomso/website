@@ -19,7 +19,7 @@ export const AboutTitle = styled.h1`
   font-size: calc(64px + (48 - 64) * ((100vw - 300px) / (1600 - 300)));
   line-height: 87px;
   letter-spacing: -0.03em;
-  color: #000000;
+  color: ${({ theme }) => theme.primary};
 `;
 
 export const AboutText = styled.p`
@@ -29,5 +29,5 @@ export const AboutText = styled.p`
   font-size: calc(18px + (14 - 18) * ((100vw - 300px) / (1600 - 300)));
   line-height: 30px;
   letter-spacing: -0.03em;
-  color: #000000;
+  color: ${({ theme }) => theme.primary};
 `;

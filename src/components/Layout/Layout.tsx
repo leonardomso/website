@@ -1,17 +1,16 @@
 import React from "react";
 import { Global } from "@emotion/core";
-import { ThemeProvider } from "theme-ui";
 
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 import OpenMenu from "./OpenMenu/OpenMenu";
 
 import reset from "src/system/reset";
-import theme from "src/system/theme";
 
 import { LayoutContainer } from "./Layout.styles";
 
 import useMenu from "src/hooks/useMenu";
+import { ThemeProvider } from "src/system/ThemeContext";
 
 const Layout = ({ children }: any) => {
   const { current, handleMenu } = useMenu();
@@ -26,7 +25,7 @@ const Layout = ({ children }: any) => {
 
   return (
     <>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider>
         <LayoutContainer>
           <Header current={current} handleMenu={handleMenu} />
           {onRenderContent()}

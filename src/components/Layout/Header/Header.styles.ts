@@ -46,7 +46,7 @@ export const HeaderLink = styled.a`
   font-size: 16px;
   line-height: 19px;
   letter-spacing: -0.03em;
-  color: #000000;
+  color: ${({ theme }) => theme.primary};
   text-decoration: none;
 
   &:hover {

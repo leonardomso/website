@@ -18,6 +18,6 @@ export const OpenMenuLink = styled.a`
   font-size: 48px;
   line-height: 58px;
   letter-spacing: -0.03em;
-  color: #000000;
+  color: ${({ theme }) => theme.primary};
   text-decoration: none;
 `;

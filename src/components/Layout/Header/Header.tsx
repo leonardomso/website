@@ -2,6 +2,8 @@ import React from "react";
 import Link from "next/link";
 import { Moon, Menu, X } from "react-feather";
 
+import { useTheme } from "src/system/ThemeContext";
+
 import {
   HeaderContainer,
   HeaderNameContainer,
@@ -16,13 +18,20 @@ interface HeaderProps {
 }
 
 const Header = ({ current, handleMenu }: HeaderProps) => {
+  const themeState = useTheme();
+
+  const moonColor = themeState.dark ? "#FFBC05" : "#000000";
+  const menuColor = themeState.dark ? "#FFF" : "#000000";
+
   const onRenderIcon = () => {
     if (current.matches("open")) {
-      return <X size={24} color="#000" cursor="pointer" onClick={handleMenu} />;
+      return (
+        <X size={24} color={menuColor} cursor="pointer" onClick={handleMenu} />
+      );
     }
 
     return (
-      <Menu size={24} color="#000" cursor="pointer" onClick={handleMenu} />
+      <Menu size={24} color={menuColor} cursor="pointer" onClick={handleMenu} />
     );
   };
 
@@ -53,7 +62,12 @@ const Header = ({ current, handleMenu }: HeaderProps) => {
           <HeaderLink href="/contact">contact</HeaderLink>
         </Link>
 
-        <Moon size={24} color="#000" cursor="pointer" />
+        <Moon
+          size={24}
+          color={moonColor}
+          cursor="pointer"
+          onClick={() => themeState.toggle()}
+        />
       </HeaderLinksContainer>
     </HeaderContainer>
   );

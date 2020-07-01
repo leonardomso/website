@@ -19,7 +19,7 @@ export const HomeTitle = styled.h1`
   font-size: calc(64px + (48 - 64) * ((100vw - 300px) / (1600 - 300)));
   line-height: auto;
   letter-spacing: -0.03em;
-  color: #000000;
+  color: ${({ theme }) => theme.primary};
 `;
 
 export const HomeSubTitle = styled.h3`
@@ -29,5 +29,5 @@ export const HomeSubTitle = styled.h3`
   font-size: calc(20px + (14 - 20) * ((100vw - 300px) / (1600 - 300)));
   line-height: 40px;
   letter-spacing: -0.03em;
-  color: #000000;
+  color: ${({ theme }) => theme.primary};
 `;

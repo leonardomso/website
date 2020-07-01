@@ -7,6 +7,6 @@ export const LayoutContainer = styled.div`
   grid-template-columns: 1fr;
   grid-template-rows: 70px 1fr 70px;
   grid-row-gap: 50px;
-  background: white;
+  background: ${({ theme }) => theme.secondary};
   padding: 10px 30px 10px 30px;
 `;

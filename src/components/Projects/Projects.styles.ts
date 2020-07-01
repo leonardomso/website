@@ -18,5 +18,5 @@ export const ProjectsTitle = styled.h1`
   font-size: calc(64px + (48 - 64) * ((100vw - 300px) / (1600 - 300)));
   line-height: 87px;
   letter-spacing: -0.03em;
-  color: #000000;
+  color: ${({ theme }) => theme.primary};
 `;

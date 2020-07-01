@@ -9,7 +9,7 @@ export const ItemContainer = styled.div`
   grid-row-gap: 10px;
   align-items: center;
   justify-content: flex-start;
-  border: 1px solid #eaeaea;
+  border: ${({ theme }) => `1px solid ${theme.lightGray}`};
   box-sizing: border-box;
   border-radius: 5px;
   padding: 20px;
@@ -44,7 +44,7 @@ export const ItemTitle = styled.a`
   font-size: 18px;
   line-height: 22px;
   letter-spacing: -0.03em;
-  color: #000000;
+  color: ${({ theme }) => theme.primary};
   text-decoration: none;
 
   &:hover {
@@ -58,7 +58,7 @@ export const ItemDescription = styled.p`
   font-weight: normal;
   font-size: 14px;
   line-height: 25px;
-  color: #6f6f6f;
+  color: ${({ theme }) => theme.darkGray};
   grid-row: 3 / 4;
   grid-column: 1 / 2;
 `;
