@@ -1,15 +1,15 @@
 import React from "react";
 import Scrollbars from "react-custom-scrollbars";
 
-import { ArticleContainer, ArticlesTitle } from "./Articles.styles";
+import { ArticlesContainer, ArticlesTitle } from "./Articles.styles";
 
 import Item from "src/components/Item/Item";
 
-import articles from "src/data/articles/articles";
+import articles from "src/data/articles";
 
 const Articles = () => (
   <Scrollbars universal autoHide autoHideTimeout={100} autoHideDuration={100}>
-    <ArticleContainer>
+    <ArticlesContainer>
       <ArticlesTitle>Articles</ArticlesTitle>
       {articles.map(({ date, title, description, link }) => (
         <Item
@@ -20,7 +20,7 @@ const Articles = () => (
           link={link}
         />
       ))}
-    </ArticleContainer>
+    </ArticlesContainer>
   </Scrollbars>
 );
 

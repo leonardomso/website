@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const ArticleContainer = styled.div`
+export const ArticlesContainer = styled.div`
   width: auto;
   max-width: 700px;
   height: auto;

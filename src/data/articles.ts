@@ -1,4 +1,11 @@
-import { Articles } from "./articles.types";
+interface Article {
+  date: string;
+  title: string;
+  description: string;
+  link: string;
+}
+
+type Articles = Array<Article>;
 
 const articles: Articles = [
   {

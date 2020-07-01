@@ -8,8 +8,7 @@ export const ProjectsContainer = styled.div`
   grid-template-columns: 1fr;
   grid-template-rows: repeat(2, max-content);
   grid-row-gap: 20px;
-  align-self: flex-start;
-  justify-self: center;
+  margin: 0 auto;
 `;
 
 export const ProjectsTitle = styled.h1`
