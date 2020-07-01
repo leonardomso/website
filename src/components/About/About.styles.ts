@@ -1,5 +1,7 @@
 import styled from "@emotion/styled";
 
+import { StyleProps } from "src/system/styles.types";
+
 export const AboutContainer = styled.div`
   width: auto;
   max-width: 700px;
@@ -12,7 +14,7 @@ export const AboutContainer = styled.div`
   justify-self: center;
 `;
 
-export const AboutTitle = styled.h1`
+export const AboutTitle = styled.h1<StyleProps>`
   font-family: Inter;
   font-style: normal;
   font-weight: 600;
@@ -22,7 +24,7 @@ export const AboutTitle = styled.h1`
   color: ${({ theme }) => theme.primary};
 `;
 
-export const AboutText = styled.p`
+export const AboutText = styled.p<StyleProps>`
   font-family: Inter;
   font-style: normal;
   font-weight: normal;

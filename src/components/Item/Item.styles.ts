@@ -1,6 +1,8 @@
 import styled from "@emotion/styled";
 
-export const ItemContainer = styled.div`
+import { StyleProps } from "src/system/styles.types";
+
+export const ItemContainer = styled.div<StyleProps>`
   width: 100%;
   height: auto;
   display: grid;
@@ -37,7 +39,7 @@ export const ItemTitleContainer = styled.div`
   align-items: center;
 `;
 
-export const ItemTitle = styled.a`
+export const ItemTitle = styled.a<StyleProps>`
   font-family: Inter;
   font-style: normal;
   font-weight: 500;
@@ -52,7 +54,7 @@ export const ItemTitle = styled.a`
   }
 `;
 
-export const ItemDescription = styled.p`
+export const ItemDescription = styled.p<StyleProps>`
   font-family: Inter;
   font-style: normal;
   font-weight: normal;

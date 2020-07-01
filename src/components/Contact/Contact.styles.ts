@@ -1,5 +1,7 @@
 import styled from "@emotion/styled";
 
+import { StyleProps } from "src/system/styles.types";
+
 export const ContactContainer = styled.div`
   width: 100%;
   max-width: 700px;
@@ -12,7 +14,7 @@ export const ContactContainer = styled.div`
   justify-self: center;
 `;
 
-export const ContactTitle = styled.h1`
+export const ContactTitle = styled.h1<StyleProps>`
   font-family: Inter;
   font-style: normal;
   font-weight: 600;
@@ -22,7 +24,7 @@ export const ContactTitle = styled.h1`
   color: ${({ theme }) => theme.primary};
 `;
 
-export const ContactText = styled.p`
+export const ContactText = styled.p<StyleProps>`
   font-family: Inter;
   font-style: normal;
   font-weight: normal;
@@ -32,7 +34,7 @@ export const ContactText = styled.p`
   color: ${({ theme }) => theme.primary};
 `;
 
-export const ContactLink = styled.a`
+export const ContactLink = styled.a<StyleProps>`
   font-family: Inter;
   font-style: normal;
   font-weight: 600;

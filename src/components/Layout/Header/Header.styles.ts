@@ -1,5 +1,7 @@
 import styled from "@emotion/styled";
 
+import { StyleProps } from "src/system/styles.types";
+
 export const HeaderContainer = styled.header`
   width: 100%;
   max-width: 1024px;
@@ -39,7 +41,7 @@ export const HeaderLinksContainer = styled.div`
   }
 `;
 
-export const HeaderLink = styled.a`
+export const HeaderLink = styled.a<StyleProps>`
   font-family: Inter;
   font-style: normal;
   font-weight: 600;

@@ -1,5 +1,7 @@
 import styled from "@emotion/styled";
 
+import { StyleProps } from "src/system/styles.types";
+
 export const ProjectsContainer = styled.div`
   width: auto;
   max-width: 700px;
@@ -11,7 +13,7 @@ export const ProjectsContainer = styled.div`
   margin: 0 auto;
 `;
 
-export const ProjectsTitle = styled.h1`
+export const ProjectsTitle = styled.h1<StyleProps>`
   font-family: Inter;
   font-style: normal;
   font-weight: 600;

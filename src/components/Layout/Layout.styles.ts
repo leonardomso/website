@@ -1,6 +1,8 @@
 import styled from "@emotion/styled";
 
-export const LayoutContainer = styled.div`
+import { StyleProps } from "src/system/styles.types";
+
+export const LayoutContainer = styled.div<StyleProps>`
   width: 100%;
   height: 100vh;
   display: grid;
