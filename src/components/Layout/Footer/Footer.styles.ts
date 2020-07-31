@@ -15,4 +15,5 @@ export const FooterContainer = styled.footer`
   justify-self: center;
   align-items: center;
   justify-content: center;
+  /* padding-bottom: 30px; */
 `;

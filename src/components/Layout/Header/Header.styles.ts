@@ -8,7 +8,7 @@ export const HeaderContainer = styled.header`
   justify-self: center;
   height: 70px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: max-content 1fr;
   grid-template-rows: 1fr;
   grid-column-gap: 20px;
   align-items: center;

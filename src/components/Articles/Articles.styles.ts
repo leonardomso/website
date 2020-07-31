@@ -3,12 +3,12 @@ import styled from "@emotion/styled";
 import { StyleProps } from "src/system/styles.types";
 
 export const ArticlesContainer = styled.div`
-  width: auto;
+  width: 100%;
   max-width: 700px;
   height: auto;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, max-content);
+  grid-template-rows: max-content max-content;
   grid-row-gap: 20px;
   margin: 0 auto;
 `;
