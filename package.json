@@ -15,7 +15,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
-    "@xstate/react": "^0.8.1",
+    "@xstate/react": "^1.0.3",
     "@xstate/test": "^0.4.0",
     "emotion-theming": "^10.0.27",
     "next": "9.4.4",
