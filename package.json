@@ -13,7 +13,7 @@
     "format": "prettier --write src"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.28",
+    "@emotion/core": "^10.1.1",
     "@emotion/styled": "^10.0.27",
     "@xstate/react": "^1.0.3",
     "@xstate/test": "^0.4.0",
