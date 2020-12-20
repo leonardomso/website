@@ -19,7 +19,7 @@
     "@xstate/test": "^0.4.0",
     "emotion-theming": "^10.0.27",
     "next": "9.4.4",
-    "next-pwa": "^2.6.1",
+    "next-pwa": "^5.0.0",
     "react": "16.13.1",
     "react-custom-scrollbars": "^4.2.1",
     "react-dom": "16.13.1",
