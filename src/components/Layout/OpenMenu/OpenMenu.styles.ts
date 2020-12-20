@@ -1,7 +1,5 @@
 import styled from "@emotion/styled";
 
-import { StyleProps } from "src/system/styles.types";
-
 export const OpenMenuContainer = styled.div`
   width: auto;
   height: auto;
@@ -13,13 +11,13 @@ export const OpenMenuContainer = styled.div`
   justify-self: flex-start;
 `;
 
-export const OpenMenuLink = styled.a<StyleProps>`
+export const OpenMenuLink = styled.a`
   font-family: Inter;
   font-style: normal;
   font-weight: 600;
   font-size: 48px;
   line-height: 58px;
   letter-spacing: -0.03em;
-  color: ${({ theme }) => theme.primary};
+  color: #101010;
   text-decoration: none;
 `;

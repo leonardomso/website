@@ -3,48 +3,40 @@ import { Twitter, GitHub, Linkedin, Instagram } from "react-feather";
 
 import { FooterContainer } from "./Footer.styles";
 
-import { useTheme } from "src/system/ThemeContext";
+const Footer = () => (
+  <FooterContainer>
+    <a
+      href="https://twitter.com/leonardomso"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Twitter size={24} color="#101010" cursor="pointer" />
+    </a>
 
-const Footer = () => {
-  const themeState = useTheme();
+    <a
+      href="https://github.com/leonardomso"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <GitHub size={24} color="#101010" cursor="pointer" />
+    </a>
 
-  const iconColor = themeState.dark ? "#FFFFFF" : "#000000";
+    <a
+      href="https://www.linkedin.com/in/leonardomso/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Linkedin size={24} color="#101010" cursor="pointer" />
+    </a>
 
-  return (
-    <FooterContainer>
-      <a
-        href="https://twitter.com/leonardomso"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Twitter size={24} color={iconColor} cursor="pointer" />
-      </a>
-
-      <a
-        href="https://github.com/leonardomso"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <GitHub size={24} color={iconColor} cursor="pointer" />
-      </a>
-
-      <a
-        href="https://www.linkedin.com/in/leonardomso/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Linkedin size={24} color={iconColor} cursor="pointer" />
-      </a>
-
-      <a
-        href="https://www.instagram.com/leonardomso/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Instagram size={24} color={iconColor} cursor="pointer" />
-      </a>
-    </FooterContainer>
-  );
-};
+    <a
+      href="https://www.instagram.com/leonardomso/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Instagram size={24} color="#101010" cursor="pointer" />
+    </a>
+  </FooterContainer>
+);
 
 export default Footer;

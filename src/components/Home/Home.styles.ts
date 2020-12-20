@@ -1,7 +1,5 @@
 import styled from "@emotion/styled";
 
-import { StyleProps } from "src/system/styles.types";
-
 export const HomeContainer = styled.div`
   width: auto;
   max-width: 700px;
@@ -14,22 +12,22 @@ export const HomeContainer = styled.div`
   justify-self: center;
 `;
 
-export const HomeTitle = styled.h1<StyleProps>`
+export const HomeTitle = styled.h1`
   font-family: Inter;
   font-style: normal;
   font-weight: 600;
   font-size: calc(64px + (48 - 64) * ((100vw - 300px) / (1600 - 300)));
   line-height: auto;
   letter-spacing: -0.03em;
-  color: ${({ theme }) => theme.primary};
+  color: #101010;
 `;
 
-export const HomeSubTitle = styled.h3<StyleProps>`
+export const HomeSubTitle = styled.h3`
   font-family: Inter;
   font-style: normal;
   font-weight: 500;
   font-size: calc(20px + (14 - 20) * ((100vw - 300px) / (1600 - 300)));
   line-height: 40px;
   letter-spacing: -0.03em;
-  color: ${({ theme }) => theme.primary};
+  color: #101010;
 `;

@@ -1,5 +1,6 @@
-import * as React from "react";
+import React from "react";
 import Document, { Head, Main, NextScript } from "next/document";
+import GoogleFonts from "next-google-fonts";
 
 class MyDocument extends Document {
   render() {
@@ -19,7 +20,7 @@ class MyDocument extends Document {
           />
           <meta
             name="description"
-            content="The best way to listen to your favorite podcasts"
+            content="Software Engineer"
           />
           <meta name="format-detection" content="telephone=no" />
           <meta name="mobile-web-app-capable" content="yes" />
@@ -103,10 +104,7 @@ class MyDocument extends Document {
           <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
           <meta name="theme-color" content="#ffffff" />
           <link rel="manifest" href="/manifest.json" />
-          <link
-            href="https://fonts.googleapis.com/css?family=Inter:100,200,300,400,500,600,700,800,900&display=swap"
-            rel="stylesheet"
-          />
+          <GoogleFonts href="https://fonts.googleapis.com/css?family=Inter:100,200,300,400,500,600,700,800,900&display=swap" />
         </Head>
         <body>
           <Main />

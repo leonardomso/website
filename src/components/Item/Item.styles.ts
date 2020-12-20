@@ -1,8 +1,6 @@
 import styled from "@emotion/styled";
 
-import { StyleProps } from "src/system/styles.types";
-
-export const ItemContainer = styled.div<StyleProps>`
+export const ItemContainer = styled.div`
   width: 100%;
   height: min-content;
   max-height: fit-content;
@@ -12,7 +10,7 @@ export const ItemContainer = styled.div<StyleProps>`
   grid-row-gap: 10px;
   align-items: center;
   justify-content: flex-start;
-  border: ${({ theme }) => `1px solid ${theme.lightGray}`};
+  border: #f3f3f3;
   border-radius: 5px;
   padding: 20px;
 `;
@@ -28,7 +26,7 @@ export const ItemDate = styled.h4`
   grid-column: 1 / 2;
 `;
 
-export const ItemTitle = styled.a<StyleProps>`
+export const ItemTitle = styled.a`
   width: 100%;
   font-family: Inter;
   font-style: normal;
@@ -36,7 +34,7 @@ export const ItemTitle = styled.a<StyleProps>`
   font-size: 18px;
   line-height: 25px;
   letter-spacing: -0.03em;
-  color: ${({ theme }) => theme.primary};
+  color: #101010;
   text-decoration: none;
 
   &:hover {
@@ -44,13 +42,13 @@ export const ItemTitle = styled.a<StyleProps>`
   }
 `;
 
-export const ItemDescription = styled.p<StyleProps>`
+export const ItemDescription = styled.p`
   font-family: Inter;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 25px;
-  color: ${({ theme }) => theme.darkGray};
+  color: #6f6f6f;
   grid-row: 3 / 4;
   grid-column: 1 / 2;
 `;

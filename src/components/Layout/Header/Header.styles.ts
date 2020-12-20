@@ -1,7 +1,5 @@
 import styled from "@emotion/styled";
 
-import { StyleProps } from "src/system/styles.types";
-
 export const HeaderContainer = styled.header`
   width: 100%;
   max-width: 1024px;
@@ -41,14 +39,14 @@ export const HeaderLinksContainer = styled.div`
   }
 `;
 
-export const HeaderLink = styled.a<StyleProps>`
+export const HeaderLink = styled.a`
   font-family: Inter;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
   line-height: 19px;
   letter-spacing: -0.03em;
-  color: ${({ theme }) => theme.primary};
+  color: #101010;
   text-decoration: none;
 
   &:hover {
