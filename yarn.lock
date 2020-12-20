@@ -1120,7 +1120,7 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.10.2", "@babel/runtime@^7.10.3", "@babel/runtime@^7.11.2", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
+"@babel/runtime@^7.10.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
   version "7.12.5"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.12.5.tgz#410e7e487441e1b360c29be715d870d9b985882e"
   integrity sha512-plcc+hbExy3McchJCEQG3knOsuh3HH+Prx1P6cLIkET/0dLuQDEnrT+s27Axgc9bqfsmNUNHfscgMUdBpC9xfg==
@@ -1739,16 +1739,19 @@
     ejs "^2.6.1"
     magic-string "^0.25.0"
 
-"@testing-library/dom@^7.17.1":
-  version "7.21.8"
-  resolved "https://registry.yarnpkg.com/@testing-library/dom/-/dom-7.21.8.tgz#b64b266264bff9135eba3b5c6d4ddc995a3371e6"
-  integrity sha512-iK1rJubFoeD5gxCryokwh09tnJa1Y4doNDbNFYYqOqz6ELwB1+kEAwlezA5xwMi8QrK7xg+1/aBMzb9X/A/EmA==
+"@testing-library/dom@^7.28.1":
+  version "7.29.0"
+  resolved "https://registry.yarnpkg.com/@testing-library/dom/-/dom-7.29.0.tgz#60b18065bab50a5cde21fe80275a47a43024d9cc"
+  integrity sha512-0hhuJSmw/zLc6ewR9cVm84TehuTd7tbqBX9pRNSp8znJ9gTmSgesdbiGZtt8R6dL+2rgaPFp9Yjr7IU1HWm49w==
   dependencies:
-    "@babel/runtime" "^7.10.3"
+    "@babel/code-frame" "^7.10.4"
+    "@babel/runtime" "^7.12.5"
     "@types/aria-query" "^4.2.0"
     aria-query "^4.2.2"
-    dom-accessibility-api "^0.4.6"
-    pretty-format "^25.5.0"
+    chalk "^4.1.0"
+    dom-accessibility-api "^0.5.4"
+    lz-string "^1.4.4"
+    pretty-format "^26.6.2"
 
 "@testing-library/jest-dom@^5.10.1":
   version "5.11.2"
@@ -1766,13 +1769,13 @@
     lodash "^4.17.15"
     redent "^3.0.0"
 
-"@testing-library/react@^10.3.0":
-  version "10.4.8"
-  resolved "https://registry.yarnpkg.com/@testing-library/react/-/react-10.4.8.tgz#5eb730291b8fd81cdb2d8877770d060b044ae4a4"
-  integrity sha512-clgpFR6QHiRRcdhFfAKDhH8UXpNASyfkkANhtCsCVBnai+O+mK1rGtMES+Apc7ql5Wyxu7j8dcLiC4pV5VblHA==
+"@testing-library/react@^11.2.2":
+  version "11.2.2"
+  resolved "https://registry.yarnpkg.com/@testing-library/react/-/react-11.2.2.tgz#099c6c195140ff069211143cb31c0f8337bdb7b7"
+  integrity sha512-jaxm0hwUjv+hzC+UFEywic7buDC9JQ1q3cDsrWVSDAPmLotfA6E6kUHlYm/zOeGCac6g48DR36tFHxl7Zb+N5A==
   dependencies:
-    "@babel/runtime" "^7.10.3"
-    "@testing-library/dom" "^7.17.1"
+    "@babel/runtime" "^7.12.5"
+    "@testing-library/dom" "^7.28.1"
 
 "@testing-library/user-event@^12.0.6":
   version "12.1.0"
@@ -3297,7 +3300,7 @@ chalk@^3.0.0:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
-chalk@^4.0.0:
+chalk@^4.0.0, chalk@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-4.1.0.tgz#4e14870a618d9e2edd97dd8345fd9d9dc315646a"
   integrity sha512-qwx12AxXe2Q5xQ43Ac//I6v5aXTipYrSESdOgzrN+9XjgEpyjpKuvSGaN4qE93f7TQTlerQQ8S+EQ0EyDoVL1A==
@@ -4083,10 +4086,10 @@ doctrine@^3.0.0:
   dependencies:
     esutils "^2.0.2"
 
-dom-accessibility-api@^0.4.6:
-  version "0.4.7"
-  resolved "https://registry.yarnpkg.com/dom-accessibility-api/-/dom-accessibility-api-0.4.7.tgz#31d01c113af49f323409b3ed09e56967aba485a8"
-  integrity sha512-5+GzhTpCQYHz4NjL8loYTDVBnXIjNLBadWQBKxXk+osFEplLt3EsSYBu2YZcdZ8QqrvCHgW6TSMGMbmgfhrn2g==
+dom-accessibility-api@^0.5.4:
+  version "0.5.4"
+  resolved "https://registry.yarnpkg.com/dom-accessibility-api/-/dom-accessibility-api-0.5.4.tgz#b06d059cdd4a4ad9a79275f9d414a5c126241166"
+  integrity sha512-TvrjBckDy2c6v6RLxPv5QXOnU+SmF9nBII5621Ve5fu6Z/BDrENurBEvlC1f44lKEUVqOpK4w9E5Idc5/EgkLQ==
 
 dom-css@^2.0.0:
   version "2.1.0"
@@ -6488,6 +6491,11 @@ lru-cache@5.1.1, lru-cache@^5.1.1:
   integrity sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==
   dependencies:
     yallist "^3.0.2"
+
+lz-string@^1.4.4:
+  version "1.4.4"
+  resolved "https://registry.yarnpkg.com/lz-string/-/lz-string-1.4.4.tgz#c0d8eaf36059f705796e1e344811cf4c498d3a26"
+  integrity sha1-wNjq82BZ9wV5bh40SBHPTEmNOiY=
 
 magic-string@^0.25.0, magic-string@^0.25.5:
   version "0.25.7"
