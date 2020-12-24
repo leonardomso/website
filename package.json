@@ -32,7 +32,7 @@
     "react-dom": "^17.0.1",
     "react-feather": "^2.0.9",
     "theme-ui": "^0.3.4",
-    "xstate": "^4.15.1"
+    "xstate": "^4.15.2"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.6",
