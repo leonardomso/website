@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://leonardomso.com/
+Host: https://www.leonardomso.com/
 
 # Sitemaps
-Sitemap: https://leonardomso.com/sitemap.xml
+Sitemap: https://www.leonardomso.com/sitemap.xml
