@@ -16,7 +16,7 @@
     "@chakra-ui/react": "^1.1.6",
     "@emotion/babel-plugin": "^11.1.2",
     "@emotion/core": "^11.0.0",
-    "@emotion/react": "^11.1.2",
+    "@emotion/react": "^11.1.4",
     "@emotion/styled": "^11.0.0",
     "@xstate/react": "^1.2.0",
     "@xstate/test": "^0.4.1",
