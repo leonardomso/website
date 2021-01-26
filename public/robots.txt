@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://leonardomso.com/
+
+# Sitemaps
+Sitemap: https://leonardomso.com/sitemap.xml
