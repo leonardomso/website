@@ -28,7 +28,7 @@
     "next-compose-plugins": "^2.2.1",
     "next-google-fonts": "^1.2.1",
     "next-pwa": "^5.0.5",
-    "next-sitemap": "^1.4.15",
+    "next-sitemap": "^1.5.6",
     "react": "^17.0.1",
     "react-custom-scrollbars": "^4.2.1",
     "react-dom": "^17.0.1",
