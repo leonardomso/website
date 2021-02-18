@@ -1,24 +1,36 @@
 import React from "react";
+import readingTime from "reading-time";
+import mdxPrism from "mdx-prism";
+import renderToString from "next-mdx-remote/render-to-string";
+import externalLinks from "remark-external-links";
+import hydrate from "next-mdx-remote/hydrate";
 import Head from "next/head";
-import { useRouter } from "next/router";
+import { Text } from "@chakra-ui/react";
 
 import Layout from "src/components/Layout/Layout";
 import Article from "src/modules/Article/Article";
 
-import markdownToHtml from "src/api/markdownToHtml";
-import { getArticleBySlug, getAllArticles } from "src/api/api";
-import { ArticleType } from "src/types";
+import { api } from "src/lib/lib";
+import { BlogArticleType } from "src/types";
+
+const components = { Text };
 
 interface Props {
-  article: ArticleType;
+  readingTime: {
+    text: string;
+  };
+  frontMatter: {
+    title: string;
+    date: string;
+    content: string;
+  };
+  slug: string;
+  source: any;
+  tags: Array<string>;
 }
 
-const Index = ({ article }: Props) => {
-  const router = useRouter();
-
-  if (!router.isFallback && !article?.slug) {
-    return <h1>error</h1>;
-  }
+const Index = ({ readingTime, frontMatter, source }: Props) => {
+  const content = hydrate(source, { components });
 
   return (
     <div className="container">
@@ -28,11 +40,12 @@ const Index = ({ article }: Props) => {
       </Head>
 
       <Layout>
-        {router.isFallback ? (
-          <h1>Loading…</h1>
-        ) : (
-            <Article article={article} />
-          )}
+        <Article
+          title={frontMatter.title}
+          date={frontMatter.date}
+          timeReading={readingTime}
+          content={content}
+        />
       </Layout>
     </div>
   );
@@ -40,36 +53,41 @@ const Index = ({ article }: Props) => {
 
 export default Index;
 
-interface Params {
+type Params = {
   params: {
     slug: string;
+    timeReading: {
+      text: string;
+    };
   };
-}
+};
 
 export async function getStaticProps({ params }: Params) {
-  const article = getArticleBySlug(params.slug, [
-    "title",
-    "description",
-    "date",
-    "timeReading",
-    "slug",
-    "content",
-  ]);
+  const { content, data } = api.getRawArticleBySlug(params.slug);
 
-  const content: string = await markdownToHtml(article.content || "");
+  const mdxSource = await renderToString(content, {
+    mdxOptions: {
+      remarkPlugins: [externalLinks],
+      rehypePlugins: [mdxPrism],
+    },
+    scope: data,
+  });
+
+  const tags = data.tags ?? [];
 
   return {
     props: {
-      article: {
-        ...article,
-        content,
-      },
+      slug: params.slug,
+      readingTime: readingTime(content),
+      source: mdxSource,
+      frontMatter: data,
+      tags,
     },
   };
 }
 
 export async function getStaticPaths() {
-  const articles = getAllArticles(["slug"]);
+  const articles: Array<BlogArticleType> = api.getAllArticles(["slug"]);
 
   return {
     paths: articles.map((articles) => {

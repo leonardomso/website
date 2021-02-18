@@ -37,7 +37,7 @@ const ArticleItem = ({ article }: Props) => {
 
         <Text width="fit-content" fontSize="16px" lineHeight="30px">
           ·
-      </Text>
+        </Text>
 
         <Text width="fit-content" fontSize="16px" lineHeight="30px">
           {article.timeReading.text}
@@ -47,5 +47,5 @@ const ArticleItem = ({ article }: Props) => {
       <Divider />
     </Stack>
   );
-}
+};
 export default ArticleItem;
