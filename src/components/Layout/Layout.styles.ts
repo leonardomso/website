@@ -16,4 +16,5 @@ export const LayoutInnerContainer = styled.div`
   grid-template-columns: 1fr;
   grid-template-rows: max-content max-content max-content;
   grid-row-gap: 80px;
+  padding: 30px;
 `;

@@ -16,7 +16,7 @@ const ArticleItem = ({ date, title, description, readTime }: Props) => (
     <NextLink href="/article" as="/article">
       <Link
         color="#101010"
-        fontSize={36}
+        fontSize="clamp(1em, 1em + 2vw, 2em)"
         fontWeight="bold"
         lineHeight="44px"
         letterSpacing="-0.03em"

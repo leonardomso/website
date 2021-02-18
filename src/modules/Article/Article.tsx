@@ -7,7 +7,7 @@ const Article = () => (
       <Heading
         color="#101010"
         as="h1"
-        fontSize={72}
+        fontSize="clamp(2em, 2em + 2vw, 3em)"
         letterSpacing="-0.03em"
         textAlign="start"
       >

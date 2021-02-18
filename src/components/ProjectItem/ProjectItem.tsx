@@ -11,7 +11,7 @@ const ProjectItem = ({ title, description, website }: Props) => (
   <Stack direction="column" spacing="20px">
     <Link
       color="#101010"
-      fontSize={36}
+      fontSize="clamp(1em, 1em + 2vw, 2em)"
       fontWeight="bold"
       lineHeight="44px"
       letterSpacing="-0.03em"
