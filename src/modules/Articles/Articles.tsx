@@ -59,6 +59,7 @@ const Articles = () => (
 
     {articles.map(({ title, description, date, readTime, link }: Article) => (
       <ArticleItem
+        key={link}
         title={title}
         description={description}
         date={date}
