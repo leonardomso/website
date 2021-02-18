@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 
 import Layout from "src/components/Layout/Layout";
-import About from "src/components/About/About";
+import Article from "src/modules/Article/Article";
 
 const Index = () => (
   <div className="container">
@@ -12,7 +12,7 @@ const Index = () => (
     </Head>
 
     <Layout>
-      <About />
+      <Article />
     </Layout>
   </div>
 );

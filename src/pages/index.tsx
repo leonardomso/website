@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 
 import Layout from "src/components/Layout/Layout";
-import Home from "src/components/Home/Home";
+import Home from "src/modules/Home/Home";
 
 const Index = () => (
   <div className="container">
