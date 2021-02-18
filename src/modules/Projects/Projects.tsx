@@ -44,7 +44,12 @@ const Projects = () => (
     </Stack>
 
     {projects.map(({ title, description, website }: Article) => (
-      <ProjectItem key={website} title={title} description={description} website={website} />
+      <ProjectItem
+        key={website}
+        title={title}
+        description={description}
+        website={website}
+      />
     ))}
   </Stack>
 );

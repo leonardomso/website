@@ -1,20 +1,37 @@
 import React from "react";
-import Head from "next/head";
 
 import Layout from "src/components/Layout/Layout";
 import Articles from "src/modules/Articles/Articles";
 
-const Index = () => (
-  <div className="container">
-    <Head>
-      <title>Leonardo Maldonado</title>
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
+import { getAllArticles } from "src/api/api";
+import { ArticleType, ItemsType } from "src/types";
 
+type Props = {
+  articles: Array<ArticleType>;
+};
+
+const Index = ({ articles }: Props) => {
+  return (
     <Layout>
-      <Articles />
+      <Articles articles={articles} />
     </Layout>
-  </div>
-);
+  );
+}
+
+export const getStaticProps = async () => {
+  const articles: Array<ItemsType> = getAllArticles([
+    "slug",
+    "title",
+    "description",
+    "date",
+    "coverImage",
+    "timeReading",
+    "content",
+  ]);
+
+  return {
+    props: { articles },
+  };
+};
 
 export default Index;
