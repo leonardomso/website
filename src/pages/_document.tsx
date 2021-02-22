@@ -3,7 +3,7 @@ import Document, { Head, Main, NextScript } from "next/document";
 import GoogleFonts from "next-google-fonts";
 import { ColorModeScript } from "@chakra-ui/react";
 
-import theme from "../system/theme";
+import theme from "src/system/theme";
 
 class MyDocument extends Document {
   render() {
@@ -68,7 +68,7 @@ class MyDocument extends Document {
             name="twitter:image"
             content="https://leonardomso.com/static/icons/android-chrome-192x192.png"
           />
-          <meta name="twitter:creator" content="@DavidWShadow" />
+          <meta name="twitter:creator" content="Leonardo Maldonado" />
           <meta property="og:type" content="website" />
           <meta property="og:title" content="Leonardo Maldonado" />
           <meta property="og:description" content="Leonardo Maldonado blog" />
@@ -156,6 +156,24 @@ class MyDocument extends Document {
           <link rel="manifest" href="/manifest.json" />
 
           <GoogleFonts href="https://fonts.googleapis.com/css?family=Inter:100,200,300,400,500,600,700,800,900&display=swap" />
+
+          {/* Global Site Tag (gtag.js) - Google Analytics */}
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=G-70DZ7TDE8Q`}
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-70DZ7TDE8Q', {
+                page_path: window.location.pathname,
+              });
+          `,
+            }}
+          />
         </Head>
         <body>
           <ColorModeScript initialColorMode={theme.config.initialColorMode} />
