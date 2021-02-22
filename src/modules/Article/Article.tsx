@@ -1,5 +1,5 @@
 import React from "react";
-import { Stack, Heading, Text, Box } from "@chakra-ui/react";
+import { Stack, Heading, Text } from "@chakra-ui/react";
 
 interface Props {
   title: string;
@@ -40,7 +40,7 @@ const Article = ({ title, date, timeReading, content }: Props) => {
           </Stack>
         </Stack>
 
-        <Box>{content}</Box>
+        <Stack fontSize="16px" lineHeight="30px" direction="column" spacing="20px">{content}</Stack>
       </Stack>
     </article>
   );
