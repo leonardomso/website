@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 
 import Layout from "src/components/Layout/Layout";
-import Projects from "src/components/Projects/Projects";
+import Projects from "src/modules/Projects/Projects";
 
 const Index = () => {
   return (
