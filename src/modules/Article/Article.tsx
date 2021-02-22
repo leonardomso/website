@@ -1,8 +1,12 @@
 import React, { ReactNode } from "react";
 import { Stack, Heading, Text } from "@chakra-ui/react";
-import { ArticleJsonLd, NextSeo } from 'next-seo';
+import { ArticleJsonLd, NextSeo } from "next-seo";
 
-import { ARTICLES_BLOG_URL, AUTHOR_NAME, AUTHOR_IMAGE } from "src/utils/constants";
+import {
+  ARTICLES_BLOG_URL,
+  AUTHOR_NAME,
+  AUTHOR_IMAGE,
+} from "src/utils/constants";
 
 interface Props {
   readingTime: {
@@ -15,7 +19,14 @@ interface Props {
   content: ReactNode;
 }
 
-const Article = ({ readingTime, title, description, date, slug, content }: Props) => {
+const Article = ({
+  readingTime,
+  title,
+  description,
+  date,
+  slug,
+  content,
+}: Props) => {
   return (
     <article>
       <NextSeo
@@ -27,7 +38,9 @@ const Article = ({ readingTime, title, description, date, slug, content }: Props
           title: title,
           description: description,
           images: [
-            { url: `${process.env.NEXT_PUBLIC_SITE_URL}/api/og?title=${title}` },
+            {
+              url: `${process.env.NEXT_PUBLIC_SITE_URL}/api/og?title=${title}`,
+            },
           ],
           site_name: title,
         }}
@@ -69,7 +82,14 @@ const Article = ({ readingTime, title, description, date, slug, content }: Props
           </Stack>
         </Stack>
 
-        <Stack fontSize="16px" lineHeight="30px" direction="column" spacing="20px">{content}</Stack>
+        <Stack
+          fontSize="16px"
+          lineHeight="30px"
+          direction="column"
+          spacing="20px"
+        >
+          {content}
+        </Stack>
       </Stack>
     </article>
   );
