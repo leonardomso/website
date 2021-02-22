@@ -4,7 +4,6 @@ import mdxPrism from "mdx-prism";
 import renderToString from "next-mdx-remote/render-to-string";
 import externalLinks from "remark-external-links";
 import hydrate from "next-mdx-remote/hydrate";
-import Head from "next/head";
 import { Text } from "@chakra-ui/react";
 
 import Layout from "src/components/Layout/Layout";
@@ -21,6 +20,7 @@ interface Props {
   };
   frontMatter: {
     title: string;
+    description: string;
     date: string;
     content: string;
   };
@@ -29,21 +29,18 @@ interface Props {
   tags: Array<string>;
 }
 
-const Index = ({ readingTime, frontMatter, source }: Props) => {
+const Index = ({ readingTime, frontMatter, slug, source }: Props) => {
   const content = hydrate(source, { components });
 
   return (
     <div className="container">
-      <Head>
-        <title>Leonardo Maldonado</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <Layout>
         <Article
+          readingTime={readingTime}
           title={frontMatter.title}
+          description={frontMatter.description}
           date={frontMatter.date}
-          timeReading={readingTime}
+          slug={slug}
           content={content}
         />
       </Layout>

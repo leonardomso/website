@@ -24,8 +24,7 @@ const Articles = ({ articles }: Props) => {
         </Heading>
 
         <Text width="100%" fontSize="16px" lineHeight="30px">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur
-          pharetra quis etiam amet.
+          All the articles that I ever wrote. My thoughts, experiments, and ideas.
         </Text>
       </Stack>
 

@@ -38,8 +38,7 @@ const Projects = () => (
       </Heading>
 
       <Text width="100%" fontSize="16px" lineHeight="30px">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur
-        pharetra quis etiam amet.
+        All the projects that I ever created. Those projects are responsible for what I am today.
       </Text>
     </Stack>
 
