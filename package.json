@@ -67,7 +67,7 @@
     "jest-dom": "^4.0.0",
     "prettier": "^2.2.1",
     "ts-jest": "^26.5.4",
-    "typescript": "^4.1.5"
+    "typescript": "^4.2.4"
   },
   "husky": {
     "hooks": {
