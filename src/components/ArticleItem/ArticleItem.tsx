@@ -1,7 +1,9 @@
 import React from "react";
-import { Stack, Text, Divider } from "@chakra-ui/react";
 import NextLink from "next/link";
-import { Link } from "@chakra-ui/react";
+import { Text, Link, Stack, Image } from "@chakra-ui/react";
+import { ArrowForwardIcon } from "@chakra-ui/icons";
+
+import { ArticleItemContainer } from "./Article.styles";
 
 import { ArticleType } from "src/types";
 
@@ -9,43 +11,59 @@ interface Props {
   article: ArticleType;
 }
 
-const ArticleItem = ({ article }: Props) => {
-  return (
-    <Stack direction="column" spacing="20px">
-      <NextLink as={`/articles/${article.slug}`} href="/articles/[slug]">
+const ArticleItem = ({ article }: Props) => (
+  <ArticleItemContainer>
+    <Image
+      src={article.ogImage.url}
+      alt="Image for article"
+      width="100%"
+      height="250px"
+      layout="responsive"
+      lazy="loading"
+      borderRadius="5px"
+      objectFit="cover"
+    />
+
+    <Stack direction={["column"]} spacing="10px">
+      <NextLink as={`/blog/${article.slug}`} href="/blog/[slug]">
         <Link
+          aria-label="link"
+          href={`/blog/${article.slug}`}
           color="#101010"
-          fontSize="clamp(1em, 1em + 2vw, 2em)"
-          fontWeight="bold"
-          lineHeight="44px"
+          fontSize={36}
           letterSpacing="-0.03em"
           textAlign="start"
-          href="/article"
+          fontWeight="600"
         >
           {article.title}
         </Link>
       </NextLink>
 
-      <Text width="100%" fontSize="16px" lineHeight="30px">
+      <Text color="#6F6F6F" fontSize={16} lineHeight="30px" textAlign="start">
         {article.description}
       </Text>
 
       <Stack direction="row" spacing="10px">
-        <Text width="fit-content" fontSize="16px" lineHeight="30px">
-          {article.date}
-        </Text>
-
-        <Text width="fit-content" fontSize="16px" lineHeight="30px">
-          ·
-        </Text>
-
-        <Text width="fit-content" fontSize="16px" lineHeight="30px">
+        <Text color="#6F6F6F" fontSize={16} lineHeight="30px" textAlign="start">
           {article.timeReading.text}
+        </Text>
+
+        <Text color="#6F6F6F" fontSize={16} lineHeight="30px" textAlign="start">
+          •
+        </Text>
+
+        <Text color="#6F6F6F" fontSize={16} lineHeight="30px" textAlign="start">
+          {article.date}
         </Text>
       </Stack>
 
-      <Divider />
+      <NextLink as={`/blog/${article.slug}`} href="/blog/[slug]">
+        <Link aria-label="link" href={`/blog/${article.slug}`} color="#6f6f6f">
+          Read article <ArrowForwardIcon />
+        </Link>
+      </NextLink>
     </Stack>
-  );
-};
+  </ArticleItemContainer>
+);
+
 export default ArticleItem;

@@ -37,7 +37,7 @@ const Projects = () => (
         Projects
       </Heading>
 
-      <Text width="100%" fontSize="16px" lineHeight="30px">
+      <Text color="#6F6F6F" width="100%" fontSize="16px" lineHeight="30px">
         All the projects that I ever created. These projects are responsible for
         what I am today.
       </Text>

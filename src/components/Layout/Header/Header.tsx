@@ -7,20 +7,31 @@ import { HeaderContainer } from "./Header.styles";
 const Header = () => (
   <HeaderContainer>
     <NextLink href="/articles" as="/articles">
-      <Link fontSize="16px" lineHeight="19px" href="/articles">
+      <Link
+        fontSize="16px"
+        fontWeight="normal"
+        lineHeight="30px"
+        href="/articles"
+      >
         Articles
       </Link>
     </NextLink>
 
     <NextLink href="/projects" as="/projects">
-      <Link fontSize="16px" lineHeight="19px" href="/projects">
+      <Link
+        fontSize="16px"
+        fontWeight="normal"
+        lineHeight="30px"
+        href="/projects"
+      >
         Projects
       </Link>
     </NextLink>
 
     <Link
       fontSize="16px"
-      lineHeight="19px"
+      fontWeight="normal"
+      lineHeight="30px"
       href="https://twitter.com/leonardomso"
       target="_blank"
       rel="noopener"

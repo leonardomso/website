@@ -5,7 +5,7 @@ import readingTime from "reading-time";
 
 import { API, BlogArticleType } from "src/types";
 
-const articlesDirectory = join(process.cwd(), "src/_articles");
+const articlesDirectory = join(process.cwd(), "src/articles");
 
 function getRawArticleBySlug(slug: string): matter.GrayMatterFile<string> {
   const fullPath = join(articlesDirectory, `${slug}.mdx`);

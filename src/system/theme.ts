@@ -1,22 +1,33 @@
 import { extendTheme } from "@chakra-ui/react";
 
-const config = {
+const theme = extendTheme({
   styles: {
-    global: (props) => ({
+    global: {
       "html, body": {
-        fontSize: "16px",
-        color: props.colorMode === "dark" ? "white" : "gray.600",
-        lineHeight: "30px",
+        fontSize: 16,
       },
-      a: {
-        color: props.colorMode === "dark" ? "teal.300" : "teal.500",
-      },
-    }),
+    },
   },
-  initialColorMode: "light",
-  useSystemColorMode: false,
-};
-
-const theme = extendTheme({ config } as any);
+  fonts: {
+    heading: "Inter",
+    body: "Inter",
+  },
+  colors: {
+    black: "#101010",
+    white: "#FFFFFF",
+    brand: {
+      50: "#f7f7f7",
+      100: "#ededed",
+      200: "#e1e1e1",
+      300: "#cecece",
+      400: "#a9a9a9",
+      500: "#888888",
+      600: "#616161",
+      700: "#4e4e4e",
+      800: "#303030",
+      900: "#101010",
+    },
+  },
+});
 
 export default theme;
