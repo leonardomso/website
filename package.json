@@ -40,7 +40,7 @@
     "babel-loader": "^8.2.2",
     "date-fns": "^2.21.1",
     "emotion-theming": "^11.0.0",
-    "framer-motion": "^4.1.6",
+    "framer-motion": "^4.1.10",
     "gray-matter": "^4.0.2",
     "husky": "^6.0.0",
     "imagemin-mozjpeg": "^9.0.0",
