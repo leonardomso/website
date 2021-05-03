@@ -9275,10 +9275,10 @@ next-optimized-images@^2.6.2:
     raw-loader "^2.0.0"
     url-loader "^1.1.2"
 
-next-pwa@^5.2.18:
-  version "5.2.18"
-  resolved "https://registry.yarnpkg.com/next-pwa/-/next-pwa-5.2.18.tgz#948e9c1035fac68bee8d81692dab450469797a9d"
-  integrity sha512-T++ATlKrUD42ETf5sLcqK/L6ZV+gm7jRaZMbwJTfrxeqrbkmcYn5WZY3uLx9HI8lC/QcNJQSFd287KCZSLcQ6A==
+next-pwa@^5.2.21:
+  version "5.2.21"
+  resolved "https://registry.yarnpkg.com/next-pwa/-/next-pwa-5.2.21.tgz#fb71ba35b1a984ec6641c5def64ca8c0ab9c2b0f"
+  integrity sha512-jL782UGX0E59TmmYi1xe5kgImeGPBO3me/b3RX7bLP0eG8oJeZiJqTVkc5DJNmXgdwOc6RSvRSOUdBQ9zLu4RA==
   dependencies:
     babel-loader "^8.2.2"
     clean-webpack-plugin "^3.0.0"
