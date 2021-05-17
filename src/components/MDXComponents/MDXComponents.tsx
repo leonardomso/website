@@ -142,7 +142,6 @@ const MDXComponents = {
       color="#6F6F6F"
       fontSize={16}
       lineHeight="30px"
-      fontWeight="300"
       textAlign="start"
       {...props}
     />
