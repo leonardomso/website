@@ -42,7 +42,7 @@
     "emotion-theming": "^11.0.0",
     "framer-motion": "^4.1.17",
     "gray-matter": "^4.0.3",
-    "husky": "^6.0.0",
+    "husky": "^7.0.1",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-optipng": "^8.0.0",
     "imagemin-pngquant": "^9.0.2",
