@@ -30,7 +30,7 @@
     "@babel/preset-env": "^7.14.2",
     "@babel/preset-typescript": "^7.13.0",
     "@chakra-ui/icons": "^1.0.13",
-    "@chakra-ui/react": "^1.6.3",
+    "@chakra-ui/react": "^1.6.5",
     "@emotion/babel-plugin": "^11.3.0",
     "@emotion/core": "^11.0.0",
     "@emotion/react": "^11.4.0",
