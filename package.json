@@ -16,7 +16,7 @@
     "lint:staged": "lint-staged"
   },
   "dependencies": {
-    "@babel/cli": "^7.14.3",
+    "@babel/cli": "^7.14.8",
     "@babel/core": "^7.14.6",
     "@babel/node": "^7.14.7",
     "@babel/plugin-proposal-async-generator-functions": "^7.14.2",
@@ -96,7 +96,7 @@
     "eslint-config-react-app": "^6.0.0",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react": "^7.24.0",
     "globby": "^11.0.4",
     "jest": "^26.6.3",
     "jest-cli": "^27.0.6",
