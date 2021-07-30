@@ -48,7 +48,7 @@
     "imagemin-pngquant": "^9.0.2",
     "imagemin-svgo": "^9.0.0",
     "lint-staged": "^11.1.1",
-    "mdx-prism": "^0.3.3",
+    "mdx-prism": "^0.3.4",
     "next": "^10.2.2",
     "next-compose-plugins": "^2.2.1",
     "next-ga": "^2.3.4",
