@@ -72,7 +72,7 @@
     "remark-capitalize": "^1.1.0",
     "remark-code-titles": "^0.1.2",
     "remark-emoji": "^2.2.0",
-    "remark-external-links": "^8.0.0",
+    "remark-external-links": "^9.0.0",
     "remark-html": "^13.0.1",
     "remark-images": "^2.0.0",
     "remark-slug": "^6.1.0",
