@@ -5445,10 +5445,10 @@ eslint-plugin-jsx-a11y@^6.4.1:
     jsx-ast-utils "^3.1.0"
     language-tags "^1.0.5"
 
-eslint-plugin-prettier@^3.4.0:
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-prettier/-/eslint-plugin-prettier-3.4.0.tgz#cdbad3bf1dbd2b177e9825737fe63b476a08f0c7"
-  integrity sha512-UDK6rJT6INSfcOo545jiaOwB701uAIt2/dR7WnFQoGCVl1/EMqdANBmwUaqqQ45aXprsTGzSa39LI1PyuRBxxw==
+eslint-plugin-prettier@^3.4.1:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-prettier/-/eslint-plugin-prettier-3.4.1.tgz#e9ddb200efb6f3d05ffe83b1665a716af4a387e5"
+  integrity sha512-htg25EUYUeIhKHXjOinK4BgCcDwtLHjqaxCDsMy5nbnUMkKFvIhMVCp+5GFUXQ4Nr8lBsPqtGAqBenbpFqAA2g==
   dependencies:
     prettier-linter-helpers "^1.0.0"
 
@@ -10937,10 +10937,10 @@ readdirp@~3.5.0:
   dependencies:
     picomatch "^2.2.1"
 
-reading-time@^1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/reading-time/-/reading-time-1.3.0.tgz#d13e74431589a4a9038669f24d5acbc08bbb015d"
-  integrity sha512-RJ8J5O6UvrclfZpcPSPuKusrdRfoY7uXXoYOOdeswZNtSkQaewT3919yz6RyloDBR+iwcUyz5zGOUjhgvfuv3g==
+reading-time@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/reading-time/-/reading-time-1.4.0.tgz#53fd822ceed6ca44e07497b3e975af1712ba5a86"
+  integrity sha512-0I9aP583rqQhm6T6Y+pYgYaM4w649VHgQPC24xSWXpn/4qRs08Zu6KgXRf0da6/k7IHoC6idm76fU6vz4mmzHQ==
 
 redent@^1.0.0:
   version "1.0.0"
