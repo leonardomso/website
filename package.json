@@ -74,7 +74,7 @@
     "remark-emoji": "^2.2.0",
     "remark-external-links": "^8.0.0",
     "remark-html": "^14.0.1",
-    "remark-images": "^2.0.0",
+    "remark-images": "^3.0.0",
     "remark-slug": "^6.1.0",
     "webp-loader": "^0.6.0",
     "webpack": "^5.52.1"
