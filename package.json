@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@babel/cli": "^7.14.8",
-    "@babel/core": "^7.15.0",
+    "@babel/core": "^7.15.5",
     "@babel/node": "^7.15.4",
     "@babel/plugin-proposal-async-generator-functions": "^7.14.2",
     "@babel/plugin-proposal-class-properties": "^7.13.0",
@@ -35,7 +35,7 @@
     "@emotion/core": "^11.0.0",
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
-    "@next/mdx": "^11.1.0",
+    "@next/mdx": "^11.1.2",
     "@zeit/next-source-maps": "^0.0.3",
     "babel-loader": "^8.2.2",
     "date-fns": "^2.23.0",
