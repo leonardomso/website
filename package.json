@@ -71,7 +71,7 @@
     "remark-autolink-headings": "^6.1.0",
     "remark-capitalize": "^1.1.0",
     "remark-code-titles": "^0.1.2",
-    "remark-emoji": "^2.2.0",
+    "remark-emoji": "^3.0.2",
     "remark-external-links": "^8.0.0",
     "remark-html": "^14.0.1",
     "remark-images": "^2.0.0",
