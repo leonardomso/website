@@ -77,7 +77,7 @@
     "remark-images": "^2.0.0",
     "remark-slug": "^6.1.0",
     "webp-loader": "^0.6.0",
-    "webpack": "^5.52.1"
+    "webpack": "^5.64.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.14.1",
