@@ -54,7 +54,7 @@
     "next-ga": "^2.3.4",
     "next-google-fonts": "^2.2.0",
     "next-images": "^1.8.1",
-    "next-mdx-remote": "^2.1.4",
+    "next-mdx-remote": "^3.0.8",
     "next-optimized-images": "^2.6.2",
     "next-pwa": "^5.3.1",
     "next-remote-watch": "^1.0.0",
