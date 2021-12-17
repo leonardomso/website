@@ -1,18 +1,18 @@
 import React from "react";
 import readingTime from "reading-time";
 import mdxPrism from "mdx-prism";
-import renderToString from "next-mdx-remote/render-to-string";
-import hydrate from "next-mdx-remote/hydrate";
+import { serialize } from "next-mdx-remote/serialize";
+import { MDXRemote } from "next-mdx-remote";
 import { ArticleJsonLd, NextSeo } from "next-seo";
 
 import Layout from "src/components/Layout/Layout";
 
 import MDXComponents from "src/components/MDXComponents/MDXComponents";
 
-import Article from "src/modules/Article/Article";
-
 import { api } from "src/lib/lib";
 import { BlogArticleType } from "src/types";
+
+const components = { MDXComponents };
 
 interface Props {
   readingTime: {
@@ -36,11 +36,7 @@ interface Props {
   tags: Array<string>;
 }
 
-const Index = ({ readingTime, frontMatter, slug, source }: Props) => {
-  const content = hydrate(source, {
-    components: MDXComponents,
-  });
-
+const Index = ({ frontMatter, slug, source }: Props) => {
   return (
     <Layout>
       <NextSeo
@@ -70,16 +66,7 @@ const Index = ({ readingTime, frontMatter, slug, source }: Props) => {
         description={frontMatter.description}
       />
 
-      <Article
-        readingTime={readingTime}
-        title={frontMatter.title}
-        description={frontMatter.description}
-        date={frontMatter.date}
-        content={content}
-        author={frontMatter.author}
-        ogImage={frontMatter.ogImage}
-        slug={slug}
-      />
+      <MDXRemote {...source} components={components} />
     </Layout>
   );
 };
@@ -98,8 +85,7 @@ type Params = {
 export async function getStaticProps({ params }: Params) {
   const { content, data } = api.getRawArticleBySlug(params.slug);
 
-  const mdxSource = await renderToString(content, {
-    components: MDXComponents,
+  const mdxSource = await serialize(content, {
     mdxOptions: {
       remarkPlugins: [
         require("remark-autolink-headings"),

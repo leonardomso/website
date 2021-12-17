@@ -55,100 +55,128 @@ const Quote = (props) => {
   );
 };
 
+const HeadingOne = (props) => (
+  <Heading
+    color="#101010"
+    as="h1"
+    fontSize={36}
+    letterSpacing="-0.03em"
+    textAlign="start"
+    fontWeight="600"
+    {...props}
+  />
+);
+
+const HeadingTwo = (props) => (
+  <Heading
+    color="#101010"
+    as="h2"
+    fontSize={36}
+    letterSpacing="-0.03em"
+    textAlign="start"
+    fontWeight="600"
+    {...props}
+  />
+);
+
+const HeadingThree = (props) => (
+  <Heading
+    color="#101010"
+    as="h3"
+    fontSize={36}
+    letterSpacing="-0.03em"
+    textAlign="start"
+    fontWeight="600"
+    {...props}
+  />
+);
+
+const HeadingFour = (props) => (
+  <Heading
+    color="#101010"
+    as="h4"
+    fontSize={36}
+    letterSpacing="-0.03em"
+    textAlign="start"
+    fontWeight="600"
+    {...props}
+  />
+);
+
+const HeadingFive = (props) => (
+  <Heading
+    color="#101010"
+    as="h5"
+    fontSize={36}
+    letterSpacing="-0.03em"
+    textAlign="start"
+    fontWeight="600"
+    {...props}
+  />
+);
+
+const HeadingSix = (props) => (
+  <Heading
+    color="#101010"
+    as="h6"
+    fontSize={36}
+    letterSpacing="-0.03em"
+    textAlign="start"
+    fontWeight="600"
+    {...props}
+  />
+);
+
+const InlineCode = (props) => (
+  <Code
+    fontSize={14}
+    fontWeight="600"
+    bgColor="#F3F3F3"
+    color="#6F6F6F"
+    borderRadius="2px"
+    pl={1}
+    pr={1}
+    {...props}
+  />
+);
+
+const BreakLine = (props) => <Box height="20px" {...props} />;
+
+const HorizontalLine = (props) => (
+  <Divider orientation="horizontal" {...props} />
+);
+
+const Paragraph = (props) => (
+  <Text
+    color="#6F6F6F"
+    fontSize={16}
+    lineHeight="30px"
+    textAlign="start"
+    {...props}
+  />
+);
+
+const Unordered = (props) => <UnorderedList {...props} />;
+
+const Ordered = (props) => <OrderedList {...props} />;
+
+const Item = (props) => <ListItem {...props} />;
+
 const MDXComponents = {
-  h1: (props) => (
-    <Heading
-      color="#101010"
-      as="h1"
-      fontSize={36}
-      letterSpacing="-0.03em"
-      textAlign="start"
-      fontWeight="600"
-      {...props}
-    />
-  ),
-  h2: (props) => (
-    <Heading
-      color="#101010"
-      as="h2"
-      fontSize={36}
-      letterSpacing="-0.03em"
-      textAlign="start"
-      fontWeight="600"
-      {...props}
-    />
-  ),
-  h3: (props) => (
-    <Heading
-      color="#101010"
-      as="h3"
-      fontSize={36}
-      letterSpacing="-0.03em"
-      textAlign="start"
-      fontWeight="600"
-      {...props}
-    />
-  ),
-  h4: (props) => (
-    <Heading
-      color="#101010"
-      as="h4"
-      fontSize={36}
-      letterSpacing="-0.03em"
-      textAlign="start"
-      fontWeight="600"
-      {...props}
-    />
-  ),
-  h5: (props) => (
-    <Heading
-      color="#101010"
-      as="h5"
-      fontSize={36}
-      letterSpacing="-0.03em"
-      textAlign="start"
-      fontWeight="600"
-      {...props}
-    />
-  ),
-  h6: (props) => (
-    <Heading
-      color="#101010"
-      as="h6"
-      fontSize={36}
-      letterSpacing="-0.03em"
-      textAlign="start"
-      fontWeight="600"
-      {...props}
-    />
-  ),
-  inlineCode: (props) => (
-    <Code
-      fontSize={14}
-      fontWeight="600"
-      bgColor="#F3F3F3"
-      color="#6F6F6F"
-      borderRadius="2px"
-      pl={1}
-      pr={1}
-      {...props}
-    />
-  ),
-  br: (props) => <Box height="20px" {...props} />,
-  hr: (props) => <Divider orientation="horizontal" {...props} />,
+  h1: HeadingOne,
+  h2: HeadingTwo,
+  h3: HeadingThree,
+  h4: HeadingFour,
+  h5: HeadingFive,
+  h6: HeadingSix,
+  inlineCode: InlineCode,
+  br: BreakLine,
+  hr: HorizontalLine,
   a: CustomLink,
-  p: (props) => (
-    <Text
-      color="#6F6F6F"
-      fontSize={16}
-      lineHeight="30px"
-      textAlign="start"
-      {...props}
-    />
-  ),
-  ul: (props) => <UnorderedList {...props} />,
-  ol: (props) => <OrderedList {...props} />,
-  li: (props) => <ListItem {...props} />,
+  p: Paragraph,
+  ul: Unordered,
+  ol: Ordered,
+  li: Item,
   blockquote: Quote,
 };
 
