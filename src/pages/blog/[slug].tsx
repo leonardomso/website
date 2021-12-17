@@ -87,18 +87,6 @@ export async function getStaticProps({ params }: Params) {
 
   const mdxSource = await serialize(content, {
     mdxOptions: {
-      remarkPlugins: [
-        require("remark-autolink-headings"),
-        require("remark-slug"),
-        require("remark-code-titles"),
-        require("remark-autolink-headings"),
-        require("remark-capitalize"),
-        require("remark-code-titles"),
-        require("remark-emoji"),
-        require("remark-external-links"),
-        require("remark-images"),
-        require("remark-slug"),
-      ],
       rehypePlugins: [mdxPrism],
     },
   });
