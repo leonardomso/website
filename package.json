@@ -12,8 +12,7 @@
     "test:watch": "jest --watchAll",
     "test:coverage": "jest --coverage",
     "lint": "next lint",
-    "format": "prettier --write src",
-    "tsc": "tsc"
+    "format": "prettier --write src"
   },
   "dependencies": {
     "@babel/cli": "^7.16.0",
