@@ -1,5 +1,5 @@
 import React from "react";
-import Document, { Head, Main, NextScript } from "next/document";
+import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { GoogleFonts } from "next-google-fonts";
 import { ColorModeScript } from "@chakra-ui/react";
 
@@ -8,7 +8,7 @@ import theme from "src/system/theme";
 class MyDocument extends Document {
   render() {
     return (
-      <html lang="en-US">
+      <Html>
         <Head>
           <meta name="application-name" content="Leonardo Maldonado" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -57,7 +57,7 @@ class MyDocument extends Document {
           <link rel="shortcut icon" href="/static/icons/favicon.ico" />
           <link
             rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=optional"
           />
 
           <meta name="twitter:card" content="summary" />
@@ -180,7 +180,7 @@ class MyDocument extends Document {
           <Main />
           <NextScript />
         </body>
-      </html>
+      </Html>
     );
   }
 }
