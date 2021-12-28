@@ -6,17 +6,6 @@ import { HeaderContainer } from "./Header.styles";
 
 const Header = () => (
   <HeaderContainer>
-    <NextLink href="/articles" as="/articles">
-      <Link
-        fontSize="16px"
-        fontWeight="normal"
-        lineHeight="30px"
-        href="/articles"
-      >
-        Articles
-      </Link>
-    </NextLink>
-
     <NextLink href="/projects" as="/projects">
       <Link
         fontSize="16px"
