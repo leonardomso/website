@@ -15,7 +15,7 @@
     "format": "prettier --write src"
   },
   "dependencies": {
-    "@babel/cli": "^7.16.0",
+    "@babel/cli": "^7.16.7",
     "@babel/core": "^7.16.5",
     "@babel/node": "^7.16.5",
     "@babel/plugin-proposal-async-generator-functions": "^7.16.5",
@@ -58,7 +58,7 @@
     "babel-jest": "^27.4.5",
     "babel-plugin-emotion": "^11.0.0",
     "babel-plugin-inline-react-svg": "^2.0.1",
-    "eslint": "^8.5.0",
+    "eslint": "^8.6.0",
     "eslint-config-next": "^12.0.7",
     "globby": "^12.0.2",
     "jest": "^27.4.5",
