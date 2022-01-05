@@ -61,7 +61,7 @@
     "eslint": "^8.6.0",
     "eslint-config-next": "^12.0.7",
     "globby": "^12.0.2",
-    "jest": "^27.4.5",
+    "jest": "^27.4.6",
     "jest-cli": "^27.4.5",
     "jest-dom": "^4.0.0",
     "prettier": "^2.5.1",
