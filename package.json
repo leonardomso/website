@@ -35,7 +35,7 @@
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
     "babel-loader": "^8.2.4",
-    "framer-motion": "^6.2.9",
+    "framer-motion": "^6.2.10",
     "gray-matter": "^4.0.3",
     "next": "^12.1.5",
     "next-compose-plugins": "^2.2.1",
