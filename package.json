@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@babel/cli": "^7.17.6",
-    "@babel/core": "^7.17.9",
+    "@babel/core": "^7.18.2",
     "@babel/node": "^7.16.8",
     "@babel/plugin-proposal-async-generator-functions": "^7.16.7",
     "@babel/plugin-proposal-class-properties": "^7.16.7",
@@ -53,7 +53,7 @@
     "@testing-library/react": "^12.1.5",
     "@testing-library/user-event": "^14.1.1",
     "@types/react": "^17.0.43",
-    "@types/node": "^17.0.25",
+    "@types/node": "^17.0.40",
     "@types/react-custom-scrollbars": "^4.0.10",
     "babel-jest": "^28.1.0",
     "babel-plugin-emotion": "^11.0.0",
