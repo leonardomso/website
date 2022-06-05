@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@babel/cli": "^7.17.6",
-    "@babel/core": "^7.17.9",
+    "@babel/core": "^7.18.2",
     "@babel/node": "^7.16.8",
     "@babel/plugin-proposal-async-generator-functions": "^7.16.7",
     "@babel/plugin-proposal-class-properties": "^7.16.7",
@@ -45,7 +45,7 @@
     "next-sitemap": "^1.8.7",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-feather": "^2.0.9",
+    "react-feather": "^2.0.10",
     "webpack": "^5.72.0"
   },
   "devDependencies": {
