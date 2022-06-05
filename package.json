@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@babel/cli": "^7.17.6",
-    "@babel/core": "^7.17.9",
+    "@babel/core": "^7.18.2",
     "@babel/node": "^7.16.8",
     "@babel/plugin-proposal-async-generator-functions": "^7.16.7",
     "@babel/plugin-proposal-class-properties": "^7.16.7",
@@ -58,7 +58,7 @@
     "babel-jest": "^28.1.0",
     "babel-plugin-emotion": "^11.0.0",
     "babel-plugin-inline-react-svg": "^2.0.1",
-    "eslint": "^8.15.0",
+    "eslint": "^8.17.0",
     "eslint-config-next": "^12.1.5",
     "globby": "^13.1.1",
     "jest": "^27.5.1",
