@@ -59,7 +59,7 @@
     "babel-plugin-emotion": "^11.0.0",
     "babel-plugin-inline-react-svg": "^2.0.1",
     "eslint": "^8.15.0",
-    "eslint-config-next": "^12.1.5",
+    "eslint-config-next": "^12.2.1",
     "globby": "^13.1.1",
     "jest": "^27.5.1",
     "jest-cli": "^27.5.1",
