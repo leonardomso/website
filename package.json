@@ -62,7 +62,7 @@
     "eslint-config-next": "^12.2.2",
     "globby": "^13.1.2",
     "jest": "^28.1.2",
-    "jest-cli": "^28.1.2",
+    "jest-cli": "^29.0.3",
     "jest-dom": "^4.0.0",
     "prettier": "^2.7.1",
     "ts-jest": "^28.0.5",
