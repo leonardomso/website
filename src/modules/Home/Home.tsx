@@ -1,19 +1,11 @@
 import React from "react";
-import { Stack, Heading, Text } from "@chakra-ui/react";
+import { Stack, Title, Text } from "@mantine/core";
 
 const Home = () => (
-  <Stack direction="column" spacing="20px">
-    <Heading
-      color="#101010"
-      as="h1"
-      fontSize="clamp(2em, 2em + 2vw, 3em)"
-      letterSpacing="-0.03em"
-      textAlign="start"
-    >
-      Leonardo Maldonado
-    </Heading>
+  <Stack spacing={20}>
+    <Title>Leonardo Maldonado</Title>
 
-    <Text width="100%" fontSize="18px" lineHeight="30px">
+    <Text>
       I work with powerful technologies to help companies succeed.
       <br />
       <br />I mostly work with <strong>JavaScript</strong> and technologies

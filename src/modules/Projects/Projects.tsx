@@ -1,5 +1,5 @@
 import React from "react";
-import { Stack, Heading, Text } from "@chakra-ui/react";
+import { Stack, Title, Text } from "@mantine/core";
 
 import ProjectItem from "src/components/ProjectItem/ProjectItem";
 
@@ -25,19 +25,11 @@ const projects: Array<Article> = [
 ];
 
 const Projects = () => (
-  <Stack direction="column" spacing="50px">
-    <Stack direction="column" spacing="20px">
-      <Heading
-        color="#101010"
-        as="h1"
-        fontSize="clamp(2em, 2em + 2vw, 3em)"
-        letterSpacing="-0.03em"
-        textAlign="start"
-      >
-        Projects
-      </Heading>
+  <Stack spacing={50}>
+    <Stack spacing={20}>
+      <Title>Projects</Title>
 
-      <Text color="#6F6F6F" width="100%" fontSize="16px" lineHeight="30px">
+      <Text color="#6F6F6F">
         All the projects that I ever created. These projects are responsible for
         what I am today.
       </Text>
