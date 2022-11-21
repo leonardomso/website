@@ -20,7 +20,7 @@
     "@mantine/core": "^5.6.1",
     "@mantine/dates": "^5.6.1",
     "@mantine/hooks": "^5.6.1",
-    "@mantine/next": "^5.6.1",
+    "@mantine/next": "^5.8.2",
     "cookies-next": "^2.1.1",
     "framer-motion": "^7.6.1",
     "next": "^12.3.1",
