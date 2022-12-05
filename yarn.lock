@@ -1511,15 +1511,14 @@ flatted@^3.1.0:
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.2.4.tgz#28d9969ea90661b5134259f312ab6aa7929ac5e2"
   integrity sha512-8/sOawo8tJ4QOBX8YlQBMxL8+RLZfxMQOif9o0KUKTNTjMYElWPE0r/m5VNFxTRd0NSw8qSy8dajrwX4RYI1Hw==
 
-framer-motion@^7.6.1:
-  version "7.6.1"
-  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-7.6.1.tgz#45356eb5519275bce42121a3b3849a6243d45a22"
-  integrity sha512-8US03IWJKrLoSb81l5OahNzB9Sv7Jo1RhIwUoTG/25BRUdO9lOqq/klsdZqNmNG0ua9IEJJQ8hkYpETJ4N6VSw==
+framer-motion@^7.6.18:
+  version "7.6.18"
+  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-7.6.18.tgz#bdc8f27c90d2b0d49c81bb8ac3ec2dc3b5504609"
+  integrity sha512-+njLqmMZBqf+GpIMRkuC7s9A9KrvOfMXm+B/yscKG+/SKAA+qdQFl/3ACU2tAhN7UFau1HuB/vBa/jrWBKVvDg==
   dependencies:
     "@motionone/dom" "10.13.1"
     framesync "6.1.2"
     hey-listen "^1.0.8"
-    popmotion "11.0.5"
     style-value-types "5.1.2"
     tslib "2.4.0"
   optionalDependencies:
@@ -2405,16 +2404,6 @@ picomatch@^2.2.3:
   version "2.2.3"
   resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.2.3.tgz#465547f359ccc206d3c48e46a1bcb89bf7ee619d"
   integrity sha512-KpELjfwcCDUb9PeigTs2mBJzXUPzAuP2oPcA989He8Rte0+YUAjw1JVedDhuTKPkHjSYzMN3npC9luThGYEKdg==
-
-popmotion@11.0.5:
-  version "11.0.5"
-  resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-11.0.5.tgz#8e3e014421a0ffa30ecd722564fd2558954e1f7d"
-  integrity sha512-la8gPM1WYeFznb/JqF4GiTkRRPZsfaj2+kCxqQgr2MJylMmIKUwBfWW8Wa5fml/8gmtlD5yI01MP1QCZPWmppA==
-  dependencies:
-    framesync "6.1.2"
-    hey-listen "^1.0.8"
-    style-value-types "5.1.2"
-    tslib "2.4.0"
 
 postcss@8.4.14:
   version "8.4.14"
