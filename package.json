@@ -33,7 +33,7 @@
     "react-feather": "^2.0.10"
   },
   "devDependencies": {
-    "@types/node": "^18.11.3",
+    "@types/node": "^18.14.0",
     "@types/react": "^18.0.21",
     "@types/react-custom-scrollbars": "^4.0.10",
     "eslint": "^8.26.0",
