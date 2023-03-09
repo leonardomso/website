@@ -1,6 +1,7 @@
 import { Inter } from 'next/font/google'
 
 import Header from '~/app/components/Header/Header'
+import Analytics from '~/app/components/Analytics/Analytics'
 
 import '~/styles/global.css'
 import { cn } from '~/lib/utils'
