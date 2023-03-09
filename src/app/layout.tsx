@@ -28,6 +28,7 @@ const Layout = ({ children }: Props) => {
           <Header />
           {children}
         </div>
+        <Analytics />
       </body>
     </html>
   )
