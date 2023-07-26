@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 const Page = () => {
   return (
     <div className="max-w-2xl">
@@ -14,7 +13,7 @@ const Page = () => {
         >
           Namecheap
         </a>
-        . I'm passionate about building software that helps people and
+        I'm passionate about building software that helps people and
         businesses succeed. I like to write and read about software, philosophy,
         entrepreneurship, and more.
       </p>
