@@ -16,11 +16,15 @@ interface Props {
 const Layout = ({ children }: Props) => {
   return (
     <html
+      suppressHydrationWarning
       lang="en"
-      className={cn('font-sans text-slate-900 antialiased', fontSans.variable)}
+      className={cn(
+        'min-h-screen bg-background font-sans antialiased',
+        fontSans.variable,
+      )}
     >
       <head />
-      <body className="h-full bg-white dark:bg-neutral-900">
+      <body className="selection:bg-accent selection:text-accent-foreground">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 xl:max-w-5xl xl:px-0">
           {children}
         </div>
