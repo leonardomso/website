@@ -1,4 +1,7 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
+
+import { Button } from '~/components/ui/button'
 
 import { siteConfig } from '~/config/site'
 
@@ -37,23 +40,43 @@ export async function generateMetadata(): Promise<Metadata> {
 
 const Page = () => {
   return (
-    <div className="max-w-2xl">
-      <h1 className="tracking-3 text-4xl font-semibold text-gray-900 dark:text-white">
-        Software engineer, philosophy student, and entrepreneur.
-      </h1>
-      <p className="tracking-1 mt-6 text-base text-gray-500 dark:text-gray-400">
-        I’m Leonardo Maldonado, a software engineer working at{' '}
-        <a
-          className="tracking-1 text-base font-medium text-gray-900 hover:underline dark:text-white"
-          href="https://www.namecheap.com/"
-          target="_blank"
-        >
-          Namecheap
-        </a>
-        I am passionate about building software that helps people and businesses
-        succeed. I like to write and read about software, philosophy,
-        entrepreneurship, and more.
-      </p>
+    <div className="max-w-1xl flex flex-col gap-20 p-4">
+      <header className="flex flex-col justify-between gap-4 sm:flex-row">
+        <div>
+          <h1 className="text-2xl font-semibold tracking-tighter">
+            Leonardo Maldonado
+          </h1>
+          <p className="whitespace-normal text-sm text-muted-foreground">
+            software engineer
+          </p>
+        </div>
+
+        <div>
+          <Button variant="ghost" asChild>
+            <Link href="/about">about</Link>
+          </Button>
+
+          <Button variant="ghost" asChild>
+            <Link href="/projects">projects</Link>
+          </Button>
+        </div>
+      </header>
+
+      <main>
+        <h2 className="text-6xl font-semibold tracking-tighter">
+          I design apps.
+        </h2>
+        <p className="mt-4 whitespace-normal text-lg text-muted-foreground">
+          I{`'`}m Leo, a passionate creator living in Franca, Brazil. I have
+          years of experience with JavaScript, React, Node.js, TypeScript,
+          GraphQL, MongoDB, PostgreSQL, Tailwind, etc. I write monthly articles
+          related to various technologies.{' '}
+        </p>
+      </main>
+
+      <div>
+        <h2 className="text-1xl font-semibold tracking-tighter">projects</h2>
+      </div>
     </div>
   )
 }
