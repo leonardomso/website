@@ -1,4 +1,7 @@
 import { Inter } from 'next/font/google'
+import Link from 'next/link'
+
+import { Button } from '~/components/ui/button'
 
 import '~/styles/global.css'
 import { cn } from '~/lib/utils'
@@ -24,8 +27,30 @@ const Layout = ({ children }: Props) => {
       )}
     >
       <head />
-      <body className="selection:bg-accent selection:text-accent-foreground">
-        <div className="mx-auto max-w-2xl px-4">{children}</div>
+      <body className="mx-auto flex max-w-2xl flex-col gap-20 p-4 px-4">
+        <header className="max-w-1xl flex flex-col justify-between gap-4 sm:flex-row">
+          <div>
+            <Link href="/">
+              <h1 className="text-2xl font-semibold tracking-tighter">
+                Leonardo Maldonado
+              </h1>
+              <p className="whitespace-normal text-sm text-muted-foreground">
+                software engineer
+              </p>
+            </Link>
+          </div>
+
+          <div>
+            <Button variant="ghost" asChild>
+              <Link href="/about">about</Link>
+            </Button>
+
+            <Button variant="ghost" asChild>
+              <Link href="/projects">projects</Link>
+            </Button>
+          </div>
+        </header>
+        {children}
       </body>
     </html>
   )

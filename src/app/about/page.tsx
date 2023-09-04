@@ -39,19 +39,13 @@ const Page = () => {
   return (
     <main className="flex flex-col gap-10">
       <div>
-        <h2 className="text-6xl font-semibold tracking-tighter">
-          I design apps.
-        </h2>
+        <h2 className="text-6xl font-semibold tracking-tighter">about me</h2>
         <p className="mt-4 whitespace-normal text-lg text-muted-foreground">
           I{`'`}m Leo, a passionate creator living in Franca, Brazil. I have
           years of experience with JavaScript, React, Node.js, TypeScript,
           GraphQL, MongoDB, PostgreSQL, Tailwind, etc. I write monthly articles
           related to various technologies.{' '}
         </p>
-      </div>
-
-      <div>
-        <h2 className="text-1xl font-semibold tracking-tighter">projects</h2>
       </div>
     </main>
   )
