@@ -1,6 +1,8 @@
 import { Inter } from 'next/font/google'
 import Link from 'next/link'
 
+import Footer from '~/app/components/Footer/Footer'
+
 import { Button } from '~/components/ui/button'
 
 import '~/styles/global.css'
@@ -51,6 +53,7 @@ const Layout = ({ children }: Props) => {
           </div>
         </header>
         {children}
+        <Footer />
       </body>
     </html>
   )
