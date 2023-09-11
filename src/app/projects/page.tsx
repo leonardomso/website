@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 
 import { siteConfig } from '~/config/site'
 
+import Projects from '~/app/components/Projects/Projects'
+
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: siteConfig.title,
@@ -41,12 +43,12 @@ const Page = () => {
       <div>
         <h2 className="text-6xl font-semibold tracking-tighter">my projects</h2>
         <p className="mt-4 whitespace-normal text-lg text-muted-foreground">
-          I{`'`}m Leo, a passionate creator living in Franca, Brazil. I have
-          years of experience with JavaScript, React, Node.js, TypeScript,
-          GraphQL, MongoDB, PostgreSQL, Tailwind, etc. I write monthly articles
-          related to various technologies.{' '}
+          I like to build projects in my free time. Here are some of them. I
+          hope you like it.
         </p>
       </div>
+
+      <Projects />
     </main>
   )
 }
