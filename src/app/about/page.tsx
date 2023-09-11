@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
+import { ExternalLink } from 'lucide-react'
 
 import { siteConfig } from '~/config/site'
 
@@ -41,10 +43,43 @@ const Page = () => {
       <div>
         <h2 className="text-6xl font-semibold tracking-tighter">about me</h2>
         <p className="mt-4 whitespace-normal text-lg text-muted-foreground">
-          I{`'`}m Leo, a passionate creator living in Franca, Brazil. I have
+          I am a software engineer who works with powerful technologies. I have
           years of experience with JavaScript, React, Node.js, TypeScript,
-          GraphQL, MongoDB, PostgreSQL, Tailwind, etc. I write monthly articles
-          related to various technologies.{' '}
+          GraphQL, MongoDB, PostgreSQL, Tailwind, etc.
+        </p>
+
+        <p className="mt-4 whitespace-normal text-lg text-muted-foreground">
+          <Link
+            href="https://github.blog/2018-12-13-new-open-source-projects/#top-projects-of-2018"
+            target="_blank"
+            className="font-semibold text-secondary-foreground hover:underline"
+          >
+            I created an open-source project considered by GitHub one of the top
+            projects in 2018.
+          </Link>{' '}
+          The project was{' '}
+          <Link
+            href="https://github.com/leonardomso/33-js-concepts"
+            target="_blank"
+            className="font-semibold text-secondary-foreground hover:underline"
+          >
+            33 JavaScript Concepts
+          </Link>{' '}
+          and it lists a ton of content for JavaScript developers who want to
+          master their skills.
+        </p>
+
+        <p className="mt-4 whitespace-normal text-lg text-muted-foreground">
+          I write monthly articles for{' '}
+          <Link
+            href="https://www.telerik.com/blogs/author/leonardo-maldonado"
+            target="_blank"
+            className="font-semibold text-secondary-foreground hover:underline"
+          >
+            Telerik
+          </Link>{' '}
+          related to various technologies such as JavaScript, React, GraphQL,
+          TypeScript, databases, etc.
         </p>
       </div>
     </main>
