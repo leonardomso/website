@@ -1,30 +1,25 @@
-name: CI
+name: Build
 on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Begin CI...
+      - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Use Node 12
+      - name: Use Node 18
         uses: actions/setup-node@v1
         with:
-          node-version: 12.x
+          node-version: 18.x
 
-      - name: Use cached node_modules
-        uses: actions/cache@v1
+      - name: Cache node_modules
+        uses: actions/cache@v2
         with:
-          path: node_modules
-          key: nodeModules-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            nodeModules-
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
-        env:
-          CI: true
+        uses: bahmutov/npm-install@v1
 
       - name: Lint
         run: yarn lint
@@ -33,6 +28,11 @@ jobs:
 
       - name: Format
         run: yarn format
+        env:
+          CI: true
+
+      - name: Typecheck
+        run: yarn typecheck
         env:
           CI: true
 
