@@ -41,7 +41,7 @@ const Page = () => {
   return (
     <main className="flex flex-col gap-10">
       <div>
-        <h2 className="text-6xl font-semibold tracking-tighter">my projects</h2>
+        <h2 className="text-6xl font-semibold tracking-tighter">projects</h2>
         <p className="mt-4 whitespace-normal text-lg text-muted-foreground">
           I like to build projects in my free time. Here are some of them. I
           hope you like it.

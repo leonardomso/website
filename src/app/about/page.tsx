@@ -52,7 +52,7 @@ const Page = () => {
           <Link
             href="https://github.blog/2018-12-13-new-open-source-projects/#top-projects-of-2018"
             target="_blank"
-            className="font-semibold text-secondary-foreground hover:underline"
+            className="font-semibold hover:underline"
           >
             I created an open-source project considered by GitHub one of the top
             projects in 2018.
@@ -61,7 +61,7 @@ const Page = () => {
           <Link
             href="https://github.com/leonardomso/33-js-concepts"
             target="_blank"
-            className="font-semibold text-secondary-foreground hover:underline"
+            className="font-semibold hover:underline"
           >
             33 JavaScript Concepts
           </Link>{' '}
@@ -74,7 +74,7 @@ const Page = () => {
           <Link
             href="https://www.telerik.com/blogs/author/leonardo-maldonado"
             target="_blank"
-            className="font-semibold text-secondary-foreground hover:underline"
+            className="font-semibold hover:underline"
           >
             Telerik
           </Link>{' '}

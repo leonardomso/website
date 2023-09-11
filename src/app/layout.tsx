@@ -50,6 +50,10 @@ const Layout = ({ children }: Props) => {
             <Button variant="ghost" asChild>
               <Link href="/projects">projects</Link>
             </Button>
+
+            <Button variant="ghost" asChild>
+              <Link href="/articles">articles</Link>
+            </Button>
           </div>
         </header>
         {children}
