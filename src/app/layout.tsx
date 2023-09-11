@@ -1,5 +1,6 @@
 import { Inter } from 'next/font/google'
 import Link from 'next/link'
+import Script from 'next/script'
 
 import Footer from '~/app/components/Footer/Footer'
 
@@ -58,6 +59,7 @@ const Layout = ({ children }: Props) => {
         </header>
         {children}
         <Footer />
+        <Script src="https://scripts.simpleanalyticscdn.com/latest.js" />
       </body>
     </html>
   )
