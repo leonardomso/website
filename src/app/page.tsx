@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 
 import { siteConfig } from '~/config/site'
 
+import Projects from '~/app/components/Projects/Projects'
+
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: siteConfig.title,
@@ -40,7 +42,7 @@ const Page = () => {
     <main className="flex flex-col gap-10">
       <div>
         <h2 className="text-6xl font-semibold tracking-tighter">
-          I design apps.
+          I build apps.
         </h2>
         <p className="mt-4 whitespace-normal text-lg text-muted-foreground">
           I{`'`}m Leo, a passionate creator living in Franca, Brazil. I have
@@ -50,9 +52,7 @@ const Page = () => {
         </p>
       </div>
 
-      <div>
-        <h2 className="text-1xl font-semibold tracking-tighter">projects</h2>
-      </div>
+      <Projects />
     </main>
   )
 }

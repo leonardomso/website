@@ -29,6 +29,8 @@ module.exports = {
       'images.unsplash.com',
       'cdn.sanity.io',
       'pbs.twimg.com',
+      'i.imgur.com',
+      'unsplash.com'
     ],
   },
   async headers() {
