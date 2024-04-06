@@ -54,15 +54,13 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "@types/node": "^20.12.2",
-    "@types/react": "^18.2.74",
-    "@types/node": "^20.12.3",
+    "@types/node": "^20.12.4",
     "@types/react": "^18.2.74",
     "eslint": "^8.57.0",
     "eslint-config-next": "^14.1.4",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.13",
     "tailwindcss": "^3.4.3",
-    "typescript": "^5.4.3"
+    "typescript": "^5.4.4"
   }
 }
