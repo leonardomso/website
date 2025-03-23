@@ -1,0 +1,48 @@
+name: Build
+on:
+  push:
+  workflow_call:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      # Turbo
+      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+      TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
+      TURBO_CACHE: remote:rw
+
+      # Basehub
+      BASEHUB_TOKEN: ${{ secrets.BASEHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Cache dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.bun/install/cache
+          key: ${{ runner.os }}-${{ matrix.bun }}-bun-${{ hashFiles('**/bun.lockb') }}
+          restore-keys: |
+            ${{ runner.os }}-${{ matrix.bun }}-bun-
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Basehub
+        run: bun run basehub
+        env:
+          BASEHUB_TOKEN: ${{secrets.BASEHUB_TOKEN}}
+
+      - name: Typecheck with Turborepo
+        run: bun run turbo typecheck
+        env:
+          CI: true
+
+      - name: Build with Turborepo
+        run: bun run turbo build
+        env:
+          CI: true
+          NODE_OPTIONS: "--max-old-space-size=4096"
