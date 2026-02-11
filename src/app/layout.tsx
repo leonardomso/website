@@ -1,68 +1,130 @@
-import { Inter } from 'next/font/google'
-import Link from 'next/link'
-import Script from 'next/script'
+import { GeistMono } from "geist/font/mono";
+import { GeistSans } from "geist/font/sans";
+import type { Metadata } from "next";
+import Link from "next/link";
+import Script from "next/script";
+import { CommandPalette } from "~/components/command-palette";
+import { JsonLd, personSchema, websiteSchema } from "~/components/json-ld";
+import { getAllPosts } from "~/lib/blog";
+import "./globals.css";
 
-import Footer from '~/app/components/Footer/Footer'
+export const metadata: Metadata = {
+  metadataBase: new URL("https://leonardomso.com"),
+  title: {
+    default: "Leonardo Maldonado",
+    template: "%s — Leonardo Maldonado",
+  },
+  description:
+    "Software engineer based in Valencia, Spain. Built Spaceship's domain search platform at Namecheap. Creator of 33 JavaScript Concepts (63k+ stars).",
+  authors: [{ name: "Leonardo Maldonado", url: "https://leonardomso.com" }],
+  creator: "Leonardo Maldonado",
+  openGraph: {
+    title: "Leonardo Maldonado",
+    description:
+      "Software engineer based in Valencia, Spain. Built Spaceship's domain search platform at Namecheap. Creator of 33 JavaScript Concepts (63k+ stars).",
+    url: "https://leonardomso.com",
+    siteName: "Leonardo Maldonado",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Leonardo Maldonado",
+    creator: "@leonardomso",
+    description:
+      "Software engineer based in Valencia, Spain. Built Spaceship's domain search platform at Namecheap.",
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
+  alternates: {
+    canonical: "https://leonardomso.com",
+    types: {
+      "application/rss+xml": "https://leonardomso.com/feed.xml",
+    },
+  },
+};
 
-import { Button } from '~/components/ui/button'
+export default async function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const posts = await getAllPosts();
+  const cmdkPosts = posts.map((p) => ({ title: p.title, slug: p.slug }));
 
-import '~/styles/global.css'
-import { cn } from '~/lib/utils'
-
-const fontSans = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-inter',
-})
-
-interface Props {
-  children: React.ReactNode
-}
-
-const Layout = ({ children }: Props) => {
   return (
-    <html
-      suppressHydrationWarning
-      lang="en"
-      className={cn(
-        'min-h-screen bg-background font-sans antialiased',
-        fontSans.variable,
-      )}
-    >
-      <head />
-      <body className="mx-auto flex max-w-2xl flex-col gap-20 p-4 px-4">
-        <header className="max-w-1xl flex flex-col justify-between gap-4 sm:flex-row">
-          <div>
-            <Link href="/">
-              <h1 className="text-2xl font-semibold tracking-tighter">
-                Leonardo Maldonado
-              </h1>
-              <p className="whitespace-normal text-sm text-muted-foreground">
-                software engineer
-              </p>
+    <html className={`${GeistSans.variable} ${GeistMono.variable}`} lang="en">
+      <body className="antialiased">
+        <JsonLd data={personSchema} />
+        <JsonLd data={websiteSchema} />
+        <CommandPalette posts={cmdkPosts} />
+        <div className="relative mx-auto w-full max-w-[680px] px-6 pt-16 pb-24 md:px-0">
+          <header className="mb-20 flex items-center justify-between">
+            <Link
+              className="link-hover font-mono text-[#a0a0a0] text-[13px] uppercase tracking-wide transition-colors hover:text-[#ededed]"
+              href="/"
+            >
+              Leonardo Maldonado
             </Link>
-          </div>
+            <nav className="flex gap-6">
+              <Link
+                className="link-hover text-[#666] text-[13px] uppercase tracking-wide transition-colors hover:text-[#ededed]"
+                href="/about"
+              >
+                About
+              </Link>
+              <Link
+                className="link-hover text-[#666] text-[13px] uppercase tracking-wide transition-colors hover:text-[#ededed]"
+                href="/projects"
+              >
+                Projects
+              </Link>
+              <Link
+                className="link-hover text-[#666] text-[13px] uppercase tracking-wide transition-colors hover:text-[#ededed]"
+                href="/blog"
+              >
+                Blog
+              </Link>
+              <Link
+                className="link-hover text-[#666] text-[13px] uppercase tracking-wide transition-colors hover:text-[#ededed]"
+                href="/resume"
+              >
+                Resume
+              </Link>
+            </nav>
+          </header>
 
-          <div>
-            <Button variant="ghost" asChild>
-              <Link href="/about">about</Link>
-            </Button>
+          <main>{children}</main>
 
-            <Button variant="ghost" asChild>
-              <Link href="/projects">projects</Link>
-            </Button>
-
-            <Button variant="ghost" asChild>
-              <Link href="/articles">articles</Link>
-            </Button>
-          </div>
-        </header>
-        {children}
-        <Footer />
+          <footer className="mt-32 flex items-center justify-between border-[#161616] border-t pt-8">
+            <p className="font-mono text-[#666] text-[11px] tracking-wider">
+              © 2026
+            </p>
+            <div className="flex gap-6">
+              {[
+                { label: "GitHub", href: "https://github.com/leonardomso" },
+                { label: "X", href: "https://x.com/leonardomso" },
+                {
+                  label: "LinkedIn",
+                  href: "https://www.linkedin.com/in/leonardomso/",
+                },
+              ].map((link) => (
+                <a
+                  className="link-hover text-[#666] text-[12px] tracking-wide transition-colors hover:text-[#ededed]"
+                  href={link.href}
+                  key={link.label}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          </footer>
+        </div>
         <Script src="https://scripts.simpleanalyticscdn.com/latest.js" />
       </body>
     </html>
-  )
+  );
 }
-
-export default Layout
