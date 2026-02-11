@@ -35,6 +35,12 @@ function slugify(text: string): string {
 const CONTENT_DIR = path.join(process.cwd(), "src/content");
 
 export async function getAllPosts(): Promise<BlogPost[]> {
+  try {
+    await fs.access(CONTENT_DIR);
+  } catch {
+    return [];
+  }
+
   const files = await fs.readdir(CONTENT_DIR);
 
   const posts = await Promise.all(
