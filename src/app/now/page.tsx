@@ -82,9 +82,9 @@ export default function NowPage() {
           </h2>
           <div className="flex flex-col gap-4 text-[15px] leading-[1.8] text-[#888]">
             <p>
-              Diving deeper into edge computing, server components patterns, and
-              database optimization with PostgreSQL. Also exploring AI
-              tooling and how it fits into developer workflows.
+              Exploring modern React patterns, server components, and the latest
+              in the JavaScript ecosystem. Always looking for better ways to build
+              for the web.
             </p>
           </div>
         </section>
@@ -95,8 +95,8 @@ export default function NowPage() {
           </h2>
           <div className="flex flex-col gap-4 text-[15px] leading-[1.8] text-[#888]">
             <p>
-              Based in Valencia, Spain. Enjoying the Mediterranean pace of life,
-              exploring the city, and finding good coffee spots to work from.
+              Born and raised in Brazil, now based in Valencia, Spain. Enjoying
+              the Mediterranean pace of life and exploring the city.
             </p>
           </div>
         </section>

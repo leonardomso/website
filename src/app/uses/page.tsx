@@ -9,10 +9,9 @@ const categories = [
   {
     label: "Editor & Terminal",
     items: [
-      { name: "VS Code", description: "Primary editor with Vim keybindings" },
-      { name: "iTerm2", description: "Terminal emulator for macOS" },
+      { name: "VS Code", description: "Primary code editor" },
+      { name: "Terminal", description: "macOS terminal" },
       { name: "Geist Mono", description: "Monospace font for editor and terminal" },
-      { name: "GitHub Dark", description: "Theme across all tools" },
     ],
   },
   {
@@ -29,11 +28,8 @@ const categories = [
   {
     label: "Apps",
     items: [
-      { name: "Arc", description: "Primary browser" },
       { name: "Figma", description: "Design and prototyping" },
-      { name: "Linear", description: "Project management" },
       { name: "Notion", description: "Notes and documentation" },
-      { name: "Raycast", description: "Launcher and productivity" },
     ],
   },
   {
@@ -42,7 +38,6 @@ const categories = [
       { name: "Vercel", description: "Deployment and hosting" },
       { name: "GitHub", description: "Code hosting and collaboration" },
       { name: "Cloudflare", description: "DNS and CDN" },
-      { name: "Simple Analytics", description: "Privacy-first analytics" },
     ],
   },
 ];

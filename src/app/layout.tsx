@@ -12,10 +12,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://leonardomso.com"),
   title: "Leonardo Maldonado",
   description:
-    "Software Engineer based in Valencia, Spain. Building web experiences at Namecheap.",
+    "Software engineer based in Valencia, Spain. Building web experiences at Namecheap and passionate about programming, web development, and building products.",
   openGraph: {
     title: "Leonardo Maldonado",
-    description: "Software Engineer based in Valencia, Spain.",
+    description:
+      "Software engineer based in Valencia, Spain. Building web experiences at Namecheap and passionate about programming, web development, and building products.",
     url: "https://leonardomso.com",
     siteName: "Leonardo Maldonado",
     locale: "en_US",
@@ -24,7 +25,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Leonardo Maldonado",
-    description: "Software Engineer based in Valencia, Spain.",
+    description:
+      "Software engineer based in Valencia, Spain. Building web experiences at Namecheap.",
   },
   icons: {
     icon: "/favicon.ico",
@@ -90,7 +92,7 @@ export default async function RootLayout({
 
           <footer className="mt-32 flex items-center justify-between border-t border-[#161616] pt-8">
             <p className="font-mono text-[11px] tracking-wider text-[#666]">
-              © 2025
+              © 2026
             </p>
             <div className="flex gap-6">
               {[

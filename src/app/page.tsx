@@ -29,17 +29,17 @@ export default function Home() {
           Maldonado
         </h1>
         <p className="mt-8 max-w-[480px] text-[15px] leading-[1.75] text-[#888]">
-          Building web experiences at{" "}
+          Software engineer at{" "}
           <a
-            href="https://www.namecheap.com"
+            href="https://www.spaceship.com"
             target="_blank"
             rel="noopener noreferrer"
             className="link-hover text-[#a0a0a0] transition-colors hover:text-[#ededed]"
           >
             Namecheap
           </a>
-          . Passionate about crafting products that feel right — from the
-          architecture to the last pixel.
+          , building web experiences and passionate about programming, web
+          development, and building products.
         </p>
       </section>
 

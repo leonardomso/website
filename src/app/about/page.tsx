@@ -19,9 +19,9 @@ export default function AboutPage() {
       <div className="mt-12 flex flex-col gap-6 text-[15px] leading-[1.8] text-[#888]">
         <p>
           Hey — I&apos;m Leonardo, a software engineer based in{" "}
-          <span className="text-[#a0a0a0]">Valencia, Spain</span>. Born in 1997 in
-          Franca, Brazil. I moved to Spain to work on things I care about and be
-          closer to the European tech scene.
+          <span className="text-[#a0a0a0]">Valencia, Spain</span>. Born and
+          raised in Franca, Brazil. I moved to Spain to work on things I care
+          about and be closer to the European tech scene.
         </p>
 
         <p>
@@ -43,14 +43,15 @@ export default function AboutPage() {
           >
             Spaceship
           </a>{" "}
-          — a digital platform that helps people bring ideas to life. I built
-          the Domain Search feature from scratch and helped it reach 1 million
-          domains sold in its first year.
+          — a digital platform that helps people bring ideas to life. I
+          developed the Domain Search feature from scratch, designed its
+          architecture to scale, integrated various APIs, and helped it reach
+          1 million domains sold in one year.
         </p>
 
         <p>
           Before that, I worked at startups in Brazil building React and React
-          Native apps, and spent several years writing technical content for
+          Native apps. I also spent several years writing technical content for
           companies like{" "}
           <a
             href="https://www.telerik.com/blogs/author/leonardo-maldonado"
@@ -69,7 +70,8 @@ export default function AboutPage() {
           >
             LogRocket
           </a>
-          . I have over 90 articles published and 1 million+ views.
+          . I have over 90 articles published across JavaScript, TypeScript,
+          React, GraphQL, Node.js, and more — with over 1 million views.
         </p>
 
         <p>
@@ -91,20 +93,21 @@ export default function AboutPage() {
           >
             top projects of 2018
           </a>
-          . It&apos;s helped thousands of developers deepen their understanding
-          of JavaScript fundamentals.
+          . It now has 63,000+ stars and has been translated into 20+
+          languages.
         </p>
 
         <p>
-          I&apos;m passionate about the craft of building software — from
-          architecture decisions to the last pixel. I work primarily with
-          TypeScript, React, Next.js, Node.js, and PostgreSQL.
+          I spend most of my time building web experiences and I&apos;m
+          passionate about programming, web development, and building products.
+          I work primarily with TypeScript, React, Next.js, Node.js, and
+          PostgreSQL.
         </p>
 
         <p>
           Outside of work, I enjoy exploring Valencia, reading, and working on
-          side projects. I&apos;m always open to interesting conversations — feel
-          free to{" "}
+          side projects. Always open to interesting conversations — feel free
+          to{" "}
           <a
             href="mailto:leonardomso11@gmail.com"
             className="link-hover text-[#a0a0a0] transition-colors hover:text-[#ededed]"

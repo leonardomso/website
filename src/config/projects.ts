@@ -21,7 +21,7 @@ export const projects: Project[] = [
     title: "Spaceship",
     tag: "Work",
     description:
-      "Digital platform at Namecheap that helps people bring ideas to life. Built the Domain Search feature from scratch, designed its architecture for scale, and helped reach 1M domains sold in one year.",
+      "Digital platform at Namecheap that helps people bring ideas to life. Built the Domain Search feature from scratch, designed its architecture for scale, integrated various APIs, and helped reach 1M domains sold in one year.",
     url: "https://www.spaceship.com",
     tech: ["TypeScript", "React", "Next.js"],
     featured: true,

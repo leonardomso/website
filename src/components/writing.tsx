@@ -17,8 +17,8 @@ export function Writing() {
   return (
     <div>
       <p className="mb-8 max-w-[440px] text-[15px] leading-[1.75] text-[#888]">
-        90+ articles published across various technologies.
-        Over 1 million views total.
+        90+ articles published across JavaScript, React, TypeScript, Node.js,
+        GraphQL, and modern web development. Over 1 million views total.
       </p>
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
         {publications.map((pub) => (

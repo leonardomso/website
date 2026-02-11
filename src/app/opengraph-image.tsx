@@ -60,8 +60,8 @@ export default function OGImage() {
               lineHeight: 1.6,
             }}
           >
-            Building web experiences at Namecheap. Passionate about crafting
-            products that feel right.
+            Software engineer at Namecheap, building web experiences and
+            passionate about programming, web development, and building products.
           </div>
         </div>
         <div
