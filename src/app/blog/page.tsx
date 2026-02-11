@@ -48,6 +48,18 @@ export default async function BlogPage() {
             <p className="text-[13px] leading-relaxed text-[#888] transition-colors group-hover:text-[#a0a0a0]">
               {post.description}
             </p>
+            {post.tags.length > 0 && (
+              <div className="mt-1.5 flex flex-wrap gap-1.5">
+                {post.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="font-mono text-[10px] tracking-wide text-[#555]"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            )}
           </Link>
         ))}
       </div>

@@ -3,9 +3,13 @@ import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import Link from "next/link";
 import Script from "next/script";
+import { JsonLd, personSchema, websiteSchema } from "~/components/json-ld";
+import { CommandPalette } from "~/components/command-palette";
+import { getAllPosts } from "~/lib/blog";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://leonardomso.com"),
   title: "Leonardo Maldonado",
   description:
     "Software Engineer based in Valencia, Spain. Building web experiences at Namecheap.",
@@ -25,16 +29,27 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
+  alternates: {
+    types: {
+      "application/rss+xml": "https://leonardomso.com/feed.xml",
+    },
+  },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const posts = await getAllPosts();
+  const cmdkPosts = posts.map((p) => ({ title: p.title, slug: p.slug }));
+
   return (
     <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
       <body className="antialiased">
+        <JsonLd data={personSchema} />
+        <JsonLd data={websiteSchema} />
+        <CommandPalette posts={cmdkPosts} />
         <div className="relative mx-auto w-full max-w-[680px] px-6 pt-16 pb-24 md:px-0">
           <header className="mb-20 flex items-center justify-between">
             <Link
@@ -43,7 +58,7 @@ export default function RootLayout({
             >
               Leonardo Maldonado
             </Link>
-            <nav className="flex gap-8">
+            <nav className="flex gap-6">
               <Link
                 href="/about"
                 className="link-hover text-[13px] tracking-wide uppercase text-[#666] transition-colors hover:text-[#ededed]"
@@ -51,10 +66,22 @@ export default function RootLayout({
                 About
               </Link>
               <Link
+                href="/projects"
+                className="link-hover text-[13px] tracking-wide uppercase text-[#666] transition-colors hover:text-[#ededed]"
+              >
+                Projects
+              </Link>
+              <Link
                 href="/blog"
                 className="link-hover text-[13px] tracking-wide uppercase text-[#666] transition-colors hover:text-[#ededed]"
               >
                 Blog
+              </Link>
+              <Link
+                href="/resume"
+                className="link-hover text-[13px] tracking-wide uppercase text-[#666] transition-colors hover:text-[#ededed]"
+              >
+                Resume
               </Link>
             </nav>
           </header>

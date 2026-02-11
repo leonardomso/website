@@ -9,11 +9,25 @@ export interface BlogPost {
   date: string;
   content: string;
   readingTime: number;
+  tags: string[];
+}
+
+export interface Heading {
+  id: string;
+  text: string;
+  level: 2 | 3;
 }
 
 function estimateReadingTime(text: string): number {
   const words = text.trim().split(/\s+/).length;
   return Math.max(1, Math.round(words / 230));
+}
+
+function slugify(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
 }
 
 const CONTENT_DIR = path.join(process.cwd(), "src/content");
@@ -35,6 +49,7 @@ export async function getAllPosts(): Promise<BlogPost[]> {
           date: data.date,
           content,
           readingTime: estimateReadingTime(content),
+          tags: (data.tags as string[]) || [],
         };
       })
   );
@@ -61,4 +76,35 @@ export async function getAdjacentPosts(
     prev: index > 0 ? posts[index - 1] : null,
     next: index < posts.length - 1 ? posts[index + 1] : null,
   };
+}
+
+export async function getAllTags(): Promise<{ tag: string; count: number }[]> {
+  const posts = await getAllPosts();
+  const tagMap = new Map<string, number>();
+
+  for (const post of posts) {
+    for (const tag of post.tags) {
+      tagMap.set(tag, (tagMap.get(tag) || 0) + 1);
+    }
+  }
+
+  return Array.from(tagMap.entries())
+    .map(([tag, count]) => ({ tag, count }))
+    .sort((a, b) => b.count - a.count);
+}
+
+export function extractHeadings(content: string): Heading[] {
+  const headings: Heading[] = [];
+  const lines = content.split("\n");
+
+  for (const line of lines) {
+    const match = line.match(/^(#{2,3})\s+(.+)$/);
+    if (match) {
+      const level = match[1].length as 2 | 3;
+      const text = match[2].replace(/\*\*(.+?)\*\*/g, "$1").trim();
+      headings.push({ id: slugify(text), text, level });
+    }
+  }
+
+  return headings;
 }

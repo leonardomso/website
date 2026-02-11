@@ -1,25 +1,13 @@
-import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
+import { ArrowUpRight, ArrowRight } from "lucide-react";
+import { projects } from "~/config/projects";
 
-const ventures = [
-  {
-    title: "33 JavaScript Concepts",
-    tag: "Open Source",
-    description:
-      "Considered by GitHub one of the top open source projects of 2018.",
-    url: "https://github.com/leonardomso/33-js-concepts",
-  },
-  {
-    title: "Shopwyse",
-    tag: "SaaS",
-    description: "An ERP software to help modern companies sell more.",
-    url: "https://getshopwyse.com",
-  },
-];
+const featured = projects.filter((p) => p.featured);
 
 export function Ventures() {
   return (
     <div className="flex flex-col gap-4">
-      {ventures.map((venture) => (
+      {featured.map((venture) => (
         <a
           key={venture.title}
           href={venture.url}
@@ -45,6 +33,13 @@ export function Ventures() {
           </div>
         </a>
       ))}
+      <Link
+        href="/projects"
+        className="group mt-2 flex items-center gap-2 font-mono text-[12px] tracking-wide text-[#666] transition-colors hover:text-[#ededed]"
+      >
+        View all projects
+        <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-1" />
+      </Link>
     </div>
   );
 }

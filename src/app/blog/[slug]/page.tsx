@@ -2,9 +2,12 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import { getAllPosts, getPostBySlug, getAdjacentPosts } from "~/lib/blog";
+import { getAllPosts, getPostBySlug, getAdjacentPosts, extractHeadings } from "~/lib/blog";
 import { renderMarkdown } from "~/lib/markdown";
 import { ShareButtons } from "~/components/share-buttons";
+import { JsonLd, blogPostSchema } from "~/components/json-ld";
+import { ReadingProgress } from "~/components/reading-progress";
+import { TableOfContents } from "~/components/toc";
 
 const SITE_URL = "https://leonardomso.com";
 
@@ -53,10 +56,14 @@ export default async function BlogPostPage({ params }: Props) {
     getAdjacentPosts(slug),
   ]);
 
+  const headings = extractHeadings(post.content);
+
   const postUrl = `${SITE_URL}/blog/${slug}`;
 
   return (
     <article>
+      <ReadingProgress />
+      <JsonLd data={blogPostSchema(post)} />
       <Link
         href="/blog"
         className="link-hover mb-12 inline-block font-mono text-[11px] tracking-wider uppercase text-[#666] transition-colors hover:text-[#ededed]"
@@ -80,9 +87,23 @@ export default async function BlogPostPage({ params }: Props) {
         <p className="mt-4 text-[15px] leading-[1.75] text-[#888]">
           {post.description}
         </p>
+        {post.tags.length > 0 && (
+          <div className="mt-4 flex flex-wrap gap-2">
+            {post.tags.map((tag) => (
+              <span
+                key={tag}
+                className="rounded-md border border-[#161616] px-2.5 py-0.5 font-mono text-[10px] tracking-wide text-[#666]"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
       </header>
 
       <div className="section-divider mb-12" />
+
+      <TableOfContents headings={headings} />
 
       <div className="prose" dangerouslySetInnerHTML={{ __html: html }} />
 

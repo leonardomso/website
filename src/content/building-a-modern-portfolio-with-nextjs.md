@@ -2,6 +2,7 @@
 title: "Building a Modern Portfolio with Next.js"
 description: "A deep dive into how I rebuilt my portfolio using Next.js 16, Tailwind CSS v4, and a headless CMS — from architecture decisions to the final pixel."
 date: "2025-02-10"
+tags: ["Next.js", "React", "Portfolio", "Web Development"]
 ---
 
 I recently rebuilt my personal website from scratch. The previous version was built with Framer — it looked good, but I wanted full control over every detail. Here's how I approached it.
