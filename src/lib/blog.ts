@@ -1,5 +1,5 @@
-import fs from "fs/promises";
-import path from "path";
+import fs from "node:fs/promises";
+import path from "node:path";
 import matter from "gray-matter";
 
 export interface BlogPost {
@@ -18,8 +18,10 @@ export interface Heading {
   level: 2 | 3;
 }
 
+const WHITESPACE_RE = /\s+/;
+
 function estimateReadingTime(text: string): number {
-  const words = text.trim().split(/\s+/).length;
+  const words = text.trim().split(WHITESPACE_RE).length;
   return Math.max(1, Math.round(words / 230));
 }
 
@@ -93,15 +95,18 @@ export async function getAllTags(): Promise<{ tag: string; count: number }[]> {
     .sort((a, b) => b.count - a.count);
 }
 
+const HEADING_RE = /^(#{2,3})\s+(.+)$/;
+const BOLD_RE = /\*\*(.+?)\*\*/g;
+
 export function extractHeadings(content: string): Heading[] {
   const headings: Heading[] = [];
   const lines = content.split("\n");
 
   for (const line of lines) {
-    const match = line.match(/^(#{2,3})\s+(.+)$/);
+    const match = line.match(HEADING_RE);
     if (match) {
       const level = match[1].length as 2 | 3;
-      const text = match[2].replace(/\*\*(.+?)\*\*/g, "$1").trim();
+      const text = match[2].replace(BOLD_RE, "$1").trim();
       headings.push({ id: slugify(text), text, level });
     }
   }

@@ -8,7 +8,9 @@ export function ReadingProgress() {
   useEffect(() => {
     function onScroll() {
       const article = document.querySelector("article");
-      if (!article) return;
+      if (!article) {
+        return;
+      }
 
       const { top, height } = article.getBoundingClientRect();
       const viewportHeight = window.innerHeight;
@@ -23,7 +25,9 @@ export function ReadingProgress() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  if (progress <= 0) return null;
+  if (progress <= 0) {
+    return null;
+  }
 
   return (
     <div

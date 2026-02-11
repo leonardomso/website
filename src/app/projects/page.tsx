@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
 import { ArrowUpRight } from "lucide-react";
+import type { Metadata } from "next";
 import { projects } from "~/config/projects";
 
 export const metadata: Metadata = {
-  title: "Projects — Leonardo Maldonado",
+  title: "Projects",
   description:
     "Open source projects, products, and side projects by Leonardo Maldonado.",
 };
@@ -11,50 +11,50 @@ export const metadata: Metadata = {
 export default function ProjectsPage() {
   return (
     <div>
-      <p className="mb-4 font-mono text-[12px] tracking-[0.25em] uppercase text-[#666]">
+      <p className="mb-4 font-mono text-[#666] text-[12px] uppercase tracking-[0.25em]">
         Projects
       </p>
-      <h1 className="text-[clamp(2rem,5vw,3rem)] leading-[1.1] font-semibold tracking-[-0.03em] text-[#ededed]">
+      <h1 className="font-semibold text-[#ededed] text-[clamp(2rem,5vw,3rem)] leading-[1.1] tracking-[-0.03em]">
         Things I&apos;ve built
       </h1>
-      <p className="mt-6 max-w-[440px] text-[15px] leading-[1.75] text-[#888]">
+      <p className="mt-6 max-w-[440px] text-[#888] text-[15px] leading-[1.75]">
         Open source projects, products, and experiments.
       </p>
 
       <div className="mt-16 flex flex-col gap-4">
         {projects.map((project) => (
           <a
-            key={project.title}
-            href={project.url}
-            target="_blank"
-            rel="noopener noreferrer"
             className="card-glow group rounded-lg border border-[#161616] bg-[#0a0a0a] p-5 transition-all duration-300 hover:border-[#222] hover:bg-[#0d0d0d]"
+            href={project.url}
+            key={project.title}
+            rel="noopener noreferrer"
+            target="_blank"
           >
             <div className="flex items-start justify-between">
               <div>
                 <div className="mb-2 flex items-center gap-3">
-                  <span className="font-mono text-[10px] tracking-[0.15em] uppercase text-[#666]">
+                  <span className="font-mono text-[#666] text-[10px] uppercase tracking-[0.15em]">
                     {project.tag}
                   </span>
                 </div>
-                <p className="text-[15px] font-medium text-[#ededed] transition-colors group-hover:text-white">
+                <p className="font-medium text-[#ededed] text-[15px] transition-colors group-hover:text-white">
                   {project.title}
                 </p>
-                <p className="mt-1.5 text-[13px] leading-[1.6] text-[#888]">
+                <p className="mt-1.5 text-[#888] text-[13px] leading-[1.6]">
                   {project.description}
                 </p>
                 <div className="mt-3 flex flex-wrap gap-2">
                   {project.tech.map((t) => (
                     <span
+                      className="font-mono text-[#555] text-[10px] tracking-wide"
                       key={t}
-                      className="font-mono text-[10px] tracking-wide text-[#555]"
                     >
                       {t}
                     </span>
                   ))}
                 </div>
               </div>
-              <ArrowUpRight className="mt-1 h-4 w-4 shrink-0 text-[#555] transition-all duration-300 group-hover:text-[#888] group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+              <ArrowUpRight className="mt-1 h-4 w-4 shrink-0 text-[#555] transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-[#888]" />
             </div>
           </a>
         ))}

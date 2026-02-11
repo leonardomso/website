@@ -1,7 +1,7 @@
 "use client";
 
+import { Check, Link2 } from "lucide-react";
 import { useState } from "react";
-import { Link2, Check } from "lucide-react";
 
 interface ShareButtonsProps {
   title: string;
@@ -37,25 +37,26 @@ export function ShareButtons({ title, url }: ShareButtonsProps) {
 
   return (
     <div className="flex items-center gap-4">
-      <span className="font-mono text-[11px] tracking-wider uppercase text-[#666]">
+      <span className="font-mono text-[#666] text-[11px] uppercase tracking-wider">
         Share
       </span>
 
       {SHARE_TARGETS.map((target) => (
         <a
-          key={target.label}
+          className="link-hover text-[#666] text-[12px] tracking-wide transition-colors hover:text-[#ededed]"
           href={target.buildUrl(title, url)}
-          target="_blank"
+          key={target.label}
           rel="noopener noreferrer"
-          className="link-hover text-[12px] tracking-wide text-[#666] transition-colors hover:text-[#ededed]"
+          target="_blank"
         >
           {target.label}
         </a>
       ))}
 
       <button
+        className="flex cursor-pointer items-center gap-1.5 text-[#666] text-[12px] tracking-wide transition-colors hover:text-[#ededed]"
         onClick={handleCopy}
-        className="flex cursor-pointer items-center gap-1.5 text-[12px] tracking-wide text-[#666] transition-colors hover:text-[#ededed]"
+        type="button"
       >
         {copied ? (
           <>

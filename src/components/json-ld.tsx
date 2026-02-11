@@ -5,8 +5,8 @@ interface JsonLdProps {
 export function JsonLd({ data }: JsonLdProps) {
   return (
     <script
-      type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+      type="application/ld+json"
     />
   );
 }
@@ -16,8 +16,16 @@ export const personSchema = {
   "@type": "Person",
   name: "Leonardo Maldonado",
   jobTitle: "Software Engineer",
+  description:
+    "Software engineer with 6+ years of experience. Built Spaceship's domain search platform at Namecheap. Creator of 33 JavaScript Concepts (63k+ stars).",
   url: "https://leonardomso.com",
   image: "https://leonardomso.com/opengraph-image",
+  email: "leonardomso11@gmail.com",
+  nationality: { "@type": "Country", name: "Brazil" },
+  homeLocation: {
+    "@type": "Place",
+    name: "Valencia, Spain",
+  },
   sameAs: [
     "https://github.com/leonardomso",
     "https://x.com/leonardomso",
@@ -32,9 +40,12 @@ export const personSchema = {
     "TypeScript",
     "React",
     "Next.js",
+    "Zustand",
+    "TanStack Query",
     "Node.js",
     "GraphQL",
     "PostgreSQL",
+    "React Native",
   ],
 };
 
@@ -47,6 +58,21 @@ export const websiteSchema = {
     "@type": "Person",
     name: "Leonardo Maldonado",
   },
+};
+
+export const profilePageSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  mainEntity: {
+    "@type": "Person",
+    name: "Leonardo Maldonado",
+    url: "https://leonardomso.com",
+    jobTitle: "Software Engineer",
+    description:
+      "Software engineer based in Valencia, Spain. Built Spaceship's domain search platform at Namecheap. Creator of 33 JavaScript Concepts.",
+  },
+  url: "https://leonardomso.com/about",
+  name: "About Leonardo Maldonado",
 };
 
 export function blogPostSchema(post: {
@@ -62,6 +88,7 @@ export function blogPostSchema(post: {
     description: post.description,
     datePublished: post.date,
     url: `https://leonardomso.com/blog/${post.slug}`,
+    image: `https://leonardomso.com/blog/${post.slug}/opengraph-image`,
     author: {
       "@type": "Person",
       name: "Leonardo Maldonado",

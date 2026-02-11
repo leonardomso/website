@@ -1,22 +1,24 @@
 import type { Metadata } from "next";
+import { JsonLd, profilePageSchema } from "~/components/json-ld";
 
 export const metadata: Metadata = {
-  title: "About — Leonardo Maldonado",
+  title: "About",
   description:
-    "Software Engineer based in Valencia, Spain. Building web experiences at Namecheap.",
+    "Software engineer based in Valencia, Spain. Built Spaceship's domain search platform at Namecheap. Creator of 33 JavaScript Concepts (63k+ stars).",
 };
 
 export default function AboutPage() {
   return (
     <div>
-      <p className="mb-4 font-mono text-[12px] tracking-[0.25em] uppercase text-[#666]">
+      <JsonLd data={profilePageSchema} />
+      <p className="mb-4 font-mono text-[#666] text-[12px] uppercase tracking-[0.25em]">
         About
       </p>
-      <h1 className="text-[clamp(2rem,5vw,3rem)] leading-[1.1] font-semibold tracking-[-0.03em] text-[#ededed]">
+      <h1 className="font-semibold text-[#ededed] text-[clamp(2rem,5vw,3rem)] leading-[1.1] tracking-[-0.03em]">
         Leonardo Maldonado
       </h1>
 
-      <div className="mt-12 flex flex-col gap-6 text-[15px] leading-[1.8] text-[#888]">
+      <div className="mt-12 flex flex-col gap-6 text-[#888] text-[15px] leading-[1.8]">
         <p>
           Hey — I&apos;m Leonardo, a software engineer based in{" "}
           <span className="text-[#a0a0a0]">Valencia, Spain</span>. Born and
@@ -27,46 +29,57 @@ export default function AboutPage() {
         <p>
           I currently work at{" "}
           <a
-            href="https://www.namecheap.com"
-            target="_blank"
-            rel="noopener noreferrer"
             className="link-hover text-[#a0a0a0] transition-colors hover:text-[#ededed]"
+            href="https://www.namecheap.com"
+            rel="noopener noreferrer"
+            target="_blank"
           >
             Namecheap
           </a>
-          , where I&apos;ve been building{" "}
+          , where I built{" "}
           <a
-            href="https://www.spaceship.com"
-            target="_blank"
-            rel="noopener noreferrer"
             className="link-hover text-[#a0a0a0] transition-colors hover:text-[#ededed]"
+            href="https://www.spaceship.com"
+            rel="noopener noreferrer"
+            target="_blank"
           >
             Spaceship
+          </a>
+          &apos;s{" "}
+          <a
+            className="link-hover text-[#a0a0a0] transition-colors hover:text-[#ededed]"
+            href="https://www.spaceship.com/domain-search/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            domain search platform
           </a>{" "}
-          — a digital platform that helps people bring ideas to life. I
-          developed the Domain Search feature from scratch, designed its
-          architecture to scale, integrated various APIs, and helped it reach
-          1 million domains sold in one year.
+          from scratch as the sole front-end developer. I designed the entire
+          frontend architecture with React, TypeScript, and Zustand — building
+          features like Beast Mode bulk search, a real-time WebSocket pricing
+          system, and a multi-currency engine supporting 30+ currencies across
+          500+ TLDs.
         </p>
 
         <p>
-          Before that, I worked at startups in Brazil building React and React
-          Native apps. I also spent several years writing technical content for
-          companies like{" "}
+          Before Namecheap, I built mobile apps at startups in Brazil —
+          including a food delivery app for LA and frontend solutions for
+          Brazilian banking projects. I also spent several years writing
+          technical content for companies like{" "}
           <a
-            href="https://www.telerik.com/blogs/author/leonardo-maldonado"
-            target="_blank"
-            rel="noopener noreferrer"
             className="link-hover text-[#a0a0a0] transition-colors hover:text-[#ededed]"
+            href="https://www.telerik.com/blogs/author/leonardo-maldonado"
+            rel="noopener noreferrer"
+            target="_blank"
           >
             Progress
           </a>{" "}
           and{" "}
           <a
-            href="https://blog.logrocket.com/author/leonardomaldonado/"
-            target="_blank"
-            rel="noopener noreferrer"
             className="link-hover text-[#a0a0a0] transition-colors hover:text-[#ededed]"
+            href="https://blog.logrocket.com/author/leonardomaldonado/"
+            rel="noopener noreferrer"
+            target="_blank"
           >
             LogRocket
           </a>
@@ -77,40 +90,38 @@ export default function AboutPage() {
         <p>
           In 2018, I created{" "}
           <a
-            href="https://github.com/leonardomso/33-js-concepts"
-            target="_blank"
-            rel="noopener noreferrer"
             className="link-hover text-[#a0a0a0] transition-colors hover:text-[#ededed]"
+            href="https://github.com/leonardomso/33-js-concepts"
+            rel="noopener noreferrer"
+            target="_blank"
           >
             33 JavaScript Concepts
           </a>
           , an open-source project that GitHub recognized as one of the{" "}
           <a
-            href="https://github.blog/2018-12-13-new-open-source-projects/#top-projects-of-2018"
-            target="_blank"
-            rel="noopener noreferrer"
             className="link-hover text-[#a0a0a0] transition-colors hover:text-[#ededed]"
+            href="https://github.blog/2018-12-13-new-open-source-projects/#top-projects-of-2018"
+            rel="noopener noreferrer"
+            target="_blank"
           >
             top projects of 2018
           </a>
-          . It now has 63,000+ stars and has been translated into 20+
-          languages.
+          . It now has 63,000+ stars and has been translated into 20+ languages.
         </p>
 
         <p>
           I spend most of my time building web experiences and I&apos;m
           passionate about programming, web development, and building products.
-          I work primarily with TypeScript, React, Next.js, Node.js, and
-          PostgreSQL.
+          I work primarily with TypeScript, React, Zustand, TanStack Query,
+          Next.js, and Node.js.
         </p>
 
         <p>
           Outside of work, I enjoy exploring Valencia, reading, and working on
-          side projects. Always open to interesting conversations — feel free
-          to{" "}
+          side projects. Always open to interesting conversations — feel free to{" "}
           <a
-            href="mailto:leonardomso11@gmail.com"
             className="link-hover text-[#a0a0a0] transition-colors hover:text-[#ededed]"
+            href="mailto:leonardomso11@gmail.com"
           >
             reach out
           </a>

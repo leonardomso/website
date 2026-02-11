@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Resume — Leonardo Maldonado",
+  title: "Resume",
   description:
     "Software Engineer with 6+ years of experience. Currently at Namecheap building Spaceship.",
 };

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Uses — Leonardo Maldonado",
+  title: "Uses",
   description: "Tools, software, and hardware I use daily for development.",
 };
 
@@ -11,7 +11,10 @@ const categories = [
     items: [
       { name: "VS Code", description: "Primary code editor" },
       { name: "Terminal", description: "macOS terminal" },
-      { name: "Geist Mono", description: "Monospace font for editor and terminal" },
+      {
+        name: "Geist Mono",
+        description: "Monospace font for editor and terminal",
+      },
     ],
   },
   {
@@ -45,13 +48,13 @@ const categories = [
 export default function UsesPage() {
   return (
     <div>
-      <p className="mb-4 font-mono text-[12px] tracking-[0.25em] uppercase text-[#666]">
+      <p className="mb-4 font-mono text-[#666] text-[12px] uppercase tracking-[0.25em]">
         Uses
       </p>
-      <h1 className="text-[clamp(2rem,5vw,3rem)] leading-[1.1] font-semibold tracking-[-0.03em] text-[#ededed]">
+      <h1 className="font-semibold text-[#ededed] text-[clamp(2rem,5vw,3rem)] leading-[1.1] tracking-[-0.03em]">
         Tools & Setup
       </h1>
-      <p className="mt-6 max-w-[440px] text-[15px] leading-[1.75] text-[#888]">
+      <p className="mt-6 max-w-[440px] text-[#888] text-[15px] leading-[1.75]">
         Software, hardware, and tools I use daily for development and
         productivity.
       </p>
@@ -59,19 +62,19 @@ export default function UsesPage() {
       <div className="mt-16 flex flex-col gap-16">
         {categories.map((category) => (
           <section key={category.label}>
-            <h2 className="mb-6 font-mono text-[11px] tracking-[0.2em] uppercase text-[#666]">
+            <h2 className="mb-6 font-mono text-[#666] text-[11px] uppercase tracking-[0.2em]">
               {category.label}
             </h2>
             <div className="flex flex-col gap-4">
               {category.items.map((item) => (
                 <div
+                  className="flex items-baseline justify-between border-[#111] border-b pb-4"
                   key={item.name}
-                  className="flex items-baseline justify-between border-b border-[#111] pb-4"
                 >
-                  <span className="text-[15px] font-medium text-[#ededed]">
+                  <span className="font-medium text-[#ededed] text-[15px]">
                     {item.name}
                   </span>
-                  <span className="text-[13px] text-[#888]">
+                  <span className="text-[#888] text-[13px]">
                     {item.description}
                   </span>
                 </div>

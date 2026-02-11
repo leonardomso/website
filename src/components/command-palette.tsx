@@ -1,21 +1,21 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
 import { Command } from "cmdk";
 import {
-  Home,
-  User,
+  ArrowUpRight,
   BookOpen,
-  Folder,
-  FileText,
-  Terminal,
   Clock,
+  FileText,
+  Folder,
   Github,
+  Home,
   Linkedin,
   Mail,
-  ArrowUpRight,
+  Terminal,
+  User,
 } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { useCallback, useEffect, useState } from "react";
 
 interface BlogPost {
   title: string;
@@ -38,8 +38,16 @@ const NAV_ITEMS = [
 
 const SOCIAL_ITEMS = [
   { label: "GitHub", href: "https://github.com/leonardomso", icon: Github },
-  { label: "X (Twitter)", href: "https://x.com/leonardomso", icon: ArrowUpRight },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/leonardomso/", icon: Linkedin },
+  {
+    label: "X (Twitter)",
+    href: "https://x.com/leonardomso",
+    icon: ArrowUpRight,
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/leonardomso/",
+    icon: Linkedin,
+  },
   { label: "Email", href: "mailto:leonardomso11@gmail.com", icon: Mail },
 ];
 
@@ -70,48 +78,55 @@ export function CommandPalette({ posts }: CommandPaletteProps) {
     [router]
   );
 
-  if (!open) return null;
+  if (!open) {
+    return null;
+  }
 
   return (
+    // biome-ignore lint/a11y/noStaticElementInteractions: modal backdrop dismiss
+    // biome-ignore lint/a11y/noNoninteractiveElementInteractions: modal backdrop dismiss
+    // biome-ignore lint/a11y/useKeyWithClickEvents: Escape key handled via useEffect
     <div
       className="fixed inset-0 z-[10001] flex items-start justify-center pt-[20vh]"
       onClick={() => setOpen(false)}
     >
+      <div aria-hidden className="fixed inset-0 bg-black/50 backdrop-blur-sm" />
+      {/* biome-ignore lint/a11y/noStaticElementInteractions: modal content wrapper */}
+      {/* biome-ignore lint/a11y/noNoninteractiveElementInteractions: modal content wrapper */}
+      {/* biome-ignore lint/a11y/useKeyWithClickEvents: stopPropagation only */}
       <div
-        className="fixed inset-0 bg-black/50 backdrop-blur-sm"
-        aria-hidden
-      />
-      <div
-        className="relative z-10 w-full max-w-[520px] mx-4 overflow-hidden rounded-xl border border-[#161616] bg-[#0a0a0a] shadow-2xl"
+        className="relative z-10 mx-4 w-full max-w-[520px] overflow-hidden rounded-xl border border-[#161616] bg-[#0a0a0a] shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
         <Command
           className="flex flex-col"
           filter={(value, search) => {
-            if (value.toLowerCase().includes(search.toLowerCase())) return 1;
+            if (value.toLowerCase().includes(search.toLowerCase())) {
+              return 1;
+            }
             return 0;
           }}
         >
           <Command.Input
-            placeholder="Type a command or search..."
-            className="w-full border-b border-[#161616] bg-transparent px-4 py-3 text-[15px] text-[#ededed] outline-none placeholder:text-[#444]"
             autoFocus
+            className="w-full border-[#161616] border-b bg-transparent px-4 py-3 text-[#ededed] text-[15px] outline-none placeholder:text-[#444]"
+            placeholder="Type a command or search..."
           />
           <Command.List className="max-h-[320px] overflow-y-auto p-2">
-            <Command.Empty className="px-3 py-6 text-center text-[13px] text-[#666]">
+            <Command.Empty className="px-3 py-6 text-center text-[#666] text-[13px]">
               No results found.
             </Command.Empty>
 
             <Command.Group
+              className="[&_[cmdk-group-heading]]:px-3 [&_[cmdk-group-heading]]:py-2 [&_[cmdk-group-heading]]:font-mono [&_[cmdk-group-heading]]:text-[#666] [&_[cmdk-group-heading]]:text-[10px] [&_[cmdk-group-heading]]:uppercase [&_[cmdk-group-heading]]:tracking-[0.15em]"
               heading="Navigation"
-              className="[&_[cmdk-group-heading]]:px-3 [&_[cmdk-group-heading]]:py-2 [&_[cmdk-group-heading]]:font-mono [&_[cmdk-group-heading]]:text-[10px] [&_[cmdk-group-heading]]:tracking-[0.15em] [&_[cmdk-group-heading]]:uppercase [&_[cmdk-group-heading]]:text-[#666]"
             >
               {NAV_ITEMS.map((item) => (
                 <Command.Item
+                  className="flex cursor-pointer items-center gap-3 rounded-lg px-3 py-2.5 text-[#888] text-[14px] transition-colors data-[selected=true]:bg-[#111] data-[selected=true]:text-[#ededed]"
                   key={item.href}
-                  value={item.label}
                   onSelect={() => navigate(item.href)}
-                  className="flex cursor-pointer items-center gap-3 rounded-lg px-3 py-2.5 text-[14px] text-[#888] transition-colors data-[selected=true]:bg-[#111] data-[selected=true]:text-[#ededed]"
+                  value={item.label}
                 >
                   <item.icon className="h-4 w-4 shrink-0" />
                   {item.label}
@@ -121,15 +136,15 @@ export function CommandPalette({ posts }: CommandPaletteProps) {
 
             {posts.length > 0 && (
               <Command.Group
+                className="[&_[cmdk-group-heading]]:px-3 [&_[cmdk-group-heading]]:py-2 [&_[cmdk-group-heading]]:font-mono [&_[cmdk-group-heading]]:text-[#666] [&_[cmdk-group-heading]]:text-[10px] [&_[cmdk-group-heading]]:uppercase [&_[cmdk-group-heading]]:tracking-[0.15em]"
                 heading="Blog Posts"
-                className="[&_[cmdk-group-heading]]:px-3 [&_[cmdk-group-heading]]:py-2 [&_[cmdk-group-heading]]:font-mono [&_[cmdk-group-heading]]:text-[10px] [&_[cmdk-group-heading]]:tracking-[0.15em] [&_[cmdk-group-heading]]:uppercase [&_[cmdk-group-heading]]:text-[#666]"
               >
                 {posts.map((post) => (
                   <Command.Item
+                    className="flex cursor-pointer items-center gap-3 rounded-lg px-3 py-2.5 text-[#888] text-[14px] transition-colors data-[selected=true]:bg-[#111] data-[selected=true]:text-[#ededed]"
                     key={post.slug}
-                    value={post.title}
                     onSelect={() => navigate(`/blog/${post.slug}`)}
-                    className="flex cursor-pointer items-center gap-3 rounded-lg px-3 py-2.5 text-[14px] text-[#888] transition-colors data-[selected=true]:bg-[#111] data-[selected=true]:text-[#ededed]"
+                    value={post.title}
                   >
                     <BookOpen className="h-4 w-4 shrink-0" />
                     {post.title}
@@ -139,15 +154,15 @@ export function CommandPalette({ posts }: CommandPaletteProps) {
             )}
 
             <Command.Group
+              className="[&_[cmdk-group-heading]]:px-3 [&_[cmdk-group-heading]]:py-2 [&_[cmdk-group-heading]]:font-mono [&_[cmdk-group-heading]]:text-[#666] [&_[cmdk-group-heading]]:text-[10px] [&_[cmdk-group-heading]]:uppercase [&_[cmdk-group-heading]]:tracking-[0.15em]"
               heading="Social"
-              className="[&_[cmdk-group-heading]]:px-3 [&_[cmdk-group-heading]]:py-2 [&_[cmdk-group-heading]]:font-mono [&_[cmdk-group-heading]]:text-[10px] [&_[cmdk-group-heading]]:tracking-[0.15em] [&_[cmdk-group-heading]]:uppercase [&_[cmdk-group-heading]]:text-[#666]"
             >
               {SOCIAL_ITEMS.map((item) => (
                 <Command.Item
+                  className="flex cursor-pointer items-center gap-3 rounded-lg px-3 py-2.5 text-[#888] text-[14px] transition-colors data-[selected=true]:bg-[#111] data-[selected=true]:text-[#ededed]"
                   key={item.href}
-                  value={item.label}
                   onSelect={() => navigate(item.href)}
-                  className="flex cursor-pointer items-center gap-3 rounded-lg px-3 py-2.5 text-[14px] text-[#888] transition-colors data-[selected=true]:bg-[#111] data-[selected=true]:text-[#ededed]"
+                  value={item.label}
                 >
                   <item.icon className="h-4 w-4 shrink-0" />
                   {item.label}
@@ -157,11 +172,11 @@ export function CommandPalette({ posts }: CommandPaletteProps) {
             </Command.Group>
           </Command.List>
 
-          <div className="flex items-center justify-between border-t border-[#161616] px-4 py-2">
-            <span className="font-mono text-[10px] text-[#444]">
+          <div className="flex items-center justify-between border-[#161616] border-t px-4 py-2">
+            <span className="font-mono text-[#444] text-[10px]">
               Navigate with ↑↓ · Select with ↵ · Close with Esc
             </span>
-            <kbd className="rounded border border-[#222] px-1.5 py-0.5 font-mono text-[10px] text-[#444]">
+            <kbd className="rounded border border-[#222] px-1.5 py-0.5 font-mono text-[#444] text-[10px]">
               ⌘K
             </kbd>
           </div>

@@ -24,22 +24,22 @@ const links = [
 export function Contact() {
   return (
     <div>
-      <p className="mb-8 max-w-[400px] text-[15px] leading-[1.75] text-[#888]">
+      <p className="mb-8 max-w-[400px] text-[#888] text-[15px] leading-[1.75]">
         Have something in mind? Reach out.
       </p>
       <div className="flex flex-col gap-4">
         {links.map((link) => (
           <a
-            key={link.label}
+            className="group flex items-baseline justify-between border-[#111] border-b pb-4 transition-colors hover:border-[#222]"
             href={link.href}
-            target="_blank"
+            key={link.label}
             rel="noopener noreferrer"
-            className="group flex items-baseline justify-between border-b border-[#111] pb-4 transition-colors hover:border-[#222]"
+            target="_blank"
           >
-            <span className="font-mono text-[11px] tracking-wider uppercase text-[#666] transition-colors group-hover:text-[#a0a0a0]">
+            <span className="font-mono text-[#666] text-[11px] uppercase tracking-wider transition-colors group-hover:text-[#a0a0a0]">
               {link.label}
             </span>
-            <span className="text-[14px] text-[#a0a0a0] transition-colors group-hover:text-[#ededed]">
+            <span className="text-[#a0a0a0] text-[14px] transition-colors group-hover:text-[#ededed]">
               {link.value}
             </span>
           </a>
