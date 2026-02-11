@@ -1,60 +1,72 @@
-import type { Metadata } from 'next'
+import { Experience } from "~/components/experience";
+import { Writing } from "~/components/writing";
+import { Stack } from "~/components/stack";
+import { Ventures } from "~/components/ventures";
+import { Contact } from "~/components/contact";
 
-import { siteConfig } from '~/config/site'
-
-import Projects from '~/app/components/Projects/Projects'
-
-export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: siteConfig.title,
-    description: siteConfig.description,
-    keywords: [],
-    themeColor: [
-      { media: '(prefers-color-scheme: light)', color: 'white' },
-      { media: '(prefers-color-scheme: dark)', color: 'black' },
-    ],
-    openGraph: {
-      type: 'website',
-      locale: 'en_US',
-      url: siteConfig.url,
-      title: siteConfig.title,
-      description: siteConfig.description,
-      siteName: siteConfig.title,
-      images: [`${siteConfig.ogImage}`],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: siteConfig.title,
-      description: siteConfig.description,
-      images: [`${siteConfig.ogImage}`],
-    },
-    icons: {
-      icon: '/favicon.ico',
-      shortcut: '/favicon-16x16.png',
-      apple: '/apple-touch-icon.png',
-    },
-    manifest: `${siteConfig.url}/site.webmanifest`,
-  }
-}
-
-const Page = () => {
+function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
-    <main className="flex flex-col gap-10">
-      <div>
-        <h2 className="text-6xl font-semibold tracking-tighter">
-          I build apps.
-        </h2>
-        <p className="mt-4 whitespace-normal text-lg text-muted-foreground">
-          I{`'`}m Leo, a passionate creator living in Franca, Brazil. I have
-          years of experience with JavaScript, React, Node.js, TypeScript,
-          GraphQL, MongoDB, PostgreSQL, Tailwind, etc. I write monthly articles
-          related to various technologies.{' '}
-        </p>
-      </div>
-
-      <Projects />
-    </main>
-  )
+    <div className="mb-10 flex items-center gap-4">
+      <span className="font-mono text-[11px] tracking-[0.2em] uppercase text-[#666]">
+        {children}
+      </span>
+      <div className="section-divider flex-1" />
+    </div>
+  );
 }
 
-export default Page
+export default function Home() {
+  return (
+    <div>
+      <section className="relative mb-32">
+        <div className="hero-glow" />
+        <p className="mb-4 font-mono text-[12px] tracking-[0.25em] uppercase text-[#666]">
+          Software Engineer · Valencia, Spain
+        </p>
+        <h1 className="text-[clamp(2.5rem,6vw,4rem)] leading-[1.05] font-semibold tracking-[-0.035em] text-[#ededed]">
+          Leonardo
+          <br />
+          Maldonado
+        </h1>
+        <p className="mt-8 max-w-[480px] text-[15px] leading-[1.75] text-[#888]">
+          Building web experiences at{" "}
+          <a
+            href="https://www.namecheap.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link-hover text-[#a0a0a0] transition-colors hover:text-[#ededed]"
+          >
+            Namecheap
+          </a>
+          . Passionate about crafting products that feel right — from the
+          architecture to the last pixel.
+        </p>
+      </section>
+
+      <section className="mb-28">
+        <SectionLabel>Experience</SectionLabel>
+        <Experience />
+      </section>
+
+      <section className="mb-28">
+        <SectionLabel>Writing</SectionLabel>
+        <Writing />
+      </section>
+
+      <section className="mb-28">
+        <SectionLabel>Stack</SectionLabel>
+        <Stack />
+      </section>
+
+      <section className="mb-28">
+        <SectionLabel>Ventures</SectionLabel>
+        <Ventures />
+      </section>
+
+      <section>
+        <SectionLabel>Contact</SectionLabel>
+        <Contact />
+      </section>
+    </div>
+  );
+}

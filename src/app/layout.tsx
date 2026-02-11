@@ -1,68 +1,94 @@
-import { Inter } from 'next/font/google'
-import Link from 'next/link'
-import Script from 'next/script'
+import type { Metadata } from "next";
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
+import Link from "next/link";
+import Script from "next/script";
+import "./globals.css";
 
-import Footer from '~/app/components/Footer/Footer'
+export const metadata: Metadata = {
+  title: "Leonardo Maldonado",
+  description:
+    "Software Engineer based in Valencia, Spain. Building web experiences at Namecheap.",
+  openGraph: {
+    title: "Leonardo Maldonado",
+    description: "Software Engineer based in Valencia, Spain.",
+    url: "https://leonardomso.com",
+    siteName: "Leonardo Maldonado",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Leonardo Maldonado",
+    description: "Software Engineer based in Valencia, Spain.",
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
 
-import { Button } from '~/components/ui/button'
-
-import '~/styles/global.css'
-import { cn } from '~/lib/utils'
-
-const fontSans = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-inter',
-})
-
-interface Props {
-  children: React.ReactNode
-}
-
-const Layout = ({ children }: Props) => {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html
-      suppressHydrationWarning
-      lang="en"
-      className={cn(
-        'min-h-screen bg-background font-sans antialiased',
-        fontSans.variable,
-      )}
-    >
-      <head />
-      <body className="mx-auto flex max-w-2xl flex-col gap-20 p-4 px-4">
-        <header className="max-w-1xl flex flex-col justify-between gap-4 sm:flex-row">
-          <div>
-            <Link href="/">
-              <h1 className="text-2xl font-semibold tracking-tighter">
-                Leonardo Maldonado
-              </h1>
-              <p className="whitespace-normal text-sm text-muted-foreground">
-                software engineer
-              </p>
+    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
+      <body className="antialiased">
+        <div className="relative mx-auto w-full max-w-[680px] px-6 pt-16 pb-24 md:px-0">
+          <header className="mb-20 flex items-center justify-between">
+            <Link
+              href="/"
+              className="link-hover font-mono text-[13px] tracking-wide uppercase text-[#a0a0a0] transition-colors hover:text-[#ededed]"
+            >
+              Leonardo Maldonado
             </Link>
-          </div>
+            <nav className="flex gap-8">
+              <Link
+                href="/about"
+                className="link-hover text-[13px] tracking-wide uppercase text-[#666] transition-colors hover:text-[#ededed]"
+              >
+                About
+              </Link>
+              <Link
+                href="/blog"
+                className="link-hover text-[13px] tracking-wide uppercase text-[#666] transition-colors hover:text-[#ededed]"
+              >
+                Blog
+              </Link>
+            </nav>
+          </header>
 
-          <div>
-            <Button variant="ghost" asChild>
-              <Link href="/about">about</Link>
-            </Button>
+          <main>{children}</main>
 
-            <Button variant="ghost" asChild>
-              <Link href="/projects">projects</Link>
-            </Button>
-
-            <Button variant="ghost" asChild>
-              <Link href="/articles">articles</Link>
-            </Button>
-          </div>
-        </header>
-        {children}
-        <Footer />
+          <footer className="mt-32 flex items-center justify-between border-t border-[#161616] pt-8">
+            <p className="font-mono text-[11px] tracking-wider text-[#666]">
+              © 2025
+            </p>
+            <div className="flex gap-6">
+              {[
+                { label: "GitHub", href: "https://github.com/leonardomso" },
+                { label: "X", href: "https://x.com/leonardomso" },
+                {
+                  label: "LinkedIn",
+                  href: "https://www.linkedin.com/in/leonardomso/",
+                },
+              ].map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="link-hover text-[12px] tracking-wide text-[#666] transition-colors hover:text-[#ededed]"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          </footer>
+        </div>
         <Script src="https://scripts.simpleanalyticscdn.com/latest.js" />
       </body>
     </html>
-  )
+  );
 }
-
-export default Layout
