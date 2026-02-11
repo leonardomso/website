@@ -1,42 +1,33 @@
-name: Build
-on: [push]
+name: CI
+
+on:
+  push:
+    branches: [master, feat/v2]
+  pull_request:
+    branches: [master]
+
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v5
 
-      - name: Use Node 18
-        uses: actions/setup-node@v1
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: 18.x
-
-      - name: Cache node_modules
-        uses: actions/cache@v2
-        with:
-          path: '**/node_modules'
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+          node-version: 22
+          cache: npm
 
       - name: Install dependencies
-        uses: bahmutov/npm-install@v1
+        run: npm ci
 
       - name: Lint
-        run: yarn lint
-        env:
-          CI: true
-
-      - name: Format
-        run: yarn format
-        env:
-          CI: true
+        run: npm run lint
 
       - name: Typecheck
-        run: yarn typecheck
-        env:
-          CI: true
+        run: npm run typecheck
 
       - name: Build
-        run: yarn build
-        env:
-          CI: true
+        run: npm run build
