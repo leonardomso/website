@@ -18,8 +18,8 @@ import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 
 interface BlogPost {
-  title: string;
   slug: string;
+  title: string;
 }
 
 interface CommandPaletteProps {

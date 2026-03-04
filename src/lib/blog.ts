@@ -3,19 +3,19 @@ import path from "node:path";
 import matter from "gray-matter";
 
 export interface BlogPost {
-  slug: string;
-  title: string;
-  description: string;
-  date: string;
   content: string;
+  date: string;
+  description: string;
   readingTime: number;
+  slug: string;
   tags: string[];
+  title: string;
 }
 
 export interface Heading {
   id: string;
-  text: string;
   level: 2 | 3;
+  text: string;
 }
 
 const WHITESPACE_RE = /\s+/;

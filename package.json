@@ -3,12 +3,18 @@
   "version": "2.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
+    "dev": "next dev",
+    "build": "basehub generate && next build",
     "start": "next start",
-    "lint": "biome check .",
-    "format": "biome check --write .",
-    "typecheck": "tsc --noEmit"
+    "lint": "next lint",
+    "basehub": "basehub",
+    "biome:lint": "biome lint ./src",
+    "biome:format": "biome format --write ./src",
+    "biome:write": "biome check --write ./src",
+    "biome:fix:unsafe": "biome check --fix --unsafe ./src",
+    "typecheck": "tsc --noEmit",
+    "clean": "git clean -xdf .next .turbo node_modules",
+    "run-all": "bun run biome:fix:unsafe && bun run biome:format && bun run biome:write && bun run biome:lint && bun run typecheck"
   },
   "dependencies": {
     "basehub": "^9.5.3",
