@@ -1,10 +1,10 @@
 export interface Project {
-  title: string;
-  tag: string;
   description: string;
-  url: string;
-  tech: string[];
   featured: boolean;
+  tag: string;
+  tech: string[];
+  title: string;
+  url: string;
 }
 
 export const projects: Project[] = [

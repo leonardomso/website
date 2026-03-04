@@ -11,29 +11,29 @@ html {
 }
 
 body {
-  background-color: #050505;
-  color: #ededed;
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #ededed;
+  background-color: #050505;
 }
 
 ::selection {
-  background-color: #ededed;
   color: #050505;
+  background-color: #ededed;
 }
 
 /* ── Noise texture overlay for depth ── */
 body::before {
-  content: "";
   position: fixed;
   inset: 0;
   z-index: 9999;
   pointer-events: none;
-  opacity: 0.025;
+  content: "";
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
   background-repeat: repeat;
   background-size: 256px 256px;
+  opacity: 0.025;
 }
 
 /* ── Subtle glow behind hero ── */
@@ -41,16 +41,16 @@ body::before {
   position: absolute;
   top: -120px;
   left: 50%;
-  transform: translateX(-50%);
+  z-index: 0;
   width: 600px;
   height: 400px;
+  pointer-events: none;
   background: radial-gradient(
     ellipse at center,
     rgba(255, 255, 255, 0.03) 0%,
     transparent 70%
   );
-  pointer-events: none;
-  z-index: 0;
+  transform: translateX(-50%);
 }
 
 /* ── Section divider ── */
@@ -72,12 +72,12 @@ body::before {
 }
 
 .link-hover::after {
-  content: "";
   position: absolute;
   bottom: -2px;
   left: 0;
   width: 0;
   height: 1px;
+  content: "";
   background-color: #ededed;
   transition: width 0.3s ease;
 }
@@ -93,14 +93,14 @@ body::before {
 }
 
 .timeline-item::before {
-  content: "";
   position: absolute;
-  left: 0;
   top: 8px;
+  left: 0;
   width: 6px;
   height: 6px;
-  border-radius: 50%;
+  content: "";
   background-color: #333;
+  border-radius: 50%;
   transition: background-color 0.3s ease;
 }
 
@@ -109,12 +109,12 @@ body::before {
 }
 
 .timeline-item::after {
-  content: "";
   position: absolute;
-  left: 2.5px;
   top: 20px;
-  width: 1px;
   bottom: -24px;
+  left: 2.5px;
+  width: 1px;
+  content: "";
   background: linear-gradient(180deg, #222, transparent);
 }
 
@@ -129,17 +129,17 @@ body::before {
 }
 
 .card-glow::before {
-  content: "";
   position: absolute;
   inset: 0;
-  opacity: 0;
+  pointer-events: none;
+  content: "";
   background: radial-gradient(
     600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
     rgba(255, 255, 255, 0.04),
     transparent 40%
   );
+  opacity: 0;
   transition: opacity 0.3s ease;
-  pointer-events: none;
 }
 
 .card-glow:hover::before {
@@ -174,10 +174,10 @@ body::before {
   --prose-pre-bg: #0a0a0a;
   --prose-borders: #1a1a1a;
   --prose-captions: #888;
-
-  color: var(--prose-body);
   font-size: 15px;
   line-height: 1.8;
+
+  color: var(--prose-body);
 }
 
 .prose > * + * {
@@ -188,32 +188,32 @@ body::before {
 .prose h2,
 .prose h3,
 .prose h4 {
-  color: var(--prose-headings);
   font-weight: 600;
-  letter-spacing: -0.02em;
   line-height: 1.3;
+  color: var(--prose-headings);
+  letter-spacing: -0.02em;
 }
 
 .prose h1 {
-  font-size: 1.875rem;
   margin-top: 0;
+  font-size: 1.875rem;
 }
 
 .prose h2 {
-  font-size: 1.375rem;
-  margin-top: 2.5em;
   padding-bottom: 0.5em;
+  margin-top: 2.5em;
+  font-size: 1.375rem;
   border-bottom: 1px solid var(--prose-borders);
 }
 
 .prose h3 {
-  font-size: 1.125rem;
   margin-top: 2em;
+  font-size: 1.125rem;
 }
 
 .prose h4 {
-  font-size: 1rem;
   margin-top: 1.75em;
+  font-size: 1rem;
 }
 
 .prose p {
@@ -224,8 +224,8 @@ body::before {
 .prose a {
   color: var(--prose-links);
   text-decoration: underline;
-  text-underline-offset: 3px;
   text-decoration-color: #444;
+  text-underline-offset: 3px;
   transition: text-decoration-color 0.2s ease;
 }
 
@@ -234,8 +234,8 @@ body::before {
 }
 
 .prose strong {
-  color: var(--prose-headings);
   font-weight: 600;
+  color: var(--prose-headings);
 }
 
 .prose em {
@@ -267,58 +267,58 @@ body::before {
 }
 
 .prose blockquote {
-  border-left: 2px solid #222;
   padding-left: 1.25em;
-  color: #888;
-  font-style: italic;
   margin-top: 1.5em;
   margin-bottom: 1.5em;
+  font-style: italic;
+  color: #888;
+  border-left: 2px solid #222;
 }
 
 .prose code {
+  padding: 0.2em 0.4em;
   font-family: var(--font-mono);
   font-size: 0.875em;
   color: var(--prose-code);
   background-color: var(--prose-code-bg);
-  padding: 0.2em 0.4em;
   border-radius: 4px;
 }
 
 .prose pre {
+  padding: 1.25em 1.5em;
+  margin-top: 1.75em;
+  margin-bottom: 1.75em;
+  overflow-x: auto;
+  font-size: 13px;
+  line-height: 1.7;
   background-color: var(--prose-pre-bg);
   border: 1px solid var(--prose-borders);
   border-radius: 8px;
-  padding: 1.25em 1.5em;
-  overflow-x: auto;
-  margin-top: 1.75em;
-  margin-bottom: 1.75em;
-  font-size: 13px;
-  line-height: 1.7;
 }
 
 .prose pre code {
-  background: none;
   padding: 0;
-  border-radius: 0;
-  color: inherit;
   font-size: inherit;
+  color: inherit;
+  background: none;
+  border-radius: 0;
 }
 
 .prose hr {
-  border: none;
   height: 1px;
-  background: linear-gradient(90deg, transparent, #1a1a1a, transparent);
   margin-top: 2.5em;
   margin-bottom: 2.5em;
+  background: linear-gradient(90deg, transparent, #1a1a1a, transparent);
+  border: none;
 }
 
 .prose img {
   max-width: 100%;
   height: auto;
-  border-radius: 8px;
-  border: 1px solid var(--prose-borders);
   margin-top: 2em;
   margin-bottom: 2em;
+  border: 1px solid var(--prose-borders);
+  border-radius: 8px;
 }
 
 .prose figure {
@@ -327,29 +327,29 @@ body::before {
 }
 
 .prose figcaption {
-  color: var(--prose-captions);
-  font-size: 0.8125rem;
-  text-align: center;
   margin-top: 0.75em;
+  font-size: 0.8125rem;
+  color: var(--prose-captions);
+  text-align: center;
 }
 
 .prose table {
   width: 100%;
-  border-collapse: collapse;
-  font-size: 0.875rem;
   margin-top: 1.75em;
   margin-bottom: 1.75em;
+  font-size: 0.875rem;
+  border-collapse: collapse;
 }
 
 .prose th {
-  color: var(--prose-headings);
-  font-weight: 600;
-  text-align: left;
   padding: 0.625em 1em;
-  border-bottom: 1px solid #222;
   font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--prose-headings);
+  text-align: left;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  border-bottom: 1px solid #222;
 }
 
 .prose td {
@@ -363,11 +363,11 @@ body::before {
 
 /* ── Shiki code highlighting overrides ── */
 .prose pre [data-highlighted-line] {
-  background-color: rgba(255, 255, 255, 0.05);
-  margin: 0 -1.5em;
-  padding: 0 1.5em;
   display: inline-block;
   width: calc(100% + 3em);
+  padding: 0 1.5em;
+  margin: 0 -1.5em;
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .prose [data-rehype-pretty-code-figure] pre {
@@ -376,11 +376,11 @@ body::before {
 }
 
 .prose [data-rehype-pretty-code-figure] code {
-  background: none;
-  padding: 0;
-  border-radius: 0;
-  counter-reset: line;
   display: grid;
+  padding: 0;
+  counter-reset: line;
+  background: none;
+  border-radius: 0;
 }
 
 .prose [data-rehype-pretty-code-figure] [data-line] {
@@ -388,18 +388,18 @@ body::before {
 }
 
 .prose [data-rehype-pretty-code-title] {
+  padding: 0.75em 1.5em;
   font-family: var(--font-mono);
   font-size: 0.75rem;
   color: #666;
-  padding: 0.75em 1.5em;
-  border-bottom: 1px solid var(--prose-borders);
   background-color: var(--prose-pre-bg);
+  border-bottom: 1px solid var(--prose-borders);
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
 
 .prose [data-rehype-pretty-code-title] + pre {
+  margin-top: 0;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  margin-top: 0;
 }
