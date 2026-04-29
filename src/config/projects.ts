@@ -22,7 +22,7 @@ export const projects: Project[] = [
     tag: "Work",
     description:
       "Built the domain search platform from scratch as the sole front-end engineer. Real-time WebSocket pricing across 500+ TLDs, Beast Mode bulk search, multi-currency engine across 30+ currencies.",
-    url: "https://www.spaceship.com",
+    url: "https://www.spaceship.com/domain-search/",
     tech: ["TypeScript", "React", "Zustand", "TanStack Query"],
     featured: true,
   },
