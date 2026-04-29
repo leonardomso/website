@@ -15,8 +15,13 @@ export function TableOfContents({ headings }: TocProps) {
   }
 
   return (
-    <nav className="mb-10 rounded-lg border border-[#161616] bg-[#0a0a0a] p-4">
+    <nav
+      aria-label="Table of contents"
+      className="mb-10 rounded-lg border border-[#161616] bg-[#0a0a0a] p-4"
+    >
       <button
+        aria-controls="toc-content"
+        aria-expanded={open}
         className="flex w-full cursor-pointer items-center justify-between"
         onClick={() => setOpen(!open)}
         type="button"
@@ -29,7 +34,10 @@ export function TableOfContents({ headings }: TocProps) {
         </span>
       </button>
       {open && (
-        <ul className="mt-3 flex flex-col gap-1.5 border-[#161616] border-t pt-3">
+        <ul
+          className="mt-3 flex flex-col gap-1.5 border-[#161616] border-t pt-3"
+          id="toc-content"
+        >
           {headings.map((h) => (
             <li className={h.level === 3 ? "ml-4" : ""} key={h.id}>
               <a

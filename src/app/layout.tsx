@@ -56,6 +56,12 @@ export default async function RootLayout({
   return (
     <html className={`${GeistSans.variable} ${GeistMono.variable}`} lang="en">
       <body className="antialiased">
+        <a
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[10002] focus:rounded-lg focus:bg-[#ededed] focus:px-4 focus:py-2 focus:font-medium focus:text-[#050505] focus:text-sm"
+          href="#main-content"
+        >
+          Skip to content
+        </a>
         <JsonLd data={personSchema} />
         <JsonLd data={websiteSchema} />
         <CommandPalette posts={cmdkPosts} />
@@ -67,7 +73,7 @@ export default async function RootLayout({
             >
               Leonardo Maldonado
             </Link>
-            <nav className="flex gap-6">
+            <nav aria-label="Main navigation" className="flex gap-6">
               <Link
                 className="link-hover text-[#666] text-[13px] uppercase tracking-wide transition-colors hover:text-[#ededed]"
                 href="/about"
@@ -95,13 +101,13 @@ export default async function RootLayout({
             </nav>
           </header>
 
-          <main>{children}</main>
+          <main id="main-content">{children}</main>
 
           <footer className="mt-32 flex items-center justify-between border-[#161616] border-t pt-8">
             <p className="font-mono text-[#666] text-[11px] tracking-wider">
               © 2026
             </p>
-            <div className="flex gap-6">
+            <nav aria-label="Social links" className="flex gap-6">
               {[
                 { label: "GitHub", href: "https://github.com/leonardomso" },
                 { label: "X", href: "https://x.com/leonardomso" },
@@ -120,7 +126,7 @@ export default async function RootLayout({
                   {link.label}
                 </a>
               ))}
-            </div>
+            </nav>
           </footer>
         </div>
         <Script src="https://scripts.simpleanalyticscdn.com/latest.js" />
