@@ -49,17 +49,8 @@ export default function AboutPage() {
           </a>
           . I built the whole thing from zero: the architecture, the real-time
           pricing over WebSocket, bulk search, multi-currency support across 30+
-          currencies. Four and a half years of owning a product end to end. I
-          left in April 2026.
+          currencies. Four and a half years of owning a product end to end.
         </p>
-
-        <p>
-          Before that, I was at startups in Brazil building mobile apps with
-          React Native, including a food delivery app in LA and banking apps
-          that needed to be airtight on security. That&apos;s where I learned to
-          care about the details that matter.
-        </p>
-
         <p>
           On the side, I&apos;ve built a few things I&apos;m proud of.{" "}
           <a
