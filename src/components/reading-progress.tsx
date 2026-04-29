@@ -31,7 +31,12 @@ export function ReadingProgress() {
 
   return (
     <div
+      aria-label="Reading progress"
+      aria-valuemax={100}
+      aria-valuemin={0}
+      aria-valuenow={Math.round(progress * 100)}
       className="fixed top-0 left-0 z-[10000] h-[2px] bg-[#ededed] opacity-80 transition-[width] duration-100"
+      role="progressbar"
       style={{ width: `${progress * 100}%` }}
     />
   );

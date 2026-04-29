@@ -121,20 +121,31 @@ export function CommandPalette({ posts }: CommandPaletteProps) {
   }
 
   return (
-    // biome-ignore lint/a11y/noStaticElementInteractions: modal backdrop dismiss
-    // biome-ignore lint/a11y/noNoninteractiveElementInteractions: modal backdrop dismiss
-    // biome-ignore lint/a11y/useKeyWithClickEvents: Escape key handled via useEffect
+    // biome-ignore lint/a11y/noNoninteractiveElementInteractions: role=dialog requires click-to-dismiss and keydown handlers
     <div
+      aria-label="Command palette"
+      aria-modal="true"
       className="fixed inset-0 z-[10001] flex items-start justify-center pt-[20vh]"
       onClick={() => setOpen(false)}
+      onKeyDown={(e) => {
+        if (e.key === "Escape") {
+          setOpen(false);
+        }
+      }}
+      role="dialog"
     >
       <div aria-hidden className="fixed inset-0 bg-black/50 backdrop-blur-sm" />
-      {/* biome-ignore lint/a11y/noStaticElementInteractions: modal content wrapper */}
-      {/* biome-ignore lint/a11y/noNoninteractiveElementInteractions: modal content wrapper */}
-      {/* biome-ignore lint/a11y/useKeyWithClickEvents: stopPropagation only */}
+      {/* biome-ignore lint/a11y/noNoninteractiveElementInteractions: role=document wrapper handles ESC propagation */}
       <div
         className="relative z-10 mx-4 w-full max-w-[520px] overflow-hidden rounded-xl border border-[#161616] bg-[#0a0a0a] shadow-2xl"
         onClick={(e) => e.stopPropagation()}
+        onKeyDown={(e) => {
+          if (e.key === "Escape") {
+            e.stopPropagation();
+            setOpen(false);
+          }
+        }}
+        role="document"
       >
         <Command
           className="flex flex-col"
@@ -212,7 +223,7 @@ export function CommandPalette({ posts }: CommandPaletteProps) {
 
           <div className="flex items-center justify-between border-[#161616] border-t px-4 py-2">
             <span className="font-mono text-[#444] text-[10px]">
-              Navigate with ↑↓ · Select with ↵ · Close with Esc
+              Navigate with · Select with ↵ · Close with Esc
             </span>
             <kbd className="rounded border border-[#222] px-1.5 py-0.5 font-mono text-[#444] text-[10px]">
               ⌘K
