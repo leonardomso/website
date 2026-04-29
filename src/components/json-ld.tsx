@@ -17,7 +17,7 @@ export const personSchema = {
   name: "Leonardo Maldonado",
   jobTitle: "Software Engineer",
   description:
-    "Software engineer with 6+ years of experience. Built Spaceship's domain search platform at Namecheap. Creator of 33 JavaScript Concepts (63k+ stars).",
+    "Software engineer with 7+ years of experience. Built Spaceship's domain search platform at Namecheap. Creator of 33 JavaScript Concepts (66K+ stars).",
   url: "https://leonardomso.com",
   image: "https://leonardomso.com/opengraph-image",
   email: "leonardomso11@gmail.com",

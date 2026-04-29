@@ -6,7 +6,7 @@ const content = `# Leonardo Maldonado
 
 ## About
 
-Leonardo Maldonado is a software engineer with 6+ years of experience building web applications. He previously worked at Namecheap where he built Spaceship's domain search platform from scratch as the sole front-end developer using React, TypeScript, Zustand, and TanStack Query.
+Leonardo Maldonado is a software engineer with 7+ years of experience building web applications. He previously worked at Namecheap where he built Spaceship's domain search platform from scratch as the sole front-end developer using React, TypeScript, Zustand, and TanStack Query.
 
 He is the creator of 33 JavaScript Concepts, an open-source repository with 63,000+ stars recognized by GitHub as one of the top projects of 2018, translated into 20+ languages.
 
