@@ -14,6 +14,7 @@ const MARKDOWN_PAGES: Record<string, () => string> = {
   "/": () => homeMarkdown(),
   "/about": () => aboutMarkdown(),
   "/projects": () => projectsMarkdown(),
+  "/resume": () => resumeMarkdown(),
 };
 
 export function middleware(request: NextRequest) {
@@ -141,5 +142,70 @@ https://github.com/leonardomso/betterhook
 ## rust-skills
 179 rules that AI coding agents can use when writing Rust.
 https://github.com/leonardomso/rust-skills
+`;
+}
+
+function resumeMarkdown(): string {
+  return `# Resume — Leonardo Maldonado
+
+> Software Engineer · Valencia, Spain
+
+leonardomso11@gmail.com · [github.com/leonardomso](https://github.com/leonardomso) · [linkedin.com/in/leonardomso](https://www.linkedin.com/in/leonardomso/) · [leonardomso.com](${SITE_URL})
+
+## Professional Summary
+
+Software engineer with 7+ years of experience. For four and a half years, the sole engineer responsible for Namecheap's Spaceship domain search product end to end: product decisions, architecture, React/TypeScript frontend, real-time WebSocket data layer, performance, and releases. Also built a retail ERP (Shopwyse) and an AI writing tool (Polyglot) independently, full-stack with TypeScript, Node.js, GraphQL, and PostgreSQL. Creator of 33 JavaScript Concepts (66K+ GitHub stars). Author of 100+ technical articles. Contributor to Better Auth, Node.js, and TanStack.
+
+## Skills
+
+TypeScript | React.js | Node.js | GraphQL | PostgreSQL | Full-Stack Development | Product Engineering | Real-Time Systems / WebSocket | Performance Optimization | Open Source | REST APIs | CI/CD | GitHub Actions | Redis
+
+## Work Experience
+
+### Front End Engineer, Spaceship Domain Search — Namecheap (Nov 2021 — Apr 2026)
+
+Sole engineer responsible for Spaceship's domain search product. Built it from zero with React, TypeScript, and Zustand. Tackled real-time pricing across 500+ TLDs over WebSocket. Brought re-renders down by about 80%. Integrated TanStack Query with query key factories and smart cache invalidation, cutting redundant API calls by roughly 60%. Introduced code splitting and virtualized rendering, ending up about 40% smaller. Built "Beast Mode" bulk search. Set up a multi-currency pricing engine across 30+ currencies.
+
+### Technical Author — Progress (May 2019 — Dec 2023)
+
+Technical writer covering JavaScript, TypeScript, React, Node.js, and modern web development.
+
+### Technical Author — LogRocket (Feb 2020 — Feb 2022)
+
+Published 70+ technical articles on JavaScript, TypeScript, React, Node.js, GraphQL, and web fundamentals.
+
+### Software Engineer — Popstand (Oct 2019 — Apr 2020)
+
+Built Taco Maps from scratch, a React Native food delivery app for LA taco restaurants. Redux, TypeScript, Firebase, E2E tests with Detox.
+
+### Software Engineer — Foton (Jan 2019 — Jul 2019)
+
+React and React Native applications for Brazilian banking clients. Financial-grade security and reliability standards.
+
+## Projects
+
+- **[33 JavaScript Concepts](https://github.com/leonardomso/33-js-concepts)** — 66K+ stars, translated into 40+ languages. GitHub top project of 2018.
+- **[Shopwyse](https://www.getshopwyse.com)** — Multi-tenant retail ERP. TanStack Start, React 19, Elysia, Drizzle ORM, PostgreSQL.
+- **[Polyglot](https://www.trypolyglot.ai)** — AI writing assistant. Full-stack TypeScript.
+- **[Otis Finance](https://otisfinance.com)** — Stock market API for real-time prices, SEC filings, earnings.
+- **[gone](https://github.com/leonardomso/gone)** — Dead link detector written in Go.
+- **[betterhook](https://github.com/leonardomso/betterhook)** — Git hooks manager written in Rust.
+
+## Technical Skills
+
+- **Languages:** JavaScript, TypeScript, Go (side projects), Rust (side projects)
+- **Frontend:** React.js, Next.js, TanStack Start, TanStack Query, React Native, Zustand
+- **Backend:** Node.js, Bun, Hono, Elysia, GraphQL, REST APIs, WebSocket, PostgreSQL, Drizzle ORM, Redis, MongoDB
+- **Tools & CI/CD:** Docker, GitHub Actions, AI SDK, Biome, Better Auth
+
+## Languages
+
+- Portuguese (Native)
+- English (Fluent)
+- Spanish (Fluent)
+
+## Education
+
+Computer Engineering Technician — SENAC (Jan 2013 — Dec 2014)
 `;
 }
