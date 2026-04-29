@@ -8,7 +8,7 @@ const experiences: {
   description: React.ReactNode;
 }[] = [
   {
-    period: "Nov 2021 — Present",
+    period: "Nov 2021 — Apr 2026",
     role: "Software Engineer",
     company: "Namecheap",
     url: "https://www.namecheap.com/",
@@ -168,10 +168,11 @@ export default function ResumePage() {
           </h2>
           <p className="text-[#888] text-[15px] leading-[1.8]">
             Software engineer with 6+ years of experience building web
-            applications and developer tools. Currently at Namecheap building
-            Spaceship. Created 33 JavaScript Concepts, an open-source project
-            with 63,000+ stars recognized by GitHub as a top project of 2018.
-            Published 90+ technical articles with over 1 million views.
+            applications and developer tools. Built Spaceship&apos;s domain
+            search platform at Namecheap. Created 33 JavaScript Concepts, an
+            open-source project with 63,000+ stars recognized by GitHub as a top
+            project of 2018. Published 90+ technical articles with over 1
+            million views.
           </p>
         </section>
 

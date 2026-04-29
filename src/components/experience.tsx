@@ -6,7 +6,7 @@ const experiences: {
   description: React.ReactNode;
 }[] = [
   {
-    period: "Nov 2021 — Present",
+    period: "Nov 2021 — Apr 2026",
     role: "Software Engineer",
     company: "Namecheap",
     url: "https://www.namecheap.com/",

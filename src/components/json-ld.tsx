@@ -31,11 +31,6 @@ export const personSchema = {
     "https://x.com/leonardomso",
     "https://www.linkedin.com/in/leonardomso/",
   ],
-  worksFor: {
-    "@type": "Organization",
-    name: "Namecheap",
-    url: "https://www.namecheap.com",
-  },
   knowsAbout: [
     "TypeScript",
     "React",

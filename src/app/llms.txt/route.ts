@@ -2,11 +2,11 @@ const SITE_URL = "https://leonardomso.com";
 
 const content = `# Leonardo Maldonado
 
-> Software engineer based in Valencia, Spain. Building web experiences at Namecheap.
+> Software engineer based in Valencia, Spain. Built Spaceship's domain search platform at Namecheap.
 
 ## About
 
-Leonardo Maldonado is a software engineer with 6+ years of experience building web applications. He currently works at Namecheap where he built Spaceship's domain search platform from scratch as the sole front-end developer using React, TypeScript, Zustand, and TanStack Query.
+Leonardo Maldonado is a software engineer with 6+ years of experience building web applications. He previously worked at Namecheap where he built Spaceship's domain search platform from scratch as the sole front-end developer using React, TypeScript, Zustand, and TanStack Query.
 
 He is the creator of 33 JavaScript Concepts, an open-source repository with 63,000+ stars recognized by GitHub as one of the top projects of 2018, translated into 20+ languages.
 
@@ -44,7 +44,7 @@ TypeScript, React, JavaScript, Next.js, Zustand, TanStack Query, Node.js, GraphQ
 
 ## Experience
 
-- Software Engineer at Namecheap (Nov 2021 — Present)
+- Software Engineer at Namecheap (Nov 2021 — Apr 2026)
 - Technical Author at Progress/Telerik (May 2019 — Dec 2023)
 - Technical Author at LogRocket (Feb 2020 — Feb 2022)
 - Software Engineer at Popstand (Oct 2019 — Apr 2020)

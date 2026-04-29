@@ -27,7 +27,7 @@ export default function AboutPage() {
         </p>
 
         <p>
-          I currently work at{" "}
+          I worked at{" "}
           <a
             className="link-hover text-[#a0a0a0] transition-colors hover:text-[#ededed]"
             href="https://www.namecheap.com"
