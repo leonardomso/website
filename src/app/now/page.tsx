@@ -52,8 +52,9 @@ export default function NowPage() {
               >
                 Spaceship&apos;s
               </a>{" "}
-              domain search platform from scratch and scaled the frontend
-              architecture. Exploring what comes next.
+              domain search platform from scratch as the sole engineer for four
+              and a half years, helping the platform sell 3M+ domains. Exploring
+              what comes next.
             </p>
           </div>
         </section>

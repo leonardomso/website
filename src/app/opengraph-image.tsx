@@ -59,8 +59,8 @@ export default function OGImage() {
             lineHeight: 1.6,
           }}
         >
-          Built Spaceship&apos;s domain search platform at Namecheap. Creator of
-          33 JavaScript Concepts (63k+ stars).
+          Sole engineer on Spaceship&apos;s domain search at Namecheap — helped
+          sell 3M+ domains. Creator of 33 JavaScript Concepts (66k+ stars).
         </div>
       </div>
       <div

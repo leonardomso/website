@@ -23,18 +23,12 @@ const experiences: {
         >
           Spaceship&apos;s domain search
         </a>
-        . Built it from zero with React, TypeScript, and Zustand. Tackled
-        real-time pricing across 500+ TLDs over WebSocket. Batched state
-        updates, debounced renders, and queued incoming messages to keep the UI
-        responsive. Brought re-renders down by about 80%. Integrated TanStack
-        Query with query key factories and smart cache invalidation, cutting
-        redundant API calls by roughly 60%. Introduced code splitting and
-        virtualized rendering, ending up about 40% smaller. Built &quot;Beast
-        Mode,&quot; a bulk search feature for multiple domain variations with
-        filters for price, category, and TLD type. Set up a multi-currency
-        pricing engine with stale-while-revalidate caching and optimistic
-        updates across 30+ currencies. Defined and enforced codebase linting
-        standards using Biome.
+        — helped the platform sell 3M+ domains. Built it from zero with React,
+        TypeScript, and Zustand. Tackled real-time pricing across 500+ TLDs over
+        WebSocket. Built &quot;Beast Mode,&quot; a bulk search feature for
+        multiple domain variations with filters for price, category, and TLD
+        type. Set up a multi-currency pricing engine with
+        stale-while-revalidate caching across 30+ currencies.
       </>
     ),
   },
@@ -229,9 +223,9 @@ export default function ResumePage() {
           <p className="text-[#888] text-[15px] leading-[1.8]">
             Software engineer with 7+ years of experience. For four and a half
             years, the sole engineer responsible for Namecheap&apos;s Spaceship
-            domain search product end to end: product decisions, architecture,
-            React/TypeScript frontend, real-time WebSocket data layer,
-            performance, and releases. Also built a retail ERP (Shopwyse) and an
+            domain search product end to end — helped the platform sell 3M+
+            domains. Architecture, React/TypeScript frontend, real-time WebSocket
+            data layer, and releases. Also built a retail ERP (Shopwyse) and an
             AI writing tool (Polyglot) independently, full-stack with
             TypeScript, Node.js, GraphQL, and PostgreSQL. Creator of 33
             JavaScript Concepts (66K+ GitHub stars). Author of 100+ technical

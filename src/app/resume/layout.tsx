@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Resume",
   description:
-    "Software Engineer with 7+ years of experience. Built Spaceship's domain search platform at Namecheap. Creator of 33 JavaScript Concepts (66K+ stars).",
+    "Software Engineer with 7+ years of experience. Sole engineer on Spaceship at Namecheap — helped sell 3M+ domains.",
 };
 
 export default function ResumeLayout({

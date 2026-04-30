@@ -4,7 +4,7 @@ import { JsonLd, profilePageSchema } from "~/components/json-ld";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Software engineer based in Valencia, Spain. Built Spaceship's domain search platform at Namecheap. Creator of 33 JavaScript Concepts (66K+ stars).",
+    "Software engineer based in Valencia, Spain. Sole engineer on Spaceship's domain search at Namecheap — helped sell 3M+ domains. Creator of 33 JavaScript Concepts (66K+ stars).",
 };
 
 export default function AboutPage() {
@@ -47,9 +47,10 @@ export default function AboutPage() {
           >
             Spaceship&apos;s domain search
           </a>
-          . I built the whole thing from zero: the architecture, the real-time
-          pricing over WebSocket, bulk search, multi-currency support across 30+
-          currencies. Four and a half years of owning a product end to end.
+          . I built the whole thing from zero and helped the platform sell 3M+
+          domains: the architecture, the real-time pricing over WebSocket, bulk
+          search, multi-currency support across 30+ currencies. Four and a half
+          years of owning a product end to end.
         </p>
         <p>
           On the side, I&apos;ve built a few things I&apos;m proud of.{" "}
