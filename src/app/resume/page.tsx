@@ -13,23 +13,35 @@ const experiences: {
     company: "Namecheap",
     url: "https://www.namecheap.com/",
     description: (
-      <>
-        Sole engineer responsible for{" "}
-        <a
-          className="link-hover text-[#a0a0a0] transition-colors hover:text-[#ededed] print:text-[#111] print:no-underline"
-          href="https://www.spaceship.com/domain-search/"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          Spaceship&apos;s domain search
-        </a>
-        — helped the platform sell 3M+ domains. Built it from zero with React,
-        TypeScript, and Zustand. Tackled real-time pricing across 500+ TLDs over
-        WebSocket. Built &quot;Beast Mode,&quot; a bulk search feature for
-        multiple domain variations with filters for price, category, and TLD
-        type. Set up a multi-currency pricing engine with
-        stale-while-revalidate caching across 30+ currencies.
-      </>
+      <ul className="list-disc space-y-1.5 pl-4">
+        <li>
+          Led the development of Spaceship&apos;s domain search product,
+          contributing to the sale of over 3 million domains by building the
+          frontend with React, TypeScript, and Zustand.
+        </li>
+        <li>
+          Created a real-time pricing system using WebSocket technology to
+          stream live prices for hundreds of TLDs during each search,
+          optimizing data delivery speed to maintain UI smoothness.
+        </li>
+        <li>
+          Developed &quot;Beast Mode&quot; feature allowing users to conduct
+          bulk domain searches with customizable filters for price, category,
+          and TLD type.
+        </li>
+        <li>
+          Implemented multi-currency pricing with caching functionality to
+          ensure users in 30+ regions view accurate prices without delays.
+        </li>
+        <li>
+          Utilized TanStack Query to optimize API calls efficiency for search,
+          cart, and checkout processes.
+        </li>
+        <li>
+          Improved app performance by incorporating code splitting and lazy
+          rendering techniques to handle large result sets efficiently.
+        </li>
+      </ul>
     ),
   },
   {
@@ -275,9 +287,9 @@ export default function ResumePage() {
                     {exp.period}
                   </span>
                 </div>
-                <p className="resume-muted mt-2 text-[#888] text-[14px] leading-[1.7]">
+                <div className="resume-muted mt-2 text-[#888] text-[14px] leading-[1.7]">
                   {exp.description}
-                </p>
+                </div>
               </div>
             ))}
           </div>

@@ -12,19 +12,18 @@ const experiences: {
     url: "https://www.namecheap.com/",
     description: (
       <>
-        Sole engineer on Spaceship&apos;s{" "}
+        Led the development of Spaceship&apos;s{" "}
         <a
           className="link-hover text-[#a0a0a0] transition-colors hover:text-[#ededed]"
           href="https://www.spaceship.com/domain-search/"
           rel="noopener noreferrer"
           target="_blank"
         >
-          domain search platform
-        </a>{" "}
-        for four and a half years — helped the platform sell 3M+ domains.
-        Built it from zero with React, TypeScript, and Zustand. Real-time
-        WebSocket pricing, Beast Mode bulk search, and a multi-currency engine
-        across 500+ TLDs.
+          domain search product
+        </a>
+        , contributing to the sale of over 3 million domains. Built real-time
+        WebSocket pricing, Beast Mode bulk search, and multi-currency support
+        across 30+ regions.
       </>
     ),
   },
