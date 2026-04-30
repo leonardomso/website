@@ -17,7 +17,7 @@ export const personSchema = {
   name: "Leonardo Maldonado",
   jobTitle: "Software Engineer",
   description:
-    "Software engineer with 6+ years of experience. Built Spaceship's domain search platform at Namecheap. Creator of 33 JavaScript Concepts (63k+ stars).",
+    "Software engineer with 7+ years of experience. Sole engineer on Spaceship's domain search at Namecheap — helped sell 3M+ domains. Creator of 33 JavaScript Concepts (66k+ stars).",
   url: "https://leonardomso.com",
   image: "https://leonardomso.com/opengraph-image",
   email: "leonardomso11@gmail.com",
@@ -69,7 +69,7 @@ export const profilePageSchema = {
     url: "https://leonardomso.com",
     jobTitle: "Software Engineer",
     description:
-      "Software engineer based in Valencia, Spain. Built Spaceship's domain search platform at Namecheap. Creator of 33 JavaScript Concepts.",
+      "Software engineer based in Valencia, Spain. Sole engineer on Spaceship's domain search at Namecheap — helped sell 3M+ domains. Creator of 33 JavaScript Concepts.",
   },
   url: "https://leonardomso.com/about",
   name: "About Leonardo Maldonado",

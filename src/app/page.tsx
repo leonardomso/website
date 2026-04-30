@@ -8,7 +8,7 @@ import { Writing } from "~/components/writing";
 export const metadata: Metadata = {
   title: { absolute: "Leonardo Maldonado — Software Engineer" },
   description:
-    "Software engineer based in Valencia, Spain. Built Spaceship's domain search platform at Namecheap. Creator of 33 JavaScript Concepts (63k+ stars).",
+    "Software engineer based in Valencia, Spain. Sole engineer on Spaceship's domain search at Namecheap — helped sell 3M+ domains. Creator of 33 JavaScript Concepts (66k+ stars).",
 };
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
@@ -45,7 +45,7 @@ export default function Home() {
           >
             Namecheap
           </a>
-          , where I built Spaceship&apos;s{" "}
+          , where I was the sole engineer on Spaceship&apos;s{" "}
           <a
             className="link-hover text-[#a0a0a0] transition-colors hover:text-[#ededed]"
             href="https://www.spaceship.com/domain-search/"
@@ -54,8 +54,8 @@ export default function Home() {
           >
             domain search platform
           </a>{" "}
-          from scratch. Passionate about building fast, polished web
-          experiences.
+          — helping sell 3M+ domains. Passionate about building fast, polished
+          web experiences.
         </p>
       </section>
 

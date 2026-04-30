@@ -4,7 +4,7 @@ import { JsonLd, profilePageSchema } from "~/components/json-ld";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Software engineer based in Valencia, Spain. Built Spaceship's domain search platform at Namecheap. Creator of 33 JavaScript Concepts (63k+ stars).",
+    "Software engineer based in Valencia, Spain. Sole engineer on Spaceship's domain search at Namecheap — helped sell 3M+ domains. Creator of 33 JavaScript Concepts (66k+ stars).",
 };
 
 export default function AboutPage() {
@@ -54,11 +54,11 @@ export default function AboutPage() {
           >
             domain search platform
           </a>{" "}
-          from scratch as the sole front-end developer. I designed the entire
-          frontend architecture with React, TypeScript, and Zustand — building
-          features like Beast Mode bulk search, a real-time WebSocket pricing
-          system, and a multi-currency engine supporting 30+ currencies across
-          500+ TLDs.
+          for four and a half years as the sole engineer — helping the platform
+          sell 3M+ domains. I designed the entire frontend architecture with
+          React, TypeScript, and Zustand — building features like Beast Mode
+          bulk search, a real-time WebSocket pricing system, and a
+          multi-currency engine supporting 30+ currencies across 500+ TLDs.
         </p>
 
         <p>
@@ -83,7 +83,7 @@ export default function AboutPage() {
           >
             LogRocket
           </a>
-          . I have over 90 articles published across JavaScript, TypeScript,
+          . I have over 100 articles published across JavaScript, TypeScript,
           React, GraphQL, Node.js, and more — with over 1 million views.
         </p>
 
@@ -106,7 +106,7 @@ export default function AboutPage() {
           >
             top projects of 2018
           </a>
-          . It now has 63,000+ stars and has been translated into 20+ languages.
+          . It now has 66,000+ stars and has been translated into 20+ languages.
         </p>
 
         <p>

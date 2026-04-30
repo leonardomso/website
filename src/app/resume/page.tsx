@@ -8,13 +8,13 @@ const experiences: {
   description: React.ReactNode;
 }[] = [
   {
-    period: "Nov 2021 — Present",
+    period: "Nov 2021 — Apr 2026",
     role: "Software Engineer",
     company: "Namecheap",
     url: "https://www.namecheap.com/",
     description: (
       <>
-        Built Spaceship&apos;s{" "}
+        Sole engineer on Spaceship&apos;s{" "}
         <a
           className="link-hover text-[#a0a0a0] transition-colors hover:text-[#ededed] print:text-[#111] print:no-underline"
           href="https://www.spaceship.com/domain-search/"
@@ -23,14 +23,10 @@ const experiences: {
         >
           domain search platform
         </a>{" "}
-        from scratch as the sole front-end developer. Established the entire
-        frontend architecture with React, TypeScript, and Zustand. Built Beast
-        Mode bulk search for simultaneous multi-domain queries with advanced
-        filtering. Integrated TanStack Query with query key factories and
-        intelligent caching, reducing API calls by 60%. Optimized performance
-        through code splitting and virtualized rendering, cutting bundle size by
-        40%. Refactored WebSocket processing with batched state updates,
-        reducing re-renders by 80%. Built a multi-currency pricing engine
+        for four and a half years — helped the platform sell 3M+ domains.
+        Built it from zero with React, TypeScript, and Zustand. Designed the
+        real-time WebSocket pricing system, Beast Mode bulk search for
+        simultaneous multi-domain queries, and a multi-currency pricing engine
         supporting 30+ currencies across 500+ TLDs.
       </>
     ),
@@ -167,11 +163,12 @@ export default function ResumePage() {
             Summary
           </h2>
           <p className="text-[#888] text-[15px] leading-[1.8]">
-            Software engineer with 6+ years of experience building web
-            applications and developer tools. Currently at Namecheap building
-            Spaceship. Created 33 JavaScript Concepts, an open-source project
-            with 63,000+ stars recognized by GitHub as a top project of 2018.
-            Published 90+ technical articles with over 1 million views.
+            Software engineer with 7+ years of experience building web
+            applications and developer tools. Sole engineer on Spaceship at
+            Namecheap for four and a half years — helped the platform sell 3M+
+            domains. Creator of 33 JavaScript Concepts, an open-source project
+            with 66,000+ stars recognized by GitHub as a top project of 2018.
+            Published 100+ technical articles with over 1 million views.
           </p>
         </section>
 

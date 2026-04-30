@@ -21,7 +21,7 @@ export const projects: Project[] = [
     title: "Spaceship",
     tag: "Work",
     description:
-      "Built the domain search platform from scratch as the sole front-end developer. React, TypeScript, Zustand, TanStack Query. Beast Mode bulk search, real-time WebSocket pricing, multi-currency engine across 500+ TLDs.",
+      "Sole engineer on the domain search platform for four and a half years — helped sell 3M+ domains. React, TypeScript, Zustand, TanStack Query. Beast Mode bulk search, real-time WebSocket pricing, multi-currency engine across 500+ TLDs.",
     url: "https://www.spaceship.com",
     tech: ["TypeScript", "React", "Zustand", "TanStack Query"],
     featured: true,

@@ -15,13 +15,13 @@ export const metadata: Metadata = {
     template: "%s — Leonardo Maldonado",
   },
   description:
-    "Software engineer based in Valencia, Spain. Built Spaceship's domain search platform at Namecheap. Creator of 33 JavaScript Concepts (63k+ stars).",
+    "Software engineer based in Valencia, Spain. Sole engineer on Spaceship's domain search at Namecheap — helped sell 3M+ domains. Creator of 33 JavaScript Concepts (66k+ stars).",
   authors: [{ name: "Leonardo Maldonado", url: "https://leonardomso.com" }],
   creator: "Leonardo Maldonado",
   openGraph: {
     title: "Leonardo Maldonado",
     description:
-      "Software engineer based in Valencia, Spain. Built Spaceship's domain search platform at Namecheap. Creator of 33 JavaScript Concepts (63k+ stars).",
+      "Software engineer based in Valencia, Spain. Sole engineer on Spaceship's domain search at Namecheap — helped sell 3M+ domains. Creator of 33 JavaScript Concepts (66k+ stars).",
     url: "https://leonardomso.com",
     siteName: "Leonardo Maldonado",
     locale: "en_US",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     title: "Leonardo Maldonado",
     creator: "@leonardomso",
     description:
-      "Software engineer based in Valencia, Spain. Built Spaceship's domain search platform at Namecheap.",
+      "Software engineer based in Valencia, Spain. Sole engineer on Spaceship's domain search at Namecheap — helped sell 3M+ domains.",
   },
   icons: {
     icon: "/favicon.ico",

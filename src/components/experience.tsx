@@ -6,13 +6,13 @@ const experiences: {
   description: React.ReactNode;
 }[] = [
   {
-    period: "Nov 2021 — Present",
+    period: "Nov 2021 — Apr 2026",
     role: "Software Engineer",
     company: "Namecheap",
     url: "https://www.namecheap.com/",
     description: (
       <>
-        Built Spaceship&apos;s{" "}
+        Sole engineer on Spaceship&apos;s{" "}
         <a
           className="link-hover text-[#a0a0a0] transition-colors hover:text-[#ededed]"
           href="https://www.spaceship.com/domain-search/"
@@ -21,9 +21,10 @@ const experiences: {
         >
           domain search platform
         </a>{" "}
-        from scratch as the sole front-end developer. React, TypeScript,
-        Zustand, TanStack Query. Reduced API calls by 60%, bundle size by 40%,
-        and re-renders by 80% through WebSocket batching and code splitting.
+        for four and a half years — helped the platform sell 3M+ domains.
+        Built it from zero with React, TypeScript, and Zustand. Real-time
+        WebSocket pricing, Beast Mode bulk search, and a multi-currency engine
+        across 500+ TLDs.
       </>
     ),
   },

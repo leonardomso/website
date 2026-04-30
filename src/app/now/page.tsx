@@ -43,9 +43,9 @@ export default function NowPage() {
               >
                 Spaceship
               </a>{" "}
-              at Namecheap — a digital platform helping people bring ideas to
-              life. Focused on the Domain Search experience and scaling the
-              frontend architecture.
+              at Namecheap — where I was the sole engineer on the Domain Search
+              experience for four and a half years, helping the platform sell
+              3M+ domains.
             </p>
           </div>
         </section>
