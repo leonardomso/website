@@ -7,7 +7,7 @@ const experiences: {
 }[] = [
   {
     period: "Nov 2021 — Apr 2026",
-    role: "Software Engineer",
+    role: "Front End Engineer",
     company: "Namecheap",
     url: "https://www.namecheap.com/",
     description: (

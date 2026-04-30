@@ -17,7 +17,7 @@ export const personSchema = {
   name: "Leonardo Maldonado",
   jobTitle: "Software Engineer",
   description:
-    "Software engineer with 7+ years of experience. Sole engineer on Spaceship's domain search at Namecheap — helped sell 3M+ domains. Creator of 33 JavaScript Concepts (66k+ stars).",
+    "Software engineer with 7+ years of experience. Sole engineer on Spaceship's domain search at Namecheap — helped sell 3M+ domains. Creator of 33 JavaScript Concepts (66K+ stars).",
   url: "https://leonardomso.com",
   image: "https://leonardomso.com/opengraph-image",
   email: "leonardomso11@gmail.com",
@@ -31,11 +31,6 @@ export const personSchema = {
     "https://x.com/leonardomso",
     "https://www.linkedin.com/in/leonardomso/",
   ],
-  worksFor: {
-    "@type": "Organization",
-    name: "Namecheap",
-    url: "https://www.namecheap.com",
-  },
   knowsAbout: [
     "TypeScript",
     "React",

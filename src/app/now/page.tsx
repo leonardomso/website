@@ -34,18 +34,27 @@ export default function NowPage() {
           </h2>
           <div className="flex flex-col gap-4 text-[#888] text-[15px] leading-[1.8]">
             <p>
-              Building{" "}
+              Recently left{" "}
+              <a
+                className="link-hover text-[#a0a0a0] transition-colors hover:text-[#ededed]"
+                href="https://www.namecheap.com"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Namecheap
+              </a>
+              , where I built{" "}
               <a
                 className="link-hover text-[#a0a0a0] transition-colors hover:text-[#ededed]"
                 href="https://www.spaceship.com"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                Spaceship
+                Spaceship&apos;s
               </a>{" "}
-              at Namecheap — where I was the sole engineer on the Domain Search
-              experience for four and a half years, helping the platform sell
-              3M+ domains.
+              domain search platform from scratch as the sole engineer for four
+              and a half years, helping the platform sell 3M+ domains. Exploring
+              what comes next.
             </p>
           </div>
         </section>
