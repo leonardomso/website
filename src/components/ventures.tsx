@@ -1,5 +1,4 @@
 import { ArrowRight, ArrowUpRight } from "lucide-react";
-import Link from "next/link";
 import { projects } from "~/config/projects";
 
 const featured = projects.filter((p) => p.featured);
@@ -33,13 +32,13 @@ export function Ventures() {
           </div>
         </a>
       ))}
-      <Link
+      <a
         className="group mt-2 flex items-center gap-2 font-mono text-[#666] text-[12px] tracking-wide transition-colors hover:text-[#ededed]"
         href="/projects"
       >
         View all projects
         <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-1" />
-      </Link>
+      </a>
     </div>
   );
 }

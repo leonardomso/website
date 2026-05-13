@@ -1,0 +1,95 @@
+---
+import { CommandPalette } from "~/components/command-palette";
+import { JsonLd, personSchema, websiteSchema } from "~/components/json-ld";
+import { getAllPosts } from "~/lib/blog";
+import "~/styles/globals.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  ogType?: "website" | "article";
+}
+
+const {
+  title = "Leonardo Maldonado",
+  description =
+    "Software engineer based in Valencia, Spain. Sole engineer on Spaceship's domain search at Namecheap — helped sell 3M+ domains. Creator of 33 JavaScript Concepts (66k+ stars).",
+  canonical = "https://www.leonardomso.com",
+  ogType = "website",
+} = Astro.props;
+
+const posts = await getAllPosts();
+const cmdkPosts = posts.map((p) => ({ title: p.title, slug: p.slug }));
+---
+
+<!doctype html>
+<html lang="en" style="color-scheme: dark;">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" type="application/rss+xml" href="https://www.leonardomso.com/feed.xml" />
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content="Leonardo Maldonado" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content={ogType} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:creator" content="@leonardomso" />
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  </head>
+  <body class="antialiased">
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[10002] focus:rounded-lg focus:bg-[#ededed] focus:px-4 focus:py-2 focus:font-medium focus:text-[#050505] focus:text-sm"
+    >
+      Skip to content
+    </a>
+
+    <JsonLd data={personSchema} />
+    <JsonLd data={websiteSchema} />
+    <CommandPalette posts={cmdkPosts} client:load />
+
+    <div class="relative mx-auto w-full max-w-[680px] px-6 pt-16 pb-24 md:px-0">
+      <header class="mb-20 flex items-center justify-between">
+        <a
+          href="/"
+          class="link-hover font-mono text-[#a0a0a0] text-[13px] uppercase tracking-wide transition-colors hover:text-[#ededed]"
+        >
+          Leonardo Maldonado
+        </a>
+        <nav aria-label="Main navigation" class="flex gap-6">
+          <a href="/about" class="link-hover text-[#666] text-[13px] uppercase tracking-wide transition-colors hover:text-[#ededed]">About</a>
+          <a href="/projects" class="link-hover text-[#666] text-[13px] uppercase tracking-wide transition-colors hover:text-[#ededed]">Projects</a>
+          <a href="/blog" class="link-hover text-[#666] text-[13px] uppercase tracking-wide transition-colors hover:text-[#ededed]">Blog</a>
+          <a href="/resume" class="link-hover text-[#666] text-[13px] uppercase tracking-wide transition-colors hover:text-[#ededed]">Resume</a>
+        </nav>
+      </header>
+
+      <main id="main-content">
+        <slot />
+      </main>
+
+      <footer class="mt-32 flex items-center justify-between border-[#161616] border-t pt-8">
+        <p class="font-mono text-[#666] text-[11px] tracking-wider">© 2026</p>
+        <nav aria-label="Social links" class="flex gap-6">
+          <a href="https://github.com/leonardomso" target="_blank" rel="noopener noreferrer" class="link-hover text-[#666] text-[12px] tracking-wide transition-colors hover:text-[#ededed]">GitHub</a>
+          <a href="https://x.com/leonardomso" target="_blank" rel="noopener noreferrer" class="link-hover text-[#666] text-[12px] tracking-wide transition-colors hover:text-[#ededed]">X</a>
+          <a href="https://www.linkedin.com/in/leonardomso/" target="_blank" rel="noopener noreferrer" class="link-hover text-[#666] text-[12px] tracking-wide transition-colors hover:text-[#ededed]">LinkedIn</a>
+        </nav>
+      </footer>
+    </div>
+
+    <script is:inline async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+---
+import { ArrowLeft, ArrowRight } from "lucide-react";
+import { JsonLd, blogPostSchema } from "~/components/json-ld";
+import { ReadingProgress } from "~/components/reading-progress";
+import { ShareButtons } from "~/components/share-buttons";
+import { TableOfContents } from "~/components/toc";
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import {
+  extractHeadings,
+  getAdjacentPosts,
+  getAllPosts,
+} from "~/lib/blog";
+import { renderMarkdown } from "~/lib/markdown";
+
+const SITE_URL = "https://www.leonardomso.com";
+
+export async function getStaticPaths() {
+  const posts = await getAllPosts();
+
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const slug = post.slug;
+
+const [html, { prev, next }] = await Promise.all([
+  renderMarkdown(post.content),
+  getAdjacentPosts(slug),
+]);
+
+const headings = extractHeadings(post.content);
+const postUrl = `${SITE_URL}/blog/${slug}`;
+
+function formatDate(dateStr: string): string {
+  return new Date(dateStr).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+}
+---
+
+<BaseLayout
+  title={`${post.title} — Leonardo Maldonado`}
+  description={post.description}
+  canonical={postUrl}
+  ogType="article"
+>
+  <article>
+    <ReadingProgress client:load />
+    <JsonLd data={blogPostSchema(post)} />
+    <a href="/blog" class="link-hover mb-12 inline-block font-mono text-[#666] text-[11px] uppercase tracking-wider transition-colors hover:text-[#ededed]">← Back to blog</a>
+
+    <header class="mb-12">
+      <div class="mb-3 flex items-baseline gap-3">
+        <span class="font-mono text-[#666] text-[11px] tracking-wider">{formatDate(post.date)}</span>
+        <span class="text-[#444]">·</span>
+        <span class="font-mono text-[#666] text-[11px] tracking-wider">{post.readingTime} min read</span>
+      </div>
+      <h1 class="font-semibold text-[#ededed] text-[clamp(1.75rem,4vw,2.5rem)] leading-[1.15] tracking-[-0.03em]">{post.title}</h1>
+      <p class="mt-4 text-[#888] text-[15px] leading-[1.75]">{post.description}</p>
+      {post.tags.length > 0 && (
+        <div class="mt-4 flex flex-wrap gap-2">
+          {post.tags.map((tag) => (
+            <span class="rounded-md border border-[#161616] px-2.5 py-0.5 font-mono text-[#666] text-[10px] tracking-wide">{tag}</span>
+          ))}
+        </div>
+      )}
+    </header>
+
+    <div class="section-divider mb-12" />
+
+    <TableOfContents headings={headings} client:load />
+
+    <div class="prose" set:html={html} />
+
+    <div class="section-divider mt-16" />
+
+    <div class="mt-8">
+      <ShareButtons title={post.title} url={postUrl} client:load />
+    </div>
+
+    {(prev || next) && (
+      <>
+        <div class="section-divider mt-8" />
+
+        <nav class="mt-8 grid grid-cols-2 gap-4">
+          {prev ? (
+            <a href={`/blog/${prev.slug}`} class="group flex flex-col gap-1.5 rounded-lg border border-[#161616] p-4 transition-colors hover:border-[#222] hover:bg-[#0a0a0a]">
+              <span class="flex items-center gap-1.5 font-mono text-[#666] text-[10px] uppercase tracking-wider transition-colors group-hover:text-[#888]">
+                <ArrowLeft className="h-3 w-3" />
+                Previous
+              </span>
+              <span class="font-medium text-[#a0a0a0] text-[13px] transition-colors group-hover:text-[#ededed]">{prev.title}</span>
+            </a>
+          ) : (
+            <div />
+          )}
+          {next ? (
+            <a href={`/blog/${next.slug}`} class="group flex flex-col items-end gap-1.5 rounded-lg border border-[#161616] p-4 text-right transition-colors hover:border-[#222] hover:bg-[#0a0a0a]">
+              <span class="flex items-center gap-1.5 font-mono text-[#666] text-[10px] uppercase tracking-wider transition-colors group-hover:text-[#888]">
+                Next
+                <ArrowRight className="h-3 w-3" />
+              </span>
+              <span class="font-medium text-[#a0a0a0] text-[13px] transition-colors group-hover:text-[#ededed]">{next.title}</span>
+            </a>
+          ) : (
+            <div />
+          )}
+        </nav>
+      </>
+    )}
+  </article>
+</BaseLayout>

@@ -1,4 +1,4 @@
-const SITE_URL = "https://leonardomso.com";
+const SITE_URL = "https://www.leonardomso.com";
 
 const content = `# Leonardo Maldonado
 

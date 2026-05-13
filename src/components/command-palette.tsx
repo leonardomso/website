@@ -52,7 +52,6 @@ const Linkedin = (props: React.SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 
 interface BlogPost {
@@ -91,8 +90,6 @@ const SOCIAL_ITEMS = [
 
 export function CommandPalette({ posts }: CommandPaletteProps) {
   const [open, setOpen] = useState(false);
-  const router = useRouter();
-
   useEffect(() => {
     function onKeyDown(e: KeyboardEvent) {
       if ((e.metaKey || e.ctrlKey) && e.key === "k") {
@@ -110,12 +107,11 @@ export function CommandPalette({ posts }: CommandPaletteProps) {
       if (href.startsWith("http") || href.startsWith("mailto:")) {
         window.open(href, "_blank", "noopener,noreferrer");
       } else {
-        router.push(href);
+        window.location.assign(href);
       }
     },
-    [router]
+    []
   );
-
   if (!open) {
     return null;
   }
