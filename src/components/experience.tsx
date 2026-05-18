@@ -6,7 +6,7 @@ const experiences: {
   description: React.ReactNode;
 }[] = [
   {
-    period: "Nov 2021 — Apr 2026",
+    period: "Nov 2021 to Apr 2026",
     role: "Front End Engineer",
     company: "Namecheap",
     url: "https://www.namecheap.com/",
@@ -28,7 +28,7 @@ const experiences: {
     ),
   },
   {
-    period: "May 2019 — Dec 2023",
+    period: "May 2019 to Dec 2023",
     role: "Technical Author",
     company: "Progress",
     url: "https://www.progress.com/",
@@ -36,7 +36,7 @@ const experiences: {
       "Wrote extensively about JavaScript, TypeScript, React, GraphQL, and modern web development for the Telerik blog.",
   },
   {
-    period: "Feb 2020 — Feb 2022",
+    period: "Feb 2020 to Feb 2022",
     role: "Technical Author",
     company: "LogRocket",
     url: "https://logrocket.com/",
@@ -44,7 +44,7 @@ const experiences: {
       "Created content empowering developers to learn about JavaScript, TypeScript, GraphQL, React, Node.js, and programming fundamentals.",
   },
   {
-    period: "Oct 2019 — Apr 2020",
+    period: "Oct 2019 to Apr 2020",
     role: "Software Engineer",
     company: "Popstand",
     url: "https://popstand.com/",
@@ -52,7 +52,7 @@ const experiences: {
       "Built Taco Maps, a React Native food delivery app for Los Angeles. Architected from the ground up with Redux, TypeScript, Firebase, and Detox e2e testing.",
   },
   {
-    period: "Jan 2019 — Jul 2019",
+    period: "Jan 2019 to Jul 2019",
     role: "Software Engineer",
     company: "Foton",
     url: "https://foton.tech/",
@@ -67,12 +67,12 @@ export function Experience() {
       {experiences.map((exp) => (
         <div className="timeline-item" key={exp.period}>
           <div className="flex items-baseline gap-3">
-            <span className="font-mono text-[#666] text-[11px] tracking-wider">
+            <span className="font-mono text-[#7a7a7a] text-[11px] tracking-wider">
               {exp.period}
             </span>
           </div>
           <p className="mt-1.5 font-medium text-[#ededed] text-[15px]">
-            {exp.role} <span className="text-[#666]">at</span>{" "}
+            {exp.role} <span className="text-[#7a7a7a]">at</span>{" "}
             <a
               className="link-hover text-[#a0a0a0] transition-colors hover:text-[#ededed]"
               href={exp.url}

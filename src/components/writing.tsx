@@ -20,22 +20,24 @@ export function Writing() {
         90+ articles published across JavaScript, React, TypeScript, Node.js,
         GraphQL, and modern web development. Over 1 million views total.
       </p>
-      <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+      <ul className="flex flex-col gap-1">
         {publications.map((pub) => (
-          <a
-            className="card-glow group flex flex-col justify-between rounded-lg border border-[#161616] bg-[#0a0a0a] px-4 py-4 transition-all duration-300 hover:border-[#222] hover:bg-[#0d0d0d]"
-            href={pub.url}
-            key={pub.name}
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <span className="font-medium text-[#a0a0a0] text-[13px] transition-colors group-hover:text-[#ededed]">
-              {pub.name}
-            </span>
-            <ArrowUpRight className="mt-4 h-3.5 w-3.5 text-[#555] transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-[#888]" />
-          </a>
+          <li key={pub.name}>
+            <a
+              className="group -mx-3 flex items-baseline justify-between gap-4 rounded-lg px-3 py-2.5 transition-colors hover:bg-[#0a0a0a]"
+              href={pub.url}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span className="text-[#ededed] text-[15px]">{pub.name}</span>
+              <ArrowUpRight
+                aria-hidden="true"
+                className="h-3.5 w-3.5 shrink-0 text-[#7a7a7a] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+              />
+            </a>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 }

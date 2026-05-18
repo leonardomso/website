@@ -44,7 +44,7 @@ function formatDate(dateStr: string): string {
 ---
 
 <BaseLayout
-  title={`${post.title} — Leonardo Maldonado`}
+  title={`${post.title} · Leonardo Maldonado`}
   description={post.description}
   canonical={postUrl}
   ogType="article"
@@ -52,20 +52,20 @@ function formatDate(dateStr: string): string {
   <article>
     <ReadingProgress client:load />
     <JsonLd data={blogPostSchema(post)} />
-    <a href="/blog" class="link-hover mb-12 inline-block font-mono text-[#666] text-[11px] uppercase tracking-wider transition-colors hover:text-[#ededed]">← Back to blog</a>
+    <a href="/blog" class="link-hover mb-12 inline-block font-mono text-[#7a7a7a] text-[11px] uppercase tracking-wider transition-colors hover:text-[#ededed]">← Back to blog</a>
 
     <header class="mb-12">
       <div class="mb-3 flex items-baseline gap-3">
-        <span class="font-mono text-[#666] text-[11px] tracking-wider">{formatDate(post.date)}</span>
+        <span class="font-mono text-[#7a7a7a] text-[11px] tracking-wider">{formatDate(post.date)}</span>
         <span class="text-[#444]">·</span>
-        <span class="font-mono text-[#666] text-[11px] tracking-wider">{post.readingTime} min read</span>
+        <span class="font-mono text-[#7a7a7a] text-[11px] tracking-wider">{post.readingTime} min read</span>
       </div>
       <h1 class="font-semibold text-[#ededed] text-[clamp(1.75rem,4vw,2.5rem)] leading-[1.15] tracking-[-0.03em]">{post.title}</h1>
       <p class="mt-4 text-[#888] text-[15px] leading-[1.75]">{post.description}</p>
       {post.tags.length > 0 && (
         <div class="mt-4 flex flex-wrap gap-2">
           {post.tags.map((tag) => (
-            <span class="rounded-md border border-[#161616] px-2.5 py-0.5 font-mono text-[#666] text-[10px] tracking-wide">{tag}</span>
+            <span class="rounded-md border border-[#161616] px-2.5 py-0.5 font-mono text-[#7a7a7a] text-[10px] tracking-wide">{tag}</span>
           ))}
         </div>
       )}
@@ -90,7 +90,7 @@ function formatDate(dateStr: string): string {
         <nav class="mt-8 grid grid-cols-2 gap-4">
           {prev ? (
             <a href={`/blog/${prev.slug}`} class="group flex flex-col gap-1.5 rounded-lg border border-[#161616] p-4 transition-colors hover:border-[#222] hover:bg-[#0a0a0a]">
-              <span class="flex items-center gap-1.5 font-mono text-[#666] text-[10px] uppercase tracking-wider transition-colors group-hover:text-[#888]">
+              <span class="flex items-center gap-1.5 font-mono text-[#7a7a7a] text-[10px] uppercase tracking-wider transition-colors group-hover:text-[#888]">
                 <ArrowLeft className="h-3 w-3" />
                 Previous
               </span>
@@ -101,7 +101,7 @@ function formatDate(dateStr: string): string {
           )}
           {next ? (
             <a href={`/blog/${next.slug}`} class="group flex flex-col items-end gap-1.5 rounded-lg border border-[#161616] p-4 text-right transition-colors hover:border-[#222] hover:bg-[#0a0a0a]">
-              <span class="flex items-center gap-1.5 font-mono text-[#666] text-[10px] uppercase tracking-wider transition-colors group-hover:text-[#888]">
+              <span class="flex items-center gap-1.5 font-mono text-[#7a7a7a] text-[10px] uppercase tracking-wider transition-colors group-hover:text-[#888]">
                 Next
                 <ArrowRight className="h-3 w-3" />
               </span>

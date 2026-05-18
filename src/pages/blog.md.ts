@@ -8,12 +8,12 @@ export async function GET() {
   const links = posts.length
     ? posts
         .map(
-          (p) => `- [${p.title}](${SITE_URL}/blog/${p.slug}) — ${p.description}`,
+          (p) => `- [${p.title}](${SITE_URL}/blog/${p.slug}): ${p.description}`,
         )
         .join("\n")
     : "No posts yet.";
 
-  const body = `# Blog — Leonardo Maldonado
+  const body = `# Blog · Leonardo Maldonado
 
 Thoughts on software engineering, web development, and building products.
 

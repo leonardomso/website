@@ -5,19 +5,19 @@ import BaseLayout from "~/layouts/base-layout.astro";
 ---
 
 <BaseLayout
-  title="Projects — Leonardo Maldonado"
+  title="Projects · Leonardo Maldonado"
   description="Open source projects, products, and side projects by Leonardo Maldonado."
   canonical="https://www.leonardomso.com/projects"
 >
   <div>
-    <p class="mb-4 font-mono text-[#666] text-[12px] uppercase tracking-[0.25em]">Projects</p>
+    <p class="mb-4 font-mono text-[#7a7a7a] text-[12px] uppercase tracking-[0.25em]">Projects</p>
     <h1 class="font-semibold text-[#ededed] text-[clamp(2rem,5vw,3rem)] leading-[1.1] tracking-[-0.03em]">Things I&apos;ve built</h1>
     <p class="mt-6 max-w-[440px] text-[#888] text-[15px] leading-[1.75]">Open source projects, products, and experiments.</p>
 
     <div class="mt-16 flex flex-col gap-4">
       {projects.map((project) => (
         <a
-          class="card-glow group rounded-lg border border-[#161616] bg-[#0a0a0a] p-5 transition-all duration-300 hover:border-[#222] hover:bg-[#0d0d0d]"
+          class="card-glow group rounded-lg border border-[#161616] bg-[#0a0a0a] p-5 transition-all duration-300 hover:border-[#222] hover:bg-[#0a0a0a]"
           href={project.url}
           rel="noopener noreferrer"
           target="_blank"
@@ -25,17 +25,17 @@ import BaseLayout from "~/layouts/base-layout.astro";
           <div class="flex items-start justify-between">
             <div>
               <div class="mb-2 flex items-center gap-3">
-                <span class="font-mono text-[#666] text-[10px] uppercase tracking-[0.15em]">{project.tag}</span>
+                <span class="font-mono text-[#7a7a7a] text-[10px] uppercase tracking-[0.15em]">{project.tag}</span>
               </div>
-              <p class="font-medium text-[#ededed] text-[15px] transition-colors group-hover:text-white">{project.title}</p>
+              <p class="font-medium text-[#ededed] text-[15px] transition-colors group-hover:text-[#ededed]">{project.title}</p>
               <p class="mt-1.5 text-[#888] text-[13px] leading-[1.6]">{project.description}</p>
               <div class="mt-3 flex flex-wrap gap-2">
                 {project.tech.map((t) => (
-                  <span class="font-mono text-[#555] text-[10px] tracking-wide">{t}</span>
+                  <span class="font-mono text-[#7a7a7a] text-[10px] tracking-wide">{t}</span>
                 ))}
               </div>
             </div>
-            <ArrowUpRight className="mt-1 h-4 w-4 shrink-0 text-[#555] transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-[#888]" />
+            <ArrowUpRight className="mt-1 h-4 w-4 shrink-0 text-[#7a7a7a] transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-[#ededed]" />
           </div>
         </a>
       ))}

@@ -43,19 +43,19 @@ const categories = [
 ---
 
 <BaseLayout
-  title="Uses — Leonardo Maldonado"
+  title="Uses · Leonardo Maldonado"
   description="Tools, software, and hardware I use daily for development."
   canonical="https://www.leonardomso.com/uses"
 >
   <div>
-    <p class="mb-4 font-mono text-[#666] text-[12px] uppercase tracking-[0.25em]">Uses</p>
+    <p class="mb-4 font-mono text-[#7a7a7a] text-[12px] uppercase tracking-[0.25em]">Uses</p>
     <h1 class="font-semibold text-[#ededed] text-[clamp(2rem,5vw,3rem)] leading-[1.1] tracking-[-0.03em]">Tools & Setup</h1>
     <p class="mt-6 max-w-[440px] text-[#888] text-[15px] leading-[1.75]">Software, hardware, and tools I use daily for development and productivity.</p>
 
     <div class="mt-16 flex flex-col gap-16">
       {categories.map((category) => (
         <section>
-          <h2 class="mb-6 font-mono text-[#666] text-[11px] uppercase tracking-[0.2em]">{category.label}</h2>
+          <h2 class="mb-6 font-mono text-[#7a7a7a] text-[11px] uppercase tracking-[0.2em]">{category.label}</h2>
           <div class="flex flex-col gap-4">
             {category.items.map((item) => (
               <div class="flex items-baseline justify-between border-[#111] border-b pb-4">

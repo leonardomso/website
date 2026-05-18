@@ -3,6 +3,17 @@
 @theme {
   --font-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "Geist Mono", ui-monospace, monospace;
+
+  --color-bg: #050505;
+  --color-surface-low: #0a0a0a;
+  --color-surface-border: #161616;
+  --color-surface-border-strong: #222222;
+  --color-fg: #ededed;
+  --color-fg-muted: #a0a0a0;
+  --color-fg-secondary: #888888;
+  --color-fg-tertiary: #7a7a7a;
+  --color-fg-quaternary: #666666;
+  --color-fg-disabled: #444444;
 }
 
 html {
@@ -14,13 +25,13 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #ededed;
-  background-color: #050505;
+  color: var(--color-fg);
+  background-color: var(--color-bg);
 }
 
 ::selection {
-  color: #050505;
-  background-color: #ededed;
+  color: var(--color-bg);
+  background-color: var(--color-fg);
 }
 
 /* ── Noise texture overlay for depth ── */
@@ -144,24 +155,6 @@ body::before {
 
 .card-glow:hover::before {
   opacity: 1;
-}
-
-/* ── Marquee ── */
-@keyframes marquee {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.animate-marquee {
-  animation: marquee 25s linear infinite;
-}
-
-.animate-marquee:hover {
-  animation-play-state: paused;
 }
 
 /* ── Prose (blog post typography) ── */

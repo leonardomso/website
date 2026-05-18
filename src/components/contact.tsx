@@ -36,7 +36,7 @@ export function Contact() {
             rel="noopener noreferrer"
             target="_blank"
           >
-            <span className="font-mono text-[#666] text-[11px] uppercase tracking-wider transition-colors group-hover:text-[#a0a0a0]">
+            <span className="font-mono text-[#7a7a7a] text-[11px] uppercase tracking-wider transition-colors group-hover:text-[#a0a0a0]">
               {link.label}
             </span>
             <span className="text-[#a0a0a0] text-[14px] transition-colors group-hover:text-[#ededed]">

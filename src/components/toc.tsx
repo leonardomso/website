@@ -26,7 +26,7 @@ export function TableOfContents({ headings }: TocProps) {
         onClick={() => setOpen(!open)}
         type="button"
       >
-        <span className="font-mono text-[#666] text-[11px] uppercase tracking-[0.15em]">
+        <span className="font-mono text-[#7a7a7a] text-[11px] uppercase tracking-[0.15em]">
           Table of Contents
         </span>
         <span className="font-mono text-[#444] text-[11px]">

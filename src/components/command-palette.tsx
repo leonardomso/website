@@ -158,12 +158,12 @@ export function CommandPalette({ posts }: CommandPaletteProps) {
             placeholder="Type a command or search..."
           />
           <Command.List className="max-h-[320px] overflow-y-auto p-2">
-            <Command.Empty className="px-3 py-6 text-center text-[#666] text-[13px]">
+            <Command.Empty className="px-3 py-6 text-center text-[#7a7a7a] text-[13px]">
               No results found.
             </Command.Empty>
 
             <Command.Group
-              className="[&_[cmdk-group-heading]]:px-3 [&_[cmdk-group-heading]]:py-2 [&_[cmdk-group-heading]]:font-mono [&_[cmdk-group-heading]]:text-[#666] [&_[cmdk-group-heading]]:text-[10px] [&_[cmdk-group-heading]]:uppercase [&_[cmdk-group-heading]]:tracking-[0.15em]"
+              className="[&_[cmdk-group-heading]]:px-3 [&_[cmdk-group-heading]]:py-2 [&_[cmdk-group-heading]]:font-mono [&_[cmdk-group-heading]]:text-[#7a7a7a] [&_[cmdk-group-heading]]:text-[10px] [&_[cmdk-group-heading]]:uppercase [&_[cmdk-group-heading]]:tracking-[0.15em]"
               heading="Navigation"
             >
               {NAV_ITEMS.map((item) => (
@@ -181,7 +181,7 @@ export function CommandPalette({ posts }: CommandPaletteProps) {
 
             {posts.length > 0 && (
               <Command.Group
-                className="[&_[cmdk-group-heading]]:px-3 [&_[cmdk-group-heading]]:py-2 [&_[cmdk-group-heading]]:font-mono [&_[cmdk-group-heading]]:text-[#666] [&_[cmdk-group-heading]]:text-[10px] [&_[cmdk-group-heading]]:uppercase [&_[cmdk-group-heading]]:tracking-[0.15em]"
+                className="[&_[cmdk-group-heading]]:px-3 [&_[cmdk-group-heading]]:py-2 [&_[cmdk-group-heading]]:font-mono [&_[cmdk-group-heading]]:text-[#7a7a7a] [&_[cmdk-group-heading]]:text-[10px] [&_[cmdk-group-heading]]:uppercase [&_[cmdk-group-heading]]:tracking-[0.15em]"
                 heading="Blog Posts"
               >
                 {posts.map((post) => (
@@ -199,7 +199,7 @@ export function CommandPalette({ posts }: CommandPaletteProps) {
             )}
 
             <Command.Group
-              className="[&_[cmdk-group-heading]]:px-3 [&_[cmdk-group-heading]]:py-2 [&_[cmdk-group-heading]]:font-mono [&_[cmdk-group-heading]]:text-[#666] [&_[cmdk-group-heading]]:text-[10px] [&_[cmdk-group-heading]]:uppercase [&_[cmdk-group-heading]]:tracking-[0.15em]"
+              className="[&_[cmdk-group-heading]]:px-3 [&_[cmdk-group-heading]]:py-2 [&_[cmdk-group-heading]]:font-mono [&_[cmdk-group-heading]]:text-[#7a7a7a] [&_[cmdk-group-heading]]:text-[10px] [&_[cmdk-group-heading]]:uppercase [&_[cmdk-group-heading]]:tracking-[0.15em]"
               heading="Social"
             >
               {SOCIAL_ITEMS.map((item) => (

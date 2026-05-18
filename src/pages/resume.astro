@@ -10,7 +10,7 @@ const experiences: {
   description?: string;
 }[] = [
   {
-    period: "Nov 2021 — Apr 2026",
+    period: "Nov 2021 to Apr 2026",
     role: "Front End Engineer",
     company: "Namecheap",
     url: "https://www.namecheap.com/",
@@ -24,7 +24,7 @@ const experiences: {
     ],
   },
   {
-    period: "May 2019 — Dec 2023",
+    period: "May 2019 to Dec 2023",
     role: "Technical Author",
     company: "Progress",
     url: "https://www.progress.com/",
@@ -32,7 +32,7 @@ const experiences: {
       "Technical writer covering JavaScript, TypeScript, React, Node.js, and modern web development. Created educational content helping developers adopt new technologies.",
   },
   {
-    period: "Feb 2020 — Feb 2022",
+    period: "Feb 2020 to Feb 2022",
     role: "Technical Author",
     company: "LogRocket",
     url: "https://logrocket.com/",
@@ -40,7 +40,7 @@ const experiences: {
       "Published 70+ technical articles on JavaScript, TypeScript, React, Node.js, GraphQL, and web fundamentals. Tutorials, deep dives, and framework comparisons.",
   },
   {
-    period: "Oct 2019 — Apr 2020",
+    period: "Oct 2019 to Apr 2020",
     role: "Software Engineer",
     company: "Popstand",
     url: "https://popstand.com/",
@@ -48,7 +48,7 @@ const experiences: {
       "Built Taco Maps from scratch, a React Native food delivery app for LA taco restaurants. Handled the full setup: Redux, TypeScript, Firebase for real-time order updates, and E2E tests with Detox on both iOS and Android.",
   },
   {
-    period: "Jan 2019 — Jul 2019",
+    period: "Jan 2019 to Jul 2019",
     role: "Software Engineer",
     company: "Foton",
     url: "https://foton.tech/",
@@ -139,7 +139,7 @@ const languages = [
 ---
 
 <BaseLayout
-  title="Resume — Leonardo Maldonado"
+  title="Resume · Leonardo Maldonado"
   description="Professional resume and experience of Leonardo Maldonado, software engineer."
   canonical="https://www.leonardomso.com/resume"
 >
@@ -153,16 +153,16 @@ const languages = [
       a { color: #111 !important; text-decoration: none !important; }
       .link-hover::after { display: none !important; }
       * { color: #111 !important; border-color: #ddd !important; }
-      .resume-label { color: #666 !important; }
-      .resume-muted { color: #555 !important; }
+      .resume-label { color: #333 !important; }
+      .resume-muted { color: #444 !important; }
     }
   </style>
 
   <div>
     <div class="no-print mb-8 flex items-center justify-between">
-      <p class="font-mono text-[#666] text-[12px] uppercase tracking-[0.25em]">Resume</p>
+      <p class="font-mono text-[#7a7a7a] text-[12px] uppercase tracking-[0.25em]">Resume</p>
       <button
-        class="cursor-pointer font-mono text-[#666] text-[12px] tracking-wide transition-colors hover:text-[#ededed]"
+        class="cursor-pointer font-mono text-[#7a7a7a] text-[12px] tracking-wide transition-colors hover:text-[#ededed]"
         onclick="window.print()"
         type="button"
       >
@@ -182,14 +182,14 @@ const languages = [
     </div>
 
     <section class="resume-section mb-12">
-      <h2 class="resume-label mb-4 font-mono text-[#666] text-[11px] uppercase tracking-[0.2em]">Professional Summary</h2>
+      <h2 class="resume-label mb-4 font-mono text-[#7a7a7a] text-[11px] uppercase tracking-[0.2em]">Professional Summary</h2>
       <p class="text-[#888] text-[15px] leading-[1.8]">
-        Software engineer with 7+ years of experience. For four and a half years, the sole engineer responsible for Namecheap&apos;s Spaceship domain search product end to end — helped the platform sell 3M+ domains. Architecture, React/TypeScript frontend, real-time WebSocket data layer, and releases. Also built a retail ERP (Shopwyse) and an AI writing tool (Polyglot) independently, full-stack with TypeScript, Node.js, GraphQL, and PostgreSQL. Creator of 33 JavaScript Concepts (66K+ GitHub stars). Author of 100+ technical articles. Contributor to Better Auth, Node.js, and TanStack.
+        Software engineer with 7+ years of experience. For four and a half years, the sole engineer responsible for Namecheap&apos;s Spaceship domain search product end to end, helping the platform sell 3M+ domains. Architecture, React/TypeScript frontend, real-time WebSocket data layer, and releases. Also built a retail ERP (Shopwyse) and an AI writing tool (Polyglot) independently, full-stack with TypeScript, Node.js, GraphQL, and PostgreSQL. Creator of 33 JavaScript Concepts (66K+ GitHub stars). Author of 100+ technical articles. Contributor to Better Auth, Node.js, and TanStack.
       </p>
     </section>
 
     <section class="resume-section mb-12">
-      <h2 class="resume-label mb-4 font-mono text-[#666] text-[11px] uppercase tracking-[0.2em]">Skills</h2>
+      <h2 class="resume-label mb-4 font-mono text-[#7a7a7a] text-[11px] uppercase tracking-[0.2em]">Skills</h2>
       <div class="flex flex-wrap gap-2">
         {skills.map((skill) => (
           <span class="rounded-md border border-[#161616] px-3 py-1 font-mono text-[#888] text-[12px]">{skill}</span>
@@ -198,18 +198,18 @@ const languages = [
     </section>
 
     <section class="resume-section mb-12">
-      <h2 class="resume-label mb-6 font-mono text-[#666] text-[11px] uppercase tracking-[0.2em]">Work Experience</h2>
+      <h2 class="resume-label mb-6 font-mono text-[#7a7a7a] text-[11px] uppercase tracking-[0.2em]">Work Experience</h2>
       <div class="flex flex-col gap-8">
         {experiences.map((exp) => (
           <div>
             <div class="flex items-baseline justify-between gap-4">
               <p class="font-medium text-[#ededed] text-[15px]">
-                {exp.role} <span class="resume-muted text-[#666]">at</span>
+                {exp.role} <span class="resume-muted text-[#7a7a7a]">at</span>
                 <a href={exp.url} target="_blank" rel="noopener noreferrer" class="link-hover text-[#a0a0a0] transition-colors hover:text-[#ededed]">
                   {exp.company}
                 </a>
               </p>
-              <span class="resume-muted shrink-0 font-mono text-[#666] text-[11px] tracking-wider">{exp.period}</span>
+              <span class="resume-muted shrink-0 font-mono text-[#7a7a7a] text-[11px] tracking-wider">{exp.period}</span>
             </div>
             <div class="resume-muted mt-2 text-[#888] text-[14px] leading-[1.7]">
               {exp.bullets ? (
@@ -226,13 +226,13 @@ const languages = [
     </section>
 
     <section class="resume-section mb-12">
-      <h2 class="resume-label mb-6 font-mono text-[#666] text-[11px] uppercase tracking-[0.2em]">Projects</h2>
+      <h2 class="resume-label mb-6 font-mono text-[#7a7a7a] text-[11px] uppercase tracking-[0.2em]">Projects</h2>
       <div class="flex flex-col gap-6">
         {projects.map((project) => (
           <div>
             <p class="font-medium text-[#ededed] text-[15px]">
               {project.url ? (
-                <a href={project.url} target="_blank" rel="noopener noreferrer" class="link-hover text-[#ededed] transition-colors hover:text-white">{project.name}</a>
+                <a href={project.url} target="_blank" rel="noopener noreferrer" class="link-hover text-[#ededed] transition-colors hover:text-[#ededed]">{project.name}</a>
               ) : (
                 project.name
               )}
@@ -244,11 +244,11 @@ const languages = [
     </section>
 
     <section class="resume-section mb-12">
-      <h2 class="resume-label mb-4 font-mono text-[#666] text-[11px] uppercase tracking-[0.2em]">Technical Skills</h2>
+      <h2 class="resume-label mb-4 font-mono text-[#7a7a7a] text-[11px] uppercase tracking-[0.2em]">Technical Skills</h2>
       <div class="flex flex-col gap-3">
         {technicalSkills.map((group) => (
           <div class="flex gap-3">
-            <span class="resume-muted shrink-0 font-mono text-[#666] text-[12px]">{group.category}:</span>
+            <span class="resume-muted shrink-0 font-mono text-[#7a7a7a] text-[12px]">{group.category}:</span>
             <span class="text-[#888] text-[14px]">{group.items}</span>
           </div>
         ))}
@@ -256,22 +256,22 @@ const languages = [
     </section>
 
     <section class="resume-section mb-12">
-      <h2 class="resume-label mb-4 font-mono text-[#666] text-[11px] uppercase tracking-[0.2em]">Languages</h2>
+      <h2 class="resume-label mb-4 font-mono text-[#7a7a7a] text-[11px] uppercase tracking-[0.2em]">Languages</h2>
       <div class="flex gap-8">
         {languages.map((lang) => (
           <div class="flex items-baseline gap-2">
             <span class="text-[#ededed] text-[15px]">{lang.name}</span>
-            <span class="resume-muted font-mono text-[#666] text-[11px]">{lang.level}</span>
+            <span class="resume-muted font-mono text-[#7a7a7a] text-[11px]">{lang.level}</span>
           </div>
         ))}
       </div>
     </section>
 
     <section class="resume-section">
-      <h2 class="resume-label mb-4 font-mono text-[#666] text-[11px] uppercase tracking-[0.2em]">Education</h2>
+      <h2 class="resume-label mb-4 font-mono text-[#7a7a7a] text-[11px] uppercase tracking-[0.2em]">Education</h2>
       <div class="flex items-baseline justify-between gap-4">
         <p class="font-medium text-[#ededed] text-[15px]">Computer Engineering Technician</p>
-        <span class="resume-muted shrink-0 font-mono text-[#666] text-[11px] tracking-wider">Jan 2013 — Dec 2014</span>
+        <span class="resume-muted shrink-0 font-mono text-[#7a7a7a] text-[11px] tracking-wider">Jan 2013 to Dec 2014</span>
       </div>
       <p class="resume-muted mt-1 text-[#888] text-[14px]">SENAC</p>
     </section>

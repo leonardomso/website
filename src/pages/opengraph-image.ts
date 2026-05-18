@@ -10,7 +10,7 @@ function svgEscape(value: string): string {
 export function GET() {
   const title = "Leonardo Maldonado";
   const subtitle =
-    "Sole engineer on Spaceship's domain search at Namecheap — helped sell 3M+ domains.";
+    "Sole engineer on Spaceship's domain search at Namecheap, helped sell 3M+ domains.";
 
   const svg = `<?xml version="1.0" encoding="UTF-8"?>
 <svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">

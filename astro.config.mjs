@@ -42,7 +42,7 @@ Software engineer at [Namecheap](https://www.namecheap.com), where I built [Spac
         },
         {
           pattern: "/about",
-          render: () => `# About — Leonardo Maldonado
+          render: () => `# About · Leonardo Maldonado
 
 I'm Leonardo. I grew up in Franca, Brazil and moved to Valencia, Spain a few years ago.
 
@@ -53,7 +53,7 @@ In 2018, I created [33 JavaScript Concepts](https://github.com/leonardomso/33-js
         },
         {
           pattern: "/projects",
-          render: () => `# Projects — Leonardo Maldonado
+          render: () => `# Projects · Leonardo Maldonado
 
 ## 33 JavaScript Concepts
 https://github.com/leonardomso/33-js-concepts
@@ -79,7 +79,7 @@ https://github.com/leonardomso/betterhook
         },
         {
           pattern: "/resume",
-          render: () => `# Resume — Leonardo Maldonado
+          render: () => `# Resume · Leonardo Maldonado
 
 > Software Engineer · Valencia, Spain
 
@@ -96,7 +96,7 @@ TypeScript, React, Node.js, GraphQL, PostgreSQL
         },
         {
           pattern: "/uses",
-          render: () => `# Uses — Leonardo Maldonado
+          render: () => `# Uses · Leonardo Maldonado
 
 ## Editor & Terminal
 - VS Code
@@ -112,7 +112,7 @@ TypeScript, React, Node.js, GraphQL, PostgreSQL
         },
         {
           pattern: "/now",
-          render: () => `# Now — Leonardo Maldonado
+          render: () => `# Now · Leonardo Maldonado
 
 ## Work
 Recently left Namecheap after building Spaceship domain search as the sole engineer.
@@ -126,7 +126,7 @@ Building products and writing about software engineering.
         enabled: true,
         brandName: "Leonardo Maldonado",
         description:
-          "Software engineer based in Valencia, Spain. Sole engineer on Spaceship's domain search at Namecheap — helped sell 3M+ domains. Creator of 33 JavaScript Concepts (66K+ stars).",
+          "Software engineer based in Valencia, Spain. Sole engineer on Spaceship's domain search at Namecheap, helped sell 3M+ domains. Creator of 33 JavaScript Concepts (66K+ stars).",
         sections: [
           {
             title: "Pages",
