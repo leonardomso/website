@@ -1,7 +1,43 @@
 ---
 import { ArrowUpRight } from "lucide-react";
+import {
+  breadcrumbSchema,
+  JsonLd,
+  softwareApplicationSchema,
+} from "~/components/json-ld";
 import { projects } from "~/config/projects";
 import BaseLayout from "~/layouts/base-layout.astro";
+
+const SITE_URL = "https://www.leonardomso.com";
+
+const breadcrumbs = breadcrumbSchema([
+  { name: "Home", url: SITE_URL },
+  { name: "Projects", url: `${SITE_URL}/projects` },
+]);
+
+const softwareSchemas = projects
+  .filter((p) => p.featured)
+  .map((project) =>
+    softwareApplicationSchema({
+      name: project.title,
+      description: project.description,
+      url: project.url,
+      programmingLanguage: project.tech,
+    })
+  );
+
+const itemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Projects by Leonardo Maldonado",
+  url: `${SITE_URL}/projects`,
+  itemListElement: projects.map((project, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    url: project.url,
+    name: project.title,
+  })),
+};
 ---
 
 <BaseLayout
@@ -10,6 +46,9 @@ import BaseLayout from "~/layouts/base-layout.astro";
   canonical="https://www.leonardomso.com/projects"
 >
   <div>
+    <JsonLd data={breadcrumbs} />
+    <JsonLd data={itemListSchema} />
+    {softwareSchemas.map((schema) => <JsonLd data={schema} />)}
     <p class="mb-4 font-mono text-fg-tertiary text-[12px] uppercase tracking-[0.25em]">Projects</p>
     <h1 class="font-semibold text-fg text-[clamp(2rem,5vw,3rem)] leading-[1.1] tracking-[-0.03em]">Things I&apos;ve built</h1>
     <p class="mt-6 max-w-[440px] text-fg-secondary text-[15px] leading-[1.75]">Open source projects, products, and experiments.</p>

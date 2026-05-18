@@ -1,15 +1,72 @@
 ---
-import { JsonLd, profilePageSchema } from "~/components/json-ld";
+import {
+  breadcrumbSchema,
+  faqSchema,
+  JsonLd,
+  profilePageSchema,
+} from "~/components/json-ld";
 import BaseLayout from "~/layouts/base-layout.astro";
+
+const SITE_URL = "https://www.leonardomso.com";
+
+const faqItems = [
+  {
+    question: "Who is Leonardo Maldonado?",
+    answer:
+      "Leonardo Maldonado is a senior full-stack engineer based in Valencia, Spain, originally from Franca, Brazil. He has 7+ years of experience in TypeScript, React, Node.js, and Go. He was previously the sole engineer on Spaceship's domain search at Namecheap, helping sell 3M+ domains, and is the creator of 33 JavaScript Concepts (66K+ GitHub stars).",
+  },
+  {
+    question: "What is Leonardo Maldonado building right now?",
+    answer:
+      "Leonardo is currently building Strait, an agentic workflow orchestration platform written in Go. It runs background jobs, scheduled tasks, and multi-step workflows from a single binary under 30MB. Strait ships with SDKs in five languages (TypeScript, Python, Go, Ruby, Rust), MCP servers, and a CLI.",
+  },
+  {
+    question: "What did Leonardo build at Namecheap?",
+    answer:
+      "Leonardo was the sole engineer on Spaceship's domain search product for four and a half years (Nov 2021 to Apr 2026). He built the React/TypeScript frontend from scratch, including a real-time WebSocket pricing engine for 500+ TLDs, Beast Mode bulk search, and multi-currency pricing for 30+ markets. The platform sold over 3M domains during his tenure.",
+  },
+  {
+    question: "What is 33 JavaScript Concepts?",
+    answer:
+      "33 JavaScript Concepts is an open-source curated guide created by Leonardo Maldonado in 2018, covering core JavaScript concepts from closures and prototypes to async patterns. It has 66K+ GitHub stars, has been translated into 40+ languages by the community, and was recognized by GitHub as a top open-source project of 2018.",
+  },
+  {
+    question: "What is Leonardo Maldonado's technical stack?",
+    answer:
+      "Leonardo's main stack is TypeScript, React, Node.js, and Go. He uses Next.js, TanStack Start, Tailwind CSS, PostgreSQL, Redis, GraphQL, and WebSocket for full-stack work. For AI applications he uses Vercel AI SDK, Anthropic API, OpenAI API, and MCP (Model Context Protocol). He writes Rust for side projects like betterhook.",
+  },
+  {
+    question: "Where is Leonardo Maldonado based?",
+    answer:
+      "Leonardo Maldonado is based in Valencia, Spain (CET timezone). He's originally from Franca, Brazil, and moved to Valencia to be closer to the European tech scene. He speaks Portuguese (native), English (fluent), and Spanish (fluent).",
+  },
+  {
+    question: "How can I contact Leonardo Maldonado?",
+    answer:
+      "You can reach Leonardo by email at leonardomso11@gmail.com, on GitHub at github.com/leonardomso, on LinkedIn at linkedin.com/in/leonardomso, or on X at @leonardomso.",
+  },
+  {
+    question: "Is Leonardo Maldonado open to new opportunities?",
+    answer:
+      "Leonardo recently left Namecheap and is exploring what comes next while building Strait. He's open to conversations about senior full-stack and product engineering roles, particularly involving TypeScript, React, Go, or AI agent infrastructure.",
+  },
+];
+
+const breadcrumbs = breadcrumbSchema([
+  { name: "Home", url: SITE_URL },
+  { name: "About", url: `${SITE_URL}/about` },
+]);
 ---
 
 <BaseLayout
   title="About · Leonardo Maldonado"
-  description="Software engineer based in Valencia, Spain. Sole engineer on Spaceship's domain search at Namecheap, helped sell 3M+ domains. Creator of 33 JavaScript Concepts (66K+ stars)."
+  description="Senior full-stack engineer based in Valencia, Spain. Previously sole engineer on Spaceship's domain search at Namecheap (3M+ domains sold). Creator of 33 JavaScript Concepts. Currently building Strait."
   canonical="https://www.leonardomso.com/about"
 >
   <div>
     <JsonLd data={profilePageSchema} />
+    <JsonLd data={breadcrumbs} />
+    <JsonLd data={faqSchema(faqItems)} />
     <p class="mb-4 font-mono text-fg-tertiary text-[12px] uppercase tracking-[0.25em]">About</p>
     <h1 class="font-semibold text-fg text-[clamp(2rem,5vw,3rem)] leading-[1.1] tracking-[-0.03em]">Leonardo Maldonado</h1>
 
@@ -32,5 +89,24 @@ import BaseLayout from "~/layouts/base-layout.astro";
 
       <p>If you want to chat, I&apos;m always up for it. <a class="link-hover text-fg-muted transition-colors hover:text-fg" href="mailto:leonardomso11@gmail.com">Send me an email</a> or find me on <a class="link-hover text-fg-muted transition-colors hover:text-fg" href="https://x.com/leonardomso" rel="noopener noreferrer" target="_blank">X</a>.</p>
     </div>
+
+    <section class="mt-24" aria-labelledby="faq-heading">
+      <div class="mb-10 flex items-center gap-4">
+        <h2 id="faq-heading" class="font-mono text-fg-tertiary text-[11px] uppercase tracking-[0.2em]">FAQ</h2>
+        <div class="section-divider flex-1" />
+      </div>
+      <div class="flex flex-col gap-6">
+        {faqItems.map((item) => (
+          <details class="group rounded-lg border border-surface-border bg-surface-low p-5 transition-colors hover:border-surface-border-strong">
+            <summary class="cursor-pointer font-medium text-fg text-[15px] marker:hidden">
+              {item.question}
+            </summary>
+            <p class="mt-3 text-fg-secondary text-[14px] leading-[1.75] sm:text-[15px] sm:leading-[1.8]">
+              {item.answer}
+            </p>
+          </details>
+        ))}
+      </div>
+    </section>
   </div>
 </BaseLayout>

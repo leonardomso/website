@@ -1,6 +1,6 @@
 # Leonardo Maldonado
 
-> Software engineer based in Valencia, Spain. Sole engineer on Spaceship's domain search at Namecheap, helped sell 3M+ domains. Creator of 33 JavaScript Concepts (66K+ stars).
+> Senior full-stack engineer with 7+ years of experience in TypeScript, React, Node.js, and Go. Previously sole engineer on Spaceship's domain search at Namecheap (3M+ domains sold). Creator of 33 JavaScript Concepts (66K+ GitHub stars). Currently building Strait, an agentic workflow orchestration platform.
 
 ## Pages
 

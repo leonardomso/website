@@ -1,6 +1,7 @@
 import { getAllPosts } from "~/lib/blog";
 
 const SITE_URL = "https://www.leonardomso.com";
+const BUILD_DATE = new Date().toISOString();
 
 function formatDate(date: Date): string {
   return date.toISOString();
@@ -19,13 +20,11 @@ export async function GET() {
     { url: `${SITE_URL}/now`, changefreq: "weekly", priority: "0.5" },
   ];
 
-  const now = new Date();
-
   const entries = [
     ...staticPages.map(
       (page) => `  <url>
     <loc>${page.url}</loc>
-    <lastmod>${formatDate(now)}</lastmod>
+    <lastmod>${BUILD_DATE}</lastmod>
     <changefreq>${page.changefreq}</changefreq>
     <priority>${page.priority}</priority>
   </url>`

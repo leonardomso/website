@@ -1,8 +1,34 @@
 ---
+import { breadcrumbSchema, JsonLd } from "~/components/json-ld";
 import BaseLayout from "~/layouts/base-layout.astro";
 import { getAllPosts } from "~/lib/blog";
 
+const SITE_URL = "https://www.leonardomso.com";
 const posts = await getAllPosts();
+
+const breadcrumbs = breadcrumbSchema([
+  { name: "Home", url: SITE_URL },
+  { name: "Blog", url: `${SITE_URL}/blog` },
+]);
+
+const blogSchema = {
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  url: `${SITE_URL}/blog`,
+  name: "Leonardo Maldonado Blog",
+  description:
+    "Thoughts on software engineering, web development, and building products.",
+  inLanguage: "en",
+  author: { "@id": `${SITE_URL}/#person` },
+  publisher: { "@id": `${SITE_URL}/#person` },
+  blogPost: posts.map((post) => ({
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.description,
+    datePublished: post.date,
+    url: `${SITE_URL}/blog/${post.slug}`,
+  })),
+};
 
 function formatDate(dateStr: string): string {
   return new Date(dateStr).toLocaleDateString("en-US", {
@@ -19,6 +45,8 @@ function formatDate(dateStr: string): string {
   canonical="https://www.leonardomso.com/blog"
 >
   <div>
+    <JsonLd data={breadcrumbs} />
+    <JsonLd data={blogSchema} />
     <p class="mb-4 font-mono text-fg-tertiary text-[12px] uppercase tracking-[0.25em]">Blog</p>
     <h1 class="font-semibold text-fg text-[clamp(2rem,5vw,3rem)] leading-[1.1] tracking-[-0.03em]">Writing</h1>
     <p class="mt-6 max-w-[440px] text-fg-secondary text-[15px] leading-[1.75]">Thoughts on software engineering, web development, and building products.</p>

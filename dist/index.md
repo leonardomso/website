@@ -1,8 +1,10 @@
 # Leonardo Maldonado
 
-> Software Engineer - Valencia, Spain
+> Senior Full-Stack Engineer - Valencia, Spain - React, TypeScript, Go
 
-Software engineer at [Namecheap](https://www.namecheap.com), where I built [Spaceship's domain search](https://www.spaceship.com/domain-search/) from scratch. Passionate about building fast, polished web experiences.
+Senior full-stack engineer with 7+ years of experience in TypeScript, React, Node.js, and Go. Previously the sole engineer on [Spaceship's domain search](https://www.spaceship.com/domain-search/) at [Namecheap](https://www.namecheap.com), helping sell 3M+ domains. Currently building [Strait](https://strait.dev), an agentic workflow orchestration platform with SDKs in five languages, MCP servers, and a CLI.
+
+Creator of [33 JavaScript Concepts](https://github.com/leonardomso/33-js-concepts) (66K+ GitHub stars, GitHub Top Open Source Project of 2018). Open source contributor to Better Auth, Node.js, and TanStack.
 
 ## Links
 

@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.leonardomso.com/sitemap.xml
+
+# AEO discovery
+# llms.txt: https://www.leonardomso.com/llms.txt
+# Markdown twins: https://www.leonardomso.com/<page>.md

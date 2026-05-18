@@ -1,6 +1,6 @@
 ---
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import { blogPostSchema, JsonLd } from "~/components/json-ld";
+import { blogPostSchema, breadcrumbSchema, JsonLd } from "~/components/json-ld";
 import { ReadingProgress } from "~/components/reading-progress";
 import { ShareButtons } from "~/components/share-buttons";
 import { TableOfContents } from "~/components/toc";
@@ -30,6 +30,12 @@ const [html, { prev, next }] = await Promise.all([
 const headings = extractHeadings(post.content);
 const postUrl = `${SITE_URL}/blog/${slug}`;
 
+const breadcrumbs = breadcrumbSchema([
+  { name: "Home", url: SITE_URL },
+  { name: "Blog", url: `${SITE_URL}/blog` },
+  { name: post.title, url: postUrl },
+]);
+
 function formatDate(dateStr: string): string {
   return new Date(dateStr).toLocaleDateString("en-US", {
     year: "numeric",
@@ -48,6 +54,7 @@ function formatDate(dateStr: string): string {
   <article>
     <ReadingProgress client:load />
     <JsonLd data={blogPostSchema(post)} />
+    <JsonLd data={breadcrumbs} />
     <a href="/blog" class="link-hover mb-12 inline-block font-mono text-fg-tertiary text-[11px] uppercase tracking-wider transition-colors hover:text-fg">← Back to blog</a>
 
     <header class="mb-12">

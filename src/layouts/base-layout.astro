@@ -7,14 +7,19 @@ import "~/styles/globals.css";
 interface Props {
   canonical?: string;
   description?: string;
+  ogImage?: string;
   ogType?: "website" | "article";
   title?: string;
 }
 
+const SITE_URL = "https://www.leonardomso.com";
+const DEFAULT_OG_IMAGE = `${SITE_URL}/opengraph-image`;
+
 const {
   title = "Leonardo Maldonado",
-  description = "Software engineer based in Valencia, Spain. Sole engineer on Spaceship's domain search at Namecheap, helped sell 3M+ domains. Creator of 33 JavaScript Concepts (66k+ stars).",
-  canonical = "https://www.leonardomso.com",
+  description = "Senior full-stack engineer based in Valencia, Spain. Previously sole engineer on Spaceship's domain search at Namecheap (3M+ domains sold). Creator of 33 JavaScript Concepts (66K+ stars). Currently building Strait.",
+  canonical = SITE_URL,
+  ogImage = DEFAULT_OG_IMAGE,
   ogType = "website",
 } = Astro.props;
 
@@ -30,8 +35,10 @@ const cmdkPosts = posts.map((p) => ({ title: p.title, slug: p.slug }));
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta name="author" content="Leonardo Maldonado" />
+    <meta name="theme-color" content="#050505" />
     <link rel="canonical" href={canonical} />
-    <link rel="alternate" type="application/rss+xml" href="https://www.leonardomso.com/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Leonardo Maldonado RSS Feed" href={`${SITE_URL}/feed.xml`} />
 
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -39,13 +46,23 @@ const cmdkPosts = posts.map((p) => ({ title: p.title, slug: p.slug }));
     <meta property="og:site_name" content="Leonardo Maldonado" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content={ogType} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:secure_url" content={ogImage} />
+    <meta property="og:image:type" content="image/svg+xml" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={`${title} — preview card`} />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:creator" content="@leonardomso" />
+    <meta name="twitter:site" content="@leonardomso" />
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content={`${title} — preview card`} />
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/favicon.ico" />
   </head>
   <body class="antialiased">
     <a
