@@ -101,17 +101,14 @@ export function CommandPalette({ posts }: CommandPaletteProps) {
     return () => document.removeEventListener("keydown", onKeyDown);
   }, []);
 
-  const navigate = useCallback(
-    (href: string) => {
-      setOpen(false);
-      if (href.startsWith("http") || href.startsWith("mailto:")) {
-        window.open(href, "_blank", "noopener,noreferrer");
-      } else {
-        window.location.assign(href);
-      }
-    },
-    []
-  );
+  const navigate = useCallback((href: string) => {
+    setOpen(false);
+    if (href.startsWith("http") || href.startsWith("mailto:")) {
+      window.open(href, "_blank", "noopener,noreferrer");
+    } else {
+      window.location.assign(href);
+    }
+  }, []);
   if (!open) {
     return null;
   }
@@ -133,7 +130,7 @@ export function CommandPalette({ posts }: CommandPaletteProps) {
       <div aria-hidden className="fixed inset-0 bg-black/50 backdrop-blur-sm" />
       {/* biome-ignore lint/a11y/noNoninteractiveElementInteractions: role=document wrapper handles ESC propagation */}
       <div
-        className="relative z-10 mx-4 w-full max-w-[520px] overflow-hidden rounded-xl border border-[#161616] bg-[#0a0a0a] shadow-2xl"
+        className="relative z-10 mx-4 w-full max-w-[520px] overflow-hidden rounded-xl border border-surface-border bg-surface-low shadow-2xl"
         onClick={(e) => e.stopPropagation()}
         onKeyDown={(e) => {
           if (e.key === "Escape") {
@@ -154,21 +151,21 @@ export function CommandPalette({ posts }: CommandPaletteProps) {
         >
           <Command.Input
             autoFocus
-            className="w-full border-[#161616] border-b bg-transparent px-4 py-3 text-[#ededed] text-[15px] outline-none placeholder:text-[#444]"
+            className="w-full border-surface-border border-b bg-transparent px-4 py-3 text-[15px] text-fg outline-none placeholder:text-fg-disabled"
             placeholder="Type a command or search..."
           />
           <Command.List className="max-h-[320px] overflow-y-auto p-2">
-            <Command.Empty className="px-3 py-6 text-center text-[#7a7a7a] text-[13px]">
+            <Command.Empty className="px-3 py-6 text-center text-[13px] text-fg-tertiary">
               No results found.
             </Command.Empty>
 
             <Command.Group
-              className="[&_[cmdk-group-heading]]:px-3 [&_[cmdk-group-heading]]:py-2 [&_[cmdk-group-heading]]:font-mono [&_[cmdk-group-heading]]:text-[#7a7a7a] [&_[cmdk-group-heading]]:text-[10px] [&_[cmdk-group-heading]]:uppercase [&_[cmdk-group-heading]]:tracking-[0.15em]"
+              className="[&_[cmdk-group-heading]]:px-3 [&_[cmdk-group-heading]]:py-2 [&_[cmdk-group-heading]]:font-mono [&_[cmdk-group-heading]]:text-[10px] [&_[cmdk-group-heading]]:text-fg-tertiary [&_[cmdk-group-heading]]:uppercase [&_[cmdk-group-heading]]:tracking-[0.15em]"
               heading="Navigation"
             >
               {NAV_ITEMS.map((item) => (
                 <Command.Item
-                  className="flex cursor-pointer items-center gap-3 rounded-lg px-3 py-2.5 text-[#888] text-[14px] transition-colors data-[selected=true]:bg-[#111] data-[selected=true]:text-[#ededed]"
+                  className="flex cursor-pointer items-center gap-3 rounded-lg px-3 py-2.5 text-[14px] text-fg-secondary transition-colors data-[selected=true]:bg-surface-border data-[selected=true]:text-fg"
                   key={item.href}
                   onSelect={() => navigate(item.href)}
                   value={item.label}
@@ -181,12 +178,12 @@ export function CommandPalette({ posts }: CommandPaletteProps) {
 
             {posts.length > 0 && (
               <Command.Group
-                className="[&_[cmdk-group-heading]]:px-3 [&_[cmdk-group-heading]]:py-2 [&_[cmdk-group-heading]]:font-mono [&_[cmdk-group-heading]]:text-[#7a7a7a] [&_[cmdk-group-heading]]:text-[10px] [&_[cmdk-group-heading]]:uppercase [&_[cmdk-group-heading]]:tracking-[0.15em]"
+                className="[&_[cmdk-group-heading]]:px-3 [&_[cmdk-group-heading]]:py-2 [&_[cmdk-group-heading]]:font-mono [&_[cmdk-group-heading]]:text-[10px] [&_[cmdk-group-heading]]:text-fg-tertiary [&_[cmdk-group-heading]]:uppercase [&_[cmdk-group-heading]]:tracking-[0.15em]"
                 heading="Blog Posts"
               >
                 {posts.map((post) => (
                   <Command.Item
-                    className="flex cursor-pointer items-center gap-3 rounded-lg px-3 py-2.5 text-[#888] text-[14px] transition-colors data-[selected=true]:bg-[#111] data-[selected=true]:text-[#ededed]"
+                    className="flex cursor-pointer items-center gap-3 rounded-lg px-3 py-2.5 text-[14px] text-fg-secondary transition-colors data-[selected=true]:bg-surface-border data-[selected=true]:text-fg"
                     key={post.slug}
                     onSelect={() => navigate(`/blog/${post.slug}`)}
                     value={post.title}
@@ -199,29 +196,29 @@ export function CommandPalette({ posts }: CommandPaletteProps) {
             )}
 
             <Command.Group
-              className="[&_[cmdk-group-heading]]:px-3 [&_[cmdk-group-heading]]:py-2 [&_[cmdk-group-heading]]:font-mono [&_[cmdk-group-heading]]:text-[#7a7a7a] [&_[cmdk-group-heading]]:text-[10px] [&_[cmdk-group-heading]]:uppercase [&_[cmdk-group-heading]]:tracking-[0.15em]"
+              className="[&_[cmdk-group-heading]]:px-3 [&_[cmdk-group-heading]]:py-2 [&_[cmdk-group-heading]]:font-mono [&_[cmdk-group-heading]]:text-[10px] [&_[cmdk-group-heading]]:text-fg-tertiary [&_[cmdk-group-heading]]:uppercase [&_[cmdk-group-heading]]:tracking-[0.15em]"
               heading="Social"
             >
               {SOCIAL_ITEMS.map((item) => (
                 <Command.Item
-                  className="flex cursor-pointer items-center gap-3 rounded-lg px-3 py-2.5 text-[#888] text-[14px] transition-colors data-[selected=true]:bg-[#111] data-[selected=true]:text-[#ededed]"
+                  className="flex cursor-pointer items-center gap-3 rounded-lg px-3 py-2.5 text-[14px] text-fg-secondary transition-colors data-[selected=true]:bg-surface-border data-[selected=true]:text-fg"
                   key={item.href}
                   onSelect={() => navigate(item.href)}
                   value={item.label}
                 >
                   <item.icon className="h-4 w-4 shrink-0" />
                   {item.label}
-                  <ArrowUpRight className="ml-auto h-3 w-3 text-[#333]" />
+                  <ArrowUpRight className="ml-auto h-3 w-3 text-fg-disabled" />
                 </Command.Item>
               ))}
             </Command.Group>
           </Command.List>
 
-          <div className="flex items-center justify-between border-[#161616] border-t px-4 py-2">
-            <span className="font-mono text-[#444] text-[10px]">
+          <div className="flex items-center justify-between border-surface-border border-t px-4 py-2">
+            <span className="font-mono text-[10px] text-fg-disabled">
               Navigate with · Select with ↵ · Close with Esc
             </span>
-            <kbd className="rounded border border-[#222] px-1.5 py-0.5 font-mono text-[#444] text-[10px]">
+            <kbd className="rounded border border-surface-border-strong px-1.5 py-0.5 font-mono text-[10px] text-fg-disabled">
               ⌘K
             </kbd>
           </div>

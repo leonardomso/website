@@ -17,7 +17,7 @@ export function TableOfContents({ headings }: TocProps) {
   return (
     <nav
       aria-label="Table of contents"
-      className="mb-10 rounded-lg border border-[#161616] bg-[#0a0a0a] p-4"
+      className="mb-10 rounded-lg border border-surface-border bg-surface-low p-4"
     >
       <button
         aria-controls="toc-content"
@@ -26,22 +26,22 @@ export function TableOfContents({ headings }: TocProps) {
         onClick={() => setOpen(!open)}
         type="button"
       >
-        <span className="font-mono text-[#7a7a7a] text-[11px] uppercase tracking-[0.15em]">
+        <span className="font-mono text-[11px] text-fg-tertiary uppercase tracking-[0.15em]">
           Table of Contents
         </span>
-        <span className="font-mono text-[#444] text-[11px]">
+        <span className="font-mono text-[11px] text-fg-disabled">
           {open ? "−" : "+"}
         </span>
       </button>
       {open && (
         <ul
-          className="mt-3 flex flex-col gap-1.5 border-[#161616] border-t pt-3"
+          className="mt-3 flex flex-col gap-1.5 border-surface-border border-t pt-3"
           id="toc-content"
         >
           {headings.map((h) => (
             <li className={h.level === 3 ? "ml-4" : ""} key={h.id}>
               <a
-                className="block text-[#888] text-[13px] leading-relaxed transition-colors hover:text-[#ededed]"
+                className="block text-[13px] text-fg-secondary leading-relaxed transition-colors hover:text-fg"
                 href={`#${h.id}`}
               >
                 {h.text}

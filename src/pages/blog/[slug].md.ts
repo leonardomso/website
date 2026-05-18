@@ -9,7 +9,11 @@ export async function getStaticPaths() {
   }));
 }
 
-export function GET({ props }: { props: { post: Awaited<ReturnType<typeof getAllPosts>>[number] } }) {
+export function GET({
+  props,
+}: {
+  props: { post: Awaited<ReturnType<typeof getAllPosts>>[number] };
+}) {
   const { post } = props;
   const tags = post.tags.length ? `\n\nTags: ${post.tags.join(", ")}` : "";
   const body = `# ${post.title}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://agentskills.io/schemas/agent-skills-discovery-v0.2.0.json",
+  "skills": [
+    {
+      "name": "llms-txt",
+      "type": "content",
+      "description": "Machine-readable profile of Leonardo Maldonado: bio, links, projects, skills, and experience.",
+      "url": "https://www.leonardomso.com/llms.txt"
+    },
+    {
+      "name": "rss-feed",
+      "type": "content",
+      "description": "RSS 2.0 feed of blog posts by Leonardo Maldonado.",
+      "url": "https://www.leonardomso.com/feed.xml"
+    },
+    {
+      "name": "humans-txt",
+      "type": "content",
+      "description": "Team and technology information for leonardomso.com.",
+      "url": "https://www.leonardomso.com/humans.txt"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+# Leonardo Maldonado
+
+> Software engineer based in Valencia, Spain. Sole engineer on Spaceship's domain search at Namecheap, helped sell 3M+ domains. Creator of 33 JavaScript Concepts (66K+ stars).
+
+## Pages
+
+- [Home](https://www.leonardomso.com/)
+- [About](https://www.leonardomso.com/about)
+- [Projects](https://www.leonardomso.com/projects)
+- [Blog](https://www.leonardomso.com/blog)
+- [Resume](https://www.leonardomso.com/resume)
+- [Uses](https://www.leonardomso.com/uses)
+- [Now](https://www.leonardomso.com/now)
+
+## Profiles
+
+- [GitHub](https://github.com/leonardomso)
+- [LinkedIn](https://www.linkedin.com/in/leonardomso/)
+- [X / Twitter](https://x.com/leonardomso)

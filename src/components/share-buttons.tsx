@@ -37,13 +37,13 @@ export function ShareButtons({ title, url }: ShareButtonsProps) {
 
   return (
     <div className="flex items-center gap-4">
-      <span className="font-mono text-[#7a7a7a] text-[11px] uppercase tracking-wider">
+      <span className="font-mono text-[11px] text-fg-tertiary uppercase tracking-wider">
         Share
       </span>
 
       {SHARE_TARGETS.map((target) => (
         <a
-          className="link-hover text-[#7a7a7a] text-[12px] tracking-wide transition-colors hover:text-[#ededed]"
+          className="link-hover py-1.5 text-[12px] text-fg-tertiary tracking-wide transition-colors hover:text-fg"
           href={target.buildUrl(title, url)}
           key={target.label}
           rel="noopener noreferrer"
@@ -54,7 +54,7 @@ export function ShareButtons({ title, url }: ShareButtonsProps) {
       ))}
 
       <button
-        className="flex cursor-pointer items-center gap-1.5 text-[#7a7a7a] text-[12px] tracking-wide transition-colors hover:text-[#ededed]"
+        className="flex cursor-pointer items-center gap-1.5 py-1.5 text-[12px] text-fg-tertiary tracking-wide transition-colors hover:text-fg"
         onClick={handleCopy}
         type="button"
       >

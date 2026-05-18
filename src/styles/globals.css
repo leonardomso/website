@@ -47,23 +47,6 @@ body::before {
   opacity: 0.025;
 }
 
-/* ── Subtle glow behind hero ── */
-.hero-glow {
-  position: absolute;
-  top: -120px;
-  left: 50%;
-  z-index: 0;
-  width: 600px;
-  height: 400px;
-  pointer-events: none;
-  background: radial-gradient(
-    ellipse at center,
-    rgba(255, 255, 255, 0.03) 0%,
-    transparent 70%
-  );
-  transform: translateX(-50%);
-}
-
 /* ── Section divider ── */
 .section-divider {
   width: 100%;
@@ -95,66 +78,6 @@ body::before {
 
 .link-hover:hover::after {
   width: 100%;
-}
-
-/* ── Experience timeline ── */
-.timeline-item {
-  position: relative;
-  padding-left: 24px;
-}
-
-.timeline-item::before {
-  position: absolute;
-  top: 8px;
-  left: 0;
-  width: 6px;
-  height: 6px;
-  content: "";
-  background-color: #333;
-  border-radius: 50%;
-  transition: background-color 0.3s ease;
-}
-
-.timeline-item:hover::before {
-  background-color: #ededed;
-}
-
-.timeline-item::after {
-  position: absolute;
-  top: 20px;
-  bottom: -24px;
-  left: 2.5px;
-  width: 1px;
-  content: "";
-  background: linear-gradient(180deg, #222, transparent);
-}
-
-.timeline-item:last-child::after {
-  display: none;
-}
-
-/* ── Card hover glow ── */
-.card-glow {
-  position: relative;
-  overflow: hidden;
-}
-
-.card-glow::before {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  content: "";
-  background: radial-gradient(
-    600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-    rgba(255, 255, 255, 0.04),
-    transparent 40%
-  );
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.card-glow:hover::before {
-  opacity: 1;
 }
 
 /* ── Prose (blog post typography) ── */

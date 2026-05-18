@@ -8,7 +8,7 @@ export async function GET() {
   const links = posts.length
     ? posts
         .map(
-          (p) => `- [${p.title}](${SITE_URL}/blog/${p.slug}): ${p.description}`,
+          (p) => `- [${p.title}](${SITE_URL}/blog/${p.slug}): ${p.description}`
         )
         .join("\n")
     : "No posts yet.";

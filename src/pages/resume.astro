@@ -17,7 +17,7 @@ const experiences: {
     bullets: [
       "Led the development of Spaceship's domain search product, contributing to the sale of over 3 million domains by building the frontend with React, TypeScript, and Zustand.",
       "Created a real-time pricing system using WebSocket technology to stream live prices for hundreds of TLDs during each search, optimizing data delivery speed to maintain UI smoothness.",
-      "Developed \"Beast Mode\" feature allowing users to conduct bulk domain searches with customizable filters for price, category, and TLD type.",
+      'Developed "Beast Mode" feature allowing users to conduct bulk domain searches with customizable filters for price, category, and TLD type.',
       "Implemented multi-currency pricing with caching functionality to ensure users in 30+ regions view accurate prices without delays.",
       "Utilized TanStack Query to optimize API calls efficiency for search, cart, and checkout processes.",
       "Improved app performance by incorporating code splitting and lazy rendering techniques to handle large result sets efficiently.",
@@ -160,9 +160,9 @@ const languages = [
 
   <div>
     <div class="no-print mb-8 flex items-center justify-between">
-      <p class="font-mono text-[#7a7a7a] text-[12px] uppercase tracking-[0.25em]">Resume</p>
+      <p class="font-mono text-fg-tertiary text-[12px] uppercase tracking-[0.25em]">Resume</p>
       <button
-        class="cursor-pointer font-mono text-[#7a7a7a] text-[12px] tracking-wide transition-colors hover:text-[#ededed]"
+        class="cursor-pointer py-1.5 font-mono text-fg-tertiary text-[12px] tracking-wide transition-colors hover:text-fg"
         onclick="window.print()"
         type="button"
       >
@@ -171,47 +171,47 @@ const languages = [
     </div>
 
     <div class="mb-12">
-      <h1 class="font-semibold text-[#ededed] text-[clamp(2rem,5vw,3rem)] leading-[1.1] tracking-[-0.03em]">Leonardo Maldonado</h1>
-      <p class="mt-3 text-[#888] text-[15px]">Software Engineer · Valencia, Spain</p>
+      <h1 class="font-semibold text-fg text-[clamp(2rem,5vw,3rem)] leading-[1.1] tracking-[-0.03em]">Leonardo Maldonado</h1>
+      <p class="mt-3 text-fg-secondary text-[15px]">Software Engineer · Valencia, Spain</p>
       <div class="mt-4 flex flex-wrap gap-x-6 gap-y-2">
-        <a href="mailto:leonardomso11@gmail.com" class="link-hover text-[#a0a0a0] text-[13px] transition-colors hover:text-[#ededed]">leonardomso11@gmail.com</a>
-        <a href="https://github.com/leonardomso" target="_blank" rel="noopener noreferrer" class="link-hover text-[#a0a0a0] text-[13px] transition-colors hover:text-[#ededed]">github.com/leonardomso</a>
-        <a href="https://www.linkedin.com/in/leonardomso/" target="_blank" rel="noopener noreferrer" class="link-hover text-[#a0a0a0] text-[13px] transition-colors hover:text-[#ededed]">linkedin.com/in/leonardomso</a>
-        <a href="https://www.leonardomso.com" target="_blank" rel="noopener noreferrer" class="link-hover text-[#a0a0a0] text-[13px] transition-colors hover:text-[#ededed]">leonardomso.com</a>
+        <a href="mailto:leonardomso11@gmail.com" class="link-hover text-fg-muted text-[13px] transition-colors hover:text-fg">leonardomso11@gmail.com</a>
+        <a href="https://github.com/leonardomso" target="_blank" rel="noopener noreferrer" class="link-hover text-fg-muted text-[13px] transition-colors hover:text-fg">github.com/leonardomso</a>
+        <a href="https://www.linkedin.com/in/leonardomso/" target="_blank" rel="noopener noreferrer" class="link-hover text-fg-muted text-[13px] transition-colors hover:text-fg">linkedin.com/in/leonardomso</a>
+        <a href="https://www.leonardomso.com" target="_blank" rel="noopener noreferrer" class="link-hover text-fg-muted text-[13px] transition-colors hover:text-fg">leonardomso.com</a>
       </div>
     </div>
 
     <section class="resume-section mb-12">
-      <h2 class="resume-label mb-4 font-mono text-[#7a7a7a] text-[11px] uppercase tracking-[0.2em]">Professional Summary</h2>
-      <p class="text-[#888] text-[15px] leading-[1.8]">
+      <h2 class="resume-label mb-4 font-mono text-fg-tertiary text-[11px] uppercase tracking-[0.2em]">Professional Summary</h2>
+      <p class="text-fg-secondary text-[15px] leading-[1.8]">
         Software engineer with 7+ years of experience. For four and a half years, the sole engineer responsible for Namecheap&apos;s Spaceship domain search product end to end, helping the platform sell 3M+ domains. Architecture, React/TypeScript frontend, real-time WebSocket data layer, and releases. Also built a retail ERP (Shopwyse) and an AI writing tool (Polyglot) independently, full-stack with TypeScript, Node.js, GraphQL, and PostgreSQL. Creator of 33 JavaScript Concepts (66K+ GitHub stars). Author of 100+ technical articles. Contributor to Better Auth, Node.js, and TanStack.
       </p>
     </section>
 
     <section class="resume-section mb-12">
-      <h2 class="resume-label mb-4 font-mono text-[#7a7a7a] text-[11px] uppercase tracking-[0.2em]">Skills</h2>
+      <h2 class="resume-label mb-4 font-mono text-fg-tertiary text-[11px] uppercase tracking-[0.2em]">Skills</h2>
       <div class="flex flex-wrap gap-2">
         {skills.map((skill) => (
-          <span class="rounded-md border border-[#161616] px-3 py-1 font-mono text-[#888] text-[12px]">{skill}</span>
+          <span class="rounded-md border border-surface-border px-3 py-1 font-mono text-fg-secondary text-[12px]">{skill}</span>
         ))}
       </div>
     </section>
 
     <section class="resume-section mb-12">
-      <h2 class="resume-label mb-6 font-mono text-[#7a7a7a] text-[11px] uppercase tracking-[0.2em]">Work Experience</h2>
+      <h2 class="resume-label mb-6 font-mono text-fg-tertiary text-[11px] uppercase tracking-[0.2em]">Work Experience</h2>
       <div class="flex flex-col gap-8">
         {experiences.map((exp) => (
           <div>
             <div class="flex items-baseline justify-between gap-4">
-              <p class="font-medium text-[#ededed] text-[15px]">
-                {exp.role} <span class="resume-muted text-[#7a7a7a]">at</span>
-                <a href={exp.url} target="_blank" rel="noopener noreferrer" class="link-hover text-[#a0a0a0] transition-colors hover:text-[#ededed]">
+              <p class="font-medium text-fg text-[15px]">
+                {exp.role} <span class="resume-muted text-fg-tertiary">at</span>
+                <a href={exp.url} target="_blank" rel="noopener noreferrer" class="link-hover text-fg-muted transition-colors hover:text-fg">
                   {exp.company}
                 </a>
               </p>
-              <span class="resume-muted shrink-0 font-mono text-[#7a7a7a] text-[11px] tracking-wider">{exp.period}</span>
+              <span class="resume-muted shrink-0 font-mono text-fg-tertiary text-[11px] tracking-wider">{exp.period}</span>
             </div>
-            <div class="resume-muted mt-2 text-[#888] text-[14px] leading-[1.7]">
+            <div class="resume-muted mt-2 text-fg-secondary text-[14px] leading-[1.7]">
               {exp.bullets ? (
                 <ul class="list-disc space-y-1.5 pl-4">
                   {exp.bullets.map((bullet) => <li>{bullet}</li>)}
@@ -226,54 +226,54 @@ const languages = [
     </section>
 
     <section class="resume-section mb-12">
-      <h2 class="resume-label mb-6 font-mono text-[#7a7a7a] text-[11px] uppercase tracking-[0.2em]">Projects</h2>
+      <h2 class="resume-label mb-6 font-mono text-fg-tertiary text-[11px] uppercase tracking-[0.2em]">Projects</h2>
       <div class="flex flex-col gap-6">
         {projects.map((project) => (
           <div>
-            <p class="font-medium text-[#ededed] text-[15px]">
+            <p class="font-medium text-fg text-[15px]">
               {project.url ? (
-                <a href={project.url} target="_blank" rel="noopener noreferrer" class="link-hover text-[#ededed] transition-colors hover:text-[#ededed]">{project.name}</a>
+                <a href={project.url} target="_blank" rel="noopener noreferrer" class="link-hover text-fg transition-colors hover:text-fg">{project.name}</a>
               ) : (
                 project.name
               )}
             </p>
-            <p class="resume-muted mt-1 text-[#888] text-[14px] leading-[1.7]">{project.description}</p>
+            <p class="resume-muted mt-1 text-fg-secondary text-[14px] leading-[1.7]">{project.description}</p>
           </div>
         ))}
       </div>
     </section>
 
     <section class="resume-section mb-12">
-      <h2 class="resume-label mb-4 font-mono text-[#7a7a7a] text-[11px] uppercase tracking-[0.2em]">Technical Skills</h2>
+      <h2 class="resume-label mb-4 font-mono text-fg-tertiary text-[11px] uppercase tracking-[0.2em]">Technical Skills</h2>
       <div class="flex flex-col gap-3">
         {technicalSkills.map((group) => (
           <div class="flex gap-3">
-            <span class="resume-muted shrink-0 font-mono text-[#7a7a7a] text-[12px]">{group.category}:</span>
-            <span class="text-[#888] text-[14px]">{group.items}</span>
+            <span class="resume-muted shrink-0 font-mono text-fg-tertiary text-[12px]">{group.category}:</span>
+            <span class="text-fg-secondary text-[14px]">{group.items}</span>
           </div>
         ))}
       </div>
     </section>
 
     <section class="resume-section mb-12">
-      <h2 class="resume-label mb-4 font-mono text-[#7a7a7a] text-[11px] uppercase tracking-[0.2em]">Languages</h2>
+      <h2 class="resume-label mb-4 font-mono text-fg-tertiary text-[11px] uppercase tracking-[0.2em]">Languages</h2>
       <div class="flex gap-8">
         {languages.map((lang) => (
           <div class="flex items-baseline gap-2">
-            <span class="text-[#ededed] text-[15px]">{lang.name}</span>
-            <span class="resume-muted font-mono text-[#7a7a7a] text-[11px]">{lang.level}</span>
+            <span class="text-fg text-[15px]">{lang.name}</span>
+            <span class="resume-muted font-mono text-fg-tertiary text-[11px]">{lang.level}</span>
           </div>
         ))}
       </div>
     </section>
 
     <section class="resume-section">
-      <h2 class="resume-label mb-4 font-mono text-[#7a7a7a] text-[11px] uppercase tracking-[0.2em]">Education</h2>
+      <h2 class="resume-label mb-4 font-mono text-fg-tertiary text-[11px] uppercase tracking-[0.2em]">Education</h2>
       <div class="flex items-baseline justify-between gap-4">
-        <p class="font-medium text-[#ededed] text-[15px]">Computer Engineering Technician</p>
-        <span class="resume-muted shrink-0 font-mono text-[#7a7a7a] text-[11px] tracking-wider">Jan 2013 to Dec 2014</span>
+        <p class="font-medium text-fg text-[15px]">Computer Engineering Technician</p>
+        <span class="resume-muted shrink-0 font-mono text-fg-tertiary text-[11px] tracking-wider">Jan 2013 to Dec 2014</span>
       </div>
-      <p class="resume-muted mt-1 text-[#888] text-[14px]">SENAC</p>
+      <p class="resume-muted mt-1 text-fg-secondary text-[14px]">SENAC</p>
     </section>
   </div>
 </BaseLayout>

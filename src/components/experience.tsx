@@ -14,7 +14,7 @@ const experiences: {
       <>
         Led the development of Spaceship&apos;s{" "}
         <a
-          className="link-hover text-[#a0a0a0] transition-colors hover:text-[#ededed]"
+          className="link-hover text-fg-muted transition-colors hover:text-fg"
           href="https://www.spaceship.com/domain-search/"
           rel="noopener noreferrer"
           target="_blank"
@@ -65,16 +65,16 @@ export function Experience() {
   return (
     <div className="flex flex-col gap-8">
       {experiences.map((exp) => (
-        <div className="timeline-item" key={exp.period}>
+        <div key={exp.period}>
           <div className="flex items-baseline gap-3">
-            <span className="font-mono text-[#7a7a7a] text-[11px] tracking-wider">
+            <span className="font-mono text-[11px] text-fg-tertiary tracking-wider">
               {exp.period}
             </span>
           </div>
-          <p className="mt-1.5 font-medium text-[#ededed] text-[15px]">
-            {exp.role} <span className="text-[#7a7a7a]">at</span>{" "}
+          <p className="mt-1.5 font-medium text-[15px] text-fg">
+            {exp.role} <span className="text-fg-tertiary">at</span>{" "}
             <a
-              className="link-hover text-[#a0a0a0] transition-colors hover:text-[#ededed]"
+              className="link-hover text-fg-muted transition-colors hover:text-fg"
               href={exp.url}
               rel="noopener noreferrer"
               target="_blank"
@@ -82,7 +82,7 @@ export function Experience() {
               {exp.company}
             </a>
           </p>
-          <p className="mt-2 text-[#888] text-[14px] leading-[1.7]">
+          <p className="mt-2 text-[14px] text-fg-secondary leading-[1.7]">
             {exp.description}
           </p>
         </div>

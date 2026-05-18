@@ -85,7 +85,7 @@ components:
 
 A single-column reading column, 680px max, on a near-black field. The site is a personal portfolio for a software engineer; the design is the work sample. Every page is restrained, monochrome, and visibly considered. Visitors should feel they've landed on something hand-set rather than templated.
 
-The grid is one column. Horizontal rhythm is built from a small set of internal indents (`-mx-3` / `px-3`) on hoverable list rows; vertical rhythm comes from a single section spacing scale plus a 1px low-contrast divider. There is no card-on-card nesting and no decorative chrome. A subtle SVG noise overlay (2.5% opacity) and a small radial glow behind the hero are the only background flourishes.
+The grid is one column. Horizontal rhythm is built from a small set of internal indents (`-mx-3` / `px-3`) on hoverable list rows; vertical rhythm comes from a single section spacing scale plus a 1px low-contrast divider. There is no card-on-card nesting and no decorative chrome. A single SVG noise overlay (2.5% opacity) is the only background flourish.
 
 ## 2. Colors
 
@@ -127,10 +127,10 @@ Headings never use color for emphasis. They lean on size + weight + the `-0.03em
 
 Flat. There is no shadow vocabulary; depth is tonal. The page reads in two layers:
 
-1. **Field**: `#050505` with the 2.5% SVG noise overlay and a single radial glow (`rgba(255,255,255,0.03)`) behind the home hero.
-2. **Surface**: a hover-revealed `#0a0a0a` rectangle on list rows. Cards on the blog adjacent-post nav use a 1px `#161616` border and the same surface tint on hover (`#222`).
+1. **Field**: `#050505` with the 2.5% SVG noise overlay. No glows, no radial gradients, no atmospheric lighting.
+2. **Surface**: a hover-revealed `#0a0a0a` rectangle on list rows. Cards on the blog adjacent-post nav use a 1px `#161616` border and a hover border at `#222`.
 
-No drop shadows. No inset shadows. No backdrop blur. No glow on focusable elements beyond the focus ring described in Components. If a design idea requires elevation to read, the layout is wrong — fix hierarchy with spacing and type instead.
+No drop shadows. No inset shadows. No backdrop blur. No glow anywhere, including focusable elements (the focus ring described in Components is a solid 2px outline, not a glow). If a design idea requires elevation to read, the layout is wrong, fix hierarchy with spacing and type instead.
 
 ## 5. Components
 

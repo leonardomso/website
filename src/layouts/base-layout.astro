@@ -5,16 +5,15 @@ import { getAllPosts } from "~/lib/blog";
 import "~/styles/globals.css";
 
 interface Props {
-  title?: string;
-  description?: string;
   canonical?: string;
+  description?: string;
   ogType?: "website" | "article";
+  title?: string;
 }
 
 const {
   title = "Leonardo Maldonado",
-  description =
-    "Software engineer based in Valencia, Spain. Sole engineer on Spaceship's domain search at Namecheap, helped sell 3M+ domains. Creator of 33 JavaScript Concepts (66k+ stars).",
+  description = "Software engineer based in Valencia, Spain. Sole engineer on Spaceship's domain search at Namecheap, helped sell 3M+ domains. Creator of 33 JavaScript Concepts (66k+ stars).",
   canonical = "https://www.leonardomso.com",
   ogType = "website",
 } = Astro.props;
@@ -51,7 +50,7 @@ const cmdkPosts = posts.map((p) => ({ title: p.title, slug: p.slug }));
   <body class="antialiased">
     <a
       href="#main-content"
-      class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[10002] focus:rounded-lg focus:bg-[#ededed] focus:px-4 focus:py-2 focus:font-medium focus:text-[#050505] focus:text-sm"
+      class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[10002] focus:rounded-lg focus:bg-fg focus:px-4 focus:py-2 focus:font-medium focus:text-bg focus:text-sm"
     >
       Skip to content
     </a>
@@ -64,15 +63,15 @@ const cmdkPosts = posts.map((p) => ({ title: p.title, slug: p.slug }));
       <header class="mb-20 flex items-center justify-between">
         <a
           href="/"
-          class="link-hover font-mono text-[#a0a0a0] text-[13px] uppercase tracking-wide transition-colors hover:text-[#ededed]"
+          class="link-hover py-1.5 font-mono text-fg-muted text-[13px] uppercase tracking-wide transition-colors hover:text-fg"
         >
           Leonardo Maldonado
         </a>
         <nav aria-label="Main navigation" class="flex gap-6">
-          <a href="/about" class="link-hover text-[#7a7a7a] text-[13px] uppercase tracking-wide transition-colors hover:text-[#ededed]">About</a>
-          <a href="/projects" class="link-hover text-[#7a7a7a] text-[13px] uppercase tracking-wide transition-colors hover:text-[#ededed]">Projects</a>
-          <a href="/blog" class="link-hover text-[#7a7a7a] text-[13px] uppercase tracking-wide transition-colors hover:text-[#ededed]">Blog</a>
-          <a href="/resume" class="link-hover text-[#7a7a7a] text-[13px] uppercase tracking-wide transition-colors hover:text-[#ededed]">Resume</a>
+          <a href="/about" class="link-hover py-1.5 text-fg-tertiary text-[13px] uppercase tracking-wide transition-colors hover:text-fg">About</a>
+          <a href="/projects" class="link-hover py-1.5 text-fg-tertiary text-[13px] uppercase tracking-wide transition-colors hover:text-fg">Projects</a>
+          <a href="/blog" class="link-hover py-1.5 text-fg-tertiary text-[13px] uppercase tracking-wide transition-colors hover:text-fg">Blog</a>
+          <a href="/resume" class="link-hover py-1.5 text-fg-tertiary text-[13px] uppercase tracking-wide transition-colors hover:text-fg">Resume</a>
         </nav>
       </header>
 
@@ -80,12 +79,12 @@ const cmdkPosts = posts.map((p) => ({ title: p.title, slug: p.slug }));
         <slot />
       </main>
 
-      <footer class="mt-32 flex items-center justify-between border-[#161616] border-t pt-8">
-        <p class="font-mono text-[#7a7a7a] text-[11px] tracking-wider">© 2026</p>
+      <footer class="mt-32 flex items-center justify-between border-surface-border border-t pt-8">
+        <p class="font-mono text-fg-tertiary text-[11px] tracking-wider">© 2026</p>
         <nav aria-label="Social links" class="flex gap-6">
-          <a href="https://github.com/leonardomso" target="_blank" rel="noopener noreferrer" class="link-hover text-[#7a7a7a] text-[12px] tracking-wide transition-colors hover:text-[#ededed]">GitHub</a>
-          <a href="https://x.com/leonardomso" target="_blank" rel="noopener noreferrer" class="link-hover text-[#7a7a7a] text-[12px] tracking-wide transition-colors hover:text-[#ededed]">X</a>
-          <a href="https://www.linkedin.com/in/leonardomso/" target="_blank" rel="noopener noreferrer" class="link-hover text-[#7a7a7a] text-[12px] tracking-wide transition-colors hover:text-[#ededed]">LinkedIn</a>
+          <a href="https://github.com/leonardomso" target="_blank" rel="noopener noreferrer" class="link-hover py-1.5 text-fg-tertiary text-[12px] tracking-wide transition-colors hover:text-fg">GitHub</a>
+          <a href="https://x.com/leonardomso" target="_blank" rel="noopener noreferrer" class="link-hover py-1.5 text-fg-tertiary text-[12px] tracking-wide transition-colors hover:text-fg">X</a>
+          <a href="https://www.linkedin.com/in/leonardomso/" target="_blank" rel="noopener noreferrer" class="link-hover py-1.5 text-fg-tertiary text-[12px] tracking-wide transition-colors hover:text-fg">LinkedIn</a>
         </nav>
       </footer>
     </div>
