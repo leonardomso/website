@@ -21,6 +21,7 @@
   "dependencies": {
     "@astrojs/react": "^5.0.5",
     "@dualmark/astro": "^0.6.0",
+    "@dualmark/cloudflare": "^0.5.2",
     "@dualmark/converters": "^0.5.2",
     "@dualmark/core": "^0.5.2",
     "@tailwindcss/vite": "^4.3.0",
@@ -46,6 +47,7 @@
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
     "@biomejs/biome": "^2.4.15",
+    "@cloudflare/workers-types": "^4.20260518.1",
     "@types/node": "^25.8.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",

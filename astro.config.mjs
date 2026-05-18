@@ -1,14 +1,18 @@
 import react from "@astrojs/react";
-import tailwindcss from "@tailwindcss/vite";
 import dualmark from "@dualmark/astro";
+import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 
+const SITE_URL = "https://www.leonardomso.com";
+
 export default defineConfig({
-  site: "https://www.leonardomso.com",
+  site: SITE_URL,
+  trailingSlash: "never",
+  build: { format: "file" },
   integrations: [
     react(),
     dualmark({
-      siteUrl: "https://www.leonardomso.com",
+      siteUrl: SITE_URL,
       staticPages: [
         {
           pattern: "/",
@@ -117,17 +121,43 @@ Recently left Namecheap after building Spaceship domain search as the sole engin
 Building products and writing about software engineering.
 `,
         },
-        {
-          pattern: "/blog",
-          render: () => `# Blog — Leonardo Maldonado
-
-Thoughts on software engineering, web development, and building products.
-
-Visit: https://www.leonardomso.com/blog
-`,
-        },
       ],
+      llmsTxt: {
+        enabled: true,
+        brandName: "Leonardo Maldonado",
+        description:
+          "Software engineer based in Valencia, Spain. Sole engineer on Spaceship's domain search at Namecheap — helped sell 3M+ domains. Creator of 33 JavaScript Concepts (66K+ stars).",
+        sections: [
+          {
+            title: "Pages",
+            links: [
+              { title: "Home", href: `${SITE_URL}/` },
+              { title: "About", href: `${SITE_URL}/about` },
+              { title: "Projects", href: `${SITE_URL}/projects` },
+              { title: "Blog", href: `${SITE_URL}/blog` },
+              { title: "Resume", href: `${SITE_URL}/resume` },
+              { title: "Uses", href: `${SITE_URL}/uses` },
+              { title: "Now", href: `${SITE_URL}/now` },
+            ],
+          },
+          {
+            title: "Profiles",
+            links: [
+              { title: "GitHub", href: "https://github.com/leonardomso" },
+              {
+                title: "LinkedIn",
+                href: "https://www.linkedin.com/in/leonardomso/",
+              },
+              { title: "X / Twitter", href: "https://x.com/leonardomso" },
+            ],
+          },
+        ],
+      },
       middleware: { injectLinkHeader: true },
+      headers: {
+        cacheControl: "public, max-age=300, s-maxage=3600",
+        noindex: true,
+      },
     }),
   ],
   vite: {

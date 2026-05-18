@@ -1,5 +1,7 @@
 name = "leonardomso"
+main = "./worker.ts"
 compatibility_date = "2026-05-13"
+compatibility_flags = ["nodejs_compat"]
 
 [observability]
 enabled = false
@@ -18,3 +20,11 @@ head_sampling_rate = 1
 
 [assets]
 directory = "./dist"
+binding = "ASSETS"
+run_worker_first = true
+html_handling = "auto-trailing-slash"
+not_found_handling = "404-page"
+
+[[analytics_engine_datasets]]
+binding = "AI_AGENT_ANALYTICS"
+dataset = "ai_agent_analytics"
