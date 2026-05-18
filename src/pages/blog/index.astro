@@ -29,7 +29,7 @@ function formatDate(dateStr: string): string {
       )}
       {posts.map((post) => (
         <a class="group -mx-3 flex flex-col gap-1 rounded-lg px-3 py-4 transition-colors hover:bg-surface-low" href={`/blog/${post.slug}`}>
-          <div class="flex items-baseline justify-between gap-4">
+          <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
             <span class="font-medium text-fg text-[15px] transition-colors group-hover:text-fg">{post.title}</span>
             <span class="flex shrink-0 items-baseline gap-3">
               <span class="font-mono text-fg-tertiary text-[11px] tracking-wider">{post.readingTime} min</span>

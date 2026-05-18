@@ -83,7 +83,7 @@ function formatDate(dateStr: string): string {
       <>
         <div class="section-divider mt-8" />
 
-        <nav class="mt-8 grid grid-cols-2 gap-4">
+        <nav class="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
           {prev ? (
             <a href={`/blog/${prev.slug}`} class="group flex flex-col gap-1.5 rounded-lg border border-surface-border p-4 transition-colors hover:border-surface-border-strong hover:bg-surface-low">
               <span class="flex items-center gap-1.5 font-mono text-fg-tertiary text-[10px] uppercase tracking-wider transition-colors group-hover:text-fg-secondary">

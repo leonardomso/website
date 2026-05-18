@@ -239,17 +239,17 @@ const awards: { title: string; description: string }[] = [
 
     <section class="resume-section mb-12">
       <h2 class="resume-label mb-4 font-mono text-fg-tertiary text-[11px] uppercase tracking-[0.2em]">Professional Summary</h2>
-      <p class="text-fg-secondary text-[15px] leading-[1.8]">
+      <p class="text-fg-secondary text-[16px] leading-[1.75] sm:text-[15px] sm:leading-[1.8]">
         Senior full-stack engineer with 7+ years of experience in TypeScript, React, Node.js, and Go. Previously the sole engineer on Spaceship domain search at Namecheap, helping sell 3M+ domains. Creator of 33 JavaScript Concepts (66K+ GitHub stars, GitHub Top Open Source Project of 2018). Currently building Strait, an agentic workflow orchestration platform with SDKs in five languages, MCP servers, and a CLI. Also built Shopwyse, a multi-tenant retail ERP, and Polyglot, an AI-powered writing tool. Open source contributor to Better Auth, Node.js, and TanStack.
       </p>
     </section>
 
     <section class="resume-section mb-12">
       <h2 class="resume-label mb-4 font-mono text-fg-tertiary text-[11px] uppercase tracking-[0.2em]">Technical Skills</h2>
-      <div class="flex flex-col gap-3">
+      <div class="flex flex-col gap-4 sm:gap-3">
         {technicalSkills.map((group) => (
-          <div class="grid grid-cols-[140px_1fr] gap-3">
-            <span class="resume-muted font-mono text-fg-tertiary text-[12px]">{group.category}</span>
+          <div class="grid grid-cols-1 gap-1 sm:grid-cols-[140px_1fr] sm:gap-3">
+            <span class="resume-muted font-mono text-fg-tertiary text-[12px] uppercase tracking-wider">{group.category}</span>
             <span class="text-fg-secondary text-[14px] leading-[1.7]">{group.items}</span>
           </div>
         ))}
@@ -261,13 +261,13 @@ const awards: { title: string; description: string }[] = [
       <div class="flex flex-col gap-8">
         {experiences.map((exp) => (
           <div>
-            <div class="flex items-baseline justify-between gap-4">
+            <div class="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
               <a href={exp.companyUrl} target="_blank" rel="noopener noreferrer" class="link-hover font-medium text-fg text-[15px] transition-colors hover:text-fg">
                 {exp.company}
               </a>
               <span class="resume-muted shrink-0 font-mono text-fg-tertiary text-[11px] tracking-wider">{exp.location}</span>
             </div>
-            <div class="mt-1 flex items-baseline justify-between gap-4">
+            <div class="mt-1 flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
               <p class="resume-muted text-fg-secondary text-[14px] italic">{exp.role}</p>
               <span class="resume-muted shrink-0 font-mono text-fg-tertiary text-[11px] tracking-wider">{exp.period}</span>
             </div>
@@ -284,7 +284,7 @@ const awards: { title: string; description: string }[] = [
       <div class="flex flex-col gap-6">
         {projects.map((project) => (
           <div>
-            <div class="flex items-baseline justify-between gap-4">
+            <div class="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
               <p class="font-medium text-fg text-[15px]">
                 <a href={project.url} target="_blank" rel="noopener noreferrer" class="link-hover text-fg transition-colors hover:text-fg">{project.name}</a>
                 <span class="resume-muted text-fg-tertiary text-[13px] font-normal italic"> · {project.urlLabel}</span>
@@ -303,13 +303,11 @@ const awards: { title: string; description: string }[] = [
       <h2 class="resume-label mb-6 font-mono text-fg-tertiary text-[11px] uppercase tracking-[0.2em]">Education</h2>
       <div class="flex flex-col gap-4">
         {education.map((edu) => (
-          <div>
-            <div class="flex items-baseline justify-between gap-4">
-              <p class="font-medium text-fg text-[15px]">
-                {edu.school} <span class="resume-muted text-fg-tertiary font-normal">· {edu.degree}</span>
-              </p>
-              <span class="resume-muted shrink-0 font-mono text-fg-tertiary text-[11px] tracking-wider">{edu.period}</span>
-            </div>
+          <div class="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
+            <p class="font-medium text-fg text-[15px]">
+              {edu.school} <span class="resume-muted text-fg-tertiary font-normal">· {edu.degree}</span>
+            </p>
+            <span class="resume-muted shrink-0 font-mono text-fg-tertiary text-[11px] tracking-wider">{edu.period}</span>
           </div>
         ))}
       </div>

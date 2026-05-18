@@ -26,7 +26,7 @@ const cmdkPosts = posts.map((p) => ({ title: p.title, slug: p.slug }));
 <html lang="en" style="color-scheme: dark;">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <meta name="description" content={description} />
@@ -59,15 +59,16 @@ const cmdkPosts = posts.map((p) => ({ title: p.title, slug: p.slug }));
     <JsonLd data={websiteSchema} />
     <CommandPalette posts={cmdkPosts} client:load />
 
-    <div class="relative mx-auto w-full max-w-[680px] px-6 pt-16 pb-24 md:px-0">
-      <header class="mb-20 flex items-center justify-between">
+    <div class="relative mx-auto w-full max-w-[680px] px-5 pt-10 pb-16 sm:px-6 sm:pt-16 sm:pb-24 md:px-0">
+      <header class="mb-12 flex items-center justify-between gap-4 sm:mb-20">
         <a
           href="/"
-          class="link-hover py-1.5 font-mono text-fg-muted text-[13px] uppercase tracking-wide transition-colors hover:text-fg"
+          class="link-hover hidden py-1.5 font-mono text-fg-muted text-[13px] uppercase tracking-wide transition-colors hover:text-fg sm:inline-block"
         >
           Leonardo Maldonado
         </a>
-        <nav aria-label="Main navigation" class="flex gap-6">
+        <nav aria-label="Main navigation" class="flex w-full justify-between gap-4 sm:w-auto sm:justify-end sm:gap-6">
+          <a href="/" class="link-hover py-1.5 text-fg-tertiary text-[13px] uppercase tracking-wide transition-colors hover:text-fg">Home</a>
           <a href="/about" class="link-hover py-1.5 text-fg-tertiary text-[13px] uppercase tracking-wide transition-colors hover:text-fg">About</a>
           <a href="/projects" class="link-hover py-1.5 text-fg-tertiary text-[13px] uppercase tracking-wide transition-colors hover:text-fg">Projects</a>
           <a href="/blog" class="link-hover py-1.5 text-fg-tertiary text-[13px] uppercase tracking-wide transition-colors hover:text-fg">Blog</a>
@@ -79,7 +80,7 @@ const cmdkPosts = posts.map((p) => ({ title: p.title, slug: p.slug }));
         <slot />
       </main>
 
-      <footer class="mt-32 flex items-center justify-between border-surface-border border-t pt-8">
+      <footer class="mt-20 flex flex-col-reverse items-start justify-between gap-4 border-surface-border border-t pt-8 sm:mt-32 sm:flex-row sm:items-center sm:gap-0">
         <p class="font-mono text-fg-tertiary text-[11px] tracking-wider">© 2026</p>
         <nav aria-label="Social links" class="flex gap-6">
           <a href="https://github.com/leonardomso" target="_blank" rel="noopener noreferrer" class="link-hover py-1.5 text-fg-tertiary text-[12px] tracking-wide transition-colors hover:text-fg">GitHub</a>

@@ -90,10 +90,16 @@ body::before {
   --prose-pre-bg: #0a0a0a;
   --prose-borders: #1a1a1a;
   --prose-captions: #888;
-  font-size: 15px;
-  line-height: 1.8;
+  font-size: 16px;
+  line-height: 1.75;
 
   color: var(--prose-body);
+}
+
+@media (min-width: 640px) {
+  .prose {
+    line-height: 1.8;
+  }
 }
 
 .prose > * + * {
