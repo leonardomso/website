@@ -19,17 +19,17 @@
     "run-all": "bun run biome:fix:unsafe && bun run biome:format && bun run biome:write && bun run biome:lint && bun run typecheck"
   },
   "dependencies": {
-    "@astrojs/react": "^5.0.4",
+    "@astrojs/react": "^5.0.5",
     "@dualmark/astro": "^0.6.0",
     "@dualmark/converters": "^0.5.2",
     "@dualmark/core": "^0.5.2",
     "@tailwindcss/vite": "^4.3.0",
-    "astro": "^6.3.1",
+    "astro": "^6.3.3",
     "basehub": "^9.5.3",
     "cmdk": "^1.1.1",
     "geist": "^1.7.0",
     "gray-matter": "^4.0.3",
-    "lucide-react": "^1.14.0",
+    "lucide-react": "^1.16.0",
     "motion": "^12.38.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
@@ -46,12 +46,12 @@
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
     "@biomejs/biome": "^2.4.15",
-    "@types/node": "^25.7.0",
+    "@types/node": "^25.8.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "tailwindcss": "^4.3.0",
     "typescript": "^6.0.3",
     "ultracite": "^7.7.0",
-    "wrangler": "^4.90.1"
+    "wrangler": "^4.92.0"
   }
 }
