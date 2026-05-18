@@ -9,6 +9,15 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: "Strait",
+    tag: "Building Now",
+    description:
+      "Agentic workflow orchestration platform written in Go. Single binary under 30MB. Ships with SDKs in five languages, MCP servers, and a CLI. PostgreSQL for durable queuing, Redis for real-time events.",
+    url: "https://strait.dev",
+    tech: ["Go", "TanStack Start", "PostgreSQL", "Redis"],
+    featured: true,
+  },
+  {
     title: "33 JavaScript Concepts",
     tag: "Open Source",
     description:
@@ -30,7 +39,7 @@ export const projects: Project[] = [
     title: "Shopwyse",
     tag: "SaaS",
     description:
-      "Multi-tenant retail ERP. POS/checkout, inventory, CRM, and financial reporting. Built with TanStack Start, React 19, Elysia, Drizzle ORM, and PostgreSQL.",
+      "Multi-tenant retail ERP for small merchants. POS/checkout, inventory, CRM, and financial reporting. Built with TanStack Start, React 19, Elysia, Drizzle ORM, and PostgreSQL.",
     url: "https://www.getshopwyse.com",
     tech: ["TanStack Start", "React", "Elysia", "PostgreSQL"],
     featured: true,
@@ -39,9 +48,27 @@ export const projects: Project[] = [
     title: "Polyglot",
     tag: "SaaS",
     description:
-      "AI writing assistant that interviews you first, then drafts content in your voice from different angles. Full-stack TypeScript.",
+      "AI-powered writing assistant that interviews the user first, then drafts content in their voice from multiple angles. Rich-text editing, voice profiles, and multi-format export.",
     url: "https://www.trypolyglot.ai",
     tech: ["TypeScript", "AI SDK", "Node.js"],
+    featured: true,
+  },
+  {
+    title: "gone",
+    tag: "CLI Tool",
+    description:
+      "Dead link detector written in Go. Concurrent HTTP checks, interactive TUI, auto-fix for redirects, and CI/CD output formats.",
+    url: "https://github.com/leonardomso/gone",
+    tech: ["Go", "CLI"],
+    featured: true,
+  },
+  {
+    title: "betterhook",
+    tag: "CLI Tool",
+    description:
+      "Git hooks manager written in Rust. DAG-based scheduling, content-addressable cache, and streaming output via Tokio.",
+    url: "https://github.com/leonardomso/betterhook",
+    tech: ["Rust", "Tokio", "CLI"],
     featured: true,
   },
   {
@@ -51,25 +78,7 @@ export const projects: Project[] = [
       "Stock market API for real-time prices, SEC filings, earnings, and financials.",
     url: "https://otisfinance.com",
     tech: ["TypeScript", "Node.js", "REST APIs"],
-    featured: true,
-  },
-  {
-    title: "gone",
-    tag: "CLI Tool",
-    description:
-      "Fast, concurrent dead link detector. Interactive terminal UI, auto-fix for redirects, and output formats for CI/CD pipelines. Written in Go.",
-    url: "https://github.com/leonardomso/gone",
-    tech: ["Go", "CLI"],
-    featured: true,
-  },
-  {
-    title: "betterhook",
-    tag: "CLI Tool",
-    description:
-      "Git hooks manager built for parallel AI coding agent workflows. DAG-based scheduling, content-addressable cache, and streaming output via Tokio. Written in Rust.",
-    url: "https://github.com/leonardomso/betterhook",
-    tech: ["Rust", "Tokio", "CLI"],
-    featured: true,
+    featured: false,
   },
   {
     title: "rust-skills",
@@ -84,9 +93,9 @@ export const projects: Project[] = [
     title: "leonardomso.com",
     tag: "Personal",
     description:
-      "This portfolio website. Built with Next.js 16, Tailwind CSS v4, and deployed on Vercel.",
+      "This portfolio website. Built with Astro, Tailwind CSS v4, and deployed on Cloudflare Workers.",
     url: "https://leonardomso.com",
-    tech: ["Next.js", "TypeScript", "Tailwind CSS"],
+    tech: ["Astro", "TypeScript", "Tailwind CSS"],
     featured: false,
   },
 ];

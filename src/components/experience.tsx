@@ -7,12 +7,12 @@ const experiences: {
 }[] = [
   {
     period: "Nov 2021 to Apr 2026",
-    role: "Front End Engineer",
+    role: "Front End Engineer, Spaceship Domain Search",
     company: "Namecheap",
     url: "https://www.namecheap.com/",
     description: (
       <>
-        Led the development of Spaceship&apos;s{" "}
+        Sole engineer on Spaceship&apos;s{" "}
         <a
           className="link-hover text-fg-muted transition-colors hover:text-fg"
           href="https://www.spaceship.com/domain-search/"
@@ -20,28 +20,21 @@ const experiences: {
           target="_blank"
         >
           domain search product
-        </a>
-        , contributing to the sale of over 3 million domains. Built real-time
-        WebSocket pricing, Beast Mode bulk search, and multi-currency support
-        across 30+ regions.
+        </a>{" "}
+        end to end, contributing to the sale of 3M+ domains. Built the
+        React/TypeScript frontend from scratch with real-time WebSocket pricing
+        for 500+ TLDs, Beast Mode bulk search, and multi-currency support across
+        30+ markets.
       </>
     ),
   },
   {
     period: "May 2019 to Dec 2023",
     role: "Technical Author",
-    company: "Progress",
+    company: "Progress / LogRocket",
     url: "https://www.progress.com/",
     description:
-      "Wrote extensively about JavaScript, TypeScript, React, GraphQL, and modern web development for the Telerik blog.",
-  },
-  {
-    period: "Feb 2020 to Feb 2022",
-    role: "Technical Author",
-    company: "LogRocket",
-    url: "https://logrocket.com/",
-    description:
-      "Created content empowering developers to learn about JavaScript, TypeScript, GraphQL, React, Node.js, and programming fundamentals.",
+      "Published 100+ technical articles on JavaScript, TypeScript, React, Node.js, GraphQL, and web fundamentals. Tutorials, deep dives, and framework comparisons reaching millions of developers.",
   },
   {
     period: "Oct 2019 to Apr 2020",
@@ -49,7 +42,7 @@ const experiences: {
     company: "Popstand",
     url: "https://popstand.com/",
     description:
-      "Built Taco Maps, a React Native food delivery app for Los Angeles. Architected from the ground up with Redux, TypeScript, Firebase, and Detox e2e testing.",
+      "Built Taco Maps from scratch, a React Native food delivery app for LA taco restaurants. Redux, TypeScript, Firebase for real-time order updates, and E2E tests with Detox on iOS and Android.",
   },
   {
     period: "Jan 2019 to Jul 2019",
@@ -57,7 +50,7 @@ const experiences: {
     company: "Foton",
     url: "https://foton.tech/",
     description:
-      "Delivered React and React Native applications for Brazilian banking projects. Built scalable frontend solutions with Redux, TypeScript, and Firebase.",
+      "React and React Native applications for Brazilian banking clients. Code met financial-grade security and reliability standards, with secure data handling and thorough testing.",
   },
 ];
 

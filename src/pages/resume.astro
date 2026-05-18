@@ -5,142 +5,194 @@ const experiences: {
   period: string;
   role: string;
   company: string;
-  url: string;
-  bullets?: string[];
-  description?: string;
+  companyUrl: string;
+  location: string;
+  bullets: string[];
 }[] = [
   {
     period: "Nov 2021 to Apr 2026",
-    role: "Front End Engineer",
+    role: "Front End Engineer, Spaceship Domain Search",
     company: "Namecheap",
-    url: "https://www.namecheap.com/",
+    companyUrl: "https://www.namecheap.com/",
+    location: "Remote",
     bullets: [
-      "Led the development of Spaceship's domain search product, contributing to the sale of over 3 million domains by building the frontend with React, TypeScript, and Zustand.",
-      "Created a real-time pricing system using WebSocket technology to stream live prices for hundreds of TLDs during each search, optimizing data delivery speed to maintain UI smoothness.",
-      'Developed "Beast Mode" feature allowing users to conduct bulk domain searches with customizable filters for price, category, and TLD type.',
-      "Implemented multi-currency pricing with caching functionality to ensure users in 30+ regions view accurate prices without delays.",
-      "Utilized TanStack Query to optimize API calls efficiency for search, cart, and checkout processes.",
-      "Improved app performance by incorporating code splitting and lazy rendering techniques to handle large result sets efficiently.",
+      "Sole engineer on Spaceship's domain search product end to end, contributing to the sale of over 3M+ domains. Built the React/TypeScript frontend from scratch, owning architecture decisions, code reviews, and the full release cycle.",
+      "Built a real-time pricing engine over WebSocket that streams live prices for 500+ TLDs per search, keeping render times under 100ms even on large result sets.",
+      "Developed Beast Mode, a bulk search feature with customizable filters for price, category, and TLD type. Processed queries of up to 100 domains per search, became one of the top power-user features on the platform.",
+      "Shipped multi-currency pricing with region-aware caching for 30+ markets, eliminating redundant API calls and reducing price-fetch latency by approximately 60%.",
+      "Optimized frontend bundle size by 35% through code splitting and lazy rendering, improving initial load time for search-heavy pages.",
     ],
   },
   {
     period: "May 2019 to Dec 2023",
     role: "Technical Author",
-    company: "Progress",
-    url: "https://www.progress.com/",
-    description:
-      "Technical writer covering JavaScript, TypeScript, React, Node.js, and modern web development. Created educational content helping developers adopt new technologies.",
-  },
-  {
-    period: "Feb 2020 to Feb 2022",
-    role: "Technical Author",
-    company: "LogRocket",
-    url: "https://logrocket.com/",
-    description:
-      "Published 70+ technical articles on JavaScript, TypeScript, React, Node.js, GraphQL, and web fundamentals. Tutorials, deep dives, and framework comparisons.",
+    company: "Progress / LogRocket (Freelance)",
+    companyUrl: "https://www.progress.com/",
+    location: "Remote",
+    bullets: [
+      "Published 100+ technical articles on JavaScript, TypeScript, React, Node.js, GraphQL, and web fundamentals for LogRocket and Progress (Telerik Blog).",
+      "Tutorials, deep dives, and framework comparisons reaching millions of developers.",
+    ],
   },
   {
     period: "Oct 2019 to Apr 2020",
     role: "Software Engineer",
     company: "Popstand",
-    url: "https://popstand.com/",
-    description:
-      "Built Taco Maps from scratch, a React Native food delivery app for LA taco restaurants. Handled the full setup: Redux, TypeScript, Firebase for real-time order updates, and E2E tests with Detox on both iOS and Android.",
+    companyUrl: "https://popstand.com/",
+    location: "Remote",
+    bullets: [
+      "Built Taco Maps from scratch, a React Native food delivery app for LA taco restaurants.",
+      "Handled the full setup: Redux, TypeScript, Firebase for real-time order updates, and E2E tests with Detox on both iOS and Android.",
+    ],
   },
   {
     period: "Jan 2019 to Jul 2019",
     role: "Software Engineer",
     company: "Foton",
-    url: "https://foton.tech/",
-    description:
-      "Worked on React and React Native applications for Brazilian banking clients. Code had to meet financial-grade security and reliability standards, so secure data handling and thorough testing (Detox) were a big part of the job.",
+    companyUrl: "https://foton.tech/",
+    location: "Remote",
+    bullets: [
+      "Worked on React and React Native applications for Brazilian banking clients.",
+      "Code met financial-grade security and reliability standards, with secure data handling and thorough testing (Detox).",
+    ],
   },
 ];
 
 const projects: {
   name: string;
-  description: string;
-  url?: string;
+  url: string;
+  urlLabel: string;
+  meta: string;
+  bullets: string[];
 }[] = [
   {
+    name: "Strait",
+    url: "https://strait.dev",
+    urlLabel: "strait.dev",
+    meta: "2025 to Present",
+    bullets: [
+      "Agentic workflow orchestration platform written in Go. Runs background jobs, scheduled tasks, and multi-step workflows from a single binary under 30MB. Includes retries with backoff, workflow graphs, and a real-time dashboard built with TanStack Start.",
+      "Ships with SDKs in five languages (TypeScript, Python, Go, Ruby, Rust), MCP servers, and a CLI. PostgreSQL for durable queuing, Redis for real-time events. Signed audit logs and rate limiting built in.",
+    ],
+  },
+  {
     name: "33 JavaScript Concepts",
-    description:
-      "A curated guide to every core JavaScript concept, from closures and prototypes to async patterns. GitHub recognized it as a top open-source project of 2018. The community has translated it into 40+ languages.",
     url: "https://github.com/leonardomso/33-js-concepts",
+    urlLabel: "github.com/leonardomso/33-js-concepts",
+    meta: "66K+ Stars",
+    bullets: [
+      "A curated guide to every core JavaScript concept, from closures and prototypes to async patterns.",
+      "GitHub recognized it as a top open-source project of 2018. Translated into 40+ languages by the community.",
+    ],
   },
   {
     name: "Shopwyse",
-    description:
-      "Multi-tenant retail ERP. POS/checkout, inventory, CRM, and financial reporting. Built with TanStack Start, React 19, Elysia, Drizzle ORM, and PostgreSQL.",
+    url: "https://www.getshopwyse.com",
+    urlLabel: "getshopwyse.com",
+    meta: "2025",
+    bullets: [
+      "Multi-tenant retail ERP for small merchants. Handles POS/checkout, inventory, CRM, and financial reporting at the storefront and admin levels.",
+      "Stack: TanStack Start, React 19, Elysia, Drizzle ORM, and PostgreSQL.",
+    ],
   },
   {
     name: "Polyglot",
-    description:
-      "AI writing assistant. Guided interviews, multiple draft angles, voice profiles, rich-text editing, multi-format export. Full-stack TypeScript.",
     url: "https://trypolyglot.ai",
+    urlLabel: "trypolyglot.ai",
+    meta: "2025",
+    bullets: [
+      "AI-powered writing assistant that interviews the user first, then drafts content in their voice from multiple angles. Rich-text editing, voice profiles, and multi-format export.",
+      "Stack: Full-stack TypeScript with AI SDK integration.",
+    ],
   },
   {
     name: "gone",
-    description:
-      "Dead link detector written in Go. Concurrent HTTP checks, interactive terminal UI, auto-fix for redirects, and output formats for CI/CD pipelines.",
     url: "https://github.com/leonardomso/gone",
+    urlLabel: "github.com/leonardomso/gone",
+    meta: "2025",
+    bullets: [
+      "Dead link detector written in Go. Concurrent HTTP checks, interactive TUI, auto-fix for redirects, and CI/CD output formats.",
+    ],
   },
   {
     name: "betterhook",
-    description:
-      "Git hooks manager written in Rust for parallel AI coding agent workflows. DAG-based scheduling, content-addressable cache, and streaming output via Tokio.",
     url: "https://github.com/leonardomso/betterhook",
+    urlLabel: "github.com/leonardomso/betterhook",
+    meta: "2025",
+    bullets: [
+      "Git hooks manager written in Rust. DAG-based scheduling, content-addressable cache, and streaming output via Tokio.",
+    ],
   },
-];
-
-const skills = [
-  "TypeScript",
-  "React.js",
-  "Node.js",
-  "GraphQL",
-  "PostgreSQL",
-  "Full-Stack Development",
-  "Product Engineering",
-  "Real-Time Systems / WebSocket",
-  "Performance Optimization",
-  "Open Source",
-  "REST APIs",
-  "CI/CD",
-  "GitHub Actions",
-  "Redis",
 ];
 
 const technicalSkills: { category: string; items: string }[] = [
   {
     category: "Languages",
-    items: "JavaScript, TypeScript, Go (side projects), Rust (side projects)",
+    items: "JavaScript, TypeScript, Go, Rust, HTML, CSS",
   },
   {
     category: "Frontend",
     items:
-      "React.js, Next.js, TanStack Start, TanStack Query, React Native, Zustand",
+      "React, Next.js, React Native, Vite, Tailwind CSS, TanStack Start, TanStack Query, Redux, Zustand",
   },
   {
     category: "Backend",
     items:
-      "Node.js, Bun, Hono, Elysia, GraphQL, REST APIs, WebSocket, PostgreSQL, Drizzle ORM, Redis, MongoDB",
+      "Node.js, Bun, Hono, Elysia, GraphQL, REST APIs, WebSocket, PostgreSQL, Redis, MongoDB, Drizzle ORM",
   },
   {
-    category: "Tools & CI/CD",
-    items: "Docker, GitHub Actions, AI SDK, Biome, Better Auth",
+    category: "AI",
+    items:
+      "Vercel AI SDK, OpenAI API, Anthropic API, MCP (Model Context Protocol), AI Agents, LLM Integration",
+  },
+  {
+    category: "Cloud & Infrastructure",
+    items: "Docker, Fly.io, Cloudflare, Vercel, GitHub Actions, CI/CD",
+  },
+  {
+    category: "Testing",
+    items: "Vitest, Jest, Playwright, Detox",
+  },
+  {
+    category: "Dev Tools",
+    items: "Git, Biome, Better Auth",
   },
 ];
 
-const languages = [
-  { name: "Portuguese", level: "Native" },
-  { name: "English", level: "Fluent" },
-  { name: "Spanish", level: "Fluent" },
+const education: {
+  school: string;
+  degree: string;
+  period: string;
+}[] = [
+  {
+    school: "Universidade de Franca",
+    degree: "Bachelor of Computer Science",
+    period: "2016 to 2020",
+  },
+  {
+    school: "Centro Universitário Senac",
+    degree: "Computer Engineering Technologies / Technicians",
+    period: "2013 to 2014",
+  },
+];
+
+const awards: { title: string; description: string }[] = [
+  {
+    title: "GitHub Top Open Source Project of 2018",
+    description:
+      "33 JavaScript Concepts (66K+ stars, 40+ language translations).",
+  },
+  {
+    title: "Open Source Contributor",
+    description:
+      "Code and documentation contributions to Better Auth, Node.js, and TanStack.",
+  },
 ];
 ---
 
 <BaseLayout
   title="Resume · Leonardo Maldonado"
-  description="Professional resume and experience of Leonardo Maldonado, software engineer."
+  description="Senior full-stack engineer with 7+ years of experience in TypeScript, React, Node.js, and Go. Creator of 33 JavaScript Concepts."
   canonical="https://www.leonardomso.com/resume"
 >
   <style>
@@ -172,54 +224,56 @@ const languages = [
 
     <div class="mb-12">
       <h1 class="font-semibold text-fg text-[clamp(2rem,5vw,3rem)] leading-[1.1] tracking-[-0.03em]">Leonardo Maldonado</h1>
-      <p class="mt-3 text-fg-secondary text-[15px]">Software Engineer · Valencia, Spain</p>
-      <div class="mt-4 flex flex-wrap gap-x-6 gap-y-2">
-        <a href="mailto:leonardomso11@gmail.com" class="link-hover text-fg-muted text-[13px] transition-colors hover:text-fg">leonardomso11@gmail.com</a>
-        <a href="https://github.com/leonardomso" target="_blank" rel="noopener noreferrer" class="link-hover text-fg-muted text-[13px] transition-colors hover:text-fg">github.com/leonardomso</a>
-        <a href="https://www.linkedin.com/in/leonardomso/" target="_blank" rel="noopener noreferrer" class="link-hover text-fg-muted text-[13px] transition-colors hover:text-fg">linkedin.com/in/leonardomso</a>
-        <a href="https://www.leonardomso.com" target="_blank" rel="noopener noreferrer" class="link-hover text-fg-muted text-[13px] transition-colors hover:text-fg">leonardomso.com</a>
+      <p class="mt-3 text-fg-secondary text-[15px]">Senior Full-Stack Engineer · React, TypeScript, Go</p>
+      <div class="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-[13px]">
+        <span class="text-fg-muted">Valencia, Spain (CET)</span>
+        <a href="tel:+34674271313" class="link-hover text-fg-muted transition-colors hover:text-fg">+34 674 27 13 13</a>
+        <a href="mailto:leonardomso11@gmail.com" class="link-hover text-fg-muted transition-colors hover:text-fg">leonardomso11@gmail.com</a>
+      </div>
+      <div class="mt-2 flex flex-wrap gap-x-6 gap-y-2 text-[13px]">
+        <a href="https://www.leonardomso.com" target="_blank" rel="noopener noreferrer" class="link-hover text-fg-muted transition-colors hover:text-fg">leonardomso.com</a>
+        <a href="https://github.com/leonardomso" target="_blank" rel="noopener noreferrer" class="link-hover text-fg-muted transition-colors hover:text-fg">github.com/leonardomso</a>
+        <a href="https://www.linkedin.com/in/leonardomso/" target="_blank" rel="noopener noreferrer" class="link-hover text-fg-muted transition-colors hover:text-fg">linkedin.com/in/leonardomso</a>
       </div>
     </div>
 
     <section class="resume-section mb-12">
       <h2 class="resume-label mb-4 font-mono text-fg-tertiary text-[11px] uppercase tracking-[0.2em]">Professional Summary</h2>
       <p class="text-fg-secondary text-[15px] leading-[1.8]">
-        Software engineer with 7+ years of experience. For four and a half years, the sole engineer responsible for Namecheap&apos;s Spaceship domain search product end to end, helping the platform sell 3M+ domains. Architecture, React/TypeScript frontend, real-time WebSocket data layer, and releases. Also built a retail ERP (Shopwyse) and an AI writing tool (Polyglot) independently, full-stack with TypeScript, Node.js, GraphQL, and PostgreSQL. Creator of 33 JavaScript Concepts (66K+ GitHub stars). Author of 100+ technical articles. Contributor to Better Auth, Node.js, and TanStack.
+        Senior full-stack engineer with 7+ years of experience in TypeScript, React, Node.js, and Go. Previously the sole engineer on Spaceship domain search at Namecheap, helping sell 3M+ domains. Creator of 33 JavaScript Concepts (66K+ GitHub stars, GitHub Top Open Source Project of 2018). Currently building Strait, an agentic workflow orchestration platform with SDKs in five languages, MCP servers, and a CLI. Also built Shopwyse, a multi-tenant retail ERP, and Polyglot, an AI-powered writing tool. Open source contributor to Better Auth, Node.js, and TanStack.
       </p>
     </section>
 
     <section class="resume-section mb-12">
-      <h2 class="resume-label mb-4 font-mono text-fg-tertiary text-[11px] uppercase tracking-[0.2em]">Skills</h2>
-      <div class="flex flex-wrap gap-2">
-        {skills.map((skill) => (
-          <span class="rounded-md border border-surface-border px-3 py-1 font-mono text-fg-secondary text-[12px]">{skill}</span>
+      <h2 class="resume-label mb-4 font-mono text-fg-tertiary text-[11px] uppercase tracking-[0.2em]">Technical Skills</h2>
+      <div class="flex flex-col gap-3">
+        {technicalSkills.map((group) => (
+          <div class="grid grid-cols-[140px_1fr] gap-3">
+            <span class="resume-muted font-mono text-fg-tertiary text-[12px]">{group.category}</span>
+            <span class="text-fg-secondary text-[14px] leading-[1.7]">{group.items}</span>
+          </div>
         ))}
       </div>
     </section>
 
     <section class="resume-section mb-12">
-      <h2 class="resume-label mb-6 font-mono text-fg-tertiary text-[11px] uppercase tracking-[0.2em]">Work Experience</h2>
+      <h2 class="resume-label mb-6 font-mono text-fg-tertiary text-[11px] uppercase tracking-[0.2em]">Experience</h2>
       <div class="flex flex-col gap-8">
         {experiences.map((exp) => (
           <div>
             <div class="flex items-baseline justify-between gap-4">
-              <p class="font-medium text-fg text-[15px]">
-                {exp.role} <span class="resume-muted text-fg-tertiary">at</span>
-                <a href={exp.url} target="_blank" rel="noopener noreferrer" class="link-hover text-fg-muted transition-colors hover:text-fg">
-                  {exp.company}
-                </a>
-              </p>
+              <a href={exp.companyUrl} target="_blank" rel="noopener noreferrer" class="link-hover font-medium text-fg text-[15px] transition-colors hover:text-fg">
+                {exp.company}
+              </a>
+              <span class="resume-muted shrink-0 font-mono text-fg-tertiary text-[11px] tracking-wider">{exp.location}</span>
+            </div>
+            <div class="mt-1 flex items-baseline justify-between gap-4">
+              <p class="resume-muted text-fg-secondary text-[14px] italic">{exp.role}</p>
               <span class="resume-muted shrink-0 font-mono text-fg-tertiary text-[11px] tracking-wider">{exp.period}</span>
             </div>
-            <div class="resume-muted mt-2 text-fg-secondary text-[14px] leading-[1.7]">
-              {exp.bullets ? (
-                <ul class="list-disc space-y-1.5 pl-4">
-                  {exp.bullets.map((bullet) => <li>{bullet}</li>)}
-                </ul>
-              ) : (
-                exp.description
-              )}
-            </div>
+            <ul class="resume-muted mt-3 list-disc space-y-1.5 pl-4 text-fg-secondary text-[14px] leading-[1.7]">
+              {exp.bullets.map((bullet) => <li>{bullet}</li>)}
+            </ul>
           </div>
         ))}
       </div>
@@ -230,50 +284,48 @@ const languages = [
       <div class="flex flex-col gap-6">
         {projects.map((project) => (
           <div>
-            <p class="font-medium text-fg text-[15px]">
-              {project.url ? (
+            <div class="flex items-baseline justify-between gap-4">
+              <p class="font-medium text-fg text-[15px]">
                 <a href={project.url} target="_blank" rel="noopener noreferrer" class="link-hover text-fg transition-colors hover:text-fg">{project.name}</a>
-              ) : (
-                project.name
-              )}
-            </p>
-            <p class="resume-muted mt-1 text-fg-secondary text-[14px] leading-[1.7]">{project.description}</p>
+                <span class="resume-muted text-fg-tertiary text-[13px] font-normal italic"> · {project.urlLabel}</span>
+              </p>
+              <span class="resume-muted shrink-0 font-mono text-fg-tertiary text-[11px] tracking-wider">{project.meta}</span>
+            </div>
+            <ul class="resume-muted mt-2 list-disc space-y-1.5 pl-4 text-fg-secondary text-[14px] leading-[1.7]">
+              {project.bullets.map((bullet) => <li>{bullet}</li>)}
+            </ul>
           </div>
         ))}
       </div>
     </section>
 
     <section class="resume-section mb-12">
-      <h2 class="resume-label mb-4 font-mono text-fg-tertiary text-[11px] uppercase tracking-[0.2em]">Technical Skills</h2>
-      <div class="flex flex-col gap-3">
-        {technicalSkills.map((group) => (
-          <div class="flex gap-3">
-            <span class="resume-muted shrink-0 font-mono text-fg-tertiary text-[12px]">{group.category}:</span>
-            <span class="text-fg-secondary text-[14px]">{group.items}</span>
-          </div>
-        ))}
-      </div>
-    </section>
-
-    <section class="resume-section mb-12">
-      <h2 class="resume-label mb-4 font-mono text-fg-tertiary text-[11px] uppercase tracking-[0.2em]">Languages</h2>
-      <div class="flex gap-8">
-        {languages.map((lang) => (
-          <div class="flex items-baseline gap-2">
-            <span class="text-fg text-[15px]">{lang.name}</span>
-            <span class="resume-muted font-mono text-fg-tertiary text-[11px]">{lang.level}</span>
+      <h2 class="resume-label mb-6 font-mono text-fg-tertiary text-[11px] uppercase tracking-[0.2em]">Education</h2>
+      <div class="flex flex-col gap-4">
+        {education.map((edu) => (
+          <div>
+            <div class="flex items-baseline justify-between gap-4">
+              <p class="font-medium text-fg text-[15px]">
+                {edu.school} <span class="resume-muted text-fg-tertiary font-normal">· {edu.degree}</span>
+              </p>
+              <span class="resume-muted shrink-0 font-mono text-fg-tertiary text-[11px] tracking-wider">{edu.period}</span>
+            </div>
           </div>
         ))}
       </div>
     </section>
 
     <section class="resume-section">
-      <h2 class="resume-label mb-4 font-mono text-fg-tertiary text-[11px] uppercase tracking-[0.2em]">Education</h2>
-      <div class="flex items-baseline justify-between gap-4">
-        <p class="font-medium text-fg text-[15px]">Computer Engineering Technician</p>
-        <span class="resume-muted shrink-0 font-mono text-fg-tertiary text-[11px] tracking-wider">Jan 2013 to Dec 2014</span>
-      </div>
-      <p class="resume-muted mt-1 text-fg-secondary text-[14px]">SENAC</p>
+      <h2 class="resume-label mb-6 font-mono text-fg-tertiary text-[11px] uppercase tracking-[0.2em]">Awards & Open Source</h2>
+      <ol class="resume-muted list-decimal space-y-3 pl-5 text-fg-secondary text-[14px] leading-[1.7]">
+        {awards.map((award) => (
+          <li>
+            <span class="font-medium text-fg">{award.title}</span>
+            <span class="resume-muted text-fg-tertiary"> · </span>
+            {award.description}
+          </li>
+        ))}
+      </ol>
     </section>
   </div>
 </BaseLayout>

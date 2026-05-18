@@ -1,17 +1,19 @@
 const technologies = [
-  "React",
   "TypeScript",
   "JavaScript",
+  "Go",
+  "Rust",
+  "React",
   "Next.js",
-  "Zustand",
-  "TanStack Query",
+  "TanStack Start",
   "Node.js",
+  "Bun",
   "GraphQL",
   "PostgreSQL",
+  "Redis",
   "Tailwind CSS",
-  "React Native",
-  "Biome",
-  "Git",
+  "MCP",
+  "AI SDK",
 ];
 
 export function Stack() {
