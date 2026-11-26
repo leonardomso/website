@@ -24,7 +24,7 @@ export const personSchema = {
   familyName: "Maldonado",
   jobTitle: "Senior Full-Stack Engineer",
   description:
-    "Senior full-stack engineer with 7+ years of experience in TypeScript, React, Node.js, and Go. Previously sole engineer on Spaceship's domain search at Namecheap (3M+ domains sold). Creator of 33 JavaScript Concepts (66K+ GitHub stars). Currently building Strait, an agentic workflow orchestration platform.",
+    "Senior full-stack engineer in Valencia, Spain, with 8+ years of remote experience, mostly in TypeScript. Previously the only frontend engineer on Spaceship's domain search at Namecheap (3M+ domains sold). Creator of 33 JavaScript Concepts (66K GitHub stars). Building SetLuca, a DM sales platform for creators and coaches.",
   url: SITE_URL,
   image: `${SITE_URL}/opengraph-image`,
   email: "mailto:leonardomso11@gmail.com",
@@ -73,6 +73,10 @@ export const personSchema = {
     "Bun",
     "GraphQL",
     "PostgreSQL",
+    "Drizzle",
+    "Hono",
+    "Cloudflare Workers",
+    "Inngest",
     "Redis",
     "WebSocket",
     "AI Agents",
@@ -92,14 +96,6 @@ export const websiteSchema = {
   inLanguage: "en",
   author: { "@id": PERSON_ID },
   publisher: { "@id": PERSON_ID },
-  potentialAction: {
-    "@type": "SearchAction",
-    target: {
-      "@type": "EntryPoint",
-      urlTemplate: `${SITE_URL}/blog?q={search_term_string}`,
-    },
-    "query-input": "required name=search_term_string",
-  },
 };
 
 export const profilePageSchema = {
@@ -110,31 +106,6 @@ export const profilePageSchema = {
   inLanguage: "en",
   mainEntity: { "@id": PERSON_ID },
 };
-
-export function blogPostSchema(post: {
-  title: string;
-  description: string;
-  date: string;
-  slug: string;
-}) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    headline: post.title,
-    description: post.description,
-    datePublished: post.date,
-    dateModified: post.date,
-    url: `${SITE_URL}/blog/${post.slug}`,
-    image: `${SITE_URL}/blog/${post.slug}/opengraph-image`,
-    inLanguage: "en",
-    author: { "@id": PERSON_ID },
-    publisher: { "@id": PERSON_ID },
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": `${SITE_URL}/blog/${post.slug}`,
-    },
-  };
-}
 
 export function breadcrumbSchema(
   items: { name: string; url: string }[]
@@ -172,9 +143,11 @@ export function softwareApplicationSchema(app: {
   name: string;
   description: string;
   url: string;
-  applicationCategory?: string;
+  applicationCategory: string;
   operatingSystem?: string;
   programmingLanguage?: string | string[];
+  /** Set only for open-source projects; implies a free offer. */
+  license?: string;
 }): Record<string, unknown> {
   return {
     "@context": "https://schema.org",
@@ -182,17 +155,19 @@ export function softwareApplicationSchema(app: {
     name: app.name,
     description: app.description,
     url: app.url,
-    applicationCategory: app.applicationCategory ?? "DeveloperApplication",
+    applicationCategory: app.applicationCategory,
     operatingSystem: app.operatingSystem ?? "Cross-platform",
     ...(app.programmingLanguage
       ? { programmingLanguage: app.programmingLanguage }
       : {}),
     author: { "@id": PERSON_ID },
     creator: { "@id": PERSON_ID },
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "USD",
-    },
+    ...(app.license
+      ? {
+          license: app.license,
+          isAccessibleForFree: true,
+          offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+        }
+      : {}),
   };
 }

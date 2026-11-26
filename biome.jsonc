@@ -7,11 +7,17 @@
   ],
   "linter": {
     "rules": {
-      "security": {
-        "noDangerouslySetInnerHtml": "off"
+      // Inline handlers on small, static lists; memoizing them buys nothing.
+      "performance": {
+        "noJsxPropsBind": "off"
       },
       "suspicious": {
-        "noArrayIndexKey": "off"
+        "noArrayIndexKey": "off",
+        // text-wrap, ::marker and friends are progressive enhancements here.
+        "useBaseline": "off"
+      },
+      "security": {
+        "noDangerouslySetInnerHtml": "off"
       }
     }
   },

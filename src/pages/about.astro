@@ -5,50 +5,48 @@ import {
   JsonLd,
   profilePageSchema,
 } from "~/components/json-ld";
+import { EMAIL, SITE_URL } from "~/config/site";
 import BaseLayout from "~/layouts/base-layout.astro";
-
-const SITE_URL = "https://www.leonardomso.com";
 
 const faqItems = [
   {
     question: "Who is Leonardo Maldonado?",
     answer:
-      "Leonardo Maldonado is a senior full-stack engineer based in Valencia, Spain, originally from Franca, Brazil. He has 7+ years of experience in TypeScript, React, Node.js, and Go. He was previously the sole engineer on Spaceship's domain search at Namecheap, helping sell 3M+ domains, and is the creator of 33 JavaScript Concepts (66K+ GitHub stars).",
+      "A senior full-stack engineer based in Valencia, Spain, originally from Franca, Brazil. He has 8+ years of experience, all of it remote, mostly in TypeScript. He was the only frontend engineer on Spaceship's domain search at Namecheap, which sold more than 3 million domains, and he created 33 JavaScript Concepts (66K GitHub stars).",
   },
   {
-    question: "What is Leonardo Maldonado building right now?",
+    question: "What is he building right now?",
     answer:
-      "Leonardo is currently building Strait, an agentic workflow orchestration platform written in Go. It runs background jobs, scheduled tasks, and multi-step workflows from a single binary under 30MB. Strait ships with SDKs in five languages (TypeScript, Python, Go, Ruby, Rust), MCP servers, and a CLI.",
+      "SetLuca, a DM sales platform for experts, creators and coaches. It reads incoming DMs on Instagram, Messenger and Telegram, scores each lead and replies in the creator's own voice. It's TypeScript end to end: Hono on Cloudflare Workers, Inngest, TanStack Start, PostgreSQL and Drizzle. On the side he builds Strait, an open-source engine for background jobs and workflows on Postgres.",
   },
   {
-    question: "What did Leonardo build at Namecheap?",
+    question: "What did he build at Namecheap?",
     answer:
-      "Leonardo was the sole engineer on Spaceship's domain search product for four and a half years (Nov 2021 to Apr 2026). He built the React/TypeScript frontend from scratch, including a real-time WebSocket pricing engine for 500+ TLDs, Beast Mode bulk search, and multi-currency pricing for 30+ markets. The platform sold over 3M domains during his tenure.",
+      "From November 2021 to June 2026 he was a senior front end engineer and the only frontend engineer on Spaceship's domain search. He built it from scratch in React and TypeScript, including a WebSocket pricing engine for 500+ TLDs, bulk search for up to 100 domains and pricing in 30+ currencies. The product sold more than 3 million domains.",
   },
   {
     question: "What is 33 JavaScript Concepts?",
     answer:
-      "33 JavaScript Concepts is an open-source curated guide created by Leonardo Maldonado in 2018, covering core JavaScript concepts from closures and prototypes to async patterns. It has 66K+ GitHub stars, has been translated into 40+ languages by the community, and was recognized by GitHub as a top open-source project of 2018.",
+      "An open-source guide to core JavaScript concepts, from closures and prototypes to async patterns. Leonardo published it in 2018. It has 66K GitHub stars, community translations in 40+ languages, and GitHub named it one of the top open-source projects of 2018.",
   },
   {
-    question: "What is Leonardo Maldonado's technical stack?",
+    question: "What is his stack?",
     answer:
-      "Leonardo's main stack is TypeScript, React, Node.js, and Go. He uses Next.js, TanStack Start, Tailwind CSS, PostgreSQL, Redis, GraphQL, and WebSocket for full-stack work. For AI applications he uses Vercel AI SDK, Anthropic API, OpenAI API, and MCP (Model Context Protocol). He writes Rust for side projects like betterhook.",
+      "Mostly TypeScript, front and back: React, Next.js, TanStack Start, Node.js, Hono, Cloudflare Workers, PostgreSQL and Drizzle. He writes Go for Strait.",
   },
   {
-    question: "Where is Leonardo Maldonado based?",
+    question: "Where is he based?",
     answer:
-      "Leonardo Maldonado is based in Valencia, Spain (CET timezone). He's originally from Franca, Brazil, and moved to Valencia to be closer to the European tech scene. He speaks Portuguese (native), English (fluent), and Spanish (fluent).",
+      "Valencia, Spain (CET). He speaks Portuguese natively, works in English and has some Spanish.",
   },
   {
-    question: "How can I contact Leonardo Maldonado?",
+    question: "Is he open to new work?",
     answer:
-      "You can reach Leonardo by email at leonardomso11@gmail.com, on GitHub at github.com/leonardomso, on LinkedIn at linkedin.com/in/leonardomso, or on X at @leonardomso.",
+      "Yes. He's open to senior full-stack and freelance roles, remote or partly on-site in Europe.",
   },
   {
-    question: "Is Leonardo Maldonado open to new opportunities?",
-    answer:
-      "Leonardo recently left Namecheap and is exploring what comes next while building Strait. He's open to conversations about senior full-stack and product engineering roles, particularly involving TypeScript, React, Go, or AI agent infrastructure.",
+    question: "How can I contact him?",
+    answer: `Email ${EMAIL}, or find him as leonardomso on GitHub, LinkedIn and X.`,
   },
 ];
 
@@ -60,53 +58,45 @@ const breadcrumbs = breadcrumbSchema([
 
 <BaseLayout
   title="About · Leonardo Maldonado"
-  description="Senior full-stack engineer based in Valencia, Spain. Previously sole engineer on Spaceship's domain search at Namecheap (3M+ domains sold). Creator of 33 JavaScript Concepts. Currently building Strait."
-  canonical="https://www.leonardomso.com/about"
+  description="Leonardo Maldonado is a software engineer in Valencia, Spain. He was the only frontend engineer on Spaceship's domain search at Namecheap, created 33 JavaScript Concepts and is building SetLuca."
+  canonical={`${SITE_URL}/about`}
 >
-  <div>
-    <JsonLd data={profilePageSchema} />
-    <JsonLd data={breadcrumbs} />
-    <JsonLd data={faqSchema(faqItems)} />
-    <p class="mb-4 font-mono text-fg-tertiary text-[12px] uppercase tracking-[0.25em]">About</p>
-    <h1 class="font-semibold text-fg text-[clamp(2rem,5vw,3rem)] leading-[1.1] tracking-[-0.03em]">Leonardo Maldonado</h1>
+  <JsonLd data={profilePageSchema} />
+  <JsonLd data={breadcrumbs} />
+  <JsonLd data={faqSchema(faqItems)} />
 
-    <div class="mt-12 flex flex-col gap-6 text-fg-secondary text-[16px] leading-[1.75] sm:text-[15px] sm:leading-[1.8]">
-      <p>I&apos;m Leonardo. I grew up in <span class="text-fg-muted">Franca, Brazil</span> and moved to <span class="text-fg-muted">Valencia, Spain</span> a few years ago. I wanted to be closer to the European tech scene and, honestly, I just really like it here. The weather, the food, the pace of life.</p>
+  <h1 class="page-title">About</h1>
 
-      <p>I&apos;ve been writing code for about 7 years now. Most of that time was spent at <a class="link-hover text-fg-muted transition-colors hover:text-fg" href="https://www.namecheap.com" rel="noopener noreferrer" target="_blank">Namecheap</a>, where I was the sole engineer on <a class="link-hover text-fg-muted transition-colors hover:text-fg" href="https://www.spaceship.com/domain-search/" rel="noopener noreferrer" target="_blank">Spaceship&apos;s domain search</a>. I built the whole thing from zero and helped the platform sell 3M+ domains: the architecture, the real-time pricing over WebSocket, bulk search, multi-currency support across 30+ currencies. Four and a half years of owning a product end to end.</p>
+  <div class="stack text">
+    <p>I grew up in Franca, Brazil, and now live in Valencia, Spain.</p>
 
-      <p>Right now I&apos;m heads-down on <a class="link-hover text-fg-muted transition-colors hover:text-fg" href="https://strait.dev" rel="noopener noreferrer" target="_blank">Strait</a>, an agentic workflow orchestration platform written in Go. A single binary under 30MB that runs background jobs, scheduled tasks, and multi-step workflows. It ships with SDKs in five languages, MCP servers, and a CLI. PostgreSQL for durable queuing, Redis for real-time events.</p>
+    <p>I’ve been writing software professionally since 2019, all of it remote. For four and a half years I was the only frontend engineer on <a href="https://www.spaceship.com/domain-search/">Spaceship’s domain search</a> at <a href="https://www.namecheap.com">Namecheap</a>. I built it from scratch and owned everything from architecture to releases: real-time pricing over WebSockets for 500+ TLDs, bulk search, and pricing in 30+ currencies. It sold more than 3 million domains while I was there.</p>
 
-      <p>On the side, I&apos;ve built a few other things I&apos;m proud of. <a class="link-hover text-fg-muted transition-colors hover:text-fg" href="https://www.getshopwyse.com" rel="noopener noreferrer" target="_blank">Shopwyse</a> is a retail ERP I built full-stack with TanStack Start and PostgreSQL. <a class="link-hover text-fg-muted transition-colors hover:text-fg" href="https://www.trypolyglot.ai" rel="noopener noreferrer" target="_blank">Polyglot</a> is an AI writing tool that interviews you before drafting anything. I also write CLI tools in Go and Rust when I want to learn something new by solving a real problem.</p>
+    <p>Now I’m building <a href="https://setluca.com">SetLuca</a>, a DM sales platform for experts, creators and coaches. It reads incoming DMs on Instagram, Messenger and Telegram, scores each lead and replies in the creator’s own voice. It’s TypeScript end to end: Hono on Cloudflare Workers, Inngest, TanStack Start, PostgreSQL and Drizzle.</p>
 
-      <p>In 2018, I made <a class="link-hover text-fg-muted transition-colors hover:text-fg" href="https://github.com/leonardomso/33-js-concepts" rel="noopener noreferrer" target="_blank">33 JavaScript Concepts</a>. It was supposed to be a personal study guide, but it took off. 66K+ stars now, translated into 40+ languages. <a class="link-hover text-fg-muted transition-colors hover:text-fg" href="https://github.blog/2018-12-13-new-open-source-projects/#top-projects-of-2018" rel="noopener noreferrer" target="_blank">GitHub named it a top project of 2018</a>. I still maintain it.</p>
+    <p>On the side I build <a href="https://strait.dev">Strait</a>, background jobs and multi-step workflows that run on the Postgres database you already have, with no Redis or separate queue. It’s a single Go binary, open source under Apache-2.0.</p>
 
-      <p>I also spent a few years writing for <a class="link-hover text-fg-muted transition-colors hover:text-fg" href="https://www.telerik.com/blogs/author/leonardo-maldonado" rel="noopener noreferrer" target="_blank">Progress</a> and <a class="link-hover text-fg-muted transition-colors hover:text-fg" href="https://blog.logrocket.com/author/leonardomaldonado/" rel="noopener noreferrer" target="_blank">LogRocket</a>. 100+ articles on JavaScript, TypeScript, React, Node.js, GraphQL. Over a million views total. I like explaining things clearly and helping other developers learn.</p>
 
-      <p>My main stack is TypeScript, React, Node.js, and Go, but I don&apos;t treat tools like an identity. I pick whatever gets the job done. Rust for side projects, PostgreSQL for data, whatever framework makes sense for the problem.</p>
+    <p>In 2018 I published <a href="https://github.com/leonardomso/33-js-concepts">33 JavaScript Concepts</a> as a study guide for myself. It now has 66K stars and translations in 40+ languages, and <a href="https://github.blog/2018-12-13-new-open-source-projects/#top-projects-of-2018">GitHub named it one of the top projects of 2018</a>. I still maintain it.</p>
 
-      <p>When I&apos;m not coding, I&apos;m probably walking around Valencia, reading, or tinkering with a side project that may or may not ship. I speak Portuguese, English, and Spanish.</p>
+    <p>I’ve also written 100+ articles on React, TypeScript and frontend performance for <a href="https://blog.logrocket.com/author/leonardomaldonado/">LogRocket</a> and <a href="https://www.telerik.com/blogs/author/leonardo-maldonado">Progress</a>. I like explaining things clearly and helping other developers learn.</p>
 
-      <p>If you want to chat, I&apos;m always up for it. <a class="link-hover text-fg-muted transition-colors hover:text-fg" href="mailto:leonardomso11@gmail.com">Send me an email</a> or find me on <a class="link-hover text-fg-muted transition-colors hover:text-fg" href="https://x.com/leonardomso" rel="noopener noreferrer" target="_blank">X</a>.</p>
-    </div>
+    <p>I mostly work in TypeScript, front and back, and I like owning a product from the first architecture decision to every release.</p>
 
-    <section class="mt-24" aria-labelledby="faq-heading">
-      <div class="mb-10 flex items-center gap-4">
-        <h2 id="faq-heading" class="font-mono text-fg-tertiary text-[11px] uppercase tracking-[0.2em]">FAQ</h2>
-        <div class="section-divider flex-1" />
-      </div>
-      <div class="flex flex-col gap-6">
-        {faqItems.map((item) => (
-          <details class="group rounded-lg border border-surface-border bg-surface-low p-5 transition-colors hover:border-surface-border-strong">
-            <summary class="cursor-pointer font-medium text-fg text-[15px] marker:hidden">
-              {item.question}
-            </summary>
-            <p class="mt-3 text-fg-secondary text-[14px] leading-[1.75] sm:text-[15px] sm:leading-[1.8]">
-              {item.answer}
-            </p>
-          </details>
-        ))}
-      </div>
-    </section>
+    <p>Outside of work I walk around Valencia, read, and start side projects that sometimes ship. I speak Portuguese and English, and some Spanish.</p>
+
+    <p>I’m open to senior full-stack and freelance roles, remote or partly on-site in Europe. If you want to talk, <a href={`mailto:${EMAIL}`}>email me</a>.</p>
   </div>
+
+  <section class="section" aria-labelledby="h-faq">
+    <h2 id="h-faq">Questions</h2>
+    <div>
+      {faqItems.map((item) => (
+        <details class="disclosure">
+          <summary>{item.question}</summary>
+          <p>{item.answer}</p>
+        </details>
+      ))}
+    </div>
+  </section>
 </BaseLayout>

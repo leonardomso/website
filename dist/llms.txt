@@ -1,19 +1,30 @@
 # Leonardo Maldonado
 
-> Senior full-stack engineer with 7+ years of experience in TypeScript, React, Node.js, and Go. Previously sole engineer on Spaceship's domain search at Namecheap (3M+ domains sold). Creator of 33 JavaScript Concepts (66K+ GitHub stars). Currently building Strait, an agentic workflow orchestration platform.
+> Senior full-stack engineer in Valencia, Spain, with 8+ years of remote experience, mostly in TypeScript. Previously the only frontend engineer on Spaceship's domain search at Namecheap (3M+ domains sold). Creator of 33 JavaScript Concepts (66K GitHub stars). Building SetLuca, a DM sales platform for creators and coaches.
 
 ## Pages
 
-- [Home](https://www.leonardomso.com/)
-- [About](https://www.leonardomso.com/about)
-- [Projects](https://www.leonardomso.com/projects)
-- [Blog](https://www.leonardomso.com/blog)
-- [Resume](https://www.leonardomso.com/resume)
-- [Uses](https://www.leonardomso.com/uses)
-- [Now](https://www.leonardomso.com/now)
+- [Home](https://www.leonardomso.com/index.md): Short bio, projects, work history and contact
+- [About](https://www.leonardomso.com/about.md): Background, what I'm building and how I work
+- [Projects](https://www.leonardomso.com/projects.md): SetLuca and Strait in detail
+- [Resume](https://www.leonardomso.com/resume.md): Full experience, skills, education and recognition
+- [Now](https://www.leonardomso.com/now.md): Current focus and availability
+- [Uses](https://www.leonardomso.com/uses.md): Tools, languages and hardware
 
-## Profiles
+## Projects
 
+- [SetLuca](https://setluca.com): DM sales platform for experts, creators and coaches (building now)
+- [Strait](https://strait.dev): Open-source background jobs and workflows on Postgres, written in Go
+- [33 JavaScript Concepts](https://github.com/leonardomso/33-js-concepts): Open-source JavaScript guide, 66K GitHub stars
+
+## Writing
+
+- [LogRocket](https://blog.logrocket.com/author/leonardomaldonado/): Articles on React, state management and frontend performance
+- [Progress](https://www.telerik.com/blogs/author/leonardo-maldonado): Articles on TypeScript and web engineering
+
+## Contact
+
+- [Email](mailto:leonardomso11@gmail.com)
 - [GitHub](https://github.com/leonardomso)
 - [LinkedIn](https://www.linkedin.com/in/leonardomso/)
-- [X / Twitter](https://x.com/leonardomso)
+- [X](https://x.com/leonardomso)

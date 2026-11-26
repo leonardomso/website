@@ -1,43 +1,22 @@
-import { getAllPosts } from "~/lib/blog";
+import { SITE_URL } from "~/config/site";
 
-const SITE_URL = "https://www.leonardomso.com";
-const BUILD_DATE = new Date().toISOString();
+const PAGES = [
+  { path: "", changefreq: "monthly", priority: "1.0" },
+  { path: "/about", changefreq: "monthly", priority: "0.8" },
+  { path: "/projects", changefreq: "monthly", priority: "0.8" },
+  { path: "/resume", changefreq: "monthly", priority: "0.7" },
+  { path: "/now", changefreq: "monthly", priority: "0.5" },
+  { path: "/uses", changefreq: "yearly", priority: "0.4" },
+];
 
-function formatDate(date: Date): string {
-  return date.toISOString();
-}
-
-export async function GET() {
-  const posts = await getAllPosts();
-
-  const staticPages = [
-    { url: SITE_URL, changefreq: "monthly", priority: "1.0" },
-    { url: `${SITE_URL}/about`, changefreq: "monthly", priority: "0.8" },
-    { url: `${SITE_URL}/blog`, changefreq: "weekly", priority: "0.8" },
-    { url: `${SITE_URL}/projects`, changefreq: "monthly", priority: "0.7" },
-    { url: `${SITE_URL}/resume`, changefreq: "yearly", priority: "0.6" },
-    { url: `${SITE_URL}/uses`, changefreq: "monthly", priority: "0.5" },
-    { url: `${SITE_URL}/now`, changefreq: "weekly", priority: "0.5" },
-  ];
-
-  const entries = [
-    ...staticPages.map(
-      (page) => `  <url>
-    <loc>${page.url}</loc>
-    <lastmod>${BUILD_DATE}</lastmod>
+export function GET() {
+  const entries = PAGES.map(
+    (page) => `  <url>
+    <loc>${SITE_URL}${page.path}</loc>
     <changefreq>${page.changefreq}</changefreq>
     <priority>${page.priority}</priority>
   </url>`
-    ),
-    ...posts.map(
-      (post) => `  <url>
-    <loc>${SITE_URL}/blog/${post.slug}</loc>
-    <lastmod>${formatDate(new Date(post.date))}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>`
-    ),
-  ].join("\n");
+  ).join("\n");
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -45,8 +24,6 @@ ${entries}
 </urlset>`;
 
   return new Response(xml, {
-    headers: {
-      "Content-Type": "application/xml; charset=utf-8",
-    },
+    headers: { "Content-Type": "application/xml; charset=utf-8" },
   });
 }

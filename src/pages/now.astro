@@ -1,72 +1,43 @@
 ---
+import { SITE_URL } from "~/config/site";
 import BaseLayout from "~/layouts/base-layout.astro";
 ---
 
 <BaseLayout
   title="Now · Leonardo Maldonado"
-  description="What I'm currently working on and thinking about."
-  canonical="https://www.leonardomso.com/now"
+  description="What Leonardo Maldonado is working on right now."
+  canonical={`${SITE_URL}/now`}
 >
-  <div>
-    <p class="mb-4 font-mono text-fg-tertiary text-[12px] uppercase tracking-[0.25em]">Now</p>
-    <h1 class="font-semibold text-fg text-[clamp(2rem,5vw,3rem)] leading-[1.1] tracking-[-0.03em]">What I&apos;m up to</h1>
-    <p class="mt-6 max-w-[440px] text-fg-secondary text-[15px] leading-[1.75]">
-      A snapshot of what I&apos;m focused on right now. Inspired by
-      <a class="link-hover text-fg-muted transition-colors hover:text-fg" href="https://nownownow.com/about" rel="noopener noreferrer" target="_blank">
-        nownownow.com
-      </a>.
-    </p>
+  <h1 class="page-title">Now</h1>
+  <p class="mute text">What I’m focused on at the moment. This is a <a href="https://nownownow.com/about">now page</a>.</p>
 
-    <div class="mt-16 flex flex-col gap-12">
-      <section>
-        <h2 class="mb-4 font-mono text-fg-tertiary text-[11px] uppercase tracking-[0.2em]">Work</h2>
-        <div class="flex flex-col gap-4 text-fg-secondary text-[16px] leading-[1.75] sm:text-[15px] sm:leading-[1.8]">
-          <p>
-            Recently left
-            <a class="link-hover text-fg-muted transition-colors hover:text-fg" href="https://www.namecheap.com" rel="noopener noreferrer" target="_blank">
-              Namecheap
-            </a>, where I built
-            <a class="link-hover text-fg-muted transition-colors hover:text-fg" href="https://www.spaceship.com" rel="noopener noreferrer" target="_blank">
-              Spaceship&apos;s
-            </a>
-            domain search platform from scratch as the sole engineer for four and a half years, helping the platform sell 3M+ domains. Exploring what comes next.
-          </p>
-        </div>
-      </section>
-
-      <section>
-        <h2 class="mb-4 font-mono text-fg-tertiary text-[11px] uppercase tracking-[0.2em]">Side Projects</h2>
-        <div class="flex flex-col gap-4 text-fg-secondary text-[16px] leading-[1.75] sm:text-[15px] sm:leading-[1.8]">
-          <p>
-            Redesigning this portfolio from scratch with Next.js 16, Tailwind CSS v4, and a custom dark minimal aesthetic. Exploring markdown-powered blogging and modern web patterns.
-          </p>
-          <p>
-            Continuing to maintain
-            <a class="link-hover text-fg-muted transition-colors hover:text-fg" href="https://github.com/leonardomso/33-js-concepts" rel="noopener noreferrer" target="_blank">
-              33 JavaScript Concepts
-            </a>
-            , now at 63k+ stars and translated into 20+ languages.
-          </p>
-        </div>
-      </section>
-
-      <section>
-        <h2 class="mb-4 font-mono text-fg-tertiary text-[11px] uppercase tracking-[0.2em]">Learning</h2>
-        <div class="flex flex-col gap-4 text-fg-secondary text-[16px] leading-[1.75] sm:text-[15px] sm:leading-[1.8]">
-          <p>
-            Exploring modern React patterns, server components, and the latest in the JavaScript ecosystem. Always looking for better ways to build for the web.
-          </p>
-        </div>
-      </section>
-
-      <section>
-        <h2 class="mb-4 font-mono text-fg-tertiary text-[11px] uppercase tracking-[0.2em]">Life</h2>
-        <div class="flex flex-col gap-4 text-fg-secondary text-[16px] leading-[1.75] sm:text-[15px] sm:leading-[1.8]">
-          <p>Born and raised in Brazil, now based in Valencia, Spain. Enjoying the Mediterranean pace of life and exploring the city.</p>
-        </div>
-      </section>
+  <section class="section" aria-labelledby="h-work">
+    <h2 id="h-work">Work</h2>
+    <div class="stack">
+    <p class="text">I left <a href="https://www.namecheap.com">Namecheap</a> in June 2026 after four and a half years as the only frontend engineer on Spaceship’s domain search. Since July I’ve been building <a href="https://setluca.com">SetLuca</a>, a DM sales platform for experts, creators and coaches.</p>
+    <p>I’m open to senior full-stack and freelance roles, remote or partly on-site in Europe.</p>
     </div>
+  </section>
 
-    <p class="mt-20 text-fg-tertiary text-[13px]">Last updated: February 2026</p>
-  </div>
+  <section class="section" aria-labelledby="h-side">
+    <h2 id="h-side">Side project</h2>
+    <p class="text"><a href="https://strait.dev">Strait</a>, background jobs and workflows that run on Postgres, with no Redis or separate queue.</p>
+  </section>
+
+  <section class="section" aria-labelledby="h-open-source">
+    <h2 id="h-open-source">Open source</h2>
+    <p class="text">Maintaining <a href="https://github.com/leonardomso/33-js-concepts">33 JavaScript Concepts</a>, now at 66K stars and 40+ translations, and recently relaunched as a website.</p>
+  </section>
+
+  <section class="section" aria-labelledby="h-learning">
+    <h2 id="h-learning">Learning</h2>
+    <p>Patterns for AI agents, MCP servers, and Go for backend systems.</p>
+  </section>
+
+  <section class="section" aria-labelledby="h-life">
+    <h2 id="h-life">Life</h2>
+    <p>Living in Valencia and enjoying the Mediterranean pace.</p>
+  </section>
+
+  <p class="section mute">Updated November 2026</p>
 </BaseLayout>

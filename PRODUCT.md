@@ -32,7 +32,7 @@ The emotional target is **quiet confidence**. Within five seconds of arriving, a
 Explicitly NOT this site:
 
 - **Generic dev-bro portfolio.** No "Hi, I'm Leonardo 👋" hero. No purple-to-blue gradient name. No spinning avatar. No row of brand-colored social icons. No "Welcome to my portfolio" intro paragraph.
-- **SaaS template aesthetic.** No cards-in-cards. No gradient mesh backgrounds. No Inter for everything. No rounded-square icon tile above every heading. No purple primary button.
+- **SaaS template aesthetic.** No cards-in-cards. No gradient mesh backgrounds. No rounded-square icon tile above every heading. No purple primary button.
 - **Brittany Chiang clone.** No mint-on-navy single-page resume scroll. No giant left-column sticky bio with right-column timeline. The pattern is recognizable on sight; visitors will assume the rest is also copied.
 - **Neon / brutalist / deliberately-ugly.** No oversized accent colors, no terminal-green-on-black, no shock-value typography. Restraint over edge.
 

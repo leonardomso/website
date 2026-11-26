@@ -1,16 +1,20 @@
 # Now - Leonardo Maldonado
 
 ## Work
-Recently left Namecheap after four and a half years building Spaceship's domain search as the sole engineer. The platform sold 3M+ domains during that time. Exploring what comes next.
+I left Namecheap in June 2026 after four and a half years as the only frontend engineer on Spaceship's domain search. Since July I've been building [SetLuca](https://setluca.com), a DM sales platform for experts, creators and coaches.
 
-## Building
-Heads-down on [Strait](https://strait.dev), an agentic workflow orchestration platform written in Go. SDKs in five languages, MCP servers, and a CLI.
+I'm open to senior full-stack and freelance roles, remote or partly on-site in Europe.
 
-## Side Projects
-Continuing to maintain [33 JavaScript Concepts](https://github.com/leonardomso/33-js-concepts), now at 66K+ stars and 40+ language translations.
+## Side project
+[Strait](https://strait.dev), background jobs and workflows that run on Postgres, with no Redis or separate queue.
+
+## Open source
+Maintaining [33 JavaScript Concepts](https://github.com/leonardomso/33-js-concepts), now at 66K stars and 40+ translations, and recently relaunched as a website.
 
 ## Learning
-Exploring modern AI agent patterns, MCP servers, and Go for backend systems.
+Patterns for AI agents, MCP servers, and Go for backend systems.
 
 ## Life
-Based in Valencia, Spain. Enjoying the Mediterranean pace of life.
+Living in Valencia and enjoying the Mediterranean pace.
+
+Updated November 2026.

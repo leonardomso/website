@@ -1,30 +1,28 @@
 ---
-import { ArrowUpRight } from "lucide-react";
 import {
   breadcrumbSchema,
   JsonLd,
   softwareApplicationSchema,
 } from "~/components/json-ld";
 import { projects } from "~/config/projects";
+import { SITE_URL } from "~/config/site";
 import BaseLayout from "~/layouts/base-layout.astro";
-
-const SITE_URL = "https://www.leonardomso.com";
 
 const breadcrumbs = breadcrumbSchema([
   { name: "Home", url: SITE_URL },
   { name: "Projects", url: `${SITE_URL}/projects` },
 ]);
 
-const softwareSchemas = projects
-  .filter((p) => p.featured)
-  .map((project) =>
-    softwareApplicationSchema({
-      name: project.title,
-      description: project.description,
-      url: project.url,
-      programmingLanguage: project.tech,
-    })
-  );
+const softwareSchemas = projects.map((project) =>
+  softwareApplicationSchema({
+    name: project.title,
+    description: project.description,
+    url: project.url,
+    applicationCategory: project.category,
+    programmingLanguage: project.languages,
+    license: project.license,
+  })
+);
 
 const itemListSchema = {
   "@context": "https://schema.org",
@@ -42,42 +40,26 @@ const itemListSchema = {
 
 <BaseLayout
   title="Projects · Leonardo Maldonado"
-  description="Open source projects, products, and side projects by Leonardo Maldonado."
-  canonical="https://www.leonardomso.com/projects"
+  description="What Leonardo Maldonado is building: SetLuca, a DM sales platform for creators and coaches, and Strait, background jobs and workflows on Postgres."
+  canonical={`${SITE_URL}/projects`}
 >
-  <div>
-    <JsonLd data={breadcrumbs} />
-    <JsonLd data={itemListSchema} />
-    {softwareSchemas.map((schema) => <JsonLd data={schema} />)}
-    <p class="mb-4 font-mono text-fg-tertiary text-[12px] uppercase tracking-[0.25em]">Projects</p>
-    <h1 class="font-semibold text-fg text-[clamp(2rem,5vw,3rem)] leading-[1.1] tracking-[-0.03em]">Things I&apos;ve built</h1>
-    <p class="mt-6 max-w-[440px] text-fg-secondary text-[15px] leading-[1.75]">Open source projects, products, and experiments.</p>
+  <JsonLd data={breadcrumbs} />
+  <JsonLd data={itemListSchema} />
+  {softwareSchemas.map((schema) => <JsonLd data={schema} />)}
 
-    <div class="mt-16 flex flex-col gap-4">
-      {projects.map((project) => (
-        <a
-          class="group rounded-lg border border-surface-border bg-surface-low p-5 transition-colors duration-300 hover:border-surface-border-strong"
-          href={project.url}
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <div class="flex items-start justify-between">
-            <div>
-              <div class="mb-2 flex items-center gap-3">
-                <span class="font-mono text-fg-tertiary text-[10px] uppercase tracking-[0.15em]">{project.tag}</span>
-              </div>
-              <p class="font-medium text-fg text-[15px] transition-colors group-hover:text-fg">{project.title}</p>
-              <p class="mt-1.5 text-fg-secondary text-[13px] leading-[1.6]">{project.description}</p>
-              <div class="mt-3 flex flex-wrap gap-2">
-                {project.tech.map((t) => (
-                  <span class="font-mono text-fg-tertiary text-[10px] tracking-wide">{t}</span>
-                ))}
-              </div>
-            </div>
-            <ArrowUpRight className="mt-1 h-4 w-4 shrink-0 text-fg-tertiary transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-fg" />
-          </div>
-        </a>
-      ))}
-    </div>
-  </div>
+  <h1 class="page-title">Projects</h1>
+  <p class="mute measure">What I’m building right now.</p>
+
+  <ul class="entries section">
+    {projects.map((project) => (
+      <li>
+        <div class="entry-head">
+          <a class="title-lg" href={project.url}>{project.title}<span aria-hidden="true" class="arrow">↗</span></a>
+          <span class="entry-meta">{project.tag}</span>
+        </div>
+        <p class="entry-body measure">{project.description}</p>
+        <p class="entry-body">{project.tech.join(", ")}</p>
+      </li>
+    ))}
+  </ul>
 </BaseLayout>

@@ -1,36 +1,11 @@
 # Projects - Leonardo Maldonado
 
-## Strait -- Building Now
+## SetLuca (building now)
+https://setluca.com
+
+A DM sales platform for experts, creators and coaches. It replies to every lead on Instagram, Messenger and Telegram in the creator's own voice, works out who's serious and books the call on their calendar.
+
+## Strait (open source)
 https://strait.dev
 
-Agentic workflow orchestration platform written in Go. Single binary under 30MB. Ships with SDKs in five languages (TypeScript, Python, Go, Ruby, Rust), MCP servers, and a CLI. PostgreSQL for durable queuing, Redis for real-time events. Signed audit logs and rate limiting built in.
-
-## 33 JavaScript Concepts -- 66K+ Stars
-https://github.com/leonardomso/33-js-concepts
-
-A curated guide to every core JavaScript concept, from closures and prototypes to async patterns. GitHub recognized it as a top open-source project of 2018. Translated into 40+ languages by the community.
-
-## Spaceship Domain Search
-https://www.spaceship.com/domain-search/
-
-Sole engineer on the domain search platform for four and a half years, helped sell 3M+ domains. Real-time WebSocket pricing across 500+ TLDs, Beast Mode bulk search, multi-currency engine across 30+ currencies.
-
-## Shopwyse
-https://www.getshopwyse.com
-
-Multi-tenant retail ERP for small merchants. POS/checkout, inventory, CRM, and financial reporting. Built with TanStack Start, React 19, Elysia, Drizzle ORM, and PostgreSQL.
-
-## Polyglot
-https://www.trypolyglot.ai
-
-AI-powered writing assistant that interviews the user first, then drafts content in their voice from multiple angles. Rich-text editing, voice profiles, and multi-format export. Full-stack TypeScript.
-
-## gone
-https://github.com/leonardomso/gone
-
-Dead link detector written in Go. Concurrent HTTP checks, interactive TUI, auto-fix for redirects, and CI/CD output formats.
-
-## betterhook
-https://github.com/leonardomso/betterhook
-
-Git hooks manager written in Rust. DAG-based scheduling, content-addressable cache, and streaming output via Tokio.
+Background jobs and multi-step workflows that run on the Postgres database you already have, with no Redis or separate queue. Durable queues with retries and backoff, workflows that can pause for manual approval, and a live dashboard. A single self-hostable Go binary under Apache-2.0, with SDKs for TypeScript, Python, Go, Ruby and Rust, plus MCP servers and a CLI.
