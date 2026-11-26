@@ -7,14 +7,8 @@ const index = {
       name: "llms-txt",
       type: "content",
       description:
-        "Machine-readable profile of Leonardo Maldonado: bio, links, projects, skills, and experience.",
+        "Index of Leonardo Maldonado's site for language models: a short bio, current projects, and links to a Markdown version of every page.",
       url: `${SITE_URL}/llms.txt`,
-    },
-    {
-      name: "rss-feed",
-      type: "content",
-      description: "RSS 2.0 feed of blog posts by Leonardo Maldonado.",
-      url: `${SITE_URL}/feed.xml`,
     },
     {
       name: "humans-txt",

@@ -7,10 +7,10 @@ Location: Valencia, Spain
 
 /* SITE */
 Standards: HTML5, CSS3
-Framework: Astro 6
+Framework: Astro 7
 Language: TypeScript
 Styling: Tailwind CSS v4
-Fonts: Geist Sans, Geist Mono
+Fonts: Inter
 Tooling: Biome
-Hosting: Vercel
+Hosting: Cloudflare Workers
 Analytics: Simple Analytics

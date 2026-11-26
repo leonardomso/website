@@ -1,79 +1,67 @@
 ---
-import { Contact } from "~/components/contact";
-import { Experience } from "~/components/experience";
-import { Stack } from "~/components/stack";
-import { Ventures } from "~/components/ventures";
-import { Writing } from "~/components/writing";
+import { projects } from "~/config/projects";
+import { SOCIAL_LINKS, WORK } from "~/config/site";
 import BaseLayout from "~/layouts/base-layout.astro";
 ---
 
 <BaseLayout
+  home
   title="Leonardo Maldonado · Senior Full-Stack Engineer"
-  description="Senior full-stack engineer based in Valencia, Spain. Previously sole engineer on Spaceship's domain search at Namecheap (3M+ domains sold). Creator of 33 JavaScript Concepts (66K+ stars). Currently building Strait."
+  description="Senior full-stack engineer in Valencia, Spain. Building SetLuca, a DM sales platform for creators and coaches. Previously the only frontend engineer on Spaceship's domain search at Namecheap. Creator of 33 JavaScript Concepts."
 >
-  <div>
-    <section class="mb-24 sm:mb-32">
-      <p class="mb-4 font-mono text-fg-tertiary text-[12px] uppercase tracking-[0.25em]">
-        Senior Full-Stack Engineer · Valencia, Spain
-      </p>
-      <h1 class="font-semibold text-fg text-[clamp(2.5rem,6vw,4rem)] leading-[1.05] tracking-[-0.035em]">
-        Leonardo
-        <br />
-        Maldonado
-      </h1>
-      <p class="mt-8 max-w-[480px] text-fg-secondary text-[16px] leading-[1.75] sm:text-[15px]">
-        Senior full-stack engineer working with TypeScript, React, Node.js, and Go. Previously the sole engineer on Spaceship&apos;s
-        <a class="link-hover text-fg-muted transition-colors hover:text-fg" href="https://www.spaceship.com/domain-search/" rel="noopener noreferrer" target="_blank">
-          domain search
-        </a>
-        at
-        <a class="link-hover text-fg-muted transition-colors hover:text-fg" href="https://www.namecheap.com" rel="noopener noreferrer" target="_blank">
-          Namecheap
-        </a>, helping sell 3M+ domains. Currently building
-        <a class="link-hover text-fg-muted transition-colors hover:text-fg" href="https://strait.dev" rel="noopener noreferrer" target="_blank">
-          Strait
-        </a>, an agentic workflow orchestration platform.
-      </p>
-    </section>
+  <section class="hero" aria-label="About">
+    <h1 class="display">I build products end to end in TypeScript. <span class="mute">Right now that’s <a href="https://setluca.com">SetLuca</a>, a DM sales platform for experts, creators and coaches.</span></h1>
+    <p class="hero-sub mute text">Senior full-stack engineer in Valencia. Four and a half years as the only frontend engineer on Spaceship’s domain search at Namecheap. Author of <a href="https://github.com/leonardomso/33-js-concepts">33 JavaScript Concepts</a>.</p>
+  </section>
 
-    <section class="mb-20 sm:mb-28">
-      <div class="mb-10 flex items-center gap-4">
-        <span class="font-mono text-fg-tertiary text-[11px] uppercase tracking-[0.2em]">Experience</span>
-        <div class="section-divider flex-1" />
-      </div>
-      <Experience />
-    </section>
+  <section class="section" aria-labelledby="h-projects">
+    <h2 id="h-projects">Projects</h2>
+    <ul class="cards grid-2">
+      {projects.map((project) => (
+        <li>
+          <a href={project.url}>
+            <span class="title-lg">{project.title}<span aria-hidden="true" class="arrow">↗</span></span>
+            <span class="mute">{project.summary}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
 
-    <section class="mb-20 sm:mb-28">
-      <div class="mb-10 flex items-center gap-4">
-        <span class="font-mono text-fg-tertiary text-[11px] uppercase tracking-[0.2em]">Writing</span>
-        <div class="section-divider flex-1" />
-      </div>
-      <Writing />
-    </section>
+  <section class="section" aria-labelledby="h-work">
+    <h2 id="h-work">Work</h2>
+    <ul class="list">
+      {WORK.map((job) => (
+        <li>
+          <span class="name">{job.company}</span>
+          <span class="role">{job.role}</span>
+          <span class="years">{job.years}</span>
+        </li>
+      ))}
+    </ul>
+  </section>
 
-    <section class="mb-20 sm:mb-28">
-      <div class="mb-10 flex items-center gap-4">
-        <span class="font-mono text-fg-tertiary text-[11px] uppercase tracking-[0.2em]">Stack</span>
-        <div class="section-divider flex-1" />
-      </div>
-      <Stack />
-    </section>
-
-    <section class="mb-20 sm:mb-28">
-      <div class="mb-10 flex items-center gap-4">
-        <span class="font-mono text-fg-tertiary text-[11px] uppercase tracking-[0.2em]">Ventures</span>
-        <div class="section-divider flex-1" />
-      </div>
-      <Ventures />
-    </section>
-
-    <section>
-      <div class="mb-10 flex items-center gap-4">
-        <span class="font-mono text-fg-tertiary text-[11px] uppercase tracking-[0.2em]">Contact</span>
-        <div class="section-divider flex-1" />
-      </div>
-      <Contact />
-    </section>
-  </div>
+  <section class="section grid-2">
+    <div>
+      <h2 id="h-writing">Writing</h2>
+      <p class="text">Over 100 articles on React, TypeScript and frontend performance for <a href="https://blog.logrocket.com/author/leonardomaldonado/">LogRocket</a> and <a href="https://www.telerik.com/blogs/author/leonardo-maldonado">Progress</a>.</p>
+    </div>
+    <div>
+      <h2 id="h-contact">Contact</h2>
+      <p class="links">{SOCIAL_LINKS.map((link) => <a href={link.href}>{link.label}</a>)}</p>
+    </div>
+  </section>
 </BaseLayout>
+
+<style>
+  .hero {
+    padding-top: clamp(16px, 4vh, 40px);
+    padding-bottom: clamp(56px, 10vh, 96px);
+  }
+
+  .hero-sub {
+    max-width: 30rem;
+    margin-top: 28px;
+    text-wrap: pretty;
+  }
+</style>

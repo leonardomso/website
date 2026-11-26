@@ -18,25 +18,40 @@ export default defineConfig({
           pattern: "/",
           render: () => `# Leonardo Maldonado
 
-> Senior Full-Stack Engineer · Valencia, Spain · React, TypeScript, Go
+> Senior full-stack engineer in Valencia, Spain. Building SetLuca.
 
-Senior full-stack engineer with 7+ years of experience in TypeScript, React, Node.js, and Go. Previously the sole engineer on [Spaceship's domain search](https://www.spaceship.com/domain-search/) at [Namecheap](https://www.namecheap.com), helping sell 3M+ domains. Currently building [Strait](https://strait.dev), an agentic workflow orchestration platform with SDKs in five languages, MCP servers, and a CLI.
+I build products end to end in TypeScript, front and back. Right now I'm working on [SetLuca](https://setluca.com), a DM sales platform for experts, creators and coaches.
 
-Creator of [33 JavaScript Concepts](https://github.com/leonardomso/33-js-concepts) (66K+ GitHub stars, GitHub Top Open Source Project of 2018). Open source contributor to Better Auth, Node.js, and TanStack.
+Before that I spent four and a half years as the only frontend engineer on [Spaceship's domain search](https://www.spaceship.com/domain-search/) at [Namecheap](https://www.namecheap.com). I also wrote [33 JavaScript Concepts](https://github.com/leonardomso/33-js-concepts), an open-source guide that people have translated into 40+ languages.
 
-## Links
+## Projects
 
-- Website: https://www.leonardomso.com
-- GitHub: https://github.com/leonardomso
-- LinkedIn: https://www.linkedin.com/in/leonardomso/
-- X: https://x.com/leonardomso
+- [SetLuca](https://setluca.com): DM sales for creators and coaches
+- [Strait](https://strait.dev): Background jobs on Postgres
+
+## Work
+
+- Spaceship (Namecheap): Senior front end engineer, 2021 to 2026
+- Progress: Technical author, 2019 to 2023
+- LogRocket: Technical author, 2020 to 2022
+- Popstand: Software engineer, 2019 to 2021
+- Foton: Software engineer, 2019
+
+## Writing
+
+Over 100 articles on React, TypeScript and frontend performance for [LogRocket](https://blog.logrocket.com/author/leonardomaldonado/) and [Progress](https://www.telerik.com/blogs/author/leonardo-maldonado).
+
+## Contact
+
 - Email: leonardomso11@gmail.com
+- GitHub: https://github.com/leonardomso
+- X: https://x.com/leonardomso
+- LinkedIn: https://www.linkedin.com/in/leonardomso/
 
 ## Pages
 
 - [About](https://www.leonardomso.com/about)
 - [Projects](https://www.leonardomso.com/projects)
-- [Blog](https://www.leonardomso.com/blog)
 - [Resume](https://www.leonardomso.com/resume)
 - [Uses](https://www.leonardomso.com/uses)
 - [Now](https://www.leonardomso.com/now)
@@ -46,129 +61,123 @@ Creator of [33 JavaScript Concepts](https://github.com/leonardomso/33-js-concept
           pattern: "/about",
           render: () => `# About · Leonardo Maldonado
 
-I'm Leonardo. I grew up in Franca, Brazil and moved to Valencia, Spain a few years ago. I wanted to be closer to the European tech scene and I just really like it here.
+I grew up in Franca, Brazil, and now live in Valencia, Spain.
 
-I've been writing code for about 7 years. Most of that time was spent at [Namecheap](https://www.namecheap.com), where I was the sole engineer on [Spaceship's domain search](https://www.spaceship.com/domain-search/). I built the whole thing from zero and helped the platform sell 3M+ domains: architecture, real-time pricing over WebSocket, Beast Mode bulk search, and multi-currency support across 30+ markets.
+I've been writing software professionally since 2019, all of it remote. For four and a half years I was the only frontend engineer on [Spaceship's domain search](https://www.spaceship.com/domain-search/) at [Namecheap](https://www.namecheap.com). I built it from scratch and owned everything from architecture to releases: real-time pricing over WebSockets for 500+ TLDs, bulk search, and pricing in 30+ currencies. It sold more than 3 million domains while I was there.
 
-Right now I'm heads-down on [Strait](https://strait.dev), an agentic workflow orchestration platform written in Go. A single binary under 30MB that runs background jobs, scheduled tasks, and multi-step workflows. It ships with SDKs in five languages (TypeScript, Python, Go, Ruby, Rust), MCP servers, and a CLI. PostgreSQL for durable queuing, Redis for real-time events.
+Now I'm building [SetLuca](https://setluca.com), a DM sales platform for experts, creators and coaches. It reads incoming DMs on Instagram, Messenger and Telegram, scores each lead and replies in the creator's own voice. TypeScript end to end: Hono on Cloudflare Workers, Inngest, TanStack Start, PostgreSQL and Drizzle.
 
-On the side I also built [Shopwyse](https://www.getshopwyse.com), a multi-tenant retail ERP, and [Polyglot](https://www.trypolyglot.ai), an AI writing tool that interviews you before drafting. I write CLI tools in Go and Rust when I want to learn something new by solving a real problem.
+On the side I build [Strait](https://strait.dev), background jobs and multi-step workflows that run on the Postgres database you already have, with no Redis or separate queue. A single Go binary, open source under Apache-2.0.
 
-In 2018 I created [33 JavaScript Concepts](https://github.com/leonardomso/33-js-concepts), now at 66K+ GitHub stars and translated into 40+ languages by the community. GitHub named it a top open-source project of 2018.
+In 2018 I published [33 JavaScript Concepts](https://github.com/leonardomso/33-js-concepts) as a study guide for myself. It now has 66K stars and translations in 40+ languages, and GitHub named it one of the top projects of 2018. I still maintain it.
 
-I also spent a few years writing 100+ technical articles for [Progress (Telerik Blog)](https://www.telerik.com/blogs/author/leonardo-maldonado) and [LogRocket](https://blog.logrocket.com/author/leonardomaldonado/) on JavaScript, TypeScript, React, Node.js, and GraphQL.
+I've also written 100+ articles on React, TypeScript and frontend performance for [LogRocket](https://blog.logrocket.com/author/leonardomaldonado/) and [Progress](https://www.telerik.com/blogs/author/leonardo-maldonado).
 
-My main stack is TypeScript, React, Node.js, and Go. Rust for side projects, PostgreSQL for data, whatever framework makes sense for the problem.
+I mostly work in TypeScript, front and back, and I like owning a product from the first architecture decision to every release.
 
-I speak Portuguese (native), English (fluent), and Spanish (fluent).
+I speak Portuguese and English, and some Spanish. I'm open to senior full-stack and freelance roles, remote or partly on-site in Europe. Email leonardomso11@gmail.com.
 `,
         },
         {
           pattern: "/projects",
           render: () => `# Projects · Leonardo Maldonado
 
-## Strait — Building Now
+## SetLuca (building now)
+https://setluca.com
+
+A DM sales platform for experts, creators and coaches. It replies to every lead on Instagram, Messenger and Telegram in the creator's own voice, works out who's serious and books the call on their calendar.
+
+## Strait (open source)
 https://strait.dev
 
-Agentic workflow orchestration platform written in Go. Single binary under 30MB. Ships with SDKs in five languages (TypeScript, Python, Go, Ruby, Rust), MCP servers, and a CLI. PostgreSQL for durable queuing, Redis for real-time events. Signed audit logs and rate limiting built in.
-
-## 33 JavaScript Concepts — 66K+ Stars
-https://github.com/leonardomso/33-js-concepts
-
-A curated guide to every core JavaScript concept, from closures and prototypes to async patterns. GitHub recognized it as a top open-source project of 2018. Translated into 40+ languages by the community.
-
-## Spaceship Domain Search
-https://www.spaceship.com/domain-search/
-
-Sole engineer on the domain search platform for four and a half years, helped sell 3M+ domains. Real-time WebSocket pricing across 500+ TLDs, Beast Mode bulk search, multi-currency engine across 30+ currencies.
-
-## Shopwyse
-https://www.getshopwyse.com
-
-Multi-tenant retail ERP for small merchants. POS/checkout, inventory, CRM, and financial reporting. Built with TanStack Start, React 19, Elysia, Drizzle ORM, and PostgreSQL.
-
-## Polyglot
-https://www.trypolyglot.ai
-
-AI-powered writing assistant that interviews the user first, then drafts content in their voice from multiple angles. Rich-text editing, voice profiles, and multi-format export. Full-stack TypeScript.
-
-## gone
-https://github.com/leonardomso/gone
-
-Dead link detector written in Go. Concurrent HTTP checks, interactive TUI, auto-fix for redirects, and CI/CD output formats.
-
-## betterhook
-https://github.com/leonardomso/betterhook
-
-Git hooks manager written in Rust. DAG-based scheduling, content-addressable cache, and streaming output via Tokio.
+Background jobs and multi-step workflows that run on the Postgres database you already have, with no Redis or separate queue. Durable queues with retries and backoff, workflows that can pause for manual approval, and a live dashboard. A single self-hostable Go binary under Apache-2.0, with SDKs for TypeScript, Python, Go, Ruby and Rust, plus MCP servers and a CLI.
 `,
         },
         {
           pattern: "/resume",
           render: () => `# Resume · Leonardo Maldonado
 
-> Senior Full-Stack Engineer · React, TypeScript, Go · Valencia, Spain (CET)
+> Senior full-stack engineer · Valencia, Spain (CET)
 
 leonardomso11@gmail.com · +34 674 27 13 13 · [github.com/leonardomso](https://github.com/leonardomso) · [linkedin.com/in/leonardomso](https://www.linkedin.com/in/leonardomso/)
 
-## Professional Summary
-
-Senior full-stack engineer with 7+ years of experience in TypeScript, React, Node.js, and Go. Previously the sole engineer on Spaceship domain search at Namecheap, helping sell 3M+ domains. Creator of 33 JavaScript Concepts (66K+ GitHub stars, GitHub Top Open Source Project of 2018). Currently building Strait, an agentic workflow orchestration platform with SDKs in five languages, MCP servers, and a CLI. Also built Shopwyse, a multi-tenant retail ERP, and Polyglot, an AI-powered writing tool. Open source contributor to Better Auth, Node.js, and TanStack.
-
-## Technical Skills
-
-- Languages: JavaScript, TypeScript, Go, Rust, HTML, CSS
-- Frontend: React, Next.js, React Native, Vite, Tailwind CSS, TanStack Start, TanStack Query, Redux, Zustand
-- Backend: Node.js, Bun, Hono, Elysia, GraphQL, REST APIs, WebSocket, PostgreSQL, Redis, MongoDB, Drizzle ORM
-- AI: Vercel AI SDK, OpenAI API, Anthropic API, MCP (Model Context Protocol), AI Agents, LLM Integration
-- Cloud & Infrastructure: Docker, Fly.io, Cloudflare, Vercel, GitHub Actions, CI/CD
-- Testing: Vitest, Jest, Playwright, Detox
-- Dev Tools: Git, Biome, Better Auth
+Senior full-stack engineer with 8+ years of experience, all of it remote, mostly in TypeScript, front and back. For four and a half years I was the only frontend engineer on Spaceship's domain search at Namecheap, which sold more than 3 million domains. I'm building SetLuca, a DM sales platform for creators and coaches, and Strait, an open-source job and workflow engine on Postgres. I created 33 JavaScript Concepts (66K GitHub stars) and I've contributed to Better Auth, Node.js and TanStack. Open to senior full-stack and freelance roles, remote or partly on-site in Europe.
 
 ## Experience
 
-### Front End Engineer, Spaceship Domain Search — Namecheap (Nov 2021 to Apr 2026)
-Sole engineer on Spaceship's domain search product end to end. Built React/TypeScript frontend from scratch. Real-time WebSocket pricing for 500+ TLDs, Beast Mode bulk search, multi-currency pricing for 30+ markets. Bundle size optimized by 35%.
+### Namecheap: Senior Front End Engineer, Spaceship Domain Search (Nov 2021 to Jun 2026)
+- Only frontend engineer on Spaceship's domain search for four and a half years. Built the React and TypeScript frontend from scratch and owned architecture, code review and every release. The product sold more than 3 million domains.
+- Built a real-time pricing engine over WebSockets that streams live prices for 500+ TLDs per search and keeps renders under 100ms on large result sets.
+- Shipped Beast Mode, a bulk search for up to 100 domains at once with filters for price, category and TLD type.
+- Added pricing in 30+ currencies with region-aware caching, cutting price-fetch latency by about 60%.
+- Reduced the bundle by 35% with code splitting and lazy rendering.
+- Set the technical direction for the search frontend: component architecture, testing strategy and release process.
 
-### Technical Author — Progress / LogRocket (May 2019 to Dec 2023)
-Published 100+ technical articles on JavaScript, TypeScript, React, Node.js, GraphQL reaching millions of developers.
+### Progress: Technical Author, contract (May 2019 to Dec 2023)
+Wrote about TypeScript and web engineering for the Progress blog: Zod, tRPC, pattern matching, IndexedDB and React performance.
 
-### Software Engineer — Popstand (Oct 2019 to Apr 2020)
-Built Taco Maps, a React Native food delivery app for LA taco restaurants.
+### LogRocket: Technical Author, freelance (Feb 2020 to Feb 2022)
+Wrote for the LogRocket engineering blog on React, state management, frontend performance, lazy loading and Next.js rendering, plus JavaScript and CSS fundamentals.
 
-### Software Engineer — Foton (Jan 2019 to Jul 2019)
-React and React Native applications for Brazilian banking clients with financial-grade security standards.
+### Popstand: Software Engineer (Oct 2019 to Apr 2021)
+Built Taco Maps from scratch, a React Native food ordering app for taco restaurants in Los Angeles. Redux, TypeScript, Firebase and Detox.
+
+### Foton: Software Engineer (Jan 2019 to Jul 2019)
+Built React and React Native apps for Brazilian banking clients, held to financial-grade security and reliability standards.
+
+## Projects
+
+- [SetLuca](https://setluca.com) (Jul 2026 to now): DM sales platform for experts, creators and coaches.
+- [Strait](https://strait.dev) (Jan 2026 to now): background jobs and workflows on Postgres, open source.
+
+## Skills
+
+- Languages: TypeScript, JavaScript, Go, Rust, HTML, CSS
+- Frontend: React, Next.js, React Native, TanStack Start, TanStack Query, Vite, Tailwind CSS, Redux, Zustand
+- Backend: Node.js, Bun, Hono, Elysia, Inngest, GraphQL, REST, WebSocket, PostgreSQL, MySQL, Redis, MongoDB, Drizzle
+- AI: Vercel AI SDK, Anthropic API, OpenAI API, MCP, agents
+- Infrastructure: Cloudflare Workers, Vercel, Fly.io, Docker, GitHub Actions
+- Testing: Vitest, Jest, Playwright, Detox
+- Spoken: Portuguese (native), English (professional), Spanish (limited)
 
 ## Education
 
-- Universidade de Franca — Bachelor of Computer Science (2016 to 2020)
-- Centro Universitário Senac — Computer Engineering Technologies/Technicians (2013 to 2014)
+- Universidade de Franca: BSc Computer Science (2016 to 2020)
+- Centro Universitário Senac: Computer Engineering Technician (2013 to 2014)
 
-## Awards & Open Source
+## Recognition
 
-1. GitHub Top Open Source Project of 2018 — 33 JavaScript Concepts (66K+ stars, 40+ language translations).
-2. Open Source Contributor — Code and documentation contributions to Better Auth, Node.js, and TanStack.
+- GitHub top open-source project of 2018: 33 JavaScript Concepts (66K stars, 40+ translations).
+- Open-source contributor: code and documentation for Better Auth, Node.js and TanStack.
 `,
         },
         {
           pattern: "/uses",
           render: () => `# Uses · Leonardo Maldonado
 
-## Editor & Terminal
-- Visual Studio Code
-- Claude Code
-- macOS Terminal / iTerm2
-- Geist Mono
+## Editor and terminal
+- VS Code: editor
+- Claude Code: coding agent
+- iTerm2: terminal
+- Geist Mono: editor and terminal font
 
 ## Development
-- TypeScript
-- Go
-- Rust
-- React
-- Node.js
-- Bun
-- PostgreSQL
-- Redis
+- TypeScript: most of what I write
+- Go: backends and CLIs
+- Rust: side projects
+- React: interfaces
+- Node.js and Bun: runtimes
+- PostgreSQL: default database
+- Redis: queues and real-time events
+
+## Apps
+- Figma: design
+- Notion: notes
+
+## Services
+- GitHub: code
+- Cloudflare: hosting and DNS
+- Vercel: hosting
 
 ## Hardware
 - MacBook Pro (Apple Silicon)
@@ -179,19 +188,23 @@ React and React Native applications for Brazilian banking clients with financial
           render: () => `# Now · Leonardo Maldonado
 
 ## Work
-Recently left Namecheap after four and a half years building Spaceship's domain search as the sole engineer. The platform sold 3M+ domains during that time. Exploring what comes next.
+I left Namecheap in June 2026 after four and a half years as the only frontend engineer on Spaceship's domain search. Since July I've been building [SetLuca](https://setluca.com), a DM sales platform for experts, creators and coaches.
 
-## Building
-Heads-down on [Strait](https://strait.dev), an agentic workflow orchestration platform written in Go. SDKs in five languages, MCP servers, and a CLI.
+I'm open to senior full-stack and freelance roles, remote or partly on-site in Europe.
 
-## Side Projects
-Continuing to maintain [33 JavaScript Concepts](https://github.com/leonardomso/33-js-concepts), now at 66K+ stars and 40+ language translations.
+## Side project
+[Strait](https://strait.dev), background jobs and workflows that run on Postgres, with no Redis or separate queue.
+
+## Open source
+Maintaining [33 JavaScript Concepts](https://github.com/leonardomso/33-js-concepts), now at 66K stars and 40+ translations, and recently relaunched as a website.
 
 ## Learning
-Exploring modern AI agent patterns, MCP servers, and Go for backend systems.
+Patterns for AI agents, MCP servers, and Go for backend systems.
 
 ## Life
-Based in Valencia, Spain. Enjoying the Mediterranean pace of life.
+Living in Valencia and enjoying the Mediterranean pace.
+
+Updated November 2026.
 `,
         },
       ],
@@ -199,29 +212,41 @@ Based in Valencia, Spain. Enjoying the Mediterranean pace of life.
         enabled: true,
         brandName: "Leonardo Maldonado",
         description:
-          "Senior full-stack engineer with 7+ years of experience in TypeScript, React, Node.js, and Go. Previously sole engineer on Spaceship's domain search at Namecheap (3M+ domains sold). Creator of 33 JavaScript Concepts (66K+ GitHub stars). Currently building Strait, an agentic workflow orchestration platform.",
+          "Senior full-stack engineer in Valencia, Spain, with 8+ years of remote experience, mostly in TypeScript. Previously the only frontend engineer on Spaceship's domain search at Namecheap (3M+ domains sold). Creator of 33 JavaScript Concepts (66K GitHub stars). Building SetLuca, a DM sales platform for creators and coaches.",
         sections: [
           {
             title: "Pages",
             links: [
-              { title: "Home", href: `${SITE_URL}/` },
-              { title: "About", href: `${SITE_URL}/about` },
-              { title: "Projects", href: `${SITE_URL}/projects` },
-              { title: "Blog", href: `${SITE_URL}/blog` },
-              { title: "Resume", href: `${SITE_URL}/resume` },
-              { title: "Uses", href: `${SITE_URL}/uses` },
-              { title: "Now", href: `${SITE_URL}/now` },
+              { title: "Home", href: `${SITE_URL}/index.md`, description: "Short bio, projects, work history and contact" },
+              { title: "About", href: `${SITE_URL}/about.md`, description: "Background, what I'm building and how I work" },
+              { title: "Projects", href: `${SITE_URL}/projects.md`, description: "SetLuca and Strait in detail" },
+              { title: "Resume", href: `${SITE_URL}/resume.md`, description: "Full experience, skills, education and recognition" },
+              { title: "Now", href: `${SITE_URL}/now.md`, description: "Current focus and availability" },
+              { title: "Uses", href: `${SITE_URL}/uses.md`, description: "Tools, languages and hardware" },
             ],
           },
           {
-            title: "Profiles",
+            title: "Projects",
             links: [
+              { title: "SetLuca", href: "https://setluca.com", description: "DM sales platform for experts, creators and coaches (building now)" },
+              { title: "Strait", href: "https://strait.dev", description: "Open-source background jobs and workflows on Postgres, written in Go" },
+              { title: "33 JavaScript Concepts", href: "https://github.com/leonardomso/33-js-concepts", description: "Open-source JavaScript guide, 66K GitHub stars" },
+            ],
+          },
+          {
+            title: "Writing",
+            links: [
+              { title: "LogRocket", href: "https://blog.logrocket.com/author/leonardomaldonado/", description: "Articles on React, state management and frontend performance" },
+              { title: "Progress", href: "https://www.telerik.com/blogs/author/leonardo-maldonado", description: "Articles on TypeScript and web engineering" },
+            ],
+          },
+          {
+            title: "Contact",
+            links: [
+              { title: "Email", href: "mailto:leonardomso11@gmail.com" },
               { title: "GitHub", href: "https://github.com/leonardomso" },
-              {
-                title: "LinkedIn",
-                href: "https://www.linkedin.com/in/leonardomso/",
-              },
-              { title: "X / Twitter", href: "https://x.com/leonardomso" },
+              { title: "LinkedIn", href: "https://www.linkedin.com/in/leonardomso/" },
+              { title: "X", href: "https://x.com/leonardomso" },
             ],
           },
         ],

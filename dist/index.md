@@ -1,24 +1,39 @@
 # Leonardo Maldonado
 
-> Senior Full-Stack Engineer - Valencia, Spain - React, TypeScript, Go
+> Senior full-stack engineer in Valencia, Spain. Building SetLuca.
 
-Senior full-stack engineer with 7+ years of experience in TypeScript, React, Node.js, and Go. Previously the sole engineer on [Spaceship's domain search](https://www.spaceship.com/domain-search/) at [Namecheap](https://www.namecheap.com), helping sell 3M+ domains. Currently building [Strait](https://strait.dev), an agentic workflow orchestration platform with SDKs in five languages, MCP servers, and a CLI.
+I build products end to end in TypeScript, front and back. Right now I'm working on [SetLuca](https://setluca.com), a DM sales platform for experts, creators and coaches.
 
-Creator of [33 JavaScript Concepts](https://github.com/leonardomso/33-js-concepts) (66K+ GitHub stars, GitHub Top Open Source Project of 2018). Open source contributor to Better Auth, Node.js, and TanStack.
+Before that I spent four and a half years as the only frontend engineer on [Spaceship's domain search](https://www.spaceship.com/domain-search/) at [Namecheap](https://www.namecheap.com). I also wrote [33 JavaScript Concepts](https://github.com/leonardomso/33-js-concepts), an open-source guide that people have translated into 40+ languages.
 
-## Links
+## Projects
 
-- Website: https://www.leonardomso.com
-- GitHub: https://github.com/leonardomso
-- LinkedIn: https://www.linkedin.com/in/leonardomso/
-- X: https://x.com/leonardomso
+- [SetLuca](https://setluca.com): DM sales for creators and coaches
+- [Strait](https://strait.dev): Background jobs on Postgres
+
+## Work
+
+- Spaceship (Namecheap): Senior front end engineer, 2021 to 2026
+- Progress: Technical author, 2019 to 2023
+- LogRocket: Technical author, 2020 to 2022
+- Popstand: Software engineer, 2019 to 2021
+- Foton: Software engineer, 2019
+
+## Writing
+
+Over 100 articles on React, TypeScript and frontend performance for [LogRocket](https://blog.logrocket.com/author/leonardomaldonado/) and [Progress](https://www.telerik.com/blogs/author/leonardo-maldonado).
+
+## Contact
+
 - Email: leonardomso11@gmail.com
+- GitHub: https://github.com/leonardomso
+- X: https://x.com/leonardomso
+- LinkedIn: https://www.linkedin.com/in/leonardomso/
 
 ## Pages
 
 - [About](https://www.leonardomso.com/about)
 - [Projects](https://www.leonardomso.com/projects)
-- [Blog](https://www.leonardomso.com/blog)
 - [Resume](https://www.leonardomso.com/resume)
 - [Uses](https://www.leonardomso.com/uses)
 - [Now](https://www.leonardomso.com/now)

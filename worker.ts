@@ -13,7 +13,6 @@ interface Env extends MinimalEnv {
 const DISCOVERY_LINKS = [
   '</llms.txt>; rel="describedby"; type="text/plain"',
   '</sitemap.xml>; rel="sitemap"; type="application/xml"',
-  '</feed.xml>; rel="alternate"; type="application/rss+xml"; title="RSS Feed"',
   '</.well-known/agent-skills/index.json>; rel="https://agentskills.io/rel/index"; type="application/json"',
   '<https://github.com/leonardomso>; rel="author"',
 ];

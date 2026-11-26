@@ -4,14 +4,8 @@
     {
       "name": "llms-txt",
       "type": "content",
-      "description": "Machine-readable profile of Leonardo Maldonado: bio, links, projects, skills, and experience.",
+      "description": "Index of Leonardo Maldonado's site for language models: a short bio, current projects, and links to a Markdown version of every page.",
       "url": "https://www.leonardomso.com/llms.txt"
-    },
-    {
-      "name": "rss-feed",
-      "type": "content",
-      "description": "RSS 2.0 feed of blog posts by Leonardo Maldonado.",
-      "url": "https://www.leonardomso.com/feed.xml"
     },
     {
       "name": "humans-txt",
